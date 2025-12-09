@@ -1,0 +1,32 @@
+# NAME: HSBC & PayMe
+# AUTHOR: Custom
+# DESCRIPTION: 包含 HSBC 香港、HSBC 全球核心服务及 PayMe
+# UPDATED: 2025-12-09
+
+# > HSBC Hong Kong (核心业务)
+HOST-SUFFIX, hsbc.com.hk, HSBC
+HOST-SUFFIX, mobile-banking.hsbc.com.hk, HSBC
+HOST-SUFFIX, rbwm-api.hsbc.com.hk, HSBC
+
+# > PayMe (HSBC 旗下支付)
+HOST-SUFFIX, payme.hsbc.com.hk, HSBC
+HOST-SUFFIX, api.payme.hsbc.com.hk, HSBC
+
+# > HSBC Global Infrastructure (全球基础架构/CDN/资源)
+HOST-SUFFIX, hsbc.com, HSBC
+HOST-SUFFIX, hsbc.net, HSBC
+HOST-SUFFIX, hsbcnet.com, HSBC
+HOST-SUFFIX, hsbcprivatebank.com, HSBC
+HOST-SUFFIX, hsbc-net.com, HSBC
+
+# > 其他主要地区 (防止 App 内部跳转到其他地区服务时出错)
+HOST-SUFFIX, hsbc.com.cn, HSBC
+HOST-SUFFIX, hsbc.co.uk, HSBC
+HOST-SUFFIX, hsbc.com.au, HSBC
+HOST-SUFFIX, hsbc.ca, HSBC
+HOST-SUFFIX, hsbc.com.sg, HSBC
+HOST-SUFFIX, us.hsbc.com, HSBC
+
+# > 关键词匹配 (兜底策略，可选)
+# 这一条比较激进，如果担心误杀可以去掉
+# HOST-KEYWORD, hsbc, HSBC
