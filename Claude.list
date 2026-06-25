@@ -1,0 +1,22 @@
+# NAME: Claude / Anthropic
+# AUTHOR: Custom
+# DESCRIPTION: 包含 Claude、Anthropic API、Claude Code 及相关静态资源
+# UPDATED: 2026-06-25
+
+# > Claude 核心服务
+HOST-SUFFIX, claude.ai, Claude
+HOST-SUFFIX, claude.com, Claude
+HOST-SUFFIX, claudeusercontent.com, Claude
+
+# > Anthropic API / Platform
+# api.anthropic.com、console.anthropic.com、docs.anthropic.com 等均由 anthropic.com 覆盖
+HOST-SUFFIX, anthropic.com, Claude
+
+# > Anthropic 静态资源 / CDN
+HOST, servd-anthropic-website.b-cdn.net, Claude
+
+# > 可选兜底
+# 以下规则可能只是统计或通用第三方依赖，按需取消注释
+# HOST, cdn.usefathom.com, Claude
+# HOST-SUFFIX, sentry.io, Claude
+# HOST-KEYWORD, anthropic, Claude

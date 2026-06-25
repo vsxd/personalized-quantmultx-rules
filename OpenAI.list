@@ -1,0 +1,40 @@
+# NAME: OpenAI
+# AUTHOR: Custom
+# DESCRIPTION: 包含 ChatGPT、OpenAI API、Sora 及相关静态资源
+# UPDATED: 2026-06-25
+
+# > ChatGPT / OpenAI 核心服务
+HOST-SUFFIX, chatgpt.com, OpenAI
+HOST-SUFFIX, chat.com, OpenAI
+HOST-SUFFIX, openai.com, OpenAI
+HOST-SUFFIX, sora.com, OpenAI
+
+# > OpenAI API / Platform
+# api.openai.com、platform.openai.com、auth.openai.com 等均由 openai.com 覆盖
+HOST, chat.openai.com.cdn.cloudflare.net, OpenAI
+HOST-SUFFIX, openaiapi-site.azureedge.net, OpenAI
+
+# > OpenAI 静态资源 / 用户内容
+HOST-SUFFIX, oaistatic.com, OpenAI
+HOST-SUFFIX, oaiusercontent.com, OpenAI
+HOST-SUFFIX, openaiusercontent.com, OpenAI
+HOST, openaicom.imgix.net, OpenAI
+HOST, production-openaicom-storage.azureedge.net, OpenAI
+HOST, openaicomproductionae4b.blob.core.windows.net, OpenAI
+HOST, openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net, OpenAI
+
+# > ChatGPT 语音 / 实时通信
+HOST-SUFFIX, chatgpt.livekit.cloud, OpenAI
+HOST-SUFFIX, host.livekit.cloud, OpenAI
+HOST-SUFFIX, turn.livekit.cloud, OpenAI
+
+# > 验证 / 风控
+HOST, openai-api.arkoselabs.com, OpenAI
+
+# > 可选兜底
+# 以下规则比较激进或会影响其他网站，按需取消注释
+# HOST, client-api.arkoselabs.com, OpenAI
+# HOST, challenges.cloudflare.com, OpenAI
+# HOST-SUFFIX, auth0.com, OpenAI
+# HOST-SUFFIX, stripe.com, OpenAI
+# HOST-KEYWORD, openai, OpenAI
