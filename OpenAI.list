@@ -1,40 +1,75 @@
-# NAME: OpenAI
+# NAME: OpenAI / ChatGPT / Codex / Sora
 # AUTHOR: Custom
-# DESCRIPTION: 包含 ChatGPT、OpenAI API、Sora 及相关静态资源
-# UPDATED: 2026-06-25
+# DESCRIPTION: 覆盖 ChatGPT Web、ChatGPT App、Codex（桌面/CLI/云端）、OpenAI API、Sora 及相关依赖
+# UPDATED: 2026-08-24
+#
+# 官方网络清单（OpenAI Help Center）：
+# https://help.openai.com/en/articles/9247338-network-recommendations-for-chatgpt-errors-on-web-and-apps
+# 清单中的 *.example.com 使用 HOST-SUFFIX；未带通配符的第三方域名使用 HOST，避免误代理同一服务的其他流量。
 
-# > ChatGPT / OpenAI 核心服务
+# > ChatGPT / Codex 核心服务
 HOST-SUFFIX, chatgpt.com, OpenAI
 HOST-SUFFIX, chat.com, OpenAI
 HOST-SUFFIX, openai.com, OpenAI
 HOST-SUFFIX, sora.com, OpenAI
 
-# > OpenAI API / Platform
-# api.openai.com、platform.openai.com、auth.openai.com 等均由 openai.com 覆盖
+# > ChatGPT / Codex WebSocket
+# ChatGPT: wss://ws.chatgpt.com
+# Codex:    wss://chatgpt.com/（模型采样与流式输出）
+# 上面的 HOST-SUFFIX, chatgpt.com 已同时覆盖这两个目标；代理需允许 TCP/443 的 Upgrade: websocket。
+HOST, ws.chatgpt.com, OpenAI
+
+# > OpenAI API / Platform / OAuth
+# api.openai.com、platform.openai.com、auth.openai.com、setup.auth.openai.com、
+# auth0.openai.com 等均由 openai.com / auth.openai.com 覆盖。
+HOST-SUFFIX, auth.openai.com, OpenAI
 HOST, chat.openai.com.cdn.cloudflare.net, OpenAI
 HOST-SUFFIX, openaiapi-site.azureedge.net, OpenAI
 
-# > OpenAI 静态资源 / 用户内容
+# > OpenAI 静态资源 / 用户内容 / 文件上传
 HOST-SUFFIX, oaistatic.com, OpenAI
 HOST-SUFFIX, oaiusercontent.com, OpenAI
+# 历史兼容域名，部分旧客户端仍可能使用。
 HOST-SUFFIX, openaiusercontent.com, OpenAI
 HOST, openaicom.imgix.net, OpenAI
 HOST, production-openaicom-storage.azureedge.net, OpenAI
 HOST, openaicomproductionae4b.blob.core.windows.net, OpenAI
 HOST, openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net, OpenAI
 
+# > ChatGPT App / Codex App 官方依赖
+# 以下域名来自官方 ChatGPT Web/App 网络 allowlist；它们不属于 openai.com，
+# 因此不会被上面的 HOST-SUFFIX 自动覆盖。
+HOST-SUFFIX, ct.sendgrid.net, OpenAI
+HOST-SUFFIX, intercom.io, OpenAI
+HOST-SUFFIX, intercomcdn.com, OpenAI
+HOST-SUFFIX, oaistatsig.com, OpenAI
+HOST, cdn.openaimerge.com, OpenAI
+HOST, cdn.workos.com, OpenAI
+HOST, forwarder.workos.com, OpenAI
+HOST, humb.apple.com, OpenAI
+HOST, images.workoscdn.com, OpenAI
+HOST, js.stripe.com, OpenAI
+HOST, o207216.ingest.sentry.io, OpenAI
+HOST, o33249.ingest.sentry.io, OpenAI
+HOST, rum.browser-intake-datadoghq.com, OpenAI
+HOST, setup.workos.com, OpenAI
+HOST, workos.imgix.net, OpenAI
+
 # > ChatGPT 语音 / 实时通信
 HOST-SUFFIX, chatgpt.livekit.cloud, OpenAI
 HOST-SUFFIX, host.livekit.cloud, OpenAI
 HOST-SUFFIX, turn.livekit.cloud, OpenAI
+# ChatGPT Voice 还会通过 UDP/3478 访问 OpenAI 动态 IP；官方维护的地址见：
+# https://openai.com/chatgpt-voice.json
+# 该地址会持续更新，静态 HOST 规则无法可靠覆盖其动态 IP；必要时请另行同步 IP-CIDR/UDP 规则。
 
 # > 验证 / 风控
 HOST, openai-api.arkoselabs.com, OpenAI
+HOST, challenges.cloudflare.com, OpenAI
 
 # > 可选兜底
-# 以下规则比较激进或会影响其他网站，按需取消注释
+# 以下规则比较激进或会影响其他网站，默认保持关闭，按需取消注释。
 # HOST, client-api.arkoselabs.com, OpenAI
-# HOST, challenges.cloudflare.com, OpenAI
 # HOST-SUFFIX, auth0.com, OpenAI
 # HOST-SUFFIX, stripe.com, OpenAI
 # HOST-KEYWORD, openai, OpenAI
