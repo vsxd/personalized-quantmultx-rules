@@ -1,0 +1,11 @@
+# MIRRORED FROM: https://github.com/sve1r/Rules-For-Quantumult-X
+# SOURCE COMMIT: 8061d2ebe160280f25d4b20d6d929d9e03caecbe
+# SOURCE LICENSE: MIT (Copyright (c) 2020 SVE1R)
+# MIRROR POLICY: reviewed copy; force-policy in the consuming config controls the policy.
+#
+host-suffix,discord.com,Discord
+host-suffix,discord.gg,Discord
+host-suffix,discord.media,Discord
+host-suffix,discordapp.com,Discord
+host-suffix,discordapp.net,Discord
+host-suffix,discordstatus.com,Discord
