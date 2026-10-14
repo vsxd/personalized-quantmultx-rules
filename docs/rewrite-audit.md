@@ -36,6 +36,6 @@ Goofish 的 HTTP /amdc/mobileDispatch 通配规则范围较大，amdc.js 会返�
 
 KOP-XIAO resource-parser 固定在 29ef7480402d145396c84082a6f9316fe12931d4：用于节点格式转换，约270KB；静态阅读了过滤/重命名等入口，未执行。保留为可选节点解析功能。IP_API 同版本通过明文 ip-api 查询出口归属；纯路由基线删除。streaming-ui-check 原来引用 master，并会向 Netflix/YouTube/Disney/ChatGPT 等发请求，ChatGPT 检查仍使用旧 chat.openai.com 入口；不是业务登录可用性的证明，基线删除。
 
-34 个图标地址本次均可达；它们只影响显示，不影响分流，模板已简化去掉。
+初次审计时 34 个图标地址均可达。策略模板现已恢复原配置的 Koolson/Qure 彩色图标源，覆盖现有 15 个策略组；图标只影响显示，不改变分流或策略选择。未恢复已删除的策略组或重写项。
 
 MITM 的 p12 和 passphrase 是 CA 私钥相关材料，只存在原私有配置，本仓库和报告不收录。
