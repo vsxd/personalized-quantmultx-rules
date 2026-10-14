@@ -4,7 +4,11 @@
 # Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
 # Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
 
+host-suffix, ameba.jp, Global
+host-suffix, amebaownd.com, Global
+host-suffix, amebaowndme.com, Global
 host-suffix, badoo.com, Global
+host-suffix, dokusho-ojikan.jp, Global
 host-suffix, dribbble.com, Global
 host-suffix, flickr.com, Global
 host-suffix, licdn.com, Global

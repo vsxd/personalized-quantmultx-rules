@@ -520,6 +520,12 @@
           "format": "domain-list"
         },
         {
+          "path": "data/docker",
+          "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/docker",
+          "sha256": "f1b27237e9b861d88aaf80399af5088781e177780ecc7b30dd7795fea404546e",
+          "format": "domain-list"
+        },
+        {
           "path": "data/dropbox",
           "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/dropbox",
           "sha256": "d0acc573cf24749d243ce2a388136cd683e4f3e584283e1a37d0681d1ed13025",
@@ -598,6 +604,12 @@
           "format": "domain-list"
         },
         {
+          "path": "data/line",
+          "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/line",
+          "sha256": "32bcf614b506ec3f4751fc0dce128624bdc6aee28f36aeff31709b671f868a69",
+          "format": "domain-list"
+        },
+        {
           "path": "data/microsoft",
           "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/microsoft",
           "sha256": "b033d7375c45b2613f5230046ef190d0f2d2c83c1eba7a082d41a0c6088286f4",
@@ -634,6 +646,18 @@
           "format": "domain-list"
         },
         {
+          "path": "data/notion",
+          "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/notion",
+          "sha256": "068376eeeea9527bd2caa4d2e5dd65c944d8706f453c353ff9bdd315fb760527",
+          "format": "domain-list"
+        },
+        {
+          "path": "data/npmjs",
+          "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/npmjs",
+          "sha256": "674294756c3e5d7f20e274f7190f28b55eb373122513d0ab5e439e29dd03be53",
+          "format": "domain-list"
+        },
+        {
           "path": "data/onedrive",
           "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/onedrive",
           "sha256": "373014cf0257b6cd16580226da0c92c76b996257ad1b0b98949694d94f0bfa96",
@@ -655,6 +679,12 @@
           "path": "data/private",
           "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/private",
           "sha256": "831667a51e35d5c7ec3c53b89fa02a372fd5309aa6138aee7c03a4423f7c4cf7",
+          "format": "domain-list"
+        },
+        {
+          "path": "data/python",
+          "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/python",
+          "sha256": "73627c3749fee63ccf12fbb4cb5da121fc0ef46b04ebf32d71211e0f82bfef8c",
           "format": "domain-list"
         },
         {
@@ -732,6 +762,7 @@
           "data/category-media",
           "data/discord",
           "data/disney",
+          "data/docker",
           "data/dropbox",
           "data/epicgames",
           "data/facebook",
@@ -745,16 +776,20 @@
           "data/hsbc",
           "data/hsbc-cn",
           "data/instagram",
+          "data/line",
           "data/microsoft",
           "data/microsoft-dev",
           "data/microsoft-pki",
           "data/msn",
           "data/netflix",
           "data/nintendo",
+          "data/notion",
+          "data/npmjs",
           "data/onedrive",
           "data/openai",
           "data/playstation",
           "data/private",
+          "data/python",
           "data/slack",
           "data/spotify",
           "data/steam",

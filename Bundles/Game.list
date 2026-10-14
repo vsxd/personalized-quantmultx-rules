@@ -60,9 +60,12 @@ host-suffix, unrealtournament.com, Game
 # Service names are separate from transport IP lists; no geography/final fallback here.
 # Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
 # Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+# Modern service API reference: v2fly/domain-list-community@c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/mojang.
+# MIT (Copyright (c) 2018-2019 V2Ray); full notice in LICENSES/.
 
 host-suffix, callersbane.com, Game
 host-suffix, minecraft.net, Game
+host-suffix, minecraftservices.com, Game
 host-suffix, minecraftshop.com, Game
 host-suffix, mojang.com, Game
 

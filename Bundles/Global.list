@@ -64,14 +64,21 @@ host-suffix, thegithubshop.com, Global
 # Service names are separate from transport IP lists; no geography/final fallback here.
 # Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
 # Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+# Selected domain references: v2fly/domain-list-community@c6adacf29cc4fb05e04651fcf03e00989ef9f797.
+# MIT (Copyright (c) 2018-2019 V2Ray); full notices in LICENSES/.
 
+host, docker-pinata-support.s3.amazonaws.com, Global
+host, files.pythonhosted.org, Global
 host-suffix, adblockplus.org, Global
 host-suffix, anaconda.com, Global
 host-suffix, android-x86.org, Global
 host-suffix, angularjs.org, Global
 host-suffix, bitbucket.org, Global
 host-suffix, cocoapods.org, Global
+host-suffix, dhi.io, Global
 host-suffix, docker.com, Global
+host-suffix, docker.io, Global
+host-suffix, dockerstatic.com, Global
 host-suffix, eclipse.org, Global
 host-suffix, gitbook.com, Global
 host-suffix, hackmd.io, Global
@@ -80,10 +87,15 @@ host-suffix, jshint.com, Global
 host-suffix, leetcode.com, Global
 host-suffix, mathjax.org, Global
 host-suffix, maven.org, Global
+host-suffix, npmjs.com, Global
+host-suffix, npmjs.org, Global
+host-suffix, pypi.org, Global
+host-suffix, python.org, Global
 host-suffix, sourceforge.net, Global
 host-suffix, sstatic.net, Global
 host-suffix, stackoverflow.com, Global
 host-suffix, tablesgenerator.com, Global
+host-suffix, twitteroauth.com, Global
 host-suffix, v2ray.com, Global
 host-suffix, vimperator.org, Global
 host-suffix, w3schools.com, Global
@@ -282,14 +294,16 @@ host-suffix, soundcloud.com, Global
 # Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
 # Selected domain references: v2fly/domain-list-community@c6adacf29cc4fb05e04651fcf03e00989ef9f797.
 # MIT (Copyright (c) 2018-2019 V2Ray); full notices in LICENSES/.
+# Exact third-party hosts cross-checked against v2fly/domain-list-community
+# @c6adacf29cc4fb05e04651fcf03e00989ef9f797 (MIT; see THIRD_PARTY.md).
 
 host, audio4-ak-spotify-com.akamaized.net, Global
 host, cdn-spotify-experiments.conductrics.com, Global
 host, heads-ak-spotify-com.akamaized.net, Global
 host, spotify.com.edgesuite.net, Global
-host-suffix, audio-ak-spotify-com.akamaized.net, Global
+host, audio-ak-spotify-com.akamaized.net, Global
 host-suffix, byspotify.com, Global
-host-suffix, heads4-ak-spotify-com.akamaized.net, Global
+host, heads4-ak-spotify-com.akamaized.net, Global
 host-suffix, lifeatspotify.com, Global
 host-suffix, pscdn.co, Global
 host-suffix, scdn.co, Global
@@ -387,7 +401,16 @@ host-suffix, dnitv.com, Global
 # Service names are separate from transport IP lists; no geography/final fallback here.
 # Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
 # Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+# Exact third-party hosts cross-checked against v2fly/domain-list-community
+# @c6adacf29cc4fb05e04651fcf03e00989ef9f797 (MIT; see THIRD_PARTY.md).
+# MyDisney identity SDK: https://my.disney.com/; studio: https://www.20thcenturystudios.com/ (2026-10-14).
+# FX is part of Disney; independent classification also agrees with the pinned v2fly data/disney.
 
+host, disney.my.sentry.io, Global
+host, disneyplus.com.ssl.sc.omtrdc.net, Global
+host, espn.hb.omtrdc.net, Global
+host, espndotcom.tt.omtrdc.net, Global
+host-suffix, 20thcenturystudios.com, Global
 host-suffix, 20thcenturystudios.com.au, Global
 host-suffix, 20thcenturystudios.com.br, Global
 host-suffix, 20thcenturystudios.jp, Global
@@ -435,7 +458,6 @@ host-suffix, disney.in, Global
 host-suffix, disney.io, Global
 host-suffix, disney.it, Global
 host-suffix, disney.my, Global
-host-suffix, disney.my.sentry.io, Global
 host-suffix, disney.nl, Global
 host-suffix, disney.no, Global
 host-suffix, disney.ph, Global
@@ -445,6 +467,7 @@ host-suffix, disney.ro, Global
 host-suffix, disney.ru, Global
 host-suffix, disney.se, Global
 host-suffix, disney.sg, Global
+host-suffix, disneyaccount.com, Global
 host-suffix, disneyadsales.com, Global
 host-suffix, disneyarena.com, Global
 host-suffix, disneyaulani.com, Global
@@ -481,7 +504,6 @@ host-suffix, disneynow.com, Global
 host-suffix, disneypeoplesurveys.com, Global
 host-suffix, disneyplus.bn5x.net, Global
 host-suffix, disneyplus.com, Global
-host-suffix, disneyplus.com.ssl.sc.omtrdc.net, Global
 host-suffix, disneyredirects.com, Global
 host-suffix, disneysrivieraresort.com, Global
 host-suffix, disneystore.com, Global
@@ -498,11 +520,11 @@ host-suffix, dtci.technology, Global
 host-suffix, edgedatg.com, Global
 host-suffix, espn.co.uk, Global
 host-suffix, espn.com, Global
-host-suffix, espn.hb.omtrdc.net, Global
 host-suffix, espn.net, Global
 host-suffix, espncdn.com, Global
-host-suffix, espndotcom.tt.omtrdc.net, Global
 host-suffix, espnqa.com, Global
+host-suffix, fxnetwork.com, Global
+host-suffix, fxnetworks.com, Global
 host-suffix, go-disneyworldgo.com, Global
 host-suffix, go.com, Global
 host-suffix, marvel.com, Global
@@ -544,6 +566,8 @@ host-suffix, watchespn.com, Global
 # Service names are separate from transport IP lists; no geography/final fallback here.
 # Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
 # Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+# Exact third-party hosts cross-checked against v2fly/domain-list-community
+# @c6adacf29cc4fb05e04651fcf03e00989ef9f797 (MIT; see THIRD_PARTY.md).
 
 host-suffix, afewmomentswith.com, Global
 host-suffix, anidom.com, Global
@@ -609,8 +633,6 @@ host-suffix, foxcincy.net, Global
 host-suffix, foxcollegesports.com, Global
 host-suffix, foxcorporation.com, Global
 host-suffix, foxcreativeuniversity.com, Global
-host-suffix, foxcredit.com, Global
-host-suffix, foxcredit.org, Global
 host-suffix, foxd.tv, Global
 host-suffix, foxdcg.com, Global
 host-suffix, foxdeportes.com, Global
@@ -652,7 +674,7 @@ host-suffix, foxnewslatino.com, Global
 host-suffix, foxnewsmagazine.com, Global
 host-suffix, foxnewsnetwork.com, Global
 host-suffix, foxnewsopinion.com, Global
-host-suffix, foxnewsplayer-a.akamaihd.net, Global
+host, foxnewsplayer-a.akamaihd.net, Global
 host-suffix, foxnewspodcasts.com, Global
 host-suffix, foxnewspolitics.com, Global
 host-suffix, foxnewsradio.com, Global
@@ -729,8 +751,6 @@ host-suffix, foxweatherwatch.com, Global
 host-suffix, fse.tv, Global
 host-suffix, fssta.com, Global
 host-suffix, fxn.ws, Global
-host-suffix, fxnetwork.com, Global
-host-suffix, fxnetworks.com, Global
 host-suffix, geraldoatlarge.com, Global
 host-suffix, gooddaychicago.com, Global
 host-suffix, joeswall.com, Global
@@ -804,11 +824,14 @@ host-suffix, wogx.com, Global
 # Service names are separate from transport IP lists; no geography/final fallback here.
 # Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
 # Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+# Official HBO Max page and its API/image origins: https://www.hbomax.com/ (2026-10-14).
 
+host, beam-images.warnermediacdn.com, Global
 host-suffix, 44wilhpljf.execute-api.ap-southeast-1.amazonaws.com, Global
 host-suffix, bcbolthboa-a.akamaihd.net, Global
 host-suffix, cinemax.com, Global
 host-suffix, dai3fd1oh325y.cloudfront.net, Global
+host-suffix, discomax.com, Global
 host-suffix, forthethrone.com, Global
 host-suffix, hbo.com, Global
 host-suffix, hboasia.com, Global
@@ -828,6 +851,7 @@ host-suffix, hbomax.com, Global
 host-suffix, hbomaxcdn.com, Global
 host-suffix, hbonow.com, Global
 host-suffix, hbounify-prod.evergent.com, Global
+host-suffix, max.com, Global
 host-suffix, maxgo.com, Global
 
 # Source leaf: Rules/Media/Networks/HongKongTV.list
@@ -918,13 +942,15 @@ host-suffix, nowe.hk, Global
 # Service names are separate from transport IP lists; no geography/final fallback here.
 # Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
 # Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+# Exact third-party hosts cross-checked against v2fly/domain-list-community
+# @c6adacf29cc4fb05e04651fcf03e00989ef9f797 (MIT; see THIRD_PARTY.md).
 
 host-suffix, amlg.io, Global
 host-suffix, cbs.com, Global
 host-suffix, cbsaavideo.com, Global
 host-suffix, cbscorporation.com, Global
 host-suffix, cbsi.com, Global
-host-suffix, cbsi.live.ott.irdeto.com, Global
+host, cbsi.live.ott.irdeto.com, Global
 host-suffix, cbsi.video, Global
 host-suffix, cbsiam.com, Global
 host-suffix, cbsig.net, Global
@@ -933,10 +959,10 @@ host-suffix, cbsinteractive.com, Global
 host-suffix, cbsistatic.com, Global
 host-suffix, cbsivideo.com, Global
 host-suffix, cbsnews.com, Global
-host-suffix, cbsplaylistserver.aws.syncbak.com, Global
+host, cbsplaylistserver.aws.syncbak.com, Global
 host-suffix, cbspressexpress.com, Global
 host-suffix, cbsradio.com, Global
-host-suffix, cbsservice.aws.syncbak.com, Global
+host, cbsservice.aws.syncbak.com, Global
 host-suffix, cbssports.com, Global
 host-suffix, cbsstatic.com, Global
 host-suffix, cbsstore.com, Global
@@ -1074,10 +1100,12 @@ host-suffix, pbs.org, Global
 # Service names are separate from transport IP lists; no geography/final fallback here.
 # Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
 # Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+# Exact third-party hosts cross-checked against v2fly/domain-list-community
+# @c6adacf29cc4fb05e04651fcf03e00989ef9f797 (MIT; see THIRD_PARTY.md).
 
-host-suffix, d1k2us671qcoau.cloudfront.net, Global
-host-suffix, d2anahhhmp1ffz.cloudfront.net, Global
-host-suffix, dfp6rglgjqszk.cloudfront.net, Global
+host, d1k2us671qcoau.cloudfront.net, Global
+host, d2anahhhmp1ffz.cloudfront.net, Global
+host, dfp6rglgjqszk.cloudfront.net, Global
 host-suffix, viu.com, Global
 host-suffix, viu.tv, Global
 
@@ -1235,6 +1263,7 @@ host-suffix, nikkei.jp, Global
 # Service names are separate from transport IP lists; no geography/final fallback here.
 # Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
 # Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+# Polygon is now a Valnet publication: https://www.valnetinc.com/polygon (2026-10-14).
 
 host-suffix, 9to5mac.com, Global
 host-suffix, cnet.com, Global
@@ -1244,6 +1273,7 @@ host-suffix, imore.com, Global
 host-suffix, macrumors.com, Global
 host-suffix, mashable.com, Global
 host-suffix, osxdaily.com, Global
+host-suffix, polygon.com, Global
 host-suffix, techcrunch.com, Global
 host-suffix, tomshardware.com, Global
 host-suffix, venturebeat.com, Global
@@ -1319,7 +1349,6 @@ host-suffix, curbed.com, Global
 host-suffix, eater.com, Global
 host-suffix, funnyordie.com, Global
 host-suffix, meridian.net, Global
-host-suffix, polygon.com, Global
 host-suffix, racked.com, Global
 host-suffix, recode.net, Global
 host-suffix, sbnation.com, Global
@@ -1337,20 +1366,18 @@ host-suffix, voxops.net, Global
 # Service names are separate from transport IP lists; no geography/final fallback here.
 # Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
 # Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+# Current image and exact feature-flag endpoints observed in https://abema.tv/ (2026-10-14).
 
+host, api-abematv.bucketeer.jp, Global
+host-suffix, abema-tv.com, Global
 host-suffix, abema.io, Global
 host-suffix, abema.tv, Global
 host-suffix, abematv.akamaized.net, Global
 host-suffix, adx.promo, Global
-host-suffix, ameba.jp, Global
 host-suffix, amebame.com, Global
-host-suffix, amebaownd.com, Global
-host-suffix, amebaowndme.com, Global
 host-suffix, ameblo.jp, Global
-host-suffix, bucketeer.jp, Global
 host-suffix, d1otoma47x30pg.cloudfront.net, Global
 host-suffix, d2wy8f7a9ursnm.cloudfront.net, Global
-host-suffix, dokusho-ojikan.jp, Global
 host-suffix, ds-linear-abematv.akamaized.net, Global
 host-suffix, ds-vod-abematv.akamaized.net, Global
 host-suffix, hayabusa.dev, Global
@@ -1358,7 +1385,6 @@ host-suffix, hayabusa.io, Global
 host-suffix, hayabusa.media, Global
 host-suffix, linear-abematv.akamaized.net, Global
 host-suffix, vod-abematv.akamaized.net, Global
-host-suffix, winticket.jp, Global
 
 # Source leaf: Rules/Media/Video/Bilibili-International.list
 # Independently curated Quantumult X destinations: Bilibili-International
@@ -1366,7 +1392,9 @@ host-suffix, winticket.jp, Global
 # Service names are separate from transport IP lists; no geography/final fallback here.
 # Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
 # Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+# Exact cover-image host observed in https://www.bilibili.tv/ (2026-10-14).
 
+host, pic.bstarstatic.com, Global
 host-suffix, bilibili.tv, Global
 host-suffix, biliintl.com, Global
 host-suffix, dreamcast.hk, Global
@@ -1550,7 +1578,9 @@ host-suffix, primevideo.tv, Global
 # Service names are separate from transport IP lists; no geography/final fallback here.
 # Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
 # Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+# Extension hosting boundary: https://dev.twitch.tv/docs/extensions/ (2026-10-14).
 
+host-suffix, ext-twitch.tv, Global
 host-suffix, jtvnw.net, Global
 host-suffix, ttvnw.net, Global
 host-suffix, twitch.tv, Global
@@ -1842,9 +1872,15 @@ host-suffix, kakaocorp.com, Global
 # Service names are separate from transport IP lists; no geography/final fallback here.
 # Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
 # Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+# Selected domain references: v2fly/domain-list-community@c6adacf29cc4fb05e04651fcf03e00989ef9f797.
+# MIT (Copyright (c) 2018-2019 V2Ray); full notices in LICENSES/.
 
+host-suffix, lin.ee, Global
+host-suffix, line-apps.com, Global
 host-suffix, line-cdn.net, Global
 host-suffix, line-scdn.net, Global
+host-suffix, line.me, Global
+host-suffix, line.naver.jp, Global
 
 # Source leaf: Rules/Messaging/Messenger.list
 # Independently curated Quantumult X destinations: Messenger
@@ -1978,7 +2014,11 @@ host-suffix, potplayer.tv, Global
 # Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
 # Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
 
+host-suffix, ameba.jp, Global
+host-suffix, amebaownd.com, Global
+host-suffix, amebaowndme.com, Global
 host-suffix, badoo.com, Global
+host-suffix, dokusho-ojikan.jp, Global
 host-suffix, dribbble.com, Global
 host-suffix, flickr.com, Global
 host-suffix, licdn.com, Global
@@ -2094,7 +2134,6 @@ host-suffix, twitter.map.fastly.net, Global
 host-suffix, twittercommunity.com, Global
 host-suffix, twitterflightschool.com, Global
 host-suffix, twitterinc.com, Global
-host-suffix, twitteroauth.com, Global
 host-suffix, twitterstat.us, Global
 host-suffix, twtrdns.net, Global
 host-suffix, twttr.com, Global
@@ -2214,6 +2253,8 @@ host-suffix, flexibits.com, Global
 host-suffix, flipboard.com, Global
 host-suffix, flipkart.com, Global
 host-suffix, flitto.com, Global
+host-suffix, foxcredit.com, Global
+host-suffix, foxcredit.org, Global
 host-suffix, fzlm.net, Global
 host-suffix, gabia.net, Global
 host-suffix, geni.us, Global
@@ -2285,6 +2326,8 @@ host-suffix, name.com, Global
 host-suffix, nasa.gov, Global
 host-suffix, newipnow.com, Global
 host-suffix, nih.gov, Global
+host-suffix, notion-status.com, Global
+host-suffix, notion.com, Global
 host-suffix, notion.so, Global
 host-suffix, nsstatic.net, Global
 host-suffix, nssurge.com, Global
@@ -2443,6 +2486,7 @@ host-suffix, wikimedia.org, Global
 host-suffix, wikipedia.com, Global
 host-suffix, wikipedia.org, Global
 host-suffix, wikiwand.com, Global
+host-suffix, winticket.jp, Global
 host-suffix, wn.com, Global
 host-suffix, wordpress.com, Global
 host-suffix, workflow.is, Global

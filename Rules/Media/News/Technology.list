@@ -3,6 +3,7 @@
 # Service names are separate from transport IP lists; no geography/final fallback here.
 # Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
 # Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+# Polygon is now a Valnet publication: https://www.valnetinc.com/polygon (2026-10-14).
 
 host-suffix, 9to5mac.com, Global
 host-suffix, cnet.com, Global
@@ -12,6 +13,7 @@ host-suffix, imore.com, Global
 host-suffix, macrumors.com, Global
 host-suffix, mashable.com, Global
 host-suffix, osxdaily.com, Global
+host-suffix, polygon.com, Global
 host-suffix, techcrunch.com, Global
 host-suffix, tomshardware.com, Global
 host-suffix, venturebeat.com, Global

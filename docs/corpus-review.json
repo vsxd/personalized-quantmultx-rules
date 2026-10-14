@@ -47631,6 +47631,26 @@
         "Generate China/Global/Game remote bundles from unchanged canonical leaf destinations; retain targeted service and IP resources."
       ],
       "historical_records": "Prior records below retain their original policies and paths as dated migration evidence; Config/categories.json and current rule files are authoritative."
+    },
+    {
+      "reviewed_at": "2026-10-14",
+      "baseline_commit": "5e42737a28ccf006408b9be9b513fdd50f4a7b4b",
+      "reason": "Repository-only second line-by-line review after device configuration acceptance.",
+      "report": "docs/deep-review-2026-10-14.json",
+      "changes": [
+        "Review all 113 source leaves and 11 default emitted resources.",
+        "Fill specific official service/registry endpoints and narrow 14 third-party/provider rules.",
+        "Reclassify unrelated products without changing their effective policies; preserve the terminal GeoIP/Final design."
+      ],
+      "counts": {
+        "baseline_leaf_files": 113,
+        "baseline_all_rules": 2902,
+        "reviewed_leaf_files": 113,
+        "reviewed_all_rules": 2949,
+        "reviewed_default_rules": 2947,
+        "default_resources": 11,
+        "modified_leaves": 23
+      }
     }
   ]
 }

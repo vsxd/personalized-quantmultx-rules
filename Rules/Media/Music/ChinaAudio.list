@@ -3,7 +3,9 @@
 # Service names are separate from transport IP lists; no geography/final fallback here.
 # Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
 # Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+# Official 荔枝App and podcast links: https://www.lizhiinc.com/ (2026-10-14).
 
-host-suffix, lizhi.io, China
+host-suffix, lizhi.fm, China
+host-suffix, lzpipi.com, China
 host-suffix, ximalaya.com, China
 host-suffix, xmcdn.com, China

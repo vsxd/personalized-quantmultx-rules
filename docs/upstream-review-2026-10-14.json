@@ -191,5 +191,17 @@
     "event": "An intermediate raw response failed the locked SHA256 check and was rejected without adoption.",
     "resolution": "Independent fresh raw content and authenticated Git blob 5d27df5b41cfd59ddd2c3db7f34b4c56abcb2d57 both matched the original locked 40424-byte SHA256 aa03f015949e8f6f981d90a7d8b1acf7e88472ee48601632bd964b0bb740f8aa. Final full comparison passed; lock was not changed to accommodate the mismatch."
   },
-  "coverage_boundary": "125 selected reference files plus license evidence and directory inventories are compared. v2fly includes cover 1430 reachable source files for dependency change detection, not manual acceptance of every domain. External sources beyond these configured scopes are not claimed complete. Selective MIT adoptions and all local rule decisions are recorded in docs/corpus-review.json."
+  "coverage_boundary": "125 selected reference files plus license evidence and directory inventories are compared. v2fly includes cover 1430 reachable source files for dependency change detection, not manual acceptance of every domain. External sources beyond these configured scopes are not claimed complete. Selective MIT adoptions and all local rule decisions are recorded in docs/corpus-review.json.",
+  "follow_up_checks": [
+    {
+      "checked_at": "2026-10-14",
+      "full_report_id": "20261014T095242.216064Z",
+      "full_status": "REVIEW_REQUIRED",
+      "expanded_v2fly_report_id": "20261014T100702.859418Z",
+      "expanded_v2fly_status": "COMPLETE",
+      "selected_reference_files_after_expansion": 130,
+      "result": "Same upstream revisions and already-recorded malformed source lines; no bulk adoption and no revision advance. Five explicitly reviewed MIT files added to comparison scope.",
+      "review": "docs/deep-review-2026-10-14.json"
+    }
+  ]
 }

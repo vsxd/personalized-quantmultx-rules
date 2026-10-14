@@ -3,7 +3,9 @@
 # Service names are separate from transport IP lists; no geography/final fallback here.
 # Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
 # Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+# Exact cover-image host observed in https://www.bilibili.tv/ (2026-10-14).
 
+host, pic.bstarstatic.com, Global
 host-suffix, bilibili.tv, Global
 host-suffix, biliintl.com, Global
 host-suffix, dreamcast.hk, Global

@@ -5,10 +5,18 @@
 # Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
 # Selected domain references: v2fly/domain-list-community@c6adacf29cc4fb05e04651fcf03e00989ef9f797.
 # MIT (Copyright (c) 2018-2019 V2Ray); full notices in LICENSES/.
+# Current official endpoint scope: https://support.apple.com/en-us/101555
+# Dedicated relay tenants are exact hosts; shared PKI/Cloudflare provider roots stay unclaimed.
 
+host, app-site-association.networking.apple, Apple
+host, apple-relay.cloudflare.com, Apple
+host, apple-relay.fastly-edge.com, Apple
+host, icons.axm-usercontent-apple.com, Apple
+host, upload.appleschoolcontent.com, Apple
 host-suffix, aaplimg.com, Apple
 host-suffix, appldnld.apple.com.edgesuite.net, Apple
 host-suffix, apple-cloudkit.com, Apple
+host-suffix, apple-dns.net, Apple
 host-suffix, apple-livephotoskit.com, Apple
 host-suffix, apple-mapkit.com, Apple
 host-suffix, apple-support.akadns.net, Apple

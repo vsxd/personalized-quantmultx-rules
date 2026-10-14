@@ -42,10 +42,12 @@ GeoIP 不写进可复用类别，.cn 也不是“服务器在中国”的证明�
 
 ## 远程资源汇总
 
-`Rules/` 是唯一手工维护的规则源；manifest 的 `remote_group` 只声明发布分组，不改变规则归属或策略。构建器生成 `Bundles/China.list`、`Bundles/Global.list`、`Bundles/Game.list`，保留来源注释和许可说明。默认配置的 112 个启用叶子仍全部覆盖，共 2,900 条类别规则；资源数量变为 11 个。
+`Rules/` 是唯一手工维护的规则源；manifest 的 `remote_group` 只声明发布分组，不改变规则归属或策略。构建器生成 `Bundles/China.list`、`Bundles/Global.list`、`Bundles/Game.list`，保留来源注释和许可说明。默认配置的 112 个启用叶子仍全部覆盖，共 2,947 条类别规则；资源数量变为 11 个。
 
 HSBC、OpenAI、Claude、共享 OpenAI 依赖、Apple、Microsoft、Google 和 Telegram IP 保留独立资源。共享 OpenAI 依赖直接使用 OpenAI 策略；它的独立资源只用于明确共享范围与启停，不再需要额外策略组。OpenAI 与 Claude 各自直接提供 direct、美国、新加坡、日本和 proxy 候选。
 
 汇总按 manifest 的成员顺序生成，第一次出现的分组决定远程资源位置。审查检查实际汇总后的有效规则、选项、覆盖数量及窄规则先后；不能只验证源文件。具体包括国际 iQIYI 先于国内父域、humb.apple.com 先于 Apple、启用的 PCDN 子域先于 Bilibili。
 
 如果自定义选择改变一个分组的成员，生成器对该分组退回叶子 URL，不能继续引用包含已禁用条目的默认汇总。需要任意选择但保持单文件时使用 standalone。生成文件不接受手改，先改叶子/manifest，再运行 build_bundles.py 和 build_config.py；CI 检查两种生成结果。
+
+当前完整逐行复审与待核实边界见 [deep-review-2026-10-14.md](deep-review-2026-10-14.md)；源文件共 2,949 条，其中可选 PCDN 的 2 条默认关闭。

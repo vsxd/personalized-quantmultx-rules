@@ -46,6 +46,8 @@ python3 scripts/check_upstreams.py --source v2fly
 
 v2fly 另使用完整 SHA 的有界源码归档，读取 `data/` 中的普通文件，避免逐一请求上千个依赖；不会执行或解压任意路径/链接。`dependencies/baseline.json`、`latest.json` 记录选定根文件的完整可达 include 图、原文哈希、原生条目和属性；`dependencies/diff.json` 与 `dependencies/diffs/` 揭示父文件不变但间接子文件变化的情况。缺失依赖、循环、未知语法均令检查不完整。这个图用于**发现和审阅**，不应用属性过滤，不自动生成或导入规则。需要采用依赖中的域名时，必须单独决定服务边界。
 
+最新逐行审查与未决项见 `docs/deep-review-2026-10-14.md` / `.json`，下次更新应复核其中的待核实范围。`upstream-lock.json` 现将 LINE、Docker、Python、npm、Notion 列为显式比较文件，不能只看旧聚合列表。
+
 本轮维护决定见 `docs/upstream-review-2026-10-14.json`：它保留源文件缺陷、未采纳的最新变化和真实比较范围；原始下载与完整差异仍留在忽略的 `work/`。
 
 对每组变化记录来源完整 SHA、文件/行、归属、证据、采用类别以及理由，分为已采用、明确拒绝、仍待查。上游删除可能是过期、改分类或误删；新增也可能是共享基础设施，均不能自动接受。

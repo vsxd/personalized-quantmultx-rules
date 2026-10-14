@@ -108,6 +108,8 @@ host-suffix, flexibits.com, Global
 host-suffix, flipboard.com, Global
 host-suffix, flipkart.com, Global
 host-suffix, flitto.com, Global
+host-suffix, foxcredit.com, Global
+host-suffix, foxcredit.org, Global
 host-suffix, fzlm.net, Global
 host-suffix, gabia.net, Global
 host-suffix, geni.us, Global
@@ -179,6 +181,8 @@ host-suffix, name.com, Global
 host-suffix, nasa.gov, Global
 host-suffix, newipnow.com, Global
 host-suffix, nih.gov, Global
+host-suffix, notion-status.com, Global
+host-suffix, notion.com, Global
 host-suffix, notion.so, Global
 host-suffix, nsstatic.net, Global
 host-suffix, nssurge.com, Global
@@ -337,6 +341,7 @@ host-suffix, wikimedia.org, Global
 host-suffix, wikipedia.com, Global
 host-suffix, wikipedia.org, Global
 host-suffix, wikiwand.com, Global
+host-suffix, winticket.jp, Global
 host-suffix, wn.com, Global
 host-suffix, wordpress.com, Global
 host-suffix, workflow.is, Global

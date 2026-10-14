@@ -5,11 +5,21 @@
 # Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
 # Selected domain references: v2fly/domain-list-community@c6adacf29cc4fb05e04651fcf03e00989ef9f797.
 # MIT (Copyright (c) 2018-2019 V2Ray); full notices in LICENSES/.
+# Exact OAuth endpoints: https://accounts.google.com/.well-known/openid-configuration
+# Gemini API: https://ai.google.dev/api/generate-content
+# Gemini Code Assist: https://docs.cloud.google.com/gemini/docs/codeassist/set-up-gemini
+# Shared Google cloud/storage roots remain unclaimed; only named product API hosts are added.
 
+host, ai.google.dev, Google
 host, clientservices.googleapis.com, Google
+host, cloudaicompanion.googleapis.com, Google
+host, cloudcode-pa.googleapis.com, Google
 host, crl.pki.goog, Google
 host, fonts.googleapis.com, Google
+host, generativelanguage.googleapis.com, Google
+host, oauth2.googleapis.com, Google
 host, ocsp.pki.goog, Google
+host, openidconnect.googleapis.com, Google
 host, redirector.c.bigcache.googleapis.com, Google
 host, safebrowsing.googleapis.com, Google
 host, translate.googleapis.com, Google
