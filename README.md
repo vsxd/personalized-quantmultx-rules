@@ -9,6 +9,8 @@
 - [docs/category-partition.md](docs/category-partition.md)：目录边界、服务例外与 GeoIP 设计。
 - [docs/acceptance.md](docs/acceptance.md)：导入后的设备验收，包括节点缓存、策略实际选择、DNS、IPv6 和 UDP。
 
+默认 `filter_remote` 只有 **11 项**：HSBC、OpenAI、Claude、OpenAI 共享依赖、Apple、Microsoft、Google、China／Global／Game 三个常规汇总及 Telegram IP。规则库仍保留 113 个可维护的叶子文件；`Bundles/` 是自动生成的发布文件，不重复手工维护。
+
 所有旧根目录服务列表、Services/SNS、DomesticMedia/ForeignMedia/GamesAll 聚合路径均不再兼容。必须使用新配置或按 manifest 更新资源地址；不要继续请求旧 `main` 分支。
 
 ```sh
@@ -27,6 +29,8 @@ python3 scripts/build_config.py --mode remote --ref <完整提交SHA> \
   --private-from /path/to/private-config.txt --output /path/outside-repo/qx.private.conf
 ```
 
+在完整默认分类下使用汇总资源。若用 `--disable TAG` 关闭某个汇总内的单项，受影响的汇总会自动展开为保留下来的叶子 URL，避免关闭的规则被汇总重新带入；需要始终单文件时使用 standalone。
+
 构建器只继承 server_remote/server_local 和明确的本地 host/suffix/IP 例外。旧 GeoIP/Final 不继承；重写、任务、CA 与旧规则 URL 不继承。非法语法、/0、宽泛关键词/通配、共享提供商根域、大网段或未知策略会要求先审查并报错，不会偷偷修改其含义。同时检查私有规则之间、以及私有规则与本次启用分类／本机私网规则之间的策略和 DNS／网卡选项冲突；冲突时停止生成，不会把当前都选中 direct 的不同策略组视为等价。相同有效行为的重复规则可以去重，内部域名仍可保留。自定义组与远程节点名不会隐式继承。私有文件限制在仓库外、以 0600 权限原子写入；不要提交订阅、抓包内容和节点凭证。
 
 ## 默认策略
@@ -34,14 +38,14 @@ python3 scripts/build_config.py --mode remote --ref <完整提交SHA> \
 | 类别 | 默认选择 | 边界 |
 | --- | --- | --- |
 | HSBC | 固定 direct | 覆盖香港等明确银行域及专属 AWS WAF 主机，不接管整个 AWS |
-| OpenAI / Claude | direct，可手选 AI-Proxy | 大陆普通网络不保证直连可达；已有保存状态可能覆盖模板首选 |
-| OpenAI 共享依赖 | AI-Dependencies，默认跟随 OpenAI | 默认启用但可关闭；同域的其他应用也会受影响 |
+| OpenAI / Claude | direct，可直接手选美国／新加坡／日本等出口 | 大陆普通网络不保证直连可达；已有保存状态可能覆盖模板首选 |
+| OpenAI 共享依赖 | 直接使用 OpenAI 策略 | 默认启用但可关闭；同域的其他应用也会受影响 |
 | Apple / Microsoft / 游戏 / 国内服务 | 默认 direct | 按服务类别控制，第三方云租户不归入平台整站范围 |
 | Google / 境外服务 | 默认 OutSide | 已知域名优先，不能以 GeoIP 取代服务身份 |
 | 未命中域名 | GeoIP CN → direct，再 Final | Final 默认 OutSide；数据库和 DNS 结果可能不准确 |
 | 可选 PCDN 拦截 | 默认关闭 | 单独 reject，绝不混入 direct/China 资源 |
 
-地区组识别中文、英文和旗帜，排除流量/到期占位。没有有效节点时应修复订阅；规则本身不能提供代理。AI-Proxy 使用手选出口，避免自动测速切换长会话出口。测速 URL 可达不等于银行或 AI 服务可用。
+地区组识别中文、英文和旗帜，排除流量/到期占位。没有有效节点时应修复订阅；规则本身不能提供代理。OpenAI 和 Claude 各自手选出口，避免自动测速切换长会话出口；同一地区组的节点选择仍共享。测速 URL 可达不等于银行或 AI 服务可用。
 
 DNS 默认保留系统 DNS 与两组普通 DNS，以兼容企业 split-DNS。注释 DoH 方案会改变解析路径，不能直接视为更正确的配置。dns_exclusion_list 只影响 Fake-IP，不是直连名单。模板不加载 HTTPS 重写、MitM、会员脚本和自动请求任务。
 
@@ -55,6 +59,7 @@ DNS 默认保留系统 DNS 与两组普通 DNS，以兼容企业 split-DNS。注
 
 ```sh
 python3 scripts/check_upstreams.py
+python3 scripts/build_bundles.py
 python3 scripts/build_config.py --output Config/quantumult-x.conf
 python3 scripts/validate_rules.py
 python3 scripts/audit_semantics.py

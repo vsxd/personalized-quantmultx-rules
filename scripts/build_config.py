@@ -45,7 +45,7 @@ def load_categories(enable=(), disable=(), root=ROOT) -> list[dict]:
     items = json.loads((root / 'Config/categories.json').read_text())
     if not isinstance(items, list) or not items:
         raise ValueError('Category manifest must be a nonempty array')
-    tags, paths = set(), set()
+    tags, paths, group_policies = set(), set(), {}
     known = policy_names(sections((root / 'Config/base.conf').read_text()))
     for item in items:
         path, tag, policy = item['path'], item['tag'], item['policy']
@@ -65,13 +65,69 @@ def load_categories(enable=(), disable=(), root=ROOT) -> list[dict]:
             raise ValueError(f'default_enabled must be boolean: {tag}')
         if not (root / path).is_file():
             raise ValueError(f'Missing owned list: {path}')
+        if 'remote_group' in item:
+            group = item['remote_group']
+            if not isinstance(group, str) or not re.fullmatch(r'[A-Za-z0-9][A-Za-z0-9_-]*', group):
+                raise ValueError(f'Invalid remote group: {group!r}')
+            if path.startswith(('Rules/Optional/', 'Rules/IP/')) or not item.get('default_enabled', True):
+                raise ValueError(f'Optional and IP resources must remain individually selectable: {tag}')
+            if group in group_policies and group_policies[group] != policy:
+                raise ValueError(f'Remote group {group} mixes effective policies')
+            group_policies[group] = policy
         tags.add(tag)
         paths.add(path)
+    if tags & {f'Common-{group}' for group in group_policies}:
+        raise ValueError('Remote bundle tag conflicts with a category tag')
     enable, disable = set(enable), set(disable)
     if enable & disable or (enable | disable) - tags:
         raise ValueError('Enable/disable tags must exist and must not contradict one another')
     return [item for item in items if item['tag'] not in disable
             and (item.get('default_enabled', True) or item['tag'] in enable)]
+
+
+def remote_resources(items, root=ROOT):
+    """Coalesce complete default groups; retain leaves for custom selections.
+
+    The first selected member fixes the bundle position. source_paths records
+    the ordered leaf contents, so auditors can verify coverage and precedence.
+    A group with even one disabled member cannot use the published full bundle.
+    """
+    defaults = load_categories(root=root)
+    members, selected = {}, {}
+    for item in defaults:
+        if group := item.get('remote_group'):
+            members.setdefault(group, []).append(item['path'])
+    for item in items:
+        if group := item.get('remote_group'):
+            selected.setdefault(group, []).append(item['path'])
+    complete = {group for group, paths in selected.items() if paths == members.get(group)}
+    result, emitted = [], set()
+    for item in items:
+        group = item.get('remote_group')
+        if group in complete:
+            if group in emitted:
+                continue
+            emitted.add(group)
+            result.append({'path': f'Bundles/{group}.list', 'tag': f'Common-{group}',
+                           'policy': item['policy'], 'source_paths': members[group].copy()})
+        else:
+            result.append({key: item[key] for key in ('path', 'tag', 'policy')}
+                          | {'source_paths': [item['path']]})
+    return result
+
+
+def category_rules(item, root=ROOT, known=None):
+    """Parse a leaf and validate its effective policy without changing it."""
+    if known is None:
+        known = policy_names(sections((root / 'Config/base.conf').read_text()))
+    rules, diagnostics = inspect_text((root / item['path']).read_text(), item['path'])
+    diagnostics += validate_policy_references(rules, known, {item['path']: item['policy']})
+    errors = [d.message for d in diagnostics if d.severity == 'error']
+    if any(r.kind in {'geoip', 'ip-asn', 'final'} for r in rules):
+        errors.append('GeoIP, ASN and Final are forbidden in reusable categories')
+    if errors:
+        raise ValueError(f"Invalid category {item['path']}: " + '; '.join(errors))
+    return [Rule(r.file, r.line, r.kind, r.value, item['policy'], r.options) for r in rules]
 
 
 def serialize(rule, policy=None):
@@ -137,24 +193,17 @@ def build(mode='remote', ref='master', private_text=None, enable=(), disable=(),
     known = policy_names(config)
     domain_lines, address_lines, effective_rules = [], [], []
     for item in categories:
-        path = root / item['path']
-        rules, diagnostics = inspect_text(path.read_text(), item['path'])
-        diagnostics += validate_policy_references(rules, known, {item['path']: item['policy']})
-        errors = [d.message for d in diagnostics if d.severity == 'error']
-        if any(r.kind in {'geoip', 'ip-asn', 'final'} for r in rules):
-            errors.append('GeoIP, ASN and Final are forbidden in reusable categories')
-        if errors:
-            raise ValueError(f"Invalid category {item['path']}: " + '; '.join(errors))
-        effective_rules.extend(Rule(r.file, r.line, r.kind, r.value, item['policy'], r.options)
-                               for r in rules)
-        if mode == 'remote':
-            config['[filter_remote]'].append(
-                f"{BASE}{ref}/{item['path']}, tag={item['tag']}, force-policy={item['policy']}, "
-                'update-interval=86400, opt-parser=false, enabled=true')
-        else:
+        rules = category_rules(item, root, known)
+        effective_rules.extend(rules)
+        if mode == 'standalone':
             for rule in rules:
                 destination = address_lines if rule.kind in {'ip-cidr', 'ip6-cidr'} else domain_lines
-                destination.append(serialize(rule, item['policy']))
+                destination.append(serialize(rule))
+    if mode == 'remote':
+        for resource in remote_resources(categories, root):
+            config['[filter_remote]'].append(
+                f"{BASE}{ref}/{resource['path']}, tag={resource['tag']}, force-policy={resource['policy']}, "
+                'update-interval=86400, opt-parser=false, enabled=true')
 
     local = active(config['[filter_local]'])
     if local[-2:] != ['geoip, cn, direct', 'final, Final']:

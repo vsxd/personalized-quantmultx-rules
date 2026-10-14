@@ -134,12 +134,12 @@ https://example.invalid/remote-code.js, enabled=true
         self.assertTrue(disabled)
         tag=disabled[0]['tag']
         for mode in ('remote','standalone'):
-            output=b.build(mode,enable=[tag],disable=['AI-Dependencies'])
+            output=b.build(mode,enable=[tag],disable=['OpenAI-SharedDependencies'])
             if mode=='remote':
                 self.assertIn('tag='+tag+',',output)
-                self.assertNotIn('tag=AI-Dependencies,',output)
+                self.assertNotIn('tag=OpenAI-SharedDependencies,',output)
             else:
-                self.assertNotIn('host, cdn.workos.com, AI-Dependencies',output)
+                self.assertNotIn('host, cdn.workos.com, OpenAI',output)
         for kwargs in ({'enable':['not-a-category']},{'enable':['OpenAI'],'disable':['OpenAI']}):
             with self.assertRaises(ValueError):b.build(**kwargs)
     def test_manifest_rejects_duplicate_paths_unknown_policy_and_traversal(self):

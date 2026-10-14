@@ -38,11 +38,11 @@
         {
           "kind": "host-suffix",
           "value": "intercom.io",
-          "policy": "AI-Dependencies",
+          "policy": "OpenAI",
           "options": []
         }
       ],
-      "reason": "Official OpenAI allowlist explicitly includes this shared support provider. This is confined to the separately switchable AI-Dependencies category, enabled in the baseline; it affects other apps using the same provider and is not claimed to be OpenAI-exclusive.",
+      "reason": "Official OpenAI allowlist explicitly includes this shared support provider. This is confined to the separately switchable OpenAI-SharedDependencies category, enabled in the baseline; it affects other apps using the same provider and is not claimed to be OpenAI-exclusive.",
       "evidence": [
         "https://help.openai.com/en/articles/9247338-network-recommendations-for-chatgpt-errors-on-web-and-apps"
       ]
@@ -53,11 +53,11 @@
         {
           "kind": "host-suffix",
           "value": "intercomcdn.com",
-          "policy": "AI-Dependencies",
+          "policy": "OpenAI",
           "options": []
         }
       ],
-      "reason": "Official OpenAI allowlist explicitly includes this shared support provider. This is confined to the separately switchable AI-Dependencies category, enabled in the baseline; it affects other apps using the same provider and is not claimed to be OpenAI-exclusive.",
+      "reason": "Official OpenAI allowlist explicitly includes this shared support provider. This is confined to the separately switchable OpenAI-SharedDependencies category, enabled in the baseline; it affects other apps using the same provider and is not claimed to be OpenAI-exclusive.",
       "evidence": [
         "https://help.openai.com/en/articles/9247338-network-recommendations-for-chatgpt-errors-on-web-and-apps"
       ]
@@ -219,7 +219,7 @@
         {
           "kind": "host",
           "value": "humb.apple.com",
-          "policy": "AI-Dependencies",
+          "policy": "OpenAI",
           "options": []
         },
         {
@@ -229,7 +229,7 @@
           "options": []
         }
       ],
-      "reason": "The official OpenAI allowlist names this exact Apple host. Optional AI-Dependencies explicitly overrides the otherwise Apple policy, so the narrow host is loaded first.",
+      "reason": "The official OpenAI allowlist names this exact Apple host. Optional OpenAI-SharedDependencies explicitly overrides the otherwise Apple policy, so the narrow host is loaded first.",
       "evidence": [
         "https://help.openai.com/en/articles/9247338-network-recommendations-for-chatgpt-errors-on-web-and-apps"
       ],

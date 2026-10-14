@@ -47619,5 +47619,18 @@
     "The corpus deliberately does not mirror upstream defensive brand registrations, include directives, regex, ads or complete global IP pools.",
     "QX destination rules cannot isolate a caller on a shared hostname; OpenAI official shared dependencies are an explicit optional exception.",
     "Unknown destinations use terminal GeoIP CN then Final; database freshness and runtime policy selections affect actual routes."
+  ],
+  "follow_up_changes": [
+    {
+      "reviewed_at": "2026-10-14",
+      "baseline_commit": "001c776e98da27b4d0da64d0eed2eaa74bd65c2e",
+      "reason": "User requested fewer policy groups and remote subscription entries without losing service coverage.",
+      "changes": [
+        "Remove AI-Proxy and AI-Dependencies policy groups; inline stable regional candidates into OpenAI and Claude.",
+        "Bind the optional OpenAI shared-dependency leaf directly to OpenAI; resource tag is OpenAI-SharedDependencies.",
+        "Generate China/Global/Game remote bundles from unchanged canonical leaf destinations; retain targeted service and IP resources."
+      ],
+      "historical_records": "Prior records below retain their original policies and paths as dated migration evidence; Config/categories.json and current rule files are authoritative."
+    }
   ]
 }

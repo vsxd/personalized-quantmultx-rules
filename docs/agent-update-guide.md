@@ -62,9 +62,10 @@ v2fly 另使用完整 SHA 的有界源码归档，读取 `data/` 中的普通文
 
 ## 5. 验证并交付
 
-修改涉及的叶子清单、分类清单、覆盖/隔离证据和测试。不可引入会员解锁、响应篡改或任意远程重写脚本。运行：
+修改涉及的叶子清单、分类清单、覆盖/隔离证据和测试。`Bundles/` 是 manifest 的 remote_group 自动汇总输出，不能作为第二套手工维护的源；先重新生成汇总，再生成配置。不可引入会员解锁、响应篡改或任意远程重写脚本。运行：
 
 ```sh
+python3 scripts/build_bundles.py
 python3 scripts/build_config.py --mode remote --output Config/quantumult-x.conf
 python3 scripts/validate_rules.py
 python3 scripts/audit_semantics.py

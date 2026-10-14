@@ -12,7 +12,7 @@ spec = importlib.util.spec_from_file_location('semantic_auditor', ROOT / 'script
 audit = importlib.util.module_from_spec(spec)
 sys.modules[spec.name] = audit
 spec.loader.exec_module(audit)
-from build_config import build
+from build_config import build, load_categories
 
 
 def parse(text):
@@ -43,7 +43,7 @@ class SemanticAuditTest(unittest.TestCase):
             self.assertFalse(audit.domain_matches(rule, host))
 
     def test_host_and_suffix_parent_child_are_compared(self):
-        text = 'host, humb.apple.com, AI-Dependencies\nhost-suffix, apple.com, Apple'
+        text = 'host, humb.apple.com, OpenAI\nhost-suffix, apple.com, Apple'
         self.assertIn('host-policy-overlap', codes(text))
         self.assertIn('host-policy-overlap', codes(text.replace('host, humb', 'host-suffix, humb')))
         self.assertIn('host-policy-overlap', codes('host, example.com, direct\nhost-suffix, example.com, Global'))
@@ -120,17 +120,17 @@ class SemanticAuditTest(unittest.TestCase):
         self.assertNotIn('unknown-policy', {f.code for f in audit.audit_profile(config.replace('Missing', 'Final'))})
 
     def test_exception_binds_exact_options_evidence_and_effective_policy(self):
-        rules = parse('host, humb.apple.com, AI-Dependencies\nhost-suffix, apple.com, Apple')
+        rules = parse('host, humb.apple.com, OpenAI\nhost-suffix, apple.com, Apple')
         findings, document = audit.audit_rules(rules), exception(rules)
         self.assertEqual([], audit.apply_exceptions(findings, document))
         self.assertEqual('accepted', findings[0].severity)
-        changed = parse('host, humb.apple.com, AI-Dependencies, force-remote-dns\nhost-suffix, apple.com, Apple')
+        changed = parse('host, humb.apple.com, OpenAI, force-remote-dns\nhost-suffix, apple.com, Apple')
         self.assertIn('stale-exception', {f.code for f in audit.apply_exceptions(audit.audit_rules(changed), document)})
         document['exceptions'][0]['evidence'] = []
         self.assertIn('exception-schema', {f.code for f in audit.apply_exceptions(audit.audit_rules(rules), document)})
 
     def test_exception_enforces_narrower_before_broader(self):
-        rules = parse('host, humb.apple.com, AI-Dependencies\nhost-suffix, apple.com, Apple')
+        rules = parse('host, humb.apple.com, OpenAI\nhost-suffix, apple.com, Apple')
         findings = audit.audit_rules(list(reversed(rules)))
         self.assertIn('exception-order', {f.code for f in audit.apply_exceptions(findings, exception(rules))})
         self.assertEqual('error', findings[0].severity)
@@ -146,7 +146,7 @@ class SemanticAuditTest(unittest.TestCase):
             self.assertIn('error', {f.severity for f in findings})
 
     def test_missing_options_cannot_implicitly_waive_future_behavior(self):
-        rules = parse('host-suffix, intercom.io, AI-Dependencies')
+        rules = parse('host-suffix, intercom.io, OpenAI')
         document = exception(rules, 'shared-provider-suffix')
         del document['exceptions'][0]['targets'][0]['options']
         self.assertIn('exception-schema', {f.code for f in audit.apply_exceptions(audit.audit_rules(rules), document)})
@@ -187,7 +187,11 @@ class ManifestSelectionTest(unittest.TestCase):
             {'path': 'Rules/Optional/Dependency.list', 'tag': 'Dependency', 'policy': 'Optional', 'default_enabled': True}]
 
     def audit(self):
+        from build_bundles import generate_bundles
         (self.root / 'Config/categories.json').write_text(json.dumps(self.categories))
+        for path, content in generate_bundles(root=self.root).items():
+            (self.root / path).parent.mkdir(parents=True, exist_ok=True)
+            (self.root / path).write_text(content)
         (self.root / 'Config/quantumult-x.conf').write_text(build(root=self.root))
         return audit.audit_repository(self.root)
 
@@ -249,6 +253,142 @@ class ManifestSelectionTest(unittest.TestCase):
         with patch('build_config.build', side_effect=broken_builder):
             _, findings = audit.audit_repository(self.root)
         self.assertIn('standalone-manifest', {f.code for f in findings})
+
+
+class BundleAuditTest(unittest.TestCase):
+    def setUp(self):
+        self.temp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.temp.cleanup)
+        self.root = Path(self.temp.name)
+        for dirname in ('Config', 'Rules/Services', 'Rules/Optional', 'docs'):
+            (self.root / dirname).mkdir(parents=True)
+        (self.root / 'Config/base.conf').write_text(
+            '[policy]\nstatic = Service, direct\nstatic = Optional, proxy\nstatic = Final, proxy\n'
+            '[filter_remote]\n[filter_local]\ngeoip, cn, direct\nfinal, Final\n')
+        (self.root / 'Rules/Services/Core.list').write_text('host-suffix, example.com, Service\n')
+        (self.root / 'Rules/Services/Second.list').write_text('host-suffix, example.net, Service\n')
+        (self.root / 'Rules/Optional/Dependency.list').write_text('host-suffix, example.org, Optional\n')
+        self.categories = [
+            {'path': 'Rules/Services/Core.list', 'tag': 'Core', 'policy': 'Service',
+             'remote_group': 'Service', 'default_enabled': True},
+            {'path': 'Rules/Optional/Dependency.list', 'tag': 'Dependency', 'policy': 'Optional',
+             'default_enabled': True},
+            {'path': 'Rules/Services/Second.list', 'tag': 'Second', 'policy': 'Service',
+             'remote_group': 'Service', 'default_enabled': True}]
+        self.bundle = self.root / 'Bundles/Service.list'
+
+    def publish(self):
+        from build_bundles import generate_bundles
+        (self.root / 'Config/categories.json').write_text(json.dumps(self.categories))
+        for path, content in generate_bundles(root=self.root).items():
+            (self.root / path).parent.mkdir(parents=True, exist_ok=True)
+            (self.root / path).write_text(content)
+        (self.root / 'Config/quantumult-x.conf').write_text(build(root=self.root))
+
+    def error_codes(self):
+        _, findings = audit.audit_repository(self.root)
+        return {finding.code for finding in findings if finding.severity == 'error'}
+
+    def test_bundle_default_has_exact_leaf_coverage_without_duplicate_inventory(self):
+        self.publish()
+        rules, findings = audit.audit_repository(self.root)
+        self.assertEqual(3, len(rules))
+        self.assertEqual([], [f for f in findings if f.severity == 'error'])
+        resources = audit.parse_sections(build(root=self.root))['[filter_remote]']
+        self.assertEqual(2, len(resources))
+        self.assertIn('/Bundles/Service.list', resources[0])
+
+    def test_missing_bundle_rule_fails_drift_and_coverage(self):
+        self.publish()
+        self.bundle.write_text(self.bundle.read_text().replace('host-suffix, example.net, Service\n', ''))
+        self.assertTrue({'generated-bundle-drift', 'remote-coverage'} <= self.error_codes())
+
+    def test_duplicate_bundle_rule_fails_multiplicity_and_semantics(self):
+        self.publish()
+        self.bundle.write_text(self.bundle.read_text() + 'host-suffix, example.net, Service\n')
+        self.assertTrue({'generated-bundle-drift', 'remote-coverage', 'exact-duplicate'} <= self.error_codes())
+
+    def test_bundle_dns_option_change_is_not_equal_coverage(self):
+        self.publish()
+        self.bundle.write_text(self.bundle.read_text().replace(
+            'host-suffix, example.net, Service', 'host-suffix, example.net, Service, force-remote-dns'))
+        self.assertTrue({'generated-bundle-drift', 'remote-coverage'} <= self.error_codes())
+
+    def test_bundle_policy_comparison_uses_effective_force_policy(self):
+        self.publish()
+        self.bundle.write_text(self.bundle.read_text().replace(
+            'host-suffix, example.net, Service', 'host-suffix, example.net, Optional'))
+        errors = self.error_codes()
+        self.assertIn('generated-bundle-drift', errors)
+        self.assertNotIn('remote-coverage', errors)
+
+    def test_missing_and_undeclared_bundles_are_errors(self):
+        self.publish()
+        self.bundle.rename(self.bundle.with_name('Unexpected.list'))
+        self.assertTrue({'bundle-inventory', 'generated-bundle-drift', 'remote-resource'} <= self.error_codes())
+
+    def test_bundle_order_still_enforces_reviewed_narrower_first(self):
+        (self.root / 'Rules/Services/Core.list').write_text('host, api.example.com, Service, force-remote-dns\n')
+        (self.root / 'Rules/Services/Second.list').write_text('host-suffix, example.com, Service\n')
+        overlap = parse('host, api.example.com, Service, force-remote-dns\nhost-suffix, example.com, Service')
+        (self.root / 'docs/semantic-exceptions.json').write_text(
+            json.dumps(exception(overlap, 'host-option-overlap')))
+        self.publish()
+        self.assertEqual(set(), self.error_codes())
+        lines = self.bundle.read_text().splitlines()
+        positions = [i for i, line in enumerate(lines) if line.startswith('host')]
+        lines[positions[0]], lines[positions[1]] = lines[positions[1]], lines[positions[0]]
+        self.bundle.write_text('\n'.join(lines) + '\n')
+        errors = self.error_codes()
+        self.assertIn('exception-order', errors)
+        self.assertNotIn('remote-coverage', errors)
+
+    def test_bundle_movement_across_another_policy_cannot_hide_override_conflict(self):
+        (self.root / 'Rules/Services/Core.list').write_text('host-suffix, example.net, Service\n')
+        (self.root / 'Rules/Optional/Dependency.list').write_text('host, api.example.com, Optional\n')
+        (self.root / 'Rules/Services/Second.list').write_text('host-suffix, example.com, Service\n')
+        overlap = parse('host, api.example.com, Optional\nhost-suffix, example.com, Service')
+        (self.root / 'docs/semantic-exceptions.json').write_text(json.dumps(exception(overlap)))
+        self.publish()
+        errors = self.error_codes()
+        self.assertIn('exception-order', errors)
+        self.assertNotIn('standalone-manifest', errors)
+        self.assertNotIn('remote-coverage', errors)
+
+    def test_partial_group_selection_reads_leaf_and_preserves_optional(self):
+        from build_config import remote_resources
+        self.publish()
+        items = load_categories(disable=['Core'], root=self.root)
+        plan = remote_resources(items, root=self.root)
+        remote = build(disable=['Core'], root=self.root)
+        rules, findings = audit.read_remote_rules(remote, plan, self.root, 'disable=Core')
+        self.assertEqual([], findings)
+        self.assertEqual({'example.org', 'example.net'}, {rule.value for rule in rules})
+        self.assertFalse(any(item['path'].startswith('Bundles/') for item in plan))
+        self.assertEqual(['Rules/Optional/Dependency.list', 'Rules/Services/Second.list'],
+                         [item['path'] for item in plan])
+
+    def test_actual_remote_order_is_audited_even_if_manifest_plan_is_correct(self):
+        (self.root / 'Rules/Optional/Dependency.list').write_text('host, api.example.com, Optional\n')
+        self.categories = [self.categories[1], self.categories[0], self.categories[2]]
+        overlap = parse('host, api.example.com, Optional\nhost-suffix, example.com, Service')
+        (self.root / 'docs/semantic-exceptions.json').write_text(json.dumps(exception(overlap)))
+        self.publish()
+        original_build = build
+
+        def broken_builder(mode='remote', **kwargs):
+            config = original_build(mode, **kwargs)
+            if mode == 'remote':
+                rows = audit.parse_sections(config)['[filter_remote]']
+                config = config.replace('\n'.join(rows), '\n'.join(reversed(rows)))
+            return config
+
+        with patch('build_config.build', side_effect=broken_builder):
+            _, findings = audit.audit_repository(self.root)
+        errors = {finding.code for finding in findings if finding.severity == 'error'}
+        self.assertIn('remote-manifest', errors)
+        self.assertIn('exception-order', errors)
+        self.assertNotIn('remote-coverage', errors)
 
 
 if __name__ == '__main__':
