@@ -1,20 +1,20 @@
 # Independently curated Quantumult X destinations: OpenAI-SharedDependencies
 # Reviewed: 2026-10-14. Scope and exact decisions: docs/corpus-review.json.
 # Service names are separate from transport IP lists; no geography/final fallback here.
-# Optional shared OpenAI allowlist; enabled in the baseline and follows AI-Dependencies.
+# Optional shared OpenAI allowlist; enabled in the baseline and follows OpenAI.
 # These endpoints also serve other apps. Disable this category to use their normal fallback.
 # Evidence: https://help.openai.com/en/articles/9247338-network-recommendations-for-chatgpt-errors-on-web-and-apps
 
-host, cdn.workos.com, AI-Dependencies
-host, challenges.cloudflare.com, AI-Dependencies
-host, forwarder.workos.com, AI-Dependencies
-host, frontend-apps-multi-region.workos.com, AI-Dependencies
-host, humb.apple.com, AI-Dependencies
-host, images.workoscdn.com, AI-Dependencies
-host, js.stripe.com, AI-Dependencies
-host, rum.browser-intake-datadoghq.com, AI-Dependencies
-host, setup.workos.com, AI-Dependencies
-host, workos.imgix.net, AI-Dependencies
-host-suffix, ct.sendgrid.net, AI-Dependencies
-host-suffix, intercom.io, AI-Dependencies
-host-suffix, intercomcdn.com, AI-Dependencies
+host, cdn.workos.com, OpenAI
+host, challenges.cloudflare.com, OpenAI
+host, forwarder.workos.com, OpenAI
+host, frontend-apps-multi-region.workos.com, OpenAI
+host, humb.apple.com, OpenAI
+host, images.workoscdn.com, OpenAI
+host, js.stripe.com, OpenAI
+host, rum.browser-intake-datadoghq.com, OpenAI
+host, setup.workos.com, OpenAI
+host, workos.imgix.net, OpenAI
+host-suffix, ct.sendgrid.net, OpenAI
+host-suffix, intercom.io, OpenAI
+host-suffix, intercomcdn.com, OpenAI

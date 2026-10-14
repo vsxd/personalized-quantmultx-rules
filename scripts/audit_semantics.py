@@ -346,9 +346,73 @@ def audit_ip_evidence(text: str, path: str) -> list[Finding]:
     return []
 
 
+def canonical_rules(rules: list[Rule]) -> list[tuple]:
+    """Preserve multiplicity while comparing effective destination behavior."""
+    return [signature('rule', [target(rule)]) for rule in rules]
+
+
+def audit_bundle_artifacts(root: Path) -> list[Finding]:
+    """Published bundles are deterministic outputs, never independent owners."""
+    from build_bundles import generate_bundles
+    findings = []
+    try:
+        expected = generate_bundles(root=root)
+    except (OSError, ValueError, KeyError, TypeError) as exc:
+        return [Finding('bundle-build', 'error', str(exc), [], ['Bundles'])]
+    actual = {str(path.relative_to(root)) for path in (root / 'Bundles').rglob('*.list')}
+    if actual != set(expected):
+        findings.append(Finding('bundle-inventory', 'error',
+                                'Published bundles must exactly match manifest groups.',
+                                [], sorted(actual ^ set(expected))))
+    for path, content in expected.items():
+        try:
+            published = (root / path).read_text()
+        except OSError as exc:
+            findings.append(Finding('generated-bundle-drift', 'error', str(exc), [], [path]))
+            continue
+        if published != content:
+            findings.append(Finding('generated-bundle-drift', 'error',
+                                    'Published bundle differs from its ordered source leaves.', [], [path]))
+    return findings
+
+
+def read_remote_rules(config: str, resources: list[dict], root: Path, label: str
+                      ) -> tuple[list[Rule], list[Finding]]:
+    """Flatten the actual configured URL order and published bytes, including overrides.
+
+    Only URLs in the builder's selected owned-resource plan are read. A changed,
+    missing or duplicated URL still fails the exact remote-manifest comparison;
+    this pass additionally catches content drift and behavior/order changes.
+    """
+    from build_config import BASE
+    allowed = {f"{BASE}master/{item['path']}": item for item in resources}
+    rules, findings = [], []
+    for line in parse_sections(config).get('[filter_remote]', []):
+        fields = [field.strip() for field in line.split(',')]
+        item = allowed.get(fields[0])
+        if item is None:
+            findings.append(Finding('remote-resource', 'error',
+                                    'Remote URL is not in the selected owned-resource plan.', [], [label]))
+            continue
+        options = dict(field.split('=', 1) for field in fields[1:] if '=' in field)
+        path = item['path']
+        try:
+            source = (root / path).read_text()
+        except OSError as exc:
+            findings.append(Finding('remote-resource', 'error', str(exc), [], [path]))
+            continue
+        parsed, diagnostics = inspect_text(source, path)
+        findings.extend(Finding('invalid-rule', 'error', d.message, [], [f'{path}:{d.line}'])
+                        for d in diagnostics if d.severity == 'error')
+        rules.extend(Rule(rule.file, rule.line, rule.kind, rule.value,
+                          options.get('force-policy', rule.policy), rule.options)
+                     for rule in parsed)
+    return rules, findings
+
+
 def audit_repository(root: Path = ROOT) -> tuple[list[Rule], list[Finding]]:
     # Lazy import keeps build_config.private_scope_errors free to reuse this module.
-    from build_config import BASE, build, load_categories, policy_names, sections
+    from build_config import BASE, build, load_categories, policy_names, remote_resources, sections
     findings, enabled_rules = [], []
     try:
         domain_boundaries()
@@ -361,6 +425,7 @@ def audit_repository(root: Path = ROOT) -> tuple[list[Rule], list[Finding]]:
     actual = {str(path.relative_to(root)) for path in (root / 'Rules').rglob('*.list')}
     if listed != actual:
         findings.append(Finding('category-inventory', 'error', 'Every rule leaf must be declared exactly once, including optional leaves.', [], sorted(listed ^ actual)))
+    findings.extend(audit_bundle_artifacts(root))
     rule_sets = {}
     for item in categories:
         path = item['path']
@@ -421,16 +486,27 @@ def audit_repository(root: Path = ROOT) -> tuple[list[Rule], list[Finding]]:
             continue
         findings.extend(audit_profile(standalone, f'assembled/{label}/standalone'))
         findings.extend(audit_profile(remote, f'assembled/{label}/remote'))
-        expected_remote = [f"{BASE}master/{item['path']}, tag={item['tag']}, force-policy={item['policy']}, update-interval=86400, opt-parser=false, enabled=true" for item in items]
+        resources = remote_resources(items, root=root)
+        expected_remote = [f"{BASE}master/{item['path']}, tag={item['tag']}, force-policy={item['policy']}, update-interval=86400, opt-parser=false, enabled=true" for item in resources]
         if parse_sections(remote).get('[filter_remote]', []) != expected_remote:
-            findings.append(Finding('remote-manifest', 'error', 'Remote resources differ from the selected owned category manifest.', [], [label]))
+            findings.append(Finding('remote-manifest', 'error', 'Remote resources differ from the selected owned bundle/leaf plan.', [], [label]))
         if parse_sections(standalone).get('[filter_remote]', []):
             findings.append(Finding('standalone-remote', 'error', 'Standalone profile unexpectedly imports remote routing resources.', [], [label]))
         compiled_rules, _ = inspect_text('\n'.join(parse_sections(standalone)['[filter_local]']))
-        canonical = lambda rs: [signature('rule', [target(r)]) for r in rs]
         expected = domain_rules + base_rules[:-2] + address_rules + base_rules[-2:]
-        if canonical(compiled_rules) != canonical(expected):
+        if canonical_rules(compiled_rules) != canonical_rules(expected):
             findings.append(Finding('standalone-manifest', 'error', 'Standalone rule order, effective policies or options differ from domain/base-IP/service-IP/fallback order.', [], [label]))
+        remote_rules, remote_findings = read_remote_rules(remote, resources, root, label)
+        findings.extend(remote_findings)
+        remote_local, _ = inspect_text('\n'.join(parse_sections(remote).get('[filter_local]', [])))
+        if canonical_rules(remote_local) != canonical_rules(base_rules):
+            findings.append(Finding('remote-local', 'error',
+                                    'Public remote profile must retain only the reviewed base local rules.', [], [label]))
+        if Counter(canonical_rules(remote_rules + remote_local)) != Counter(canonical_rules(compiled_rules)):
+            findings.append(Finding('remote-coverage', 'error',
+                                    'Remote and standalone rules differ in coverage, multiplicity, effective policy or options.', [], [label]))
+        if not any(f.code == 'invalid-rule' for f in remote_findings):
+            findings.extend(audit_rules(remote_rules + base_extras, known))
         if not enable and not disable:
             published = root / 'Config/quantumult-x.conf'
             if not published.exists() or published.read_text() != remote:

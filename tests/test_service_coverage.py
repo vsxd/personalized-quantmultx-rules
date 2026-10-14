@@ -77,8 +77,8 @@ class ServiceCoverageTest(unittest.TestCase):
         cls.lists = {}
         manifest = {item['tag']: item for item in json.loads(MANIFEST.read_text())}
         cls.paths = {}
-        for name in ('OpenAI', 'OpenAI-Dependencies', 'HSBC', 'Claude'):
-            tag = 'AI-Dependencies' if name == 'OpenAI-Dependencies' else name
+        for name in ('OpenAI', 'OpenAI-SharedDependencies', 'HSBC', 'Claude'):
+            tag = name
             path = ROOT / manifest[tag]['path']
             cls.paths[name] = path
             rules, diagnostics = validator.inspect_text(path.read_text(), str(path.relative_to(ROOT)))
@@ -120,7 +120,7 @@ class ServiceCoverageTest(unittest.TestCase):
                 self.assertFalse(covering_rules(self.lists['HSBC'], hostname))
 
     def test_full_official_openai_allowlist_is_covered_when_dependencies_enabled(self):
-        rules = self.lists['OpenAI'] + self.lists['OpenAI-Dependencies']
+        rules = self.lists['OpenAI'] + self.lists['OpenAI-SharedDependencies']
         self.assertEqual(31, len(OPENAI_OFFICIAL_ALLOWLIST))
         for entry in OPENAI_OFFICIAL_ALLOWLIST:
             hostnames = (entry,) if not entry.startswith('*.') else (
@@ -152,10 +152,10 @@ class ServiceCoverageTest(unittest.TestCase):
         ):
             with self.subTest(hostname=hostname):
                 self.assertFalse(covering_rules(self.lists['OpenAI'], hostname))
-                self.assertTrue(covering_rules(self.lists['OpenAI-Dependencies'], hostname))
+                self.assertTrue(covering_rules(self.lists['OpenAI-SharedDependencies'], hostname))
 
     def test_openai_lists_exclude_unrelated_cloud_tenants_and_lookalikes(self):
-        rules = self.lists['OpenAI'] + self.lists['OpenAI-Dependencies']
+        rules = self.lists['OpenAI'] + self.lists['OpenAI-SharedDependencies']
         for hostname in (
             'other.azureedge.net', 'other.z01.azurefd.net', 'other.blob.core.windows.net',
             'other.imgix.net', 'other.arkoselabs.com', 'o123.ingest.sentry.io',
@@ -197,18 +197,9 @@ class ServiceCoverageTest(unittest.TestCase):
             'platform.claude.com': 'Claude',
             'bridge.claudeusercontent.com': 'Claude',
         }
-        # These are the shared entries from the independently captured vendor
-        # fixture, not values inferred from the current implementation.
-        shared_official = {
-            '*.ct.sendgrid.net', '*.intercom.io', '*.intercomcdn.com',
-            'cdn.workos.com', 'challenges.cloudflare.com', 'forwarder.workos.com',
-            'frontend-apps-multi-region.workos.com', 'humb.apple.com',
-            'images.workoscdn.com', 'js.intercomcdn.com', 'js.stripe.com',
-            'rum.browser-intake-datadoghq.com', 'setup.workos.com', 'workos.imgix.net',
-        }
         for entry in OPENAI_OFFICIAL_ALLOWLIST:
             hostname = 'fixture.' + entry[2:] if entry.startswith('*.') else entry
-            expected[hostname] = 'AI-Dependencies' if entry in shared_official else 'OpenAI'
+            expected[hostname] = 'OpenAI'
         for hostname, policy in expected.items():
             with self.subTest(hostname=hostname):
                 self.assertEqual(policy, first_hostname_policy(rules, hostname))
@@ -219,7 +210,7 @@ class ServiceCoverageTest(unittest.TestCase):
                          'example.cloudfront.net', 'other.workos.com'):
             with self.subTest(unrelated=hostname):
                 self.assertNotIn(first_hostname_policy(rules, hostname),
-                                 {'OpenAI', 'AI-Dependencies', 'Claude', 'HSBC'})
+                                 {'OpenAI', 'Claude', 'HSBC'})
 
     def test_remote_profile_binds_canonical_service_files_to_effective_policies(self):
         config = builder.sections(builder.build(mode='remote'))
@@ -231,7 +222,7 @@ class ServiceCoverageTest(unittest.TestCase):
             declarations[opts['tag']] = (url, opts)
         manifest = {item['tag']: item for item in json.loads(MANIFEST.read_text())}
         for tag, policy in (('HSBC', 'direct'), ('OpenAI', 'OpenAI'),
-                            ('Claude', 'Claude'), ('AI-Dependencies', 'AI-Dependencies')):
+                            ('Claude', 'Claude'), ('OpenAI-SharedDependencies', 'OpenAI')):
             url, opts = declarations[tag]
             self.assertEqual(builder.BASE + 'master/' + manifest[tag]['path'], url)
             self.assertEqual(policy, opts['force-policy'])
@@ -240,14 +231,20 @@ class ServiceCoverageTest(unittest.TestCase):
     def test_service_policy_defaults_preserve_explicit_direct_and_dependency_inheritance(self):
         config = builder.sections(builder.build(mode='standalone'))
         first_choices = {}
+        choices = {}
         for line in builder.active(config['[policy]']):
             kind, value = line.split('=', 1)
             fields = [part.strip() for part in value.split(',')]
             if kind.strip() == 'static':
                 first_choices[fields[0]] = fields[1]
+                choices[fields[0]] = fields[1:]
         self.assertEqual('direct', first_choices['OpenAI'])
         self.assertEqual('direct', first_choices['Claude'])
-        self.assertEqual('OpenAI', first_choices['AI-Dependencies'])
+        self.assertNotIn('AI-Dependencies', choices)
+        self.assertNotIn('AI-Proxy', choices)
+        for tag in ('OpenAI', 'Claude'):
+            self.assertEqual(['direct', 'United States', 'Singapore', 'Japan', 'proxy'], choices[tag])
+        self.assertTrue(all(rule.policy == 'OpenAI' for rule in self.lists['OpenAI-SharedDependencies']))
         # The config intentionally fixes HSBC via force-policy, so a saved
         # selectable HSBC group cannot silently change the generated route.
         self.assertNotIn('HSBC', first_choices)

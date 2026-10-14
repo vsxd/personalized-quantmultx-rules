@@ -36,6 +36,16 @@ final, Final
 
 GeoIP 不写进可复用类别，.cn 也不是“服务器在中国”的证明。已知需要指定策略的海外服务不能因为 Final 默认代理就删除：其 DNS 结果可能是中国 IP，或数据库有误，明确域名应先确定意图。反过来，无法证明属于单一应用的共享 CDN/云 IP 不抢在 GeoIP 前捕获。
 
-构建器提供 remote 和 standalone，两种输出使用同一启用清单和有效策略。远程方式每个资源单独下载；全新导入若需要排除加载/缓存差异，可先使用 standalone。QX 的匹配优化、优先本地分流和插入资源开关是独立运行设置；静态清单的顺序不等于所有设备状态下的实际执行顺序，验收必须查看命中的规则和完整策略路径。
+构建器提供 remote 和 standalone，两种输出使用同一启用清单和有效策略。远程方式默认把常规 China／Global／Game 叶子汇总成 3 个资源，总计只加载 11 项；全新导入若需要排除加载/缓存差异，可先使用 standalone。QX 的匹配优化、优先本地分流和插入资源开关是独立运行设置；静态清单的顺序不等于所有设备状态下的实际执行顺序，验收必须查看命中的规则和完整策略路径。
 
 完整迁移和删除记录见 corpus-review.json。docs/history/ 中第一轮“保留184告警”和条件重复的决策已被本轮取代。
+
+## 远程资源汇总
+
+`Rules/` 是唯一手工维护的规则源；manifest 的 `remote_group` 只声明发布分组，不改变规则归属或策略。构建器生成 `Bundles/China.list`、`Bundles/Global.list`、`Bundles/Game.list`，保留来源注释和许可说明。默认配置的 112 个启用叶子仍全部覆盖，共 2,900 条类别规则；资源数量变为 11 个。
+
+HSBC、OpenAI、Claude、共享 OpenAI 依赖、Apple、Microsoft、Google 和 Telegram IP 保留独立资源。共享 OpenAI 依赖直接使用 OpenAI 策略；它的独立资源只用于明确共享范围与启停，不再需要额外策略组。OpenAI 与 Claude 各自直接提供 direct、美国、新加坡、日本和 proxy 候选。
+
+汇总按 manifest 的成员顺序生成，第一次出现的分组决定远程资源位置。审查检查实际汇总后的有效规则、选项、覆盖数量及窄规则先后；不能只验证源文件。具体包括国际 iQIYI 先于国内父域、humb.apple.com 先于 Apple、启用的 PCDN 子域先于 Bilibili。
+
+如果自定义选择改变一个分组的成员，生成器对该分组退回叶子 URL，不能继续引用包含已禁用条目的默认汇总。需要任意选择但保持单文件时使用 standalone。生成文件不接受手改，先改叶子/manifest，再运行 build_bundles.py 和 build_config.py；CI 检查两种生成结果。

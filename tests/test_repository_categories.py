@@ -72,7 +72,7 @@ class RepositoryCategoriesTest(unittest.TestCase):
             'www.google.com': 'Google', 'www.google.co.jp': 'Google',
             'www.apple.com': 'Apple', 'widget.claudemcpcontent.com': 'Claude',
             'hsbc.edge.sdk.awswaf.com': 'direct', 'ws.chatgpt.com': 'OpenAI',
-            'cdn.workos.com': 'AI-Dependencies',
+            'cdn.workos.com': 'OpenAI',
         }
         for host, policy in expected.items():
             self.assertEqual(policy, first_hostname_policy(rules, host), host)
