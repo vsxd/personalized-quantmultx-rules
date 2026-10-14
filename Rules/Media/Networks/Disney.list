@@ -3,7 +3,16 @@
 # Service names are separate from transport IP lists; no geography/final fallback here.
 # Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
 # Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+# Exact third-party hosts cross-checked against v2fly/domain-list-community
+# @c6adacf29cc4fb05e04651fcf03e00989ef9f797 (MIT; see THIRD_PARTY.md).
+# MyDisney identity SDK: https://my.disney.com/; studio: https://www.20thcenturystudios.com/ (2026-10-14).
+# FX is part of Disney; independent classification also agrees with the pinned v2fly data/disney.
 
+host, disney.my.sentry.io, Global
+host, disneyplus.com.ssl.sc.omtrdc.net, Global
+host, espn.hb.omtrdc.net, Global
+host, espndotcom.tt.omtrdc.net, Global
+host-suffix, 20thcenturystudios.com, Global
 host-suffix, 20thcenturystudios.com.au, Global
 host-suffix, 20thcenturystudios.com.br, Global
 host-suffix, 20thcenturystudios.jp, Global
@@ -51,7 +60,6 @@ host-suffix, disney.in, Global
 host-suffix, disney.io, Global
 host-suffix, disney.it, Global
 host-suffix, disney.my, Global
-host-suffix, disney.my.sentry.io, Global
 host-suffix, disney.nl, Global
 host-suffix, disney.no, Global
 host-suffix, disney.ph, Global
@@ -61,6 +69,7 @@ host-suffix, disney.ro, Global
 host-suffix, disney.ru, Global
 host-suffix, disney.se, Global
 host-suffix, disney.sg, Global
+host-suffix, disneyaccount.com, Global
 host-suffix, disneyadsales.com, Global
 host-suffix, disneyarena.com, Global
 host-suffix, disneyaulani.com, Global
@@ -97,7 +106,6 @@ host-suffix, disneynow.com, Global
 host-suffix, disneypeoplesurveys.com, Global
 host-suffix, disneyplus.bn5x.net, Global
 host-suffix, disneyplus.com, Global
-host-suffix, disneyplus.com.ssl.sc.omtrdc.net, Global
 host-suffix, disneyredirects.com, Global
 host-suffix, disneysrivieraresort.com, Global
 host-suffix, disneystore.com, Global
@@ -114,11 +122,11 @@ host-suffix, dtci.technology, Global
 host-suffix, edgedatg.com, Global
 host-suffix, espn.co.uk, Global
 host-suffix, espn.com, Global
-host-suffix, espn.hb.omtrdc.net, Global
 host-suffix, espn.net, Global
 host-suffix, espncdn.com, Global
-host-suffix, espndotcom.tt.omtrdc.net, Global
 host-suffix, espnqa.com, Global
+host-suffix, fxnetwork.com, Global
+host-suffix, fxnetworks.com, Global
 host-suffix, go-disneyworldgo.com, Global
 host-suffix, go.com, Global
 host-suffix, marvel.com, Global

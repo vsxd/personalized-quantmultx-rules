@@ -3,14 +3,21 @@
 # Service names are separate from transport IP lists; no geography/final fallback here.
 # Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
 # Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+# Selected domain references: v2fly/domain-list-community@c6adacf29cc4fb05e04651fcf03e00989ef9f797.
+# MIT (Copyright (c) 2018-2019 V2Ray); full notices in LICENSES/.
 
+host, docker-pinata-support.s3.amazonaws.com, Global
+host, files.pythonhosted.org, Global
 host-suffix, adblockplus.org, Global
 host-suffix, anaconda.com, Global
 host-suffix, android-x86.org, Global
 host-suffix, angularjs.org, Global
 host-suffix, bitbucket.org, Global
 host-suffix, cocoapods.org, Global
+host-suffix, dhi.io, Global
 host-suffix, docker.com, Global
+host-suffix, docker.io, Global
+host-suffix, dockerstatic.com, Global
 host-suffix, eclipse.org, Global
 host-suffix, gitbook.com, Global
 host-suffix, hackmd.io, Global
@@ -19,10 +26,15 @@ host-suffix, jshint.com, Global
 host-suffix, leetcode.com, Global
 host-suffix, mathjax.org, Global
 host-suffix, maven.org, Global
+host-suffix, npmjs.com, Global
+host-suffix, npmjs.org, Global
+host-suffix, pypi.org, Global
+host-suffix, python.org, Global
 host-suffix, sourceforge.net, Global
 host-suffix, sstatic.net, Global
 host-suffix, stackoverflow.com, Global
 host-suffix, tablesgenerator.com, Global
+host-suffix, twitteroauth.com, Global
 host-suffix, v2ray.com, Global
 host-suffix, vimperator.org, Global
 host-suffix, w3schools.com, Global

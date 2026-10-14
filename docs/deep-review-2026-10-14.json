@@ -1,0 +1,3145 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-10-14",
+  "baseline_commit": "5e42737a28ccf006408b9be9b513fdd50f4a7b4b",
+  "scope": "113 canonical leaves: every original rule line read, and all 11 generated default resources mechanically checked against their canonical sources. Fresh ownership evidence is limited to the explicitly listed fetches and changes, not all legacy domains.",
+  "counts": {
+    "baseline_leaf_files": 113,
+    "baseline_all_rules": 2902,
+    "reviewed_leaf_files": 113,
+    "reviewed_all_rules": 2949,
+    "reviewed_default_rules": 2947,
+    "default_resources": 11,
+    "modified_leaves": 23
+  },
+  "line_review_method": [
+    "Read all baseline active source lines; inspect explicit target type, suffix boundary, service ownership/category, shared tenants, historic leftovers and service coverage.",
+    "Audit the complete assembled domain/IP sets, effective policies, options, duplicates, overlaps, optional resources, narrower-before-broader exceptions, generated bundle order and coverage.",
+    "Use official product documents/pages for refreshed endpoints and selected immutable MIT facts; do not import complete external rulesets or infer ownership from DNS success/name similarity.",
+    "A retained bounded legacy domain is reviewed static input, not a fresh ownership attestation. Reachability, GeoIP database accuracy and QX runtime matching are separate."
+  ],
+  "files": [
+    {
+      "path": "Rules/Optional/BilibiliPCDNReject.list",
+      "default_enabled": false,
+      "effective_policy": "reject",
+      "review_group": "games-video-china",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "670bf4b00ba29b7db24688c28883b746c2ac72048932f10cfcaef4753d5f37d8",
+      "reviewed_sha256": "670bf4b00ba29b7db24688c28883b746c2ac72048932f10cfcaef4753d5f37d8",
+      "baseline_rules": 2,
+      "reviewed_rules": 2,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Banking/HSBC.list",
+      "default_enabled": true,
+      "effective_policy": "direct",
+      "review_group": "core-services",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "6e97eea9f3896f9ccfd8b7c904aa5cbfa0a35358377f8a3fe0df8d7466e377dc",
+      "reviewed_sha256": "6e97eea9f3896f9ccfd8b7c904aa5cbfa0a35358377f8a3fe0df8d7466e377dc",
+      "baseline_rules": 11,
+      "reviewed_rules": 11,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/AI/OpenAI.list",
+      "default_enabled": true,
+      "effective_policy": "OpenAI",
+      "review_group": "core-services",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "b2e745eaee295d61f7aba87495b4cb34032a29458aef497a7c689fe583cf7e26",
+      "reviewed_sha256": "b2e745eaee295d61f7aba87495b4cb34032a29458aef497a7c689fe583cf7e26",
+      "baseline_rules": 18,
+      "reviewed_rules": 18,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/AI/Claude.list",
+      "default_enabled": true,
+      "effective_policy": "Claude",
+      "review_group": "core-services",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "00edc71c593cc15ebe1b5ceb43ea264eeff6bac72e19a822fd419b5b62a48e9c",
+      "reviewed_sha256": "00edc71c593cc15ebe1b5ceb43ea264eeff6bac72e19a822fd419b5b62a48e9c",
+      "baseline_rules": 6,
+      "reviewed_rules": 6,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Optional/OpenAI-SharedDependencies.list",
+      "default_enabled": true,
+      "effective_policy": "OpenAI",
+      "review_group": "core-services",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "0ba107d8fb4b0d2c489a60642b373e9d57c754e7580dc369eaddf8189d398838",
+      "reviewed_sha256": "0ba107d8fb4b0d2c489a60642b373e9d57c754e7580dc369eaddf8189d398838",
+      "baseline_rules": 13,
+      "reviewed_rules": 13,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/Video/IQIYI-International.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "games-video-china",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "b0e5171972a1bc06ab3aa546ec63b745b5ddecd5df96c68975618461c02bbdc5",
+      "reviewed_sha256": "b0e5171972a1bc06ab3aa546ec63b745b5ddecd5df96c68975618461c02bbdc5",
+      "baseline_rules": 5,
+      "reviewed_rules": 5,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Banking/ChinaBanks.list",
+      "default_enabled": true,
+      "effective_policy": "China",
+      "review_group": "games-video-china",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "36512ada3fe3ac2fa00c42f30309b7d4cf4b4f069131ff44299faa9e02a94c5e",
+      "reviewed_sha256": "36512ada3fe3ac2fa00c42f30309b7d4cf4b4f069131ff44299faa9e02a94c5e",
+      "baseline_rules": 5,
+      "reviewed_rules": 5,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Developer/GitHub.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "root-review",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "246320f133a005880714cb02812badf877a0758f46efb8140e2d45655ae73ad8",
+      "reviewed_sha256": "246320f133a005880714cb02812badf877a0758f46efb8140e2d45655ae73ad8",
+      "baseline_rules": 32,
+      "reviewed_rules": 32,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Developer/Tools.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "root-review",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "d086c20f85e694f60484e78f552e00942fcf455d556c2fc0c6ffe73e1270c015",
+      "reviewed_sha256": "77a7527531300d6d877f6473ecf4312b58b81a8c1b54f9cf26a207a200d7cd2b",
+      "baseline_rules": 23,
+      "reviewed_rules": 33,
+      "added_lines": [
+        "host, docker-pinata-support.s3.amazonaws.com, Global",
+        "host, files.pythonhosted.org, Global",
+        "host-suffix, dhi.io, Global",
+        "host-suffix, docker.io, Global",
+        "host-suffix, dockerstatic.com, Global",
+        "host-suffix, npmjs.com, Global",
+        "host-suffix, npmjs.org, Global",
+        "host-suffix, pypi.org, Global",
+        "host-suffix, python.org, Global",
+        "host-suffix, twitteroauth.com, Global"
+      ],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Games/Bethesda.list",
+      "default_enabled": true,
+      "effective_policy": "Game",
+      "review_group": "games-video-china",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "6c97a980f17d4bbab91760838e98bde6b75fdfadfb24aff6afb968eb8cd63e08",
+      "reviewed_sha256": "6c97a980f17d4bbab91760838e98bde6b75fdfadfb24aff6afb968eb8cd63e08",
+      "baseline_rules": 4,
+      "reviewed_rules": 4,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Games/Bilibili.list",
+      "default_enabled": true,
+      "effective_policy": "China",
+      "review_group": "games-video-china",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "534682e4af9d9e0b946e4a6fd1b4969483511a9a28c84762933adb4bf984151c",
+      "reviewed_sha256": "534682e4af9d9e0b946e4a6fd1b4969483511a9a28c84762933adb4bf984151c",
+      "baseline_rules": 11,
+      "reviewed_rules": 11,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Games/Blizzard.list",
+      "default_enabled": true,
+      "effective_policy": "Game",
+      "review_group": "games-video-china",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "ff50968a584e0d21d7f0052bd361e0fa4e51ec8de8c9a38ef19e978fc8ad67cf",
+      "reviewed_sha256": "ff50968a584e0d21d7f0052bd361e0fa4e51ec8de8c9a38ef19e978fc8ad67cf",
+      "baseline_rules": 3,
+      "reviewed_rules": 3,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Games/Epic.list",
+      "default_enabled": true,
+      "effective_policy": "Game",
+      "review_group": "games-video-china",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "19468d11415e223a7d3e6140e820a505628d5207a66bb4bee73b9f6d41a1e070",
+      "reviewed_sha256": "19468d11415e223a7d3e6140e820a505628d5207a66bb4bee73b9f6d41a1e070",
+      "baseline_rules": 18,
+      "reviewed_rules": 18,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Games/Minecraft.list",
+      "default_enabled": true,
+      "effective_policy": "Game",
+      "review_group": "games-video-china",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "a5f588e7acc451330bc0d7bd81d5b162be83c0a525dd4bb53b85750d22a644db",
+      "reviewed_sha256": "9c268acd23b70a5e1a6bf93143dc02a3841a8d1fce7564b3d9cec385ad5cd5e6",
+      "baseline_rules": 4,
+      "reviewed_rules": 5,
+      "added_lines": [
+        "host-suffix, minecraftservices.com, Game"
+      ],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Games/Nintendo.list",
+      "default_enabled": true,
+      "effective_policy": "Game",
+      "review_group": "games-video-china",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "b5e68f81f83995b3f51eb06367b29247d29aec4dd699cc70534aa326351ef80b",
+      "reviewed_sha256": "b5e68f81f83995b3f51eb06367b29247d29aec4dd699cc70534aa326351ef80b",
+      "baseline_rules": 35,
+      "reviewed_rules": 35,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Games/OtherGames.list",
+      "default_enabled": true,
+      "effective_policy": "Game",
+      "review_group": "games-video-china",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "5e1151c70bbb1628e597f0b822723e6f23929f6d8e9f3a42e843f3a85d6ced4d",
+      "reviewed_sha256": "5e1151c70bbb1628e597f0b822723e6f23929f6d8e9f3a42e843f3a85d6ced4d",
+      "baseline_rules": 6,
+      "reviewed_rules": 6,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Games/PlayStation.list",
+      "default_enabled": true,
+      "effective_policy": "Game",
+      "review_group": "games-video-china",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "e04ac2a5240db016eb7c3cd49d5a20606b27b09961b75ee4438fa0335138b355",
+      "reviewed_sha256": "e04ac2a5240db016eb7c3cd49d5a20606b27b09961b75ee4438fa0335138b355",
+      "baseline_rules": 5,
+      "reviewed_rules": 5,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Games/Steam.list",
+      "default_enabled": true,
+      "effective_policy": "Game",
+      "review_group": "games-video-china",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "fe050c268937752c89103d108bcdca011b5cccf224ef57bb5f6d46b56ac3c855",
+      "reviewed_sha256": "fe050c268937752c89103d108bcdca011b5cccf224ef57bb5f6d46b56ac3c855",
+      "baseline_rules": 56,
+      "reviewed_rules": 56,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Games/Stores.list",
+      "default_enabled": true,
+      "effective_policy": "Game",
+      "review_group": "games-video-china",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "01c9b4caccf89fb4dfc96e852ce507877bc31d8a9d32727b6bc0307fdc6a2aa3",
+      "reviewed_sha256": "01c9b4caccf89fb4dfc96e852ce507877bc31d8a9d32727b6bc0307fdc6a2aa3",
+      "baseline_rules": 2,
+      "reviewed_rules": 2,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Games/Xbox.list",
+      "default_enabled": true,
+      "effective_policy": "Game",
+      "review_group": "games-video-china",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "8c2c634124e5b67566cc4511c1a4887fd2cf6788a852c7526e1d8b76644e9f53",
+      "reviewed_sha256": "8c2c634124e5b67566cc4511c1a4887fd2cf6788a852c7526e1d8b76644e9f53",
+      "baseline_rules": 31,
+      "reviewed_rules": 31,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/Adult/EHentai.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "games-video-china",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "316fc514bd69aef8a7c604affe042b5396d4c7364534484dea1f199655d16c92",
+      "reviewed_sha256": "316fc514bd69aef8a7c604affe042b5396d4c7364534484dea1f199655d16c92",
+      "baseline_rules": 6,
+      "reviewed_rules": 6,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/Adult/Japonx.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "games-video-china",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "86d0064eb201cb45c8f38626b910980066cd150a914e6f4fab43d925c4d4f3df",
+      "reviewed_sha256": "86d0064eb201cb45c8f38626b910980066cd150a914e6f4fab43d925c4d4f3df",
+      "baseline_rules": 8,
+      "reviewed_rules": 8,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/Adult/OtherAdult.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "games-video-china",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "d3f2527c1665e94a4e39a9b1b7df1d782217c1821c8880a5ff1a2cd6bcd45dd4",
+      "reviewed_sha256": "d3f2527c1665e94a4e39a9b1b7df1d782217c1821c8880a5ff1a2cd6bcd45dd4",
+      "baseline_rules": 4,
+      "reviewed_rules": 4,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/Adult/Pornhub.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "games-video-china",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "08269e25827fd2802e3e3e4b881b23d9d6910f77664a0c185db3b0c7a0a763d5",
+      "reviewed_sha256": "08269e25827fd2802e3e3e4b881b23d9d6910f77664a0c185db3b0c7a0a763d5",
+      "baseline_rules": 5,
+      "reviewed_rules": 5,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/Community/Bahamut.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "games-video-china",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "25b6eef8309d80f7b9c6918b316c16ce022e97024c5e7dda5628193005c893ef",
+      "reviewed_sha256": "25b6eef8309d80f7b9c6918b316c16ce022e97024c5e7dda5628193005c893ef",
+      "baseline_rules": 5,
+      "reviewed_rules": 5,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/Community/Niconico.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "games-video-china",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "1c2372f6c123d986cce8a06e7ff0110706f4b04b98d1dca2e8bbc4eceb9a6c2d",
+      "reviewed_sha256": "1c2372f6c123d986cce8a06e7ff0110706f4b04b98d1dca2e8bbc4eceb9a6c2d",
+      "baseline_rules": 8,
+      "reviewed_rules": 8,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/Music/ChinaAudio.list",
+      "default_enabled": true,
+      "effective_policy": "China",
+      "review_group": "media-networks",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "ea4abf878c159653e235c1fec93ea51a393d704a3b47972a0c6dc7b091bd6b5d",
+      "reviewed_sha256": "523f0293484b5c8521df46e8c3a929e12f1f5c3254f447b6baae7c14cb061959",
+      "baseline_rules": 3,
+      "reviewed_rules": 4,
+      "added_lines": [
+        "host-suffix, lizhi.fm, China",
+        "host-suffix, lzpipi.com, China"
+      ],
+      "removed_lines": [
+        "host-suffix, lizhi.io, China"
+      ]
+    },
+    {
+      "path": "Rules/Media/Music/Deezer.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "media-networks",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "1e1de7bdf417ba687beb05e19e66ad6ffdd20b42261bccf913749d8d4cf473b2",
+      "reviewed_sha256": "1e1de7bdf417ba687beb05e19e66ad6ffdd20b42261bccf913749d8d4cf473b2",
+      "baseline_rules": 2,
+      "reviewed_rules": 2,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/Music/JOOX.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "media-networks",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "38d3d830051e35176679855424ac79f616a24d7ecf95405b3d8720424e5f939c",
+      "reviewed_sha256": "38d3d830051e35176679855424ac79f616a24d7ecf95405b3d8720424e5f939c",
+      "baseline_rules": 1,
+      "reviewed_rules": 1,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/Music/KKBOX.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "media-networks",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "981862da45eceb1958750322e04058e0632e5014d0ec6611a8743ad5a757206e",
+      "reviewed_sha256": "981862da45eceb1958750322e04058e0632e5014d0ec6611a8743ad5a757206e",
+      "baseline_rules": 6,
+      "reviewed_rules": 6,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/Music/MOOV.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "media-networks",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "71bbc81ec5b0fdc0d6f68f9bf644da32e7ec84b9f710ac25806f9a55d17f6800",
+      "reviewed_sha256": "71bbc81ec5b0fdc0d6f68f9bf644da32e7ec84b9f710ac25806f9a55d17f6800",
+      "baseline_rules": 1,
+      "reviewed_rules": 1,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/Music/Pandora.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "media-networks",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "4596da7fe369fd89a72cd5fc5cb4e7b44c6793a797b1d4fbd032ed5f5779b03f",
+      "reviewed_sha256": "4596da7fe369fd89a72cd5fc5cb4e7b44c6793a797b1d4fbd032ed5f5779b03f",
+      "baseline_rules": 2,
+      "reviewed_rules": 2,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/Music/Qobuz.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "media-networks",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "6898d4f395565719975b512dc93cf8339a60d29ef7d5f46b95040e04384dce43",
+      "reviewed_sha256": "6898d4f395565719975b512dc93cf8339a60d29ef7d5f46b95040e04384dce43",
+      "baseline_rules": 31,
+      "reviewed_rules": 31,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/Music/SoundCloud.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "media-networks",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "6c9414748a59237e3ac910aa784a85fb45e61be90768421dc639debcb62ccfab",
+      "reviewed_sha256": "6c9414748a59237e3ac910aa784a85fb45e61be90768421dc639debcb62ccfab",
+      "baseline_rules": 2,
+      "reviewed_rules": 2,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/Music/Spotify.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "media-networks",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "72e6ea1b04c2d1d52d605633b85883e5e8fb7a6806550e0b64e4918b0bd2a6fc",
+      "reviewed_sha256": "c72efbbad12b66c5ec8ca88c3831aa93e8413ecc632b73e3c8871a3e4a8c2b2e",
+      "baseline_rules": 24,
+      "reviewed_rules": 24,
+      "added_lines": [
+        "host, audio-ak-spotify-com.akamaized.net, Global",
+        "host, heads4-ak-spotify-com.akamaized.net, Global"
+      ],
+      "removed_lines": [
+        "host-suffix, audio-ak-spotify-com.akamaized.net, Global",
+        "host-suffix, heads4-ak-spotify-com.akamaized.net, Global"
+      ]
+    },
+    {
+      "path": "Rules/Media/Music/TIDAL.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "media-networks",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "3851dadc49ca4eb736cfeaf918ec2a0be923dcaf5f95756dac94fbfe7d2474e7",
+      "reviewed_sha256": "3851dadc49ca4eb736cfeaf918ec2a0be923dcaf5f95756dac94fbfe7d2474e7",
+      "baseline_rules": 4,
+      "reviewed_rules": 4,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/Networks/BBC.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "media-networks",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "fbb4b49fe0d0d7b6ce92b21b6a39b6d9ade7954dcc61a9e8b9e6cb7fbb1ca0cb",
+      "reviewed_sha256": "fbb4b49fe0d0d7b6ce92b21b6a39b6d9ade7954dcc61a9e8b9e6cb7fbb1ca0cb",
+      "baseline_rules": 25,
+      "reviewed_rules": 25,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/Networks/CW.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "media-networks",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "bc82fc0e338690f96e365364cb249ee4561f99013869e7fc50d1b853f96d74d6",
+      "reviewed_sha256": "bc82fc0e338690f96e365364cb249ee4561f99013869e7fc50d1b853f96d74d6",
+      "baseline_rules": 5,
+      "reviewed_rules": 5,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/Networks/Discovery.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "media-networks",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "e1d6b8072075c5db45ac1c571a3a6da51fe468dd485605524fad2507bc005ccc",
+      "reviewed_sha256": "e1d6b8072075c5db45ac1c571a3a6da51fe468dd485605524fad2507bc005ccc",
+      "baseline_rules": 7,
+      "reviewed_rules": 7,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/Networks/Disney.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "media-networks",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "811023d4ae5a2ee646899fcfe06e9fba422955a6073c8fa77ccb11b94ead9fa1",
+      "reviewed_sha256": "dd799f08729825f4f2b3960fca907575be5deca2809815ace1b21d19e4f84b82",
+      "baseline_rules": 149,
+      "reviewed_rules": 153,
+      "added_lines": [
+        "host, disney.my.sentry.io, Global",
+        "host, disneyplus.com.ssl.sc.omtrdc.net, Global",
+        "host, espn.hb.omtrdc.net, Global",
+        "host, espndotcom.tt.omtrdc.net, Global",
+        "host-suffix, 20thcenturystudios.com, Global",
+        "host-suffix, disneyaccount.com, Global",
+        "host-suffix, fxnetwork.com, Global",
+        "host-suffix, fxnetworks.com, Global"
+      ],
+      "removed_lines": [
+        "host-suffix, disney.my.sentry.io, Global",
+        "host-suffix, disneyplus.com.ssl.sc.omtrdc.net, Global",
+        "host-suffix, espn.hb.omtrdc.net, Global",
+        "host-suffix, espndotcom.tt.omtrdc.net, Global"
+      ]
+    },
+    {
+      "path": "Rules/Media/Networks/Fox.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "media-networks",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "4772d2efa4eaa7284e92ff03a65f8ab4539acb7ad7fe53a610a2c80c7415d41a",
+      "reviewed_sha256": "12c4418ec484f3288a09a265b3873b36b9bd434bf04ed6ef85ae3bbd41df3710",
+      "baseline_rules": 252,
+      "reviewed_rules": 248,
+      "added_lines": [
+        "host, foxnewsplayer-a.akamaihd.net, Global"
+      ],
+      "removed_lines": [
+        "host-suffix, foxcredit.com, Global",
+        "host-suffix, foxcredit.org, Global",
+        "host-suffix, foxnewsplayer-a.akamaihd.net, Global",
+        "host-suffix, fxnetwork.com, Global",
+        "host-suffix, fxnetworks.com, Global"
+      ]
+    },
+    {
+      "path": "Rules/Media/Networks/HBO.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "media-networks",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "04f20f8f9913d71550d24146c5c8416257dad8dfd0b05e5499c01bdba8a12a44",
+      "reviewed_sha256": "a670ff9885e5f6453f2fb8a5e7d9fd01edbb8af102fa6df06e9180b7062dfa0e",
+      "baseline_rules": 24,
+      "reviewed_rules": 27,
+      "added_lines": [
+        "host, beam-images.warnermediacdn.com, Global",
+        "host-suffix, discomax.com, Global",
+        "host-suffix, max.com, Global"
+      ],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/Networks/HongKongTV.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "media-networks",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "677cf8c7468aa02fc09a2a8ade93a72a475c4a116b7ee5dfdc3ffa067e78a211",
+      "reviewed_sha256": "677cf8c7468aa02fc09a2a8ade93a72a475c4a116b7ee5dfdc3ffa067e78a211",
+      "baseline_rules": 5,
+      "reviewed_rules": 5,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/Networks/InternationalTV.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "media-networks",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "4d5b77259744ed9f3eb77b27c81aaef624261c7dd4f816e13f4c8cf8ee1fcd62",
+      "reviewed_sha256": "4d5b77259744ed9f3eb77b27c81aaef624261c7dd4f816e13f4c8cf8ee1fcd62",
+      "baseline_rules": 7,
+      "reviewed_rules": 7,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/Networks/LineTV.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "media-networks",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "eaeb2b89f7b83f2f15f522f03ffd53de184beaf58111cfef9a09dd2c94c07775",
+      "reviewed_sha256": "eaeb2b89f7b83f2f15f522f03ffd53de184beaf58111cfef9a09dd2c94c07775",
+      "baseline_rules": 4,
+      "reviewed_rules": 4,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/Networks/NBC.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "media-networks",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "52f848ce95c42ec32c7fa20c7186a509b92f95deccabbe30d216288d85f2cbd4",
+      "reviewed_sha256": "52f848ce95c42ec32c7fa20c7186a509b92f95deccabbe30d216288d85f2cbd4",
+      "baseline_rules": 20,
+      "reviewed_rules": 20,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/Networks/Now.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "media-networks",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "a3a70126fdb197d0d9209996d0d4cd5c0cccfd5677f28a74e79345d98b3acb4d",
+      "reviewed_sha256": "a3a70126fdb197d0d9209996d0d4cd5c0cccfd5677f28a74e79345d98b3acb4d",
+      "baseline_rules": 6,
+      "reviewed_rules": 6,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/Networks/Paramount.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "media-networks",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "d2b6c5b14ad87d52922889cb4158681dd154e43f516de7243aae6a6d5fcea33b",
+      "reviewed_sha256": "d221ee0653280ee25376455513f0468f65f07cca8f3aa0c4534f2e3e6c8e2693",
+      "baseline_rules": 33,
+      "reviewed_rules": 33,
+      "added_lines": [
+        "host, cbsi.live.ott.irdeto.com, Global",
+        "host, cbsplaylistserver.aws.syncbak.com, Global",
+        "host, cbsservice.aws.syncbak.com, Global"
+      ],
+      "removed_lines": [
+        "host-suffix, cbsi.live.ott.irdeto.com, Global",
+        "host-suffix, cbsplaylistserver.aws.syncbak.com, Global",
+        "host-suffix, cbsservice.aws.syncbak.com, Global"
+      ]
+    },
+    {
+      "path": "Rules/Media/Networks/Sky.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "media-networks",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "f6e9b0c401a619c63b37aecdf3430fa8b7ed6b3b049e0abcbd157aac3c3064b6",
+      "reviewed_sha256": "f6e9b0c401a619c63b37aecdf3430fa8b7ed6b3b049e0abcbd157aac3c3064b6",
+      "baseline_rules": 2,
+      "reviewed_rules": 2,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/Networks/Sony.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "media-networks",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "ad79a9e2064690daeb7168caddc9ce49babdcf8ab030189d2741612cb7d1c618",
+      "reviewed_sha256": "ad79a9e2064690daeb7168caddc9ce49babdcf8ab030189d2741612cb7d1c618",
+      "baseline_rules": 1,
+      "reviewed_rules": 1,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/Networks/TVB.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "media-networks",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "c480a0b73073657c290e18109d25af6054521ef307077549404e25756b9f95c7",
+      "reviewed_sha256": "c480a0b73073657c290e18109d25af6054521ef307077549404e25756b9f95c7",
+      "baseline_rules": 16,
+      "reviewed_rules": 16,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/Networks/TVer.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "media-networks",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "22083f481267f77149f5493c836a9f9f8ebe41a3eeb0854002667816498550a5",
+      "reviewed_sha256": "22083f481267f77149f5493c836a9f9f8ebe41a3eeb0854002667816498550a5",
+      "baseline_rules": 5,
+      "reviewed_rules": 5,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/Networks/TaiwanTV.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "media-networks",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "a3f51e47a636df76c6ce28e798fe8ddb625d6d5a6ae938dd5e4df3aec0547abf",
+      "reviewed_sha256": "a3f51e47a636df76c6ce28e798fe8ddb625d6d5a6ae938dd5e4df3aec0547abf",
+      "baseline_rules": 11,
+      "reviewed_rules": 11,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/Networks/UKTV.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "media-networks",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "1047f24b887cb03f989cc8b43f39cae158107d1503db5c2358e1f34c78fad597",
+      "reviewed_sha256": "1047f24b887cb03f989cc8b43f39cae158107d1503db5c2358e1f34c78fad597",
+      "baseline_rules": 8,
+      "reviewed_rules": 8,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/Networks/USPayTV.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "media-networks",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "6b43b505d0d44cadbba02e39a713d7182a1612155a9da375ede404e21669e1b0",
+      "reviewed_sha256": "6b43b505d0d44cadbba02e39a713d7182a1612155a9da375ede404e21669e1b0",
+      "baseline_rules": 7,
+      "reviewed_rules": 7,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/Networks/USPublicTV.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "media-networks",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "fa9fb0c568f9b7507e06a34f22ee420726f5401670aeebbc49c20c712e8e3e45",
+      "reviewed_sha256": "fa9fb0c568f9b7507e06a34f22ee420726f5401670aeebbc49c20c712e8e3e45",
+      "baseline_rules": 1,
+      "reviewed_rules": 1,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/Networks/Viu.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "media-networks",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "f83e13cd9cd89843e3c9ab334f420ad10d3ee27674c06eea6e05a965e18ccb46",
+      "reviewed_sha256": "74c2d1d3ddfb935528ed9c4aaa8f1be573afd5301d4086f255c79183c925c776",
+      "baseline_rules": 5,
+      "reviewed_rules": 5,
+      "added_lines": [
+        "host, d1k2us671qcoau.cloudfront.net, Global",
+        "host, d2anahhhmp1ffz.cloudfront.net, Global",
+        "host, dfp6rglgjqszk.cloudfront.net, Global"
+      ],
+      "removed_lines": [
+        "host-suffix, d1k2us671qcoau.cloudfront.net, Global",
+        "host-suffix, d2anahhhmp1ffz.cloudfront.net, Global",
+        "host-suffix, dfp6rglgjqszk.cloudfront.net, Global"
+      ]
+    },
+    {
+      "path": "Rules/Media/Networks/Zee.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "media-networks",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "81a9e4cb7c8d2455a00974d2ccc67e30f455f6854b0dd3c119aef44f4924fb49",
+      "reviewed_sha256": "81a9e4cb7c8d2455a00974d2ccc67e30f455f6854b0dd3c119aef44f4924fb49",
+      "baseline_rules": 9,
+      "reviewed_rules": 9,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/News/CNN.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "media-networks",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "fc929a3297bcd5f940cf710dfcf27f1a5735802c7b6ff39e53bf566133adf05e",
+      "reviewed_sha256": "fc929a3297bcd5f940cf710dfcf27f1a5735802c7b6ff39e53bf566133adf05e",
+      "baseline_rules": 6,
+      "reviewed_rules": 6,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/News/ChinaNews.list",
+      "default_enabled": true,
+      "effective_policy": "China",
+      "review_group": "media-networks",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "3debb6530e516eb84d3f446924f5514e866c2f2d4aec221f02df730d71da075d",
+      "reviewed_sha256": "96d9c4da0fabdb3294bc0fcc688be5d7c26a275b9fcd1e94f128e2d01e0ae70e",
+      "baseline_rules": 11,
+      "reviewed_rules": 12,
+      "added_lines": [
+        "host-suffix, huxiu.com, China"
+      ],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/News/ChineseLanguageNews.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "media-networks",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "95fb5413867f5e38aaa3cd8ab473121cbb1603670f2dbf744664038159e260f9",
+      "reviewed_sha256": "95fb5413867f5e38aaa3cd8ab473121cbb1603670f2dbf744664038159e260f9",
+      "baseline_rules": 10,
+      "reviewed_rules": 10,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/News/HuffPost.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "media-networks",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "38779f09c27e4fc779ef44e1643429c516a117e305530ebd48cb7c995c1facd2",
+      "reviewed_sha256": "38779f09c27e4fc779ef44e1643429c516a117e305530ebd48cb7c995c1facd2",
+      "baseline_rules": 18,
+      "reviewed_rules": 18,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/News/InternationalNews.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "media-networks",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "589bdbc782585ce01f0010d48736348035e36e56cb115c899f2c07b0b40cfb0f",
+      "reviewed_sha256": "589bdbc782585ce01f0010d48736348035e36e56cb115c899f2c07b0b40cfb0f",
+      "baseline_rules": 20,
+      "reviewed_rules": 20,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/News/NYPost.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "media-networks",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "9a08dc6df8a74ebd39f99f79fcdcc984430a448142aa2a3230aaf40bf4bc99c4",
+      "reviewed_sha256": "9a08dc6df8a74ebd39f99f79fcdcc984430a448142aa2a3230aaf40bf4bc99c4",
+      "baseline_rules": 3,
+      "reviewed_rules": 3,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/News/NYTimes.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "media-networks",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "3ba3aefeb783683f0fe3749ba720eaa5a2241832e4c10275486e7c2507f89b53",
+      "reviewed_sha256": "3ba3aefeb783683f0fe3749ba720eaa5a2241832e4c10275486e7c2507f89b53",
+      "baseline_rules": 15,
+      "reviewed_rules": 15,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/News/Nikkei.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "media-networks",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "0aef4ad092595f64b23437fea4b6a364c8bf269222ea0c6bd5edf7b85d5a00a8",
+      "reviewed_sha256": "0aef4ad092595f64b23437fea4b6a364c8bf269222ea0c6bd5edf7b85d5a00a8",
+      "baseline_rules": 3,
+      "reviewed_rules": 3,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/News/Technology.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "media-networks",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "54b040f56868f33fc1e871626b27e33eb4f3b9b3d0f4e59e34fb9f931169108f",
+      "reviewed_sha256": "0d5c3d25582bf7b5194c2535165d621862b59b6a6f2c56b8a7fc57b66d6a079e",
+      "baseline_rules": 11,
+      "reviewed_rules": 12,
+      "added_lines": [
+        "host-suffix, polygon.com, Global"
+      ],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/News/VOA.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "media-networks",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "40e68a14c97b5420e2c23b0032ca997146f4b754cb205620bbbcef7f0a353974",
+      "reviewed_sha256": "40e68a14c97b5420e2c23b0032ca997146f4b754cb205620bbbcef7f0a353974",
+      "baseline_rules": 51,
+      "reviewed_rules": 51,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/News/VoxMedia.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "media-networks",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "feb6eb77f6d3a568fb59dc95c4bb4ee9670d3c5b56f5ca020d695bb581edbb2f",
+      "reviewed_sha256": "7ce5c5733c886b214b476fa9897d2121b754f0913db73fcc61387bc3e1a25882",
+      "baseline_rules": 16,
+      "reviewed_rules": 15,
+      "added_lines": [],
+      "removed_lines": [
+        "host-suffix, polygon.com, Global"
+      ]
+    },
+    {
+      "path": "Rules/Media/Video/AbemaTV.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "games-video-china",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "d1c88f804a3584ff7c024682464e72739e70175b9a5b7c8328f7619a1ed9e2d0",
+      "reviewed_sha256": "08f00909209866553031b46e4c30a3a6649db8c66ae3b181c74dab05bb48b58c",
+      "baseline_rules": 21,
+      "reviewed_rules": 17,
+      "added_lines": [
+        "host, api-abematv.bucketeer.jp, Global",
+        "host-suffix, abema-tv.com, Global"
+      ],
+      "removed_lines": [
+        "host-suffix, ameba.jp, Global",
+        "host-suffix, amebaownd.com, Global",
+        "host-suffix, amebaowndme.com, Global",
+        "host-suffix, bucketeer.jp, Global",
+        "host-suffix, dokusho-ojikan.jp, Global",
+        "host-suffix, winticket.jp, Global"
+      ]
+    },
+    {
+      "path": "Rules/Media/Video/Bilibili-International.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "games-video-china",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "c924876f1b10feba1752a4e664a9ab486bd2acf743998b9bdea0b1b325a87898",
+      "reviewed_sha256": "b970d1ae95bbaea8057522cc613ff5f6af75c065d1fe3fb401a65e10cc88e127",
+      "baseline_rules": 7,
+      "reviewed_rules": 8,
+      "added_lines": [
+        "host, pic.bstarstatic.com, Global"
+      ],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/Video/Bilibili.list",
+      "default_enabled": true,
+      "effective_policy": "China",
+      "review_group": "games-video-china",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "0c17aa33286d9726e7f3b2beffd7292f837bdb8751dfbb71f69428e1a38c2605",
+      "reviewed_sha256": "0c17aa33286d9726e7f3b2beffd7292f837bdb8751dfbb71f69428e1a38c2605",
+      "baseline_rules": 44,
+      "reviewed_rules": 44,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/Video/ChinaVideo.list",
+      "default_enabled": true,
+      "effective_policy": "China",
+      "review_group": "games-video-china",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "b60ba9f9887c0e9283af4b9c82bd8d28e1cf998c1ba99a8e63b19bdf11d50f47",
+      "reviewed_sha256": "b60ba9f9887c0e9283af4b9c82bd8d28e1cf998c1ba99a8e63b19bdf11d50f47",
+      "baseline_rules": 11,
+      "reviewed_rules": 11,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/Video/DAZN.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "games-video-china",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "ba8a2e186247508d98d36a33eb3637d8700f9d4fc6ecfe1890a66a8359d3c34c",
+      "reviewed_sha256": "ba8a2e186247508d98d36a33eb3637d8700f9d4fc6ecfe1890a66a8359d3c34c",
+      "baseline_rules": 12,
+      "reviewed_rules": 12,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/Video/Dailymotion.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "games-video-china",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "6bc907a4f79e7bee6aa4358143ee19499c762079d758615466dad45334e65679",
+      "reviewed_sha256": "6bc907a4f79e7bee6aa4358143ee19499c762079d758615466dad45334e65679",
+      "baseline_rules": 5,
+      "reviewed_rules": 5,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/Video/Hulu.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "games-video-china",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "ab084d9cfb06626e5eaa7a31aa32486ed4d36e03444decb1d19dde4adac5ecb1",
+      "reviewed_sha256": "ab084d9cfb06626e5eaa7a31aa32486ed4d36e03444decb1d19dde4adac5ecb1",
+      "baseline_rules": 56,
+      "reviewed_rules": 56,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/Video/IQIYI.list",
+      "default_enabled": true,
+      "effective_policy": "China",
+      "review_group": "games-video-china",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "177f54c81bb6f9d850fee16cfedde042c91acd1b15f81e4c14d4c0891e370fde",
+      "reviewed_sha256": "177f54c81bb6f9d850fee16cfedde042c91acd1b15f81e4c14d4c0891e370fde",
+      "baseline_rules": 32,
+      "reviewed_rules": 32,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/Video/MangoTV.list",
+      "default_enabled": true,
+      "effective_policy": "China",
+      "review_group": "games-video-china",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "cbbeec5bc792857468d65100938d59bd81a58995d0df2033615209f864dc07ce",
+      "reviewed_sha256": "cbbeec5bc792857468d65100938d59bd81a58995d0df2033615209f864dc07ce",
+      "baseline_rules": 6,
+      "reviewed_rules": 6,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/Video/Netflix.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "games-video-china",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "4ed794db1fb03ac1f3e92cbb60305fa01604b437db4fbfb4f71537aeb73da275",
+      "reviewed_sha256": "4ed794db1fb03ac1f3e92cbb60305fa01604b437db4fbfb4f71537aeb73da275",
+      "baseline_rules": 24,
+      "reviewed_rules": 24,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/Video/PandoraTV.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "games-video-china",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "a739e0a12da0ecd6d6926ae36f17aecbacaed78b8208edc630f0f09b8be8ad3f",
+      "reviewed_sha256": "a739e0a12da0ecd6d6926ae36f17aecbacaed78b8208edc630f0f09b8be8ad3f",
+      "baseline_rules": 2,
+      "reviewed_rules": 2,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/Video/PrimeVideo.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "games-video-china",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "17050e0f97ad9a20a2e4e6e6ea0190c4ef52e02509e326cef901cd5e872e14e3",
+      "reviewed_sha256": "17050e0f97ad9a20a2e4e6e6ea0190c4ef52e02509e326cef901cd5e872e14e3",
+      "baseline_rules": 20,
+      "reviewed_rules": 20,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/Video/TencentVideo.list",
+      "default_enabled": true,
+      "effective_policy": "China",
+      "review_group": "games-video-china",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "df57565dc56de4b776d543e731095e3e3d374f7a1db58ca1a60fe56f7f7f40cb",
+      "reviewed_sha256": "df57565dc56de4b776d543e731095e3e3d374f7a1db58ca1a60fe56f7f7f40cb",
+      "baseline_rules": 6,
+      "reviewed_rules": 6,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/Video/Twitch.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "games-video-china",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "b6adf7d98b02895118a929b5e9af0a378e609d6b62baaa7085766ee074602d8e",
+      "reviewed_sha256": "3d2bd3e263e49254d491d8765c32f55fa42e46509ec3bb4d8fe5a760e6c4e5b0",
+      "baseline_rules": 3,
+      "reviewed_rules": 4,
+      "added_lines": [
+        "host-suffix, ext-twitch.tv, Global"
+      ],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/Video/Viki.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "games-video-china",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "53f76f97349d940bf18d1e1f64beab2db5421e344a85fc901ef39c8042dbe13f",
+      "reviewed_sha256": "53f76f97349d940bf18d1e1f64beab2db5421e344a85fc901ef39c8042dbe13f",
+      "baseline_rules": 7,
+      "reviewed_rules": 7,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/Video/Vimeo.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "games-video-china",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "da8b6e9ac48e1fdb914a9d5a33b3415b449746c7bd6922428dfb2452f531b306",
+      "reviewed_sha256": "da8b6e9ac48e1fdb914a9d5a33b3415b449746c7bd6922428dfb2452f531b306",
+      "baseline_rules": 16,
+      "reviewed_rules": 16,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/Video/WeTV.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "games-video-china",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "989d1f5d95e245e726cb4a0cf6d39a494a52218d64a58d677442cf56ffb4c301",
+      "reviewed_sha256": "989d1f5d95e245e726cb4a0cf6d39a494a52218d64a58d677442cf56ffb4c301",
+      "baseline_rules": 5,
+      "reviewed_rules": 5,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/Video/YouTube.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "games-video-china",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "570488c9a2cf9d211389ad4bc73b60c7c93e870d5658421ab0a0778fb03c7fc6",
+      "reviewed_sha256": "570488c9a2cf9d211389ad4bc73b60c7c93e870d5658421ab0a0778fb03c7fc6",
+      "baseline_rules": 173,
+      "reviewed_rules": 173,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Media/Video/Youku.list",
+      "default_enabled": true,
+      "effective_policy": "China",
+      "review_group": "games-video-china",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "1fc26e96fd7c2af7b77f6fb66d3f4974f5d896579b640e7ef6dc9cd0caf1bed7",
+      "reviewed_sha256": "1fc26e96fd7c2af7b77f6fb66d3f4974f5d896579b640e7ef6dc9cd0caf1bed7",
+      "baseline_rules": 35,
+      "reviewed_rules": 35,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Messaging/Discord.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "root-review",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "23d4b7e2ca4906a14d8cf86b6d69f1f693637baf36b93ea60554026e0b86dd45",
+      "reviewed_sha256": "23d4b7e2ca4906a14d8cf86b6d69f1f693637baf36b93ea60554026e0b86dd45",
+      "baseline_rules": 21,
+      "reviewed_rules": 21,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Messaging/Kakao.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "root-review",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "7d3f81f000c90dff68e059ba4f85991d72dd5e17d253271699f55f872e2ea855",
+      "reviewed_sha256": "7d3f81f000c90dff68e059ba4f85991d72dd5e17d253271699f55f872e2ea855",
+      "baseline_rules": 7,
+      "reviewed_rules": 7,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Messaging/Line.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "root-review",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "455497bad0d4a753b73e2bbcd1bf56a831074e5f456c062f84296fa2a7003edf",
+      "reviewed_sha256": "f84aab1c206a9cc113ddb43d81f8208dbcc9acd46c42a81d679289c2b92c8507",
+      "baseline_rules": 2,
+      "reviewed_rules": 6,
+      "added_lines": [
+        "host-suffix, lin.ee, Global",
+        "host-suffix, line-apps.com, Global",
+        "host-suffix, line.me, Global",
+        "host-suffix, line.naver.jp, Global"
+      ],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Messaging/Messenger.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "root-review",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "d60bf251a946e55b2511a39585ea68c652bcee580ae77fc93e000dc70275e62d",
+      "reviewed_sha256": "d60bf251a946e55b2511a39585ea68c652bcee580ae77fc93e000dc70275e62d",
+      "baseline_rules": 1,
+      "reviewed_rules": 1,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Messaging/OtherMessaging.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "root-review",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "19a06299dd0ade9118d5f453a44ceb4b9b37dac691f66271c45db039f8acdb51",
+      "reviewed_sha256": "19a06299dd0ade9118d5f453a44ceb4b9b37dac691f66271c45db039f8acdb51",
+      "baseline_rules": 7,
+      "reviewed_rules": 7,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Messaging/Slack.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "root-review",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "9510953a68acffa4e4ed2b61fb22af40661821497db18f246bd7875c9df73f1e",
+      "reviewed_sha256": "9510953a68acffa4e4ed2b61fb22af40661821497db18f246bd7875c9df73f1e",
+      "baseline_rules": 11,
+      "reviewed_rules": 11,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Messaging/Telegram.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "root-review",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "8cf4925e999d3f8b3a0fdc088ce32692702ea2b046eade9daccb125e453fb028",
+      "reviewed_sha256": "8cf4925e999d3f8b3a0fdc088ce32692702ea2b046eade9daccb125e453fb028",
+      "baseline_rules": 13,
+      "reviewed_rules": 13,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Messaging/WhatsApp.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "root-review",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "939934396d16029ddebaaf9bbdcf9cdb03a1f22a1e79c946e7e81d14a6daddc0",
+      "reviewed_sha256": "939934396d16029ddebaaf9bbdcf9cdb03a1f22a1e79c946e7e81d14a6daddc0",
+      "baseline_rules": 4,
+      "reviewed_rules": 4,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Platforms/Apple.list",
+      "default_enabled": true,
+      "effective_policy": "Apple",
+      "review_group": "core-services",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "ba59eeedf22439536d8d465513a79ceabe5d726cc197976607a0373bd302003a",
+      "reviewed_sha256": "9bab5b1eb743d16fc84ed3311e59e782aa6b9fe12659f56d4cb2d2d94ccd02bd",
+      "baseline_rules": 64,
+      "reviewed_rules": 70,
+      "added_lines": [
+        "host, app-site-association.networking.apple, Apple",
+        "host, apple-relay.cloudflare.com, Apple",
+        "host, apple-relay.fastly-edge.com, Apple",
+        "host, icons.axm-usercontent-apple.com, Apple",
+        "host, upload.appleschoolcontent.com, Apple",
+        "host-suffix, apple-dns.net, Apple"
+      ],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Platforms/Dropbox.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "root-review",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "7ae0abb22b159357680ac89986d1313cbf7f765a082d7ab5c0671f40aec368b6",
+      "reviewed_sha256": "7ae0abb22b159357680ac89986d1313cbf7f765a082d7ab5c0671f40aec368b6",
+      "baseline_rules": 16,
+      "reviewed_rules": 16,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Platforms/Google.list",
+      "default_enabled": true,
+      "effective_policy": "Google",
+      "review_group": "core-services",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "953a4eaa68b8d5aa5e9e243525451de60f962bcf5bb3cd48074272295f5d1d00",
+      "reviewed_sha256": "2e52a5975af8be12ad67076fe43d4ded67701d801a38ca3ecd4011fb2ad9d2ed",
+      "baseline_rules": 272,
+      "reviewed_rules": 278,
+      "added_lines": [
+        "host, ai.google.dev, Google",
+        "host, cloudaicompanion.googleapis.com, Google",
+        "host, cloudcode-pa.googleapis.com, Google",
+        "host, generativelanguage.googleapis.com, Google",
+        "host, oauth2.googleapis.com, Google",
+        "host, openidconnect.googleapis.com, Google"
+      ],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Platforms/Microsoft.list",
+      "default_enabled": true,
+      "effective_policy": "Microsoft",
+      "review_group": "core-services",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "5b62aa1b84d3706295751f0a5706f48390cf6725afcefeb9fb94ac1392890bd9",
+      "reviewed_sha256": "0b2cb44bd9de9bf2bdc81ac5f931eec4c1450b090badc25c1167a212773f4b36",
+      "baseline_rules": 197,
+      "reviewed_rules": 205,
+      "added_lines": [
+        "host, account.activedirectory.windowsazure.com, Microsoft",
+        "host, accounts.accesscontrol.windows.net, Microsoft",
+        "host, enterpriseregistration.windows.net, Microsoft",
+        "host, graph.windows.net, Microsoft",
+        "host, login.windows.net, Microsoft",
+        "host-suffix, cloud.microsoft, Microsoft",
+        "host-suffix, static.microsoft, Microsoft",
+        "host-suffix, usercontent.microsoft, Microsoft"
+      ],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Platforms/Naver.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "root-review",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "dd6d1abebf0177c40cc8fc9a18147ae182b57d2388fcf77dff37a3723a3ffee6",
+      "reviewed_sha256": "dd6d1abebf0177c40cc8fc9a18147ae182b57d2388fcf77dff37a3723a3ffee6",
+      "baseline_rules": 1,
+      "reviewed_rules": 1,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Platforms/Sony.list",
+      "default_enabled": true,
+      "effective_policy": "Game",
+      "review_group": "root-review",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "15629300762458c530217eeb437c97f22cd32213ee4d363761944f19215bbce5",
+      "reviewed_sha256": "15629300762458c530217eeb437c97f22cd32213ee4d363761944f19215bbce5",
+      "baseline_rules": 1,
+      "reviewed_rules": 1,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Platforms/Utilities.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "root-review",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "8bc40ff146cf41fba223d26120bc8872a986a3c4962b86b9c3971ce02707d53a",
+      "reviewed_sha256": "8bc40ff146cf41fba223d26120bc8872a986a3c4962b86b9c3971ce02707d53a",
+      "baseline_rules": 2,
+      "reviewed_rules": 2,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Social/ChinaCommunities.list",
+      "default_enabled": true,
+      "effective_policy": "China",
+      "review_group": "games-video-china",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "9862df2d1048963d04f459ee0a74fd5bbed61b24b1ae58113bb5fc5a560d44a1",
+      "reviewed_sha256": "9862df2d1048963d04f459ee0a74fd5bbed61b24b1ae58113bb5fc5a560d44a1",
+      "baseline_rules": 9,
+      "reviewed_rules": 9,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Social/Communities.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "root-review",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "57ff0f6f2de55e66d4dab050528f66ab91aa97153e3d0b2e425ede562bd3dfa1",
+      "reviewed_sha256": "489128d0100a834913e315a72ea3bf64e8869a2ceed8ccddeb02637e84f27d38",
+      "baseline_rules": 20,
+      "reviewed_rules": 24,
+      "added_lines": [
+        "host-suffix, ameba.jp, Global",
+        "host-suffix, amebaownd.com, Global",
+        "host-suffix, amebaowndme.com, Global",
+        "host-suffix, dokusho-ojikan.jp, Global"
+      ],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Social/Instagram.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "root-review",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "ae5554658594132ccc9ff14fcf99ff7e6ca57624b142f9c8da3759889a7084b5",
+      "reviewed_sha256": "ae5554658594132ccc9ff14fcf99ff7e6ca57624b142f9c8da3759889a7084b5",
+      "baseline_rules": 6,
+      "reviewed_rules": 6,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Social/Meta.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "root-review",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "78991f97d92080384f51a1a5c3f3d15be3cc6ed63045b9e7c7d5d392ba792edb",
+      "reviewed_sha256": "78991f97d92080384f51a1a5c3f3d15be3cc6ed63045b9e7c7d5d392ba792edb",
+      "baseline_rules": 14,
+      "reviewed_rules": 14,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Social/Reddit.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "root-review",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "8749476f727edd964821c04e693ccbadfea4f4fca971c9661243fe50cc6fb9a2",
+      "reviewed_sha256": "8749476f727edd964821c04e693ccbadfea4f4fca971c9661243fe50cc6fb9a2",
+      "baseline_rules": 4,
+      "reviewed_rules": 4,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Social/TikTok.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "root-review",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "17e3c483c838e53285871a0c69b9ff01c4cd1c84be9bf93fc71a0620223e8b35",
+      "reviewed_sha256": "17e3c483c838e53285871a0c69b9ff01c4cd1c84be9bf93fc71a0620223e8b35",
+      "baseline_rules": 12,
+      "reviewed_rules": 12,
+      "added_lines": [],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Social/X.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "root-review",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "2b8c2afdfac97aab0035bba08aef6263edff317fedaedf93f38ba158fcccade8",
+      "reviewed_sha256": "d99068a3b98b3a257e91758428acd8e9ca4e90a364aea51c467bb39ea7096ba9",
+      "baseline_rules": 24,
+      "reviewed_rules": 23,
+      "added_lines": [],
+      "removed_lines": [
+        "host-suffix, twitteroauth.com, Global"
+      ]
+    },
+    {
+      "path": "Rules/Regional/ChinaDomains.list",
+      "default_enabled": true,
+      "effective_policy": "China",
+      "review_group": "games-video-china",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "c4d4fb9de267ed3465079a7863a2be80ab7cd6a6e19ee1e36da4692111793acf",
+      "reviewed_sha256": "5ae67be246eae235ab27487b9159b54c88168ebd6e7f640284ca8290a5415914",
+      "baseline_rules": 166,
+      "reviewed_rules": 167,
+      "added_lines": [
+        "host-suffix, lizhi.io, China"
+      ],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/Regional/GlobalDomains.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "root-review",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "52a86502ec28b7d459ea44546a58332e890c45b0100c92c946ea685cf6b8986f",
+      "reviewed_sha256": "475a444101c7ae864c880c1ae99823691c4c0e61bbffa68224ba6b71a634dde1",
+      "baseline_rules": 361,
+      "reviewed_rules": 366,
+      "added_lines": [
+        "host-suffix, foxcredit.com, Global",
+        "host-suffix, foxcredit.org, Global",
+        "host-suffix, notion-status.com, Global",
+        "host-suffix, notion.com, Global",
+        "host-suffix, winticket.jp, Global"
+      ],
+      "removed_lines": []
+    },
+    {
+      "path": "Rules/IP/Telegram.list",
+      "default_enabled": true,
+      "effective_policy": "Global",
+      "review_group": "core-services",
+      "all_original_active_lines_read": true,
+      "baseline_sha256": "1af3e4e2739720ee22c5fa4cdea99c7871526e5c67e3dc9a56f6634dba22896a",
+      "reviewed_sha256": "1af3e4e2739720ee22c5fa4cdea99c7871526e5c67e3dc9a56f6634dba22896a",
+      "baseline_rules": 14,
+      "reviewed_rules": 14,
+      "added_lines": [],
+      "removed_lines": []
+    }
+  ],
+  "active_resources": [
+    {
+      "path": "Rules/Banking/HSBC.list",
+      "policy": "direct",
+      "rules": 11,
+      "sha256": "6e97eea9f3896f9ccfd8b7c904aa5cbfa0a35358377f8a3fe0df8d7466e377dc"
+    },
+    {
+      "path": "Rules/AI/OpenAI.list",
+      "policy": "OpenAI",
+      "rules": 18,
+      "sha256": "b2e745eaee295d61f7aba87495b4cb34032a29458aef497a7c689fe583cf7e26"
+    },
+    {
+      "path": "Rules/AI/Claude.list",
+      "policy": "Claude",
+      "rules": 6,
+      "sha256": "00edc71c593cc15ebe1b5ceb43ea264eeff6bac72e19a822fd419b5b62a48e9c"
+    },
+    {
+      "path": "Rules/Optional/OpenAI-SharedDependencies.list",
+      "policy": "OpenAI",
+      "rules": 13,
+      "sha256": "0ba107d8fb4b0d2c489a60642b373e9d57c754e7580dc369eaddf8189d398838"
+    },
+    {
+      "path": "Bundles/Global.list",
+      "policy": "Global",
+      "rules": 1824,
+      "sha256": "0a03a440effae794116d9501a293f1a6dd27bbb3d8461451822bb7285b3b7122"
+    },
+    {
+      "path": "Bundles/China.list",
+      "policy": "China",
+      "rules": 342,
+      "sha256": "350815423c73e79c47e1b524a195042b126360743971f2657cf2cf27e7a1a9fc"
+    },
+    {
+      "path": "Bundles/Game.list",
+      "policy": "Game",
+      "rules": 166,
+      "sha256": "d184f284bee073d503438829e5c08e916f213a9359ec976c4fde7290656e04ec"
+    },
+    {
+      "path": "Rules/Platforms/Apple.list",
+      "policy": "Apple",
+      "rules": 70,
+      "sha256": "9bab5b1eb743d16fc84ed3311e59e782aa6b9fe12659f56d4cb2d2d94ccd02bd"
+    },
+    {
+      "path": "Rules/Platforms/Google.list",
+      "policy": "Google",
+      "rules": 278,
+      "sha256": "2e52a5975af8be12ad67076fe43d4ded67701d801a38ca3ecd4011fb2ad9d2ed"
+    },
+    {
+      "path": "Rules/Platforms/Microsoft.list",
+      "policy": "Microsoft",
+      "rules": 205,
+      "sha256": "0b2cb44bd9de9bf2bdc81ac5f931eec4c1450b090badc25c1167a212773f4b36"
+    },
+    {
+      "path": "Rules/IP/Telegram.list",
+      "policy": "Global",
+      "rules": 14,
+      "sha256": "1af3e4e2739720ee22c5fa4cdea99c7871526e5c67e3dc9a56f6634dba22896a"
+    }
+  ],
+  "source_checks": {
+    "full_check": "20261014T095242.216064Z",
+    "full_check_status": "REVIEW_REQUIRED",
+    "expanded_v2fly_check": "20261014T100702.859418Z",
+    "expanded_v2fly_status": "COMPLETE",
+    "selected_reference_files_total": 130,
+    "sources": {
+      "sve1r": {
+        "status": "REVIEW_REQUIRED",
+        "baseline_commit": "8061d2ebe160280f25d4b20d6d929d9e03caecbe",
+        "latest_commit": "8061d2ebe160280f25d4b20d6d929d9e03caecbe"
+      },
+      "ppmina": {
+        "status": "REVIEW_REQUIRED",
+        "baseline_commit": "82925ea21cdebe6f27212cd3938dc9187cc6f600",
+        "latest_commit": "82925ea21cdebe6f27212cd3938dc9187cc6f600"
+      },
+      "blackmatrix7": {
+        "status": "COMPLETE",
+        "baseline_commit": "d8363caa2c1e47fb735615316032bed3f475ee57",
+        "latest_commit": "d8363caa2c1e47fb735615316032bed3f475ee57"
+      },
+      "SukkaW": {
+        "status": "COMPLETE",
+        "baseline_commit": "7c67f6c8f0eb0e990097f3f94b39992151644d88",
+        "latest_commit": "8a4972eb334f3fd9d0c813577d47d04c4c442bf9"
+      },
+      "v2fly": {
+        "status": "COMPLETE",
+        "baseline_commit": "c6adacf29cc4fb05e04651fcf03e00989ef9f797",
+        "latest_commit": "c6adacf29cc4fb05e04651fcf03e00989ef9f797"
+      },
+      "ACL4SSR": {
+        "status": "COMPLETE",
+        "baseline_commit": "802e3abf065f8609e7d9073ba506158dbe2ba6e7",
+        "latest_commit": "802e3abf065f8609e7d9073ba506158dbe2ba6e7"
+      },
+      "Loyalsoldier": {
+        "status": "COMPLETE",
+        "baseline_commit": "d4aa79e495cfc7009a1bc33ae603a437306e8e4d",
+        "latest_commit": "d4aa79e495cfc7009a1bc33ae603a437306e8e4d"
+      }
+    },
+    "baseline_policy": "No source revision advanced. Expanded explicit v2fly comparison scope by data/line, docker, python, npmjs, notion at the same reviewed commit. Previously rejected SukkaW CDN change stays visible."
+  },
+  "findings": {
+    "core-services": [
+      {
+        "id": "core-apple-current-system-hosts",
+        "severity": "P2",
+        "status": "fixed",
+        "path": "Rules/Platforms/Apple.list",
+        "finding": "Six official system destinations were not assigned to Apple and would rely on GeoIP/Final even when the Apple policy was explicitly selected.",
+        "action": "Add five exact hosts for Universal Links, Private Cloud Compute relay tenants, managed app icons and school content upload, plus the documented apple-dns.net service suffix.",
+        "evidence_ids": [
+          "apple-enterprise"
+        ]
+      },
+      {
+        "id": "core-m365-unified-domains",
+        "severity": "P2",
+        "status": "fixed",
+        "path": "Rules/Platforms/Microsoft.list",
+        "finding": "Three mandatory unified Microsoft 365 product domain families were missing, so Outlook/Teams/static or isolated content could follow a different strategy than Microsoft.",
+        "action": "Add cloud.microsoft/static.microsoft/usercontent.microsoft, rather than the entire .microsoft TLD.",
+        "evidence_ids": [
+          "microsoft-urls"
+        ]
+      },
+      {
+        "id": "core-microsoft-auth-hosts",
+        "severity": "P2",
+        "status": "fixed",
+        "path": "Rules/Platforms/Microsoft.list",
+        "finding": "Removing broad Windows/Azure tenant roots also left five documented Microsoft authentication/directory/registration hosts without their service owner.",
+        "action": "Add exact account.activedirectory.windowsazure.com, accounts.accesscontrol.windows.net, enterpriseregistration.windows.net, graph.windows.net, login.windows.net; leave arbitrary cloud tenants unclaimed.",
+        "evidence_ids": [
+          "microsoft-urls"
+        ]
+      },
+      {
+        "id": "core-google-auth-gemini",
+        "severity": "P2",
+        "status": "fixed",
+        "path": "Rules/Platforms/Google.list",
+        "finding": "OAuth token/userinfo and named Gemini API/Code Assist hosts were missing from Google after googleapis.com was deliberately excluded.",
+        "action": "Add six exact official hosts; do not reintroduce googleapis.com, googleusercontent.com, appspot.com or storage.googleapis.com catches.",
+        "evidence_ids": [
+          "google-openid",
+          "google-gemini-api",
+          "google-codeassist-network"
+        ]
+      },
+      {
+        "id": "core-telegram-cidr-current",
+        "severity": "info",
+        "status": "verified-no-change",
+        "path": "Rules/IP/Telegram.list",
+        "finding": "All 14 published prefixes exactly match current official inventory; download hash still 3ecd072cedf72eceee6961b18a51e37f905d5ce4a656a5d24cf5fea63e6ec651.",
+        "action": "Keep official prefixes; do not import 95.161.64.0/20 from ppmina/Loyalsoldier or 109.239.140.0/24 / 91.108.0.0/16 from ACL4SSR. Their /21 and /47 aggregations of official adjacent prefixes are equivalent but offer no required service change.",
+        "evidence_ids": [
+          "telegram-cidr"
+        ]
+      },
+      {
+        "id": "core-openai-dependencies",
+        "severity": "info",
+        "status": "verified-static-no-change",
+        "path": "Rules/Optional/OpenAI-SharedDependencies.list",
+        "finding": "Thirteen shared endpoints intentionally follow OpenAI and can affect other callers of the same host. WorkOS/challenge/Stripe/Datadog stay exact; Intercom and SendGrid scopes remain explicit. humb.apple.com override remains narrowly bound in exception order.",
+        "action": "Preserve current user-approved design and static allowlist test; fresh official web retrieval failed with HTTP 403, so do not claim a new live allowlist verification.",
+        "evidence_ids": [
+          "openai-network"
+        ]
+      },
+      {
+        "id": "core-claude-current-network-guidance",
+        "severity": "info",
+        "status": "verified-no-change",
+        "path": "Rules/AI/Claude.list",
+        "finding": "Current official network guide still uses existing Anthropic/Claude roots, claudeusercontent.com and claudemcpcontent.com. Package registries/storage/telemetry are shared dependencies.",
+        "action": "Retain six existing rules; do not capture storage.googleapis.com, npm registries or Datadog as Claude-only.",
+        "evidence_ids": [
+          "claude-network"
+        ]
+      },
+      {
+        "id": "core-hsbc-specific-waf",
+        "severity": "info",
+        "status": "verified-static-no-change",
+        "path": "Rules/Banking/HSBC.list",
+        "finding": "Existing fixed-direct HSBC/PayMe service boundaries cover payme.hsbc.com.hk; WAF remains exact hsbc.edge.sdk.awswaf.com and excludes neighboring tenants.",
+        "action": "Preserve 11 existing rules. Opening the public PayMe page does not establish all mobile transaction endpoints; no banking action or live-device change performed.",
+        "evidence_ids": [
+          "hsbc-payme"
+        ]
+      }
+    ],
+    "games-video-china": [
+      {
+        "change": "Add minecraftservices.com to Minecraft/Game",
+        "evidence": "v2fly/domain-list-community@c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/mojang (MIT), api.minecraftservices.com/minecraft/profile responds 401 without authentication",
+        "limitation": "401 is service response evidence, not proof of successful login; official Education help page blocked 403."
+      },
+      {
+        "change": "Add ext-twitch.tv to Twitch/Global",
+        "evidence": "Official Twitch extensions docs explain both supervisor and per-extension hosted origins; suffix is the platform content boundary."
+      },
+      {
+        "change": "Add abema-tv.com to Abema/Global",
+        "evidence": "Official homepage image.p-c2-x.abema-tv.com current image origin; full service domain corroborated by MIT v2fly data/abema."
+      },
+      {
+        "change": "Replace broad bucketeer.jp with exact api-abematv.bucketeer.jp",
+        "evidence": "Official Abema page dns-prefetch names exact host; Bucketeer is independently documented feature-flag platform. Other tenants no longer forced through ABEMA category."
+      },
+      {
+        "change": "Add exact pic.bstarstatic.com to Bilibili-International/Global",
+        "evidence": "Official Bilibili.tv homepage dns-prefetch and actual cover img/srcset URLs."
+      },
+      {
+        "change": "Move amebaownd.com/amebaowndme.com to Social/Communities and winticket.jp to GlobalDomains",
+        "evidence": "Official Ameba Ownd page title and asset host identify website/blog hosting. CyberAgent service page identifies Winticket public-sports betting; Global policy preserved. Root owns destination edits."
+      },
+      {
+        "change": "Move lizhi.io from ChinaAudio into ChinaDomains",
+        "evidence": "Parallel media reviewer current official website evidence; China policy unchanged."
+      },
+      {
+        "change": "Move ameba.jp and dokusho-ojikan.jp to Social/Communities, Global unchanged",
+        "evidence": "Official CyberAgent media service page links ameba.jp as AmebaBlog and dokusho-ojikan.jp as Ameba Manga; root owns destination edits."
+      }
+    ],
+    "media-networks": [
+      {
+        "id": "MEDIA-01",
+        "severity": "medium",
+        "action": "added",
+        "files": [
+          "Rules/Media/Networks/Disney.list"
+        ],
+        "rules": [
+          "host-suffix, disneyaccount.com, Global",
+          "host-suffix, 20thcenturystudios.com, Global"
+        ],
+        "reason": "MyDisney preloads cdn.disneyaccount.com/v5/sdk.js; this missing identity domain could otherwise follow GeoIP rather than the intended Global policy. The main official studio domain was missing while three regional domains were retained.",
+        "evidence": [
+          {
+            "url": "https://www.20thcenturystudios.com/",
+            "final_url": "https://www.20thcenturystudios.com/",
+            "status": 200,
+            "sha256": "24ef018e02f20cd25be913e3f1b52c540237ded68062238fe66513b3748bb09c",
+            "bytes": 954656,
+            "title": [
+              "20th Century Studios | Official Site"
+            ],
+            "local": "76d60b25ae64.html"
+          },
+          {
+            "url": "https://www.disneyplus.com/",
+            "final_url": "https://www.disneyplus.com/",
+            "status": 200,
+            "sha256": "1424f1dc35df61f4cd2fa7f6952a8e09f729452da95596dcb322bc29a005f3a7",
+            "bytes": 1883684,
+            "title": [
+              "Disney+ | Stream Movies, TV Shows, Documentaries & More | U.S. Site"
+            ],
+            "local": "079c2b3543cb.html"
+          },
+          {
+            "url": "https://my.disney.com/",
+            "final_url": "https://my.disney.com/",
+            "status": 200,
+            "sha256": "95b7fc71c41954fe02b86b31f921ee779ab2792b614789d524230b2480347168",
+            "bytes": 32986,
+            "title": [
+              "MyDisney Account"
+            ],
+            "local": "6090dafdc120.html"
+          }
+        ]
+      },
+      {
+        "id": "MEDIA-02",
+        "severity": "medium",
+        "action": "added",
+        "files": [
+          "Rules/Media/Networks/HBO.list"
+        ],
+        "rules": [
+          "host-suffix, max.com, Global",
+          "host-suffix, discomax.com, Global",
+          "host, beam-images.warnermediacdn.com, Global"
+        ],
+        "reason": "Official max.com redirects to HBO Max. The returned HBO Max page contains graphql.prd.api.discomax.com, prd.api.discomax.com and beam-images.warnermediacdn.com; preserve the intended media policy for entry/API/images without capturing all Warner media CDN tenants. Embedded page references are static dependency evidence, not captured runtime requests.",
+        "evidence": [
+          {
+            "url": "https://max.com/",
+            "final_url": "https://www.hbomax.com/",
+            "status": 200,
+            "sha256": "c27ef00e7ec267918c426f9cc455403a3418f96e5e75360dac122e84d552893b",
+            "bytes": 2500000,
+            "title": [
+              "HBO Max | Stream Series and Movies",
+              "HBO Max",
+              "Disney Plus, Hulu, HBO Max Bundle"
+            ],
+            "local": "a08048189006.html",
+            "body_is_truncated_prefix": true
+          }
+        ],
+        "upstream": [
+          "data/hbo contains domain:max.com and domain:discomax.com at c6adacf29cc4fb05e04651fcf03e00989ef9f797"
+        ]
+      },
+      {
+        "id": "MEDIA-03",
+        "severity": "medium",
+        "action": "added",
+        "files": [
+          "Rules/Media/News/ChinaNews.list"
+        ],
+        "rules": [
+          "host-suffix, huxiu.com, China"
+        ],
+        "reason": "The list had huxiucdn.com but omitted the publisher primary/API domain. Official Huxiu page references api-account.huxiu.com, many other huxiu.com APIs, and huxiucdn.com assets. GeoIP should be a fallback, not the only expression of this known service intent.",
+        "evidence": [
+          {
+            "url": "https://www.huxiu.com/",
+            "final_url": "https://www.huxiu.com/",
+            "status": 200,
+            "sha256": "654037285166d1148f71b1bd1331cc2ea591fd582f1c7d93f29360b2b96cc516",
+            "bytes": 214526,
+            "title": [
+              "虎嗅网"
+            ],
+            "local": "1b4ea0fb1450.html"
+          }
+        ]
+      },
+      {
+        "id": "MEDIA-04",
+        "severity": "low",
+        "action": "relocated-and-added",
+        "files": [
+          "Rules/Media/Music/ChinaAudio.list"
+        ],
+        "removed": [
+          "host-suffix, lizhi.io, China"
+        ],
+        "added": [
+          "host-suffix, lizhi.fm, China",
+          "host-suffix, lzpipi.com, China"
+        ],
+        "relocation_target": "Rules/Regional/ChinaDomains.list",
+        "reason": "lizhi.io is a software retailer, not the Lizhi audio service. Retain its China policy in the regional category via coordinated parent edit. Official Lizhi corporate page labels lizhi.fm as 荔枝App and lzpipi.com as 荔枝播客. Direct lizhi.fm fetch was forbidden; corporate outbound link is the positive ownership evidence.",
+        "evidence": [
+          {
+            "url": "https://www.lizhiinc.com/",
+            "final_url": "https://www.lizhiinc.com/",
+            "status": 200,
+            "sha256": "ad385628473ae5036b8149163625d43b08eda6f95c1dab3db937d702f6d46c88",
+            "bytes": 22087,
+            "title": [
+              "荔枝app_荔枝播客_荔枝集团"
+            ],
+            "local": "2f33c5cb5009.html"
+          },
+          {
+            "url": "https://www.lzpipi.com/",
+            "final_url": "https://www.lzpipi.com/",
+            "status": 200,
+            "sha256": "ee224ad28fc5c4873ee8b1bc87312ebeb372c700eb4556e76e82664d9f4b0864",
+            "bytes": 484,
+            "title": [
+              "荔枝播客"
+            ],
+            "local": "4f449ee86962.html"
+          },
+          {
+            "url": "https://lizhi.io/",
+            "final_url": "https://www.lizhi.io/en",
+            "status": 200,
+            "sha256": "b830200c3b4795e8483e607001414d347b4f196dbf44d3e958de105b31502a7e",
+            "bytes": 41223,
+            "title": [
+              "lizhi.shop - Your Sale Booster in China"
+            ],
+            "local": "9175d6445bf4.html"
+          }
+        ]
+      },
+      {
+        "id": "MEDIA-05",
+        "severity": "low",
+        "action": "relocated",
+        "files": [
+          "Rules/Media/Networks/Fox.list"
+        ],
+        "rules": [
+          "host-suffix, foxcredit.com, Global",
+          "host-suffix, foxcredit.org, Global"
+        ],
+        "relocation_target": "Rules/Regional/GlobalDomains.list",
+        "reason": "These domains serve Fox Federal Credit Union; their origin as an employee credit union does not make banking a media transport. Parent coordinates relocation preserving Global policy.",
+        "evidence": [
+          {
+            "url": "https://www.foxcredit.org/about-us/",
+            "final_url": "https://www.foxcredit.org/about-us/",
+            "status": 200,
+            "sha256": "2c3ba8eb0aa28aa7e562b3b7816a8e067ffc4d663a879ab9807a9fefea712876",
+            "bytes": 102734,
+            "title": [
+              "About Us | Fox Federal Credit Union"
+            ],
+            "local": "323c0f417ab1.html"
+          },
+          {
+            "url": "https://www.foxcredit.com/",
+            "final_url": "https://www.foxcredit.org/",
+            "status": 200,
+            "sha256": "19e39d08a4be6b03237cd790f4e66c35c15a98fa8fc313bda76a30739c23e33c",
+            "bytes": 110087,
+            "title": [
+              "Fox Federal Credit Union: Coast to Coast Financial Services"
+            ],
+            "local": "1582045e4311.html"
+          },
+          {
+            "url": "https://www.foxcredit.org/",
+            "final_url": "https://www.foxcredit.org/",
+            "status": 200,
+            "sha256": "19e39d08a4be6b03237cd790f4e66c35c15a98fa8fc313bda76a30739c23e33c",
+            "bytes": 110087,
+            "title": [
+              "Fox Federal Credit Union: Coast to Coast Financial Services"
+            ],
+            "local": "84a79d66b68c.html"
+          }
+        ]
+      },
+      {
+        "id": "MEDIA-06",
+        "severity": "low",
+        "action": "relocated",
+        "files": [
+          "Rules/Media/News/VoxMedia.list",
+          "Rules/Media/News/Technology.list"
+        ],
+        "rules": [
+          "host-suffix, polygon.com, Global"
+        ],
+        "reason": "Valnet official Polygon page explicitly says acquired in 2025. Move to purpose-based Technology news to avoid claiming current Vox Media ownership, preserving Global.",
+        "evidence": [
+          {
+            "url": "https://www.valnetinc.com/polygon",
+            "final_url": "https://www.valnetinc.com/polygon",
+            "status": 200,
+            "sha256": "72fcb861488c6106f50faa2a6164176a19cdadf3a087fa274c04169023d58bc3",
+            "bytes": 26683,
+            "title": [
+              "Polygon - A Valnet Publication"
+            ],
+            "local": "78fd05945899.html"
+          }
+        ]
+      },
+      {
+        "id": "MEDIA-07",
+        "severity": "low",
+        "action": "relocated",
+        "files": [
+          "Rules/Media/Networks/Fox.list",
+          "Rules/Media/Networks/Disney.list"
+        ],
+        "rules": [
+          "host-suffix, fxnetwork.com, Global",
+          "host-suffix, fxnetworks.com, Global"
+        ],
+        "reason": "FX belongs under Disney, not the post-separation Fox category; immutable latest v2fly data/disney includes both and data/fox does not. Both retain Global. Fresh official FX pages were access-blocked or unavailable in this fetch; no claim of new page-based ownership verification.",
+        "upstream": [
+          {
+            "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/disney",
+            "sha256": "692bd4cf2e28adc8128597bcd9fcd77eae2c6ac9420dc282703873a6d40a05b1",
+            "source_rules": [
+              "domain:fxnetwork.com",
+              "domain:fxnetworks.com"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "MEDIA-08",
+        "severity": "low",
+        "action": "narrowed",
+        "reason": "Thirteen dedicated third-party telemetry/CDN hosts were incorrectly expressed as suffix matches despite exact full: references. Retain the actual host and exclude invented descendants; never expand the provider root.",
+        "changes": [
+          {
+            "path": "Rules/Media/Networks/Disney.list",
+            "old": "host-suffix, disney.my.sentry.io, Global",
+            "new": "host, disney.my.sentry.io, Global",
+            "reason": "Dedicated endpoint is exact full: in immutable v2fly input; no evidence supports matching invented descendant hosts.",
+            "reference_path": "data/disney"
+          },
+          {
+            "path": "Rules/Media/Networks/Disney.list",
+            "old": "host-suffix, disneyplus.com.ssl.sc.omtrdc.net, Global",
+            "new": "host, disneyplus.com.ssl.sc.omtrdc.net, Global",
+            "reason": "Dedicated endpoint is exact full: in immutable v2fly input; no evidence supports matching invented descendant hosts.",
+            "reference_path": "data/disney"
+          },
+          {
+            "path": "Rules/Media/Networks/Disney.list",
+            "old": "host-suffix, espn.hb.omtrdc.net, Global",
+            "new": "host, espn.hb.omtrdc.net, Global",
+            "reason": "Dedicated endpoint is exact full: in immutable v2fly input; no evidence supports matching invented descendant hosts.",
+            "reference_path": "data/espn"
+          },
+          {
+            "path": "Rules/Media/Networks/Disney.list",
+            "old": "host-suffix, espndotcom.tt.omtrdc.net, Global",
+            "new": "host, espndotcom.tt.omtrdc.net, Global",
+            "reason": "Dedicated endpoint is exact full: in immutable v2fly input; no evidence supports matching invented descendant hosts.",
+            "reference_path": "data/espn"
+          },
+          {
+            "path": "Rules/Media/Networks/Fox.list",
+            "old": "host-suffix, foxnewsplayer-a.akamaihd.net, Global",
+            "new": "host, foxnewsplayer-a.akamaihd.net, Global",
+            "reason": "Dedicated endpoint is exact full: in immutable v2fly input; no evidence supports matching invented descendant hosts.",
+            "reference_path": "data/fox"
+          },
+          {
+            "path": "Rules/Media/Networks/Paramount.list",
+            "old": "host-suffix, cbsi.live.ott.irdeto.com, Global",
+            "new": "host, cbsi.live.ott.irdeto.com, Global",
+            "reason": "Dedicated endpoint is exact full: in immutable v2fly input; no evidence supports matching invented descendant hosts.",
+            "reference_path": "data/cbs"
+          },
+          {
+            "path": "Rules/Media/Networks/Paramount.list",
+            "old": "host-suffix, cbsplaylistserver.aws.syncbak.com, Global",
+            "new": "host, cbsplaylistserver.aws.syncbak.com, Global",
+            "reason": "Dedicated endpoint is exact full: in immutable v2fly input; no evidence supports matching invented descendant hosts.",
+            "reference_path": "data/cbs"
+          },
+          {
+            "path": "Rules/Media/Networks/Paramount.list",
+            "old": "host-suffix, cbsservice.aws.syncbak.com, Global",
+            "new": "host, cbsservice.aws.syncbak.com, Global",
+            "reason": "Dedicated endpoint is exact full: in immutable v2fly input; no evidence supports matching invented descendant hosts.",
+            "reference_path": "data/cbs"
+          },
+          {
+            "path": "Rules/Media/Networks/Viu.list",
+            "old": "host-suffix, d1k2us671qcoau.cloudfront.net, Global",
+            "new": "host, d1k2us671qcoau.cloudfront.net, Global",
+            "reason": "Dedicated endpoint is exact full: in immutable v2fly input; no evidence supports matching invented descendant hosts.",
+            "reference_path": "data/viu"
+          },
+          {
+            "path": "Rules/Media/Networks/Viu.list",
+            "old": "host-suffix, d2anahhhmp1ffz.cloudfront.net, Global",
+            "new": "host, d2anahhhmp1ffz.cloudfront.net, Global",
+            "reason": "Dedicated endpoint is exact full: in immutable v2fly input; no evidence supports matching invented descendant hosts.",
+            "reference_path": "data/viu"
+          },
+          {
+            "path": "Rules/Media/Networks/Viu.list",
+            "old": "host-suffix, dfp6rglgjqszk.cloudfront.net, Global",
+            "new": "host, dfp6rglgjqszk.cloudfront.net, Global",
+            "reason": "Dedicated endpoint is exact full: in immutable v2fly input; no evidence supports matching invented descendant hosts.",
+            "reference_path": "data/viu"
+          },
+          {
+            "path": "Rules/Media/Music/Spotify.list",
+            "old": "host-suffix, audio-ak-spotify-com.akamaized.net, Global",
+            "new": "host, audio-ak-spotify-com.akamaized.net, Global",
+            "reason": "Dedicated endpoint is exact full: in immutable v2fly input; no evidence supports matching invented descendant hosts.",
+            "reference_path": "data/spotify"
+          },
+          {
+            "path": "Rules/Media/Music/Spotify.list",
+            "old": "host-suffix, heads4-ak-spotify-com.akamaized.net, Global",
+            "new": "host, heads4-ak-spotify-com.akamaized.net, Global",
+            "reason": "Dedicated endpoint is exact full: in immutable v2fly input; no evidence supports matching invented descendant hosts.",
+            "reference_path": "data/spotify"
+          }
+        ],
+        "upstream_commit": "c6adacf29cc4fb05e04651fcf03e00989ef9f797"
+      }
+    ],
+    "root-review": [
+      {
+        "path": "Rules/Messaging/Line.list",
+        "added": [
+          "host-suffix, lin.ee, Global",
+          "host-suffix, line-apps.com, Global",
+          "host-suffix, line.me, Global",
+          "host-suffix, line.naver.jp, Global"
+        ],
+        "removed": [],
+        "reason": "The old leaf only contained CDN suffixes, omitting the main LINE and messaging service domains. Select existing MIT app destinations, excluding beta, games, retail and whole naver.jp.",
+        "evidence": [
+          "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/line",
+          "https://line.me/en/",
+          "https://developers.line.biz/en/reference/messaging-api/"
+        ]
+      },
+      {
+        "path": "Rules/Developer/Tools.list",
+        "added": [
+          "host-suffix, docker.io, Global",
+          "host-suffix, dockerstatic.com, Global",
+          "host-suffix, dhi.io, Global",
+          "host-suffix, pypi.org, Global",
+          "host-suffix, python.org, Global",
+          "host-suffix, npmjs.com, Global",
+          "host-suffix, npmjs.org, Global",
+          "host-suffix, twitteroauth.com, Global",
+          "host, files.pythonhosted.org, Global",
+          "host, docker-pinata-support.s3.amazonaws.com, Global"
+        ],
+        "removed": [],
+        "reason": "Complete explicit Docker registry and Python/npm package endpoints; cloud object storage remains exact HOST. Rehome independently maintained TwitterOAuth PHP library from X without changing Global policy.",
+        "evidence": [
+          "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/docker",
+          "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/python",
+          "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/npmjs",
+          "https://docs.docker.com/desktop/enterprise/allow-list/",
+          "https://pypi.org/pypi/pip/json",
+          "https://docs.npmjs.com/cli/v11/using-npm/registry/",
+          "https://twitteroauth.com/"
+        ]
+      },
+      {
+        "path": "Rules/Social/X.list",
+        "added": [],
+        "removed": [
+          "host-suffix, twitteroauth.com, Global"
+        ],
+        "reason": "Independent PHP client library belongs to Developer/Tools; it is not an X-owned network endpoint.",
+        "evidence": [
+          "https://twitteroauth.com/"
+        ]
+      },
+      {
+        "path": "Rules/Social/Communities.list",
+        "added": [
+          "host-suffix, amebaownd.com, Global",
+          "host-suffix, amebaowndme.com, Global",
+          "host-suffix, ameba.jp, Global",
+          "host-suffix, dokusho-ojikan.jp, Global"
+        ],
+        "removed": [],
+        "reason": "Rehome same-policy Ameba Ownd website/blog application and assets from ABEMA video; do not describe these as video-only destinations. Official service catalog also identifies AmebaBlog and Ameba Manga, separate from ABEMA streaming.",
+        "evidence": [
+          "https://www.amebaownd.com/",
+          "https://www.cyberagent.co.jp/en/service/media/"
+        ]
+      },
+      {
+        "path": "Rules/Regional/GlobalDomains.list",
+        "added": [
+          "host-suffix, foxcredit.com, Global",
+          "host-suffix, foxcredit.org, Global",
+          "host-suffix, winticket.jp, Global",
+          "host-suffix, notion.com, Global",
+          "host-suffix, notion-status.com, Global"
+        ],
+        "removed": [],
+        "reason": "Rehome unrelated financial/racing products from media with unchanged policy; add Notion current website/status from official page and MIT references. Shared Contentful hosts and user-site roots are not added.",
+        "evidence": [
+          "https://foxcredit.com/",
+          "https://www.cyberagent.co.jp/en/service/media/",
+          "https://www.notion.com/",
+          "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/notion"
+        ]
+      }
+    ]
+  },
+  "official_evidence": {
+    "core": [
+      {
+        "id": "telegram-cidr",
+        "url": "https://core.telegram.org/resources/cidr.txt",
+        "final_url": "https://core.telegram.org/resources/cidr.txt",
+        "status": 200,
+        "bytes": 227,
+        "sha256": "3ecd072cedf72eceee6961b18a51e37f905d5ce4a656a5d24cf5fea63e6ec651"
+      },
+      {
+        "id": "openai-network",
+        "url": "https://help.openai.com/en/articles/9247338-network-recommendations-for-chatgpt-errors-on-web-and-apps",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "id": "claude-network",
+        "url": "https://code.claude.com/docs/en/network-config",
+        "final_url": "https://code.claude.com/docs/en/network-config",
+        "status": 200,
+        "bytes": 605156,
+        "sha256": "37d14940e6132787d17421bc7de4080dd99971042881ddcd0e9c9dd3d7abfe71"
+      },
+      {
+        "id": "microsoft-domains",
+        "url": "https://learn.microsoft.com/en-us/microsoft-365/enterprise/microsoft-365-domains?view=o365-worldwide",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "id": "microsoft-urls",
+        "url": "https://learn.microsoft.com/en-us/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide",
+        "final_url": "https://learn.microsoft.com/en-us/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide",
+        "status": 200,
+        "bytes": 75034,
+        "sha256": "153a332b0b5921ef823d69b56162224793c01a48415a49741a95ae8427e0bc96"
+      },
+      {
+        "id": "hsbc-payme",
+        "url": "https://payme.hsbc.com.hk/en/",
+        "final_url": "https://payme.hsbc.com.hk/en/",
+        "status": 200,
+        "bytes": 59924,
+        "sha256": "d0aa476b5c71552772ab7787a1e1eb80f454e9af2218304bbba1d57935383b41"
+      },
+      {
+        "id": "apple-enterprise",
+        "url": "https://support.apple.com/en-us/101555",
+        "final_url": "https://support.apple.com/en-us/101555",
+        "status": 200,
+        "bytes": 304227,
+        "sha256": "66c80e67fd6489102e3d5f6c865d32903f85365b9cf48c45c87004d4d1a235cc"
+      },
+      {
+        "id": "google-openid",
+        "url": "https://accounts.google.com/.well-known/openid-configuration",
+        "final_url": "https://accounts.google.com/.well-known/openid-configuration",
+        "status": 200,
+        "bytes": 1399,
+        "sha256": "f86b185fd428f81d7efaa83ec256693b3abedb57ddfcc6a826f5f396b4827f02"
+      },
+      {
+        "id": "google-gemini-api",
+        "url": "https://ai.google.dev/api/generate-content",
+        "final_url": "https://ai.google.dev/api/generate-content",
+        "status": 200,
+        "bytes": 1230170,
+        "sha256": "004c35a1a6d5093b2c59f3e801639faeb71151b5fd62641246e27e8c8c4be183"
+      },
+      {
+        "id": "google-codeassist-network",
+        "url": "https://docs.cloud.google.com/gemini/docs/codeassist/set-up-gemini",
+        "final_url": "https://docs.cloud.google.com/gemini/docs/codeassist/set-up-gemini",
+        "status": 200,
+        "bytes": 160112,
+        "sha256": "4917338895f4db4f6679a4cd0a3b11473d9e5414e059efdfa2dc999edf4f6156"
+      }
+    ],
+    "games_video": [
+      {
+        "name": "minecraft-api",
+        "url": "https://api.minecraftservices.com/minecraft/profile",
+        "final_url": "https://api.minecraftservices.com/minecraft/profile",
+        "status": 401,
+        "bytes": 35,
+        "sha256": "aeed88e71a24e91c05226786cce449f5ebf4d24443642d43cbf1cfd73e19f407"
+      },
+      {
+        "name": "twitch",
+        "url": "https://www.twitch.tv/",
+        "final_url": "https://www.twitch.tv/",
+        "status": 200,
+        "bytes": 203446,
+        "sha256": "30454cdb4e0f720c9a13543cb9ab4f80a64c368bfe66c53ae5b8cac071347cc2"
+      },
+      {
+        "name": "youtube",
+        "url": "https://www.youtube.com/",
+        "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Missing Authority Key Identifier (_ssl.c:1082)>"
+      },
+      {
+        "name": "google-firewall",
+        "url": "https://support.google.com/a/answer/2589954?hl=en",
+        "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>"
+      },
+      {
+        "name": "amazon",
+        "url": "https://www.amazon.com/",
+        "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>"
+      },
+      {
+        "name": "abema",
+        "url": "https://abema.tv/",
+        "final_url": "https://abema.tv/",
+        "status": 200,
+        "bytes": 183467,
+        "sha256": "2c5805abed93b0004a8cc112b6c927a933e6e155b1ca1ccd62aed5a725ca4d8e"
+      },
+      {
+        "name": "ameba",
+        "url": "https://www.ameba.jp/",
+        "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>"
+      },
+      {
+        "name": "ameba-ownd",
+        "url": "https://www.amebaownd.com/",
+        "final_url": "https://www.amebaownd.com/",
+        "status": 200,
+        "bytes": 7139,
+        "sha256": "90e6ca13f680c515475c5e322112581285967036357298083ffa6fb1db8fe9cd"
+      },
+      {
+        "name": "bucketeer-docs",
+        "url": "https://docs.bucketeer.io/",
+        "final_url": "https://docs.bucketeer.io/",
+        "status": 200,
+        "bytes": 34582,
+        "sha256": "e43e2b85d05f395b831f5f9890983633d5488e8cee9c2668e1a1bb0c01e73f1c"
+      },
+      {
+        "name": "winticket",
+        "url": "https://www.winticket.jp/",
+        "final_url": "https://www.winticket.jp/",
+        "status": 200,
+        "bytes": 460890,
+        "sha256": "52891ca6d744e760d564aa35e02b5fb9d925f5f6dd1c8a78c034ce4c7956ce12"
+      },
+      {
+        "name": "niconico",
+        "url": "https://www.nicovideo.jp/",
+        "final_url": "https://www.nicovideo.jp/",
+        "status": 200,
+        "bytes": 148333,
+        "sha256": "fc4e502678cbae931e5afd3647c877b81b21fb7817a8ad2c1e63d66e52093ba4"
+      },
+      {
+        "name": "youku",
+        "url": "https://www.youku.com/",
+        "final_url": "https://www.youku.com/",
+        "status": 200,
+        "bytes": 1081,
+        "sha256": "8f187eeb2c6ec47e73678b7c0e424cd679605b12cb8b715589497e571fd5388c"
+      },
+      {
+        "name": "twitch-extensions",
+        "url": "https://dev.twitch.tv/docs/extensions/",
+        "final_url": "https://dev.twitch.tv/docs/extensions/",
+        "status": 200,
+        "bytes": 74427,
+        "sha256": "dc85365373e53901c42f01bdabc6322b07c81d91d390419e45fbaec667314c8c",
+        "domain_mentions": [
+          ".ext-twitch.tv",
+          "ext-twitch.tv",
+          "ext-twitch.tv.",
+          "my-extension.ext-twitch.tv",
+          "supervisor.ext-twitch.tv",
+          "your-extension.ext-twitch.tv"
+        ]
+      },
+      {
+        "name": "twitch-extensions-reference",
+        "url": "https://dev.twitch.tv/docs/extensions/reference/",
+        "final_url": "https://dev.twitch.tv/docs/extensions/reference/",
+        "status": 200,
+        "bytes": 73044,
+        "sha256": "b267e51115002e57bb3befa4504396d33360be9c271c76f95d9076824fbb3410",
+        "domain_mentions": []
+      },
+      {
+        "name": "minecraft-network",
+        "url": "https://educommunity.minecraft.net/hc/en-us/articles/360047118992-URLs-Used-by-Minecraft-Education",
+        "final_url": "https://edusupport.minecraft.net/hc/en-us/articles/360047118992-URLs-Used-by-Minecraft-Education",
+        "status": 403,
+        "bytes": 5678,
+        "sha256": "2b9cf5306cc3369e2155dc2bd4feaf3d4a58f86ee85f7bf19d83881dda8ee296",
+        "domain_mentions": []
+      },
+      {
+        "name": "abema-help",
+        "url": "https://help.abema.tv/hc/ja/articles/360013157091",
+        "final_url": "https://help.abema.tv/hc/ja/articles/360013157091",
+        "status": 404,
+        "bytes": 17922,
+        "sha256": "d263f5c06a121dee84888474ddf14b27fdc04a3793be54dcea33895ca477481b",
+        "domain_mentions": []
+      },
+      {
+        "name": "cyberagent-services",
+        "url": "https://www.cyberagent.co.jp/en/service/media/",
+        "final_url": "https://www.cyberagent.co.jp/en/service/media/",
+        "status": 200,
+        "bytes": 100870,
+        "sha256": "3b927b4f3f55e55bea3ce8718976827df21c18dbd5f50580dfab7ce749beee94",
+        "domain_mentions": []
+      },
+      {
+        "name": "amazon-prime",
+        "url": "https://www.primevideo.com/",
+        "final_url": "https://www.primevideo.com/offers/nonprimehomepage?ref_=dv_web_force_root",
+        "status": 200,
+        "bytes": 629638,
+        "sha256": "13d42509bc2a23ee9689e545db833479980bfd0466c75ecd8aeb8d3b17125a8a",
+        "domain_mentions": [
+          "m.media-amazon.com",
+          "u002Fm.media-amazon.com"
+        ]
+      },
+      {
+        "url": "https://www.bilibili.tv/",
+        "final_url": "https://www.bilibili.tv/",
+        "status": 200,
+        "sha256": "4c41de338be31e96968bd968bb81dc1b531c8379c7a5b21be98a6b343bb08493",
+        "bytes": 26581,
+        "hosts": [
+          "p.bstarstatic.com",
+          "pic.bstarstatic.com",
+          "schema.org",
+          "securepubads.g.doubleclick.net",
+          "www.bilibili.tv",
+          "www.googletagmanager.com"
+        ]
+      }
+    ],
+    "media": [
+      {
+        "url": "https://www.dgepress.com/fx/about-us/",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "url": "https://www.detpress.com/fx/about-us/",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "url": "https://www.valnetinc.com/polygon",
+        "final_url": "https://www.valnetinc.com/polygon",
+        "status": 200,
+        "sha256": "72fcb861488c6106f50faa2a6164176a19cdadf3a087fa274c04169023d58bc3",
+        "bytes": 26683,
+        "title": [
+          "Polygon - A Valnet Publication"
+        ],
+        "local": "78fd05945899.html"
+      },
+      {
+        "url": "https://thewaltdisneycompany.com/company/",
+        "final_url": "https://thewaltdisneycompany.com/company/",
+        "status": 200,
+        "sha256": "8df9fd216d8842b5428ed8654b1b7b107f180d109e4af247ba5ef0b9eaf4cf71",
+        "bytes": 176005,
+        "title": [
+          "Company News Archives | The Walt Disney Company"
+        ],
+        "local": "ac3af562d7d0.html"
+      },
+      {
+        "url": "https://www.dgepress.com/fx/",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "url": "https://www.detpress.com/fx/",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "url": "https://press.fxnetworks.com/",
+        "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>"
+      },
+      {
+        "url": "https://thewaltdisneycompany.com/the-walt-disney-company-and-21st-century-fox-announcement/",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "url": "https://thewaltdisneycompany.com/our-businesses/",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "url": "https://my.disney.com/legal/terms-of-use",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "url": "https://www.lizhi.fm/about",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://www.lizhiinc.com/",
+        "final_url": "https://www.lizhiinc.com/",
+        "status": 200,
+        "sha256": "ad385628473ae5036b8149163625d43b08eda6f95c1dab3db937d702f6d46c88",
+        "bytes": 22087,
+        "title": [
+          "荔枝app_荔枝播客_荔枝集团"
+        ],
+        "local": "2f33c5cb5009.html"
+      },
+      {
+        "url": "https://www.voxmedia.com/about-vox-media",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "url": "https://www.valnetinc.com/en/brands",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "url": "https://www.foxcredit.org/about-us/",
+        "final_url": "https://www.foxcredit.org/about-us/",
+        "status": 200,
+        "sha256": "2c3ba8eb0aa28aa7e562b3b7816a8e067ffc4d663a879ab9807a9fefea712876",
+        "bytes": 102734,
+        "title": [
+          "About Us | Fox Federal Credit Union"
+        ],
+        "local": "323c0f417ab1.html"
+      },
+      {
+        "url": "https://www.foxcredit.org/about/",
+        "final_url": "https://www.foxcredit.org/about-us",
+        "status": 200,
+        "sha256": "9c9b0eb31088e178fab0002b41a4eba3437742b837c1dbe24d8d7cbd18493f0d",
+        "bytes": 102734,
+        "title": [
+          "About Us | Fox Federal Credit Union"
+        ],
+        "local": "3acfcaa0aacb.html"
+      },
+      {
+        "url": "https://www.sonyliv.com/",
+        "error": "The read operation timed out"
+      },
+      {
+        "url": "https://thewaltdisneycompany.com/",
+        "final_url": "https://thewaltdisneycompany.com/",
+        "status": 200,
+        "sha256": "bbe3edd8adecf1bf70148c9deba4ad269637c79e6345f113eae3de4a7aaa0f81",
+        "bytes": 234613,
+        "title": [
+          "The Walt Disney Company"
+        ],
+        "local": "ef50b4a2b263.html"
+      },
+      {
+        "url": "https://www.fxnetworks.com/about",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://www.voxmedia.com/",
+        "final_url": "https://www.voxmedia.com/",
+        "status": 200,
+        "sha256": "8ae275080ce19b385d61e2b10f6cabb3f49d7ffb37b6276ebdbab44b7f0d40e8",
+        "bytes": 183363,
+        "title": [
+          "Vox Media"
+        ],
+        "local": "057f2dfec2c9.html"
+      },
+      {
+        "url": "https://www.valnetinc.com/",
+        "final_url": "https://www.valnetinc.com/",
+        "status": 200,
+        "sha256": "67abbd6e39c717d749293e9eab2836d053ca1b791e5dd8e747a08ae14f1f4d5a",
+        "bytes": 32874,
+        "title": [
+          "Valnet - The Leading Publishing & Media Investment Company"
+        ],
+        "local": "4a85c679291d.html"
+      },
+      {
+        "url": "https://www.bbc.co/",
+        "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>"
+      },
+      {
+        "url": "https://bbc.co/",
+        "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>"
+      },
+      {
+        "url": "https://bbci.co/",
+        "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>"
+      },
+      {
+        "url": "https://www.20thcenturystudios.com/",
+        "final_url": "https://www.20thcenturystudios.com/",
+        "status": 200,
+        "sha256": "24ef018e02f20cd25be913e3f1b52c540237ded68062238fe66513b3748bb09c",
+        "bytes": 954656,
+        "title": [
+          "20th Century Studios | Official Site"
+        ],
+        "local": "76d60b25ae64.html"
+      },
+      {
+        "url": "https://www.sciencemag.org/",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://www.lzpipi.com/",
+        "final_url": "https://www.lzpipi.com/",
+        "status": 200,
+        "sha256": "ee224ad28fc5c4873ee8b1bc87312ebeb372c700eb4556e76e82664d9f4b0864",
+        "bytes": 484,
+        "title": [
+          "荔枝播客"
+        ],
+        "local": "4f449ee86962.html"
+      },
+      {
+        "url": "https://www.huxiu.com/",
+        "final_url": "https://www.huxiu.com/",
+        "status": 200,
+        "sha256": "654037285166d1148f71b1bd1331cc2ea591fd582f1c7d93f29360b2b96cc516",
+        "bytes": 214526,
+        "title": [
+          "虎嗅网"
+        ],
+        "local": "1b4ea0fb1450.html"
+      },
+      {
+        "url": "https://www.lizhi.fm/",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://lizhi.io/",
+        "final_url": "https://www.lizhi.io/en",
+        "status": 200,
+        "sha256": "b830200c3b4795e8483e607001414d347b4f196dbf44d3e958de105b31502a7e",
+        "bytes": 41223,
+        "title": [
+          "lizhi.shop - Your Sale Booster in China"
+        ],
+        "local": "9175d6445bf4.html"
+      },
+      {
+        "url": "https://max.com/",
+        "final_url": "https://www.hbomax.com/",
+        "status": 200,
+        "sha256": "c27ef00e7ec267918c426f9cc455403a3418f96e5e75360dac122e84d552893b",
+        "bytes": 2500000,
+        "title": [
+          "HBO Max | Stream Series and Movies",
+          "HBO Max",
+          "Disney Plus, Hulu, HBO Max Bundle"
+        ],
+        "local": "a08048189006.html",
+        "body_is_truncated_prefix": true
+      },
+      {
+        "url": "https://www.fxnetworks.com/",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://www.foxcredit.com/",
+        "final_url": "https://www.foxcredit.org/",
+        "status": 200,
+        "sha256": "19e39d08a4be6b03237cd790f4e66c35c15a98fa8fc313bda76a30739c23e33c",
+        "bytes": 110087,
+        "title": [
+          "Fox Federal Credit Union: Coast to Coast Financial Services"
+        ],
+        "local": "1582045e4311.html"
+      },
+      {
+        "url": "https://www.foxcredit.org/",
+        "final_url": "https://www.foxcredit.org/",
+        "status": 200,
+        "sha256": "19e39d08a4be6b03237cd790f4e66c35c15a98fa8fc313bda76a30739c23e33c",
+        "bytes": 110087,
+        "title": [
+          "Fox Federal Credit Union: Coast to Coast Financial Services"
+        ],
+        "local": "84a79d66b68c.html"
+      },
+      {
+        "url": "https://www.disneyplus.com/",
+        "final_url": "https://www.disneyplus.com/",
+        "status": 200,
+        "sha256": "1424f1dc35df61f4cd2fa7f6952a8e09f729452da95596dcb322bc29a005f3a7",
+        "bytes": 1883684,
+        "title": [
+          "Disney+ | Stream Movies, TV Shows, Documentaries & More | U.S. Site"
+        ],
+        "local": "079c2b3543cb.html"
+      },
+      {
+        "url": "https://my.disney.com/",
+        "final_url": "https://my.disney.com/",
+        "status": 200,
+        "sha256": "95b7fc71c41954fe02b86b31f921ee779ab2792b614789d524230b2480347168",
+        "bytes": 32986,
+        "title": [
+          "MyDisney Account"
+        ],
+        "local": "6090dafdc120.html"
+      },
+      {
+        "url": "https://www.disneyaccount.com/",
+        "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>"
+      },
+      {
+        "url": "https://www.polygon.com/",
+        "error": "Remote end closed connection without response"
+      },
+      {
+        "url": "https://www.voxmedia.com/brands",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "url": "https://www.science.org/",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://www.kkstream.com/",
+        "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>"
+      },
+      {
+        "url": "https://kk.stream/",
+        "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>"
+      },
+      {
+        "url": "https://soundcloud.com/",
+        "final_url": "https://soundcloud.com/",
+        "status": 200,
+        "sha256": "2bb1cc1827b374168a89e38f30eb9bc87bff8a23b13d7d29e41e439e6fa8cae6",
+        "bytes": 68934,
+        "title": [
+          "Stream and listen to music online for free with SoundCloud"
+        ],
+        "local": "f93baa11200c.html"
+      },
+      {
+        "url": "https://soundcloud.cloud/",
+        "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>"
+      },
+      {
+        "url": "https://www.sonypicturesnetworks.com/",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://www.sonypicturesnetworks.com/sony-liv",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/sonyliv",
+        "error": "HTTP Error 404: Not Found"
+      }
+    ],
+    "root": [
+      {
+        "id": "line",
+        "url": "https://line.me/en/",
+        "final_url": "https://www.line.me/en/",
+        "status": 200,
+        "sha256": "9765b1199a4e68d32fb24b3b37104e793834ec2b679e30f641f4a96abb9c950f",
+        "bytes": 35792
+      },
+      {
+        "id": "line-api",
+        "url": "https://developers.line.biz/en/reference/messaging-api/",
+        "final_url": "https://developers.line.biz/en/reference/messaging-api/",
+        "status": 200,
+        "sha256": "6b89650ce918e16c49728d4963864dc05d048405b303232745dcbd32c011f432",
+        "bytes": 150873
+      },
+      {
+        "id": "docker-allowlist",
+        "url": "https://docs.docker.com/desktop/setup/allow-list/",
+        "final_url": "https://docs.docker.com/desktop/enterprise/allow-list/",
+        "status": 200,
+        "sha256": "28ffca4e499351be97220efcf322daa560edbb480083f7377c87244972f0f4f6",
+        "bytes": 520007
+      },
+      {
+        "id": "pypi",
+        "url": "https://pypi.org/help/",
+        "final_url": "https://pypi.org/help/",
+        "status": 200,
+        "sha256": "b9e1b868b04f91471d7e680d1ad5f18f1f6d405eee22176d5ed0e6a9731d06ae",
+        "bytes": 87090
+      },
+      {
+        "id": "pip-registry",
+        "url": "https://pip.pypa.io/en/stable/cli/pip_install/",
+        "final_url": "https://pip.pypa.io/en/stable/cli/pip_install/",
+        "status": 200,
+        "sha256": "454a951dd12c117e42d16ec20cd15ca691e723a2d1fd7559409d52a9b721239f",
+        "bytes": 113089
+      },
+      {
+        "id": "npm-registry",
+        "url": "https://docs.npmjs.com/cli/v11/using-npm/registry/",
+        "final_url": "https://docs.npmjs.com/cli/v11/using-npm/registry/",
+        "status": 200,
+        "sha256": "b88c04e20010aab709921aad2d1711b1fcd9e96458b195a2977f22fe77a14bf5",
+        "bytes": 507940
+      },
+      {
+        "id": "freedns",
+        "url": "https://freedns.afraid.org/domain/registry/?sort=5&q=us.to",
+        "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1082)>"
+      },
+      {
+        "id": "notion",
+        "url": "https://www.notion.com/help/allowlist-notion",
+        "error": "HTTP Error 404: Not Found"
+      },
+      {
+        "id": "twitteroauth",
+        "url": "https://twitteroauth.com/",
+        "final_url": "https://twitteroauth.com/",
+        "status": 200,
+        "sha256": "61ea5d37d8de4086a4ff3e635dc726cf592cea10d5d1b0d7be4bfc9eecd3e0a1",
+        "bytes": 22580
+      },
+      {
+        "id": "sony",
+        "url": "https://www.sony.com/en/",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      {
+        "id": "freedns-http",
+        "url": "http://freedns.afraid.org/domain/registry/?sort=5&q=us.to",
+        "error": "Remote end closed connection without response"
+      },
+      {
+        "id": "pypi-project",
+        "url": "https://pypi.org/pypi/pip/json",
+        "final_url": "https://pypi.org/pypi/pip/json",
+        "status": 200,
+        "sha256": "6e11a831a6a7c5aac56ee8634c4041a4d86b19380f43879a76a1903dcde9d814",
+        "bytes": 228494
+      },
+      {
+        "id": "notion-home",
+        "url": "https://www.notion.com/",
+        "final_url": "https://www.notion.com/",
+        "status": 200,
+        "sha256": "f4ef29a9f3cde95d4616a1b466a42fa9012f243be25c26bbc4105acb806303ec",
+        "bytes": 210083
+      }
+    ]
+  },
+  "deferred_or_rejected": {
+    "core": [
+      {
+        "candidates": [
+          "clau.de",
+          "claude.dev",
+          "claudemcpclient.com"
+        ],
+        "source": "v2fly latest data/anthropic",
+        "decision": "not added",
+        "reason": "Absent from fetched current official Claude network guide. No observed failing dependency; request official/observed evidence before treating aliases or other new scopes as required."
+      },
+      {
+        "candidates": [
+          "chatgpt.site",
+          "crixet.com",
+          "openaiassets.blob.core.windows.net",
+          "host.livekit.cloud",
+          "turn.livekit.cloud"
+        ],
+        "source": "v2fly latest data/openai",
+        "decision": "not added",
+        "reason": "No successful fresh official allowlist fetch; shared LiveKit hosts cannot be treated as OpenAI-exclusive. Existing chatgpt.livekit.cloud stays bounded."
+      },
+      {
+        "candidates": [
+          "vv1865.com"
+        ],
+        "source": "v2fly latest data/hsbc",
+        "decision": "not added",
+        "reason": "Current public HSBC PayMe page did not establish this endpoint. Needs an official PayMe reference or observed app evidence before fixed-direct classification."
+      },
+      {
+        "candidates": [
+          "daily-cloudcode-pa.googleapis.com",
+          "geller-pa.googleapis.com",
+          "robinfrontend-pa.googleapis.com"
+        ],
+        "source": "v2fly latest google-deepmind / SukkaW ai reference",
+        "decision": "not added this pass",
+        "reason": "Only exact product hosts present in fetched official Google guidance were selected; broader generated AI collections are not automatically adopted."
+      },
+      {
+        "candidates": [
+          "cp4.cloudflare.com",
+          "*.vertexsmb.com",
+          "*.digicert.com",
+          "*.blob.core.windows.net",
+          "*.azure-apim.net",
+          "storage.googleapis.com",
+          "www.googleapis.com"
+        ],
+        "source": "official network allowlist pages",
+        "decision": "remain normal fallback",
+        "reason": "Firewall allowlists include shared dependencies. A destination-routing list cannot infer which caller is using a shared host; avoid claiming all provider/customers merely because a vendor allowlist mentions it."
+      },
+      {
+        "candidates": [
+          "akadns.net",
+          "edgesuite.net",
+          "crashlytics.com",
+          "auth0.com",
+          "sentry.io",
+          "stripe.com",
+          "host-keyword openai",
+          "17.0.0.0/8"
+        ],
+        "source": "ACL4SSR / SukkaW / ppmina / blackmatrix7 comparative inventories",
+        "decision": "rejected",
+        "reason": "Unbounded shared hosting, generic vendor dependencies, heuristic strings or broad IP allocation; keep explicit service hosts and terminal GeoIP/Final."
+      }
+    ],
+    "games_video": [
+      {
+        "candidate": "live-video.net and Twitch opaque CloudFront inventory",
+        "decision": "not adopted",
+        "reason": "AWS IVS shared video infrastructure is broader than Twitch; unrelated tenant capture unacceptable. No fresh trace establishes need for opaque historical distributions."
+      },
+      {
+        "candidate": "ggpht.com/.cn platform rehome",
+        "decision": "deferred unchanged",
+        "reason": "Potential broader Google imagery scope; official Google network reference failed TLS; splitting parent Google and child YouTube would add precedence exceptions without fresh use evidence."
+      },
+      {
+        "candidate": "media-amazon.com PrimeVideo-only claim",
+        "decision": "scope caveat retained",
+        "reason": "Current PrimeVideo uses m.media-amazon.com but whole service root is not proven exclusive; no new policy change introduced."
+      },
+      {
+        "candidate": "Abema legacy amebame/ameblo/hayabusa/adx classifications",
+        "decision": "remaining classification caveat",
+        "reason": "Corporate ownership or prior upstream grouping is not live per-product evidence; further exact moves require independent confirmation."
+      },
+      {
+        "candidate": "All legacy defensive brand variants and parked possibilities",
+        "decision": "not mass deleted",
+        "reason": "DNS liveness, redirects or absence from one reference do not prove wrong ownership or lack of future product use. Inherited limited confidence is explicit."
+      },
+      {
+        "candidate": "National/bank/media IP or public TLD catchalls",
+        "decision": "not adopted",
+        "reason": "Unknown destinations use GeoIP CN then Final; explicit service names preserve known routing intent without catching every cloud tenant."
+      }
+    ],
+    "media": [
+      "A full static line review is not a fresh registration/ownership audit of all 842 domain names. Historical Fox affiliates, campaign/merchandise domains, closed international editions and defensive Qobuz variants remain bounded rules unless a verified change justified removal.",
+      "No DNS/CIDR replacement was generated from current resolution. Unknown or shared destinations remain subject to terminal GeoIP CN / Final.",
+      "BBC bbc.co and bbci.co failed TLS fetch; this does not establish abandonment or a new registrant, so retained.",
+      "SonyMedia contains only an inherited dedicated Akamai host. sonyliv.com is an obvious coverage candidate, but its fresh page fetch timed out and no matching selected MIT reference was found; no unsupported new domain was added in this pass.",
+      "All current rules remain HOST/HOST-SUFFIX, with no new keyword, wildcard, catch-all domain, shared provider root, media IP block or per-leaf terminal fallback.",
+      "Dedicated tenant names whose upstream format remains domain: are retained pending narrower evidence; the 13 exact-host changes are deliberately limited to reviewed full: references."
+    ],
+    "sony_followup": {
+      "status": "unresolved-no-rule-change",
+      "candidate": "host-suffix, sonyliv.com, Global",
+      "checks": [
+        {
+          "reference": "v2fly c6adacf29cc4fb05e04651fcf03e00989ef9f797 data/sony and data/sonypictures",
+          "result": "Neither contains sonyliv.com; full downloaded include closure has no sonyliv or sony-liv entry."
+        },
+        {
+          "reference": "sve1r 8061d2ebe160280f25d4b20d6d929d9e03caecbe Rules/Media/ForeignMedia.list:1531",
+          "result": "Contains only host,sonyliveevents-nonssai.akamaized.net,Foreign Media, already retained."
+        },
+        {
+          "url": "https://www.sonypicturesnetworks.com/",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://www.sonypicturesnetworks.com/sony-liv",
+          "error": "HTTP Error 403: Forbidden"
+        },
+        {
+          "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/sonyliv",
+          "error": "HTTP Error 404: Not Found"
+        }
+      ],
+      "reason": "Direct sonyliv.com request timed out; official Sony Pictures Networks site and /sony-liv both return 403. Immutable v2fly data/sonyliv URL is 404. This is absence of currently inspected positive evidence, not proof that the service/domain is invalid. No unverified API or whole Sony provider suffix was added."
+    },
+    "root": [
+      {
+        "scope": "GlobalDomains legacy destinations",
+        "decision": "Retain bounded historical service names unless a concrete ownership/scope issue has evidence. No DNS failure or old product name alone triggers deletion.",
+        "examples": [
+          "megaupload.com",
+          "storify.com",
+          "panoramio.com",
+          "deja.com"
+        ]
+      },
+      {
+        "scope": "us.to",
+        "decision": "Unresolved suspected shared dynamic-DNS namespace. HTTPS and HTTP FreeDNS registry requests failed in this network, so no current authority/tenant inventory was falsely claimed. Needs independent ownership verification before further expansion or a separately evidenced removal.",
+        "fetches": [
+          "https://freedns.afraid.org/domain/registry/?sort=5&q=us.to",
+          "http://freedns.afraid.org/domain/registry/?sort=5&q=us.to"
+        ]
+      },
+      {
+        "scope": "Sony and shared platform imagery",
+        "decision": "Preserve current explicit effective policies rather than silently changing corporate Sony Game policy or shared ggpht/PrimeVideo imagery routing during evidence gaps."
+      },
+      {
+        "scope": "Shared dependencies",
+        "decision": "Do not add global Contentful, Auth0, Bugsnag, Cloudflare R2 or full S3/pythonhosted roots merely because official service pages mention individual hosts."
+      }
+    ]
+  },
+  "validation": {
+    "unit_tests": 130,
+    "new_regressions": 15,
+    "rule_errors": 0,
+    "existing_syntax_warnings": 10,
+    "semantic_findings_accepted": 26,
+    "new_semantic_exceptions": 0,
+    "remote_resource_count": 11,
+    "config_template_unchanged": true,
+    "active_device_changes": false
+  }
+}

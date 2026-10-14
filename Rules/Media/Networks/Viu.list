@@ -3,9 +3,11 @@
 # Service names are separate from transport IP lists; no geography/final fallback here.
 # Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
 # Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+# Exact third-party hosts cross-checked against v2fly/domain-list-community
+# @c6adacf29cc4fb05e04651fcf03e00989ef9f797 (MIT; see THIRD_PARTY.md).
 
-host-suffix, d1k2us671qcoau.cloudfront.net, Global
-host-suffix, d2anahhhmp1ffz.cloudfront.net, Global
-host-suffix, dfp6rglgjqszk.cloudfront.net, Global
+host, d1k2us671qcoau.cloudfront.net, Global
+host, d2anahhhmp1ffz.cloudfront.net, Global
+host, dfp6rglgjqszk.cloudfront.net, Global
 host-suffix, viu.com, Global
 host-suffix, viu.tv, Global

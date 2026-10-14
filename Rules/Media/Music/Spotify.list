@@ -5,14 +5,16 @@
 # Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
 # Selected domain references: v2fly/domain-list-community@c6adacf29cc4fb05e04651fcf03e00989ef9f797.
 # MIT (Copyright (c) 2018-2019 V2Ray); full notices in LICENSES/.
+# Exact third-party hosts cross-checked against v2fly/domain-list-community
+# @c6adacf29cc4fb05e04651fcf03e00989ef9f797 (MIT; see THIRD_PARTY.md).
 
 host, audio4-ak-spotify-com.akamaized.net, Global
 host, cdn-spotify-experiments.conductrics.com, Global
 host, heads-ak-spotify-com.akamaized.net, Global
 host, spotify.com.edgesuite.net, Global
-host-suffix, audio-ak-spotify-com.akamaized.net, Global
+host, audio-ak-spotify-com.akamaized.net, Global
 host-suffix, byspotify.com, Global
-host-suffix, heads4-ak-spotify-com.akamaized.net, Global
+host, heads4-ak-spotify-com.akamaized.net, Global
 host-suffix, lifeatspotify.com, Global
 host-suffix, pscdn.co, Global
 host-suffix, scdn.co, Global

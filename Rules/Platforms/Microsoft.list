@@ -5,8 +5,15 @@
 # Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
 # Selected domain references: v2fly/domain-list-community@c6adacf29cc4fb05e04651fcf03e00989ef9f797.
 # MIT (Copyright (c) 2018-2019 V2Ray); full notices in LICENSES/.
+# Current official endpoint scope: https://learn.microsoft.com/en-us/microsoft-365/enterprise/urls-and-ip-address-ranges
+# Unified Microsoft 365 product domains and exact auth endpoints do not include Azure tenant roots.
 
+host, account.activedirectory.windowsazure.com, Microsoft
+host, accounts.accesscontrol.windows.net, Microsoft
 host, default.exp-tas.com, Microsoft
+host, enterpriseregistration.windows.net, Microsoft
+host, graph.windows.net, Microsoft
+host, login.windows.net, Microsoft
 host, vscode-sync-insiders.trafficmanager.net, Microsoft
 host, vscode-sync.trafficmanager.net, Microsoft
 host, vscode.blob.core.windows.net, Microsoft
@@ -35,6 +42,7 @@ host-suffix, bingj.com, Microsoft
 host-suffix, blazor.net, Microsoft
 host-suffix, botframework.com, Microsoft
 host-suffix, c-msedge.net, Microsoft
+host-suffix, cloud.microsoft, Microsoft
 host-suffix, dot.net, Microsoft
 host-suffix, dynamics.com, Microsoft
 host-suffix, e-msedge.net, Microsoft
@@ -171,6 +179,7 @@ host-suffix, skypeforbusiness.com, Microsoft
 host-suffix, spo-msedge.net, Microsoft
 host-suffix, spoprod-a.akamaihd.net, Microsoft
 host-suffix, staffhub.ms, Microsoft
+host-suffix, static.microsoft, Microsoft
 host-suffix, statics-marketingsites-eas-ms-com.akamaized.net, Microsoft
 host-suffix, statics-marketingsites-eus-ms-com.akamaized.net, Microsoft
 host-suffix, statics-marketingsites-neu-ms-com.akamaized.net, Microsoft
@@ -182,6 +191,7 @@ host-suffix, sway-extensions.com, Microsoft
 host-suffix, sway.com, Microsoft
 host-suffix, sysinternals.com, Microsoft
 host-suffix, t-msedge.net, Microsoft
+host-suffix, usercontent.microsoft, Microsoft
 host-suffix, userpxt.io, Microsoft
 host-suffix, videoindexer.ai, Microsoft
 host-suffix, virtualearth.net, Microsoft

@@ -3,13 +3,15 @@
 # Service names are separate from transport IP lists; no geography/final fallback here.
 # Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
 # Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+# Exact third-party hosts cross-checked against v2fly/domain-list-community
+# @c6adacf29cc4fb05e04651fcf03e00989ef9f797 (MIT; see THIRD_PARTY.md).
 
 host-suffix, amlg.io, Global
 host-suffix, cbs.com, Global
 host-suffix, cbsaavideo.com, Global
 host-suffix, cbscorporation.com, Global
 host-suffix, cbsi.com, Global
-host-suffix, cbsi.live.ott.irdeto.com, Global
+host, cbsi.live.ott.irdeto.com, Global
 host-suffix, cbsi.video, Global
 host-suffix, cbsiam.com, Global
 host-suffix, cbsig.net, Global
@@ -18,10 +20,10 @@ host-suffix, cbsinteractive.com, Global
 host-suffix, cbsistatic.com, Global
 host-suffix, cbsivideo.com, Global
 host-suffix, cbsnews.com, Global
-host-suffix, cbsplaylistserver.aws.syncbak.com, Global
+host, cbsplaylistserver.aws.syncbak.com, Global
 host-suffix, cbspressexpress.com, Global
 host-suffix, cbsradio.com, Global
-host-suffix, cbsservice.aws.syncbak.com, Global
+host, cbsservice.aws.syncbak.com, Global
 host-suffix, cbssports.com, Global
 host-suffix, cbsstatic.com, Global
 host-suffix, cbsstore.com, Global

@@ -3,6 +3,8 @@
 # Service names are separate from transport IP lists; no geography/final fallback here.
 # Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
 # Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+# Exact third-party hosts cross-checked against v2fly/domain-list-community
+# @c6adacf29cc4fb05e04651fcf03e00989ef9f797 (MIT; see THIRD_PARTY.md).
 
 host-suffix, afewmomentswith.com, Global
 host-suffix, anidom.com, Global
@@ -68,8 +70,6 @@ host-suffix, foxcincy.net, Global
 host-suffix, foxcollegesports.com, Global
 host-suffix, foxcorporation.com, Global
 host-suffix, foxcreativeuniversity.com, Global
-host-suffix, foxcredit.com, Global
-host-suffix, foxcredit.org, Global
 host-suffix, foxd.tv, Global
 host-suffix, foxdcg.com, Global
 host-suffix, foxdeportes.com, Global
@@ -111,7 +111,7 @@ host-suffix, foxnewslatino.com, Global
 host-suffix, foxnewsmagazine.com, Global
 host-suffix, foxnewsnetwork.com, Global
 host-suffix, foxnewsopinion.com, Global
-host-suffix, foxnewsplayer-a.akamaihd.net, Global
+host, foxnewsplayer-a.akamaihd.net, Global
 host-suffix, foxnewspodcasts.com, Global
 host-suffix, foxnewspolitics.com, Global
 host-suffix, foxnewsradio.com, Global
@@ -188,8 +188,6 @@ host-suffix, foxweatherwatch.com, Global
 host-suffix, fse.tv, Global
 host-suffix, fssta.com, Global
 host-suffix, fxn.ws, Global
-host-suffix, fxnetwork.com, Global
-host-suffix, fxnetworks.com, Global
 host-suffix, geraldoatlarge.com, Global
 host-suffix, gooddaychicago.com, Global
 host-suffix, joeswall.com, Global

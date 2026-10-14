@@ -71,6 +71,7 @@ git diff --check
 
 ## 审查依据
 
+- [docs/deep-review-2026-10-14.md](docs/deep-review-2026-10-14.md)：最新第二轮逐行复审、11 个实际资源结论、修正及仍待核实事项；[JSON](docs/deep-review-2026-10-14.json) 保留逐文件哈希与变更证据。
 - [docs/review-2026-10-14.md](docs/review-2026-10-14.md)：本轮问题、修复、覆盖范围与验证边界。
 - [docs/corpus-review.json](docs/corpus-review.json)：本轮逐条保留、移动、删除与新增依据。
 - [docs/semantic-exceptions.json](docs/semantic-exceptions.json)：少量有证据的服务子域或共享依赖例外。
