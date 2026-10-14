@@ -237,7 +237,7 @@ class ServiceCoverageTest(unittest.TestCase):
             fields = [part.strip() for part in value.split(',')]
             if kind.strip() == 'static':
                 first_choices[fields[0]] = fields[1]
-                choices[fields[0]] = fields[1:]
+                choices[fields[0]] = [part for part in fields[1:] if '=' not in part]
         self.assertEqual('direct', first_choices['OpenAI'])
         self.assertEqual('direct', first_choices['Claude'])
         self.assertNotIn('AI-Dependencies', choices)
