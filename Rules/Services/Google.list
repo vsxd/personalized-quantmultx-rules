@@ -1,121 +1,125 @@
-# MIRRORED FROM: https://github.com/sve1r/Rules-For-Quantumult-X
+# MAINTENANCE: independently maintained and curated in vsxd/personalized-quantmultx-rules.
+# REFERENCE SOURCE: https://github.com/sve1r/Rules-For-Quantumult-X
+# CATEGORY POLICY: Google
+# REVIEWED: 2026-10-14; source fixes, category ownership and deliberate updates are maintained locally.
+# OWNERSHIP: required categories own exact type+target keys; optional dependency fallbacks are retained.
+# AUDIT: docs/category-partition.json; docs/rule-categories.json; docs/quarantine.json.
 # SOURCE COMMIT: 8061d2ebe160280f25d4b20d6d929d9e03caecbe
 # SOURCE LICENSE: MIT (Copyright (c) 2020 SVE1R)
-# MIRROR POLICY: reviewed copy; force-policy in the consuming config controls the policy.
 #
 # >> Google
-host-keyword,google,Google
-host-suffix,265.com,Google
+host-keyword, google, Google
+host-suffix, 265.com, Google
 
 # > Alphabet Websites 
-host-suffix,abc.xyz,Google
-host-suffix,capitalg.com,Google
+host-suffix, abc.xyz, Google
+host-suffix, capitalg.com, Google
 
 # > Android
-host-suffix,android.com,Google
-host-suffix,androidify.com,Google
+host-suffix, android.com, Google
+host-suffix, androidify.com, Google
 
 # > Appspot
-host-keyword,appspot,Google
+host-suffix, appspot.com, Google
 
 # > Chrome & Chromium
-host-suffix,chrome.com,Google
-host-suffix,chromeexperiments.com,Google
-host-suffix,chromestatus.com,Google
-host-suffix,chromium.org,Google
-host-suffix,whatbrowser.org,Google
+host-suffix, chrome.com, Google
+host-suffix, chromeexperiments.com, Google
+host-suffix, chromestatus.com, Google
+host-suffix, chromium.org, Google
+host-suffix, whatbrowser.org, Google
 
 # > Google AI
-host-suffix,autodraw.com,Google
-host-suffix,deepmind.com,Google
-host-suffix,tensorflow.org,Google
-host-suffix,tfhub.dev,Google
+host-suffix, autodraw.com, Google
+host-suffix, deepmind.com, Google
+host-suffix, tensorflow.org, Google
+host-suffix, tfhub.dev, Google
 
 # > Google APIs
-host,translate.googleapis.com,Google
-host-suffix,googleapis.com,Google
+host, translate.googleapis.com, Google
+host-suffix, googleapis.com, Google
 
 # > Google Blogger
-host-keyword,blogspot,Google
-host-suffix,blogger.com,Google
-host-suffix,googleblog.com,Google
+host-keyword, blogspot, Google
+host-suffix, blogger.com, Google
+host-suffix, googleblog.com, Google
 
 # > Google Cloud Platform
-host-suffix,dialogflow.com,Google
-host-suffix,gcp.gvt2.com,Google
+host-suffix, dialogflow.com, Google
+host-suffix, gcp.gvt2.com, Google
 
 # > Google Developer
-host-keyword,googlesource,Google
-host-suffix,godoc.org,Google
-host-suffix,golang.org,Google
-host-suffix,googlemashups.com,Google
-host-suffix,gwtproject.org,Google
-host-suffix,itasoftware.com,Google
-host-suffix,pkg.go.dev,Google
-host-suffix,shattered.io,Google
-host-suffix,waveprotocol.org,Google
-host-suffix,webmproject.org,Google
-host-suffix,webrtc.org,Google
-host-suffix,withgoogle.com,Google
+host-suffix, googlesource.com, Google
+host-suffix, godoc.org, Google
+host-suffix, golang.org, Google
+host-suffix, googlemashups.com, Google
+host-suffix, gwtproject.org, Google
+host-suffix, itasoftware.com, Google
+host-suffix, pkg.go.dev, Google
+host-suffix, shattered.io, Google
+host-suffix, waveprotocol.org, Google
+host-suffix, webmproject.org, Google
+host-suffix, webrtc.org, Google
+host-suffix, withgoogle.com, Google
 
 # > Google Education
-host-suffix,madewithcode.com,Google
+host-suffix, madewithcode.com, Google
 
 # > Google Enterprise
-host-suffix,synergyse.com,Google
+host-suffix, synergyse.com, Google
 
 # > Gmail
-host-keyword,gmail,Google
+host-suffix, gmail.com, Google
 
 # > Google Recaptcha
-host-keyword,recaptcha,Google
+host-suffix, recaptcha.net, Google
 
 # > Google Static Files
-host-suffix,gstatic.com,Google
-host-suffix,gmodules.com,Google
-host-suffix,googleusercontent.com,Google
-host-suffix,gvt0.com,Google
-host-suffix,gvt1.com,Google
-host-suffix,gvt3.com,Google
+host-suffix, gstatic.com, Google
+host-suffix, gmodules.com, Google
+host-suffix, googleusercontent.com, Google
+host-suffix, gvt0.com, Google
+host-suffix, gvt1.com, Google
+host-suffix, gvt3.com, Google
 
 # > Google VR
-host-suffix,tiltbrush.com,Google
+host-suffix, tiltbrush.com, Google
 
 # > Material Design
-host-suffix,getmdl.io,Google
-host-suffix,material.io,Google
+host-suffix, getmdl.io, Google
+host-suffix, material.io, Google
 
 # > Other
-host-suffix,blog.google,DIRECT
-host-suffix,certificate-transparency.org,Google
-host-suffix,certificate-transparency.dev,Google
-host-suffix,creativelab5.com,Google
-host-suffix,debug.com,Google
-host-suffix,gv.com,Google
-host-suffix,polymer-project.org,Google
-host-suffix,waymo.com,Google
-host-suffix,widevine.com,Google
-host-suffix,x.company,Google
+host-suffix, blog.google, Google
+host-suffix, certificate-transparency.org, Google
+host-suffix, certificate-transparency.dev, Google
+host-suffix, creativelab5.com, Google
+host-suffix, debug.com, Google
+host-suffix, gv.com, Google
+host-suffix, polymer-project.org, Google
+host-suffix, waymo.com, Google
+host-suffix, widevine.com, Google
+host-suffix, x.company, Google
 
 # > Google IP-CIDR
-ip-cidr,173.194.0.0/16,Google
-ip-cidr,74.125.0.0/16,Google
+ip-cidr, 173.194.0.0/16, Google
+ip-cidr, 74.125.0.0/16, Google
 
 # > Google Domestic CDNs
-host,clientservices.googleapis.com,Google Domestic
-host,fonts.googleapis.com,Google Domestic
-host,fonts.gstatic.com,Google Domestic
-host,ocsp.pki.goog,Google Domestic
-host,crl.pki.goog,Google Domestic
-host,redirector.c.bigcache.googleapis.com,Google Domestic
-host,redirector.gvt1.com,Google Domestic
-host,safebrowsing.googleapis.com,Google Domestic
-host,safebrowsing-cache.google.com,Google Domestic
-host-suffix,dl.google.com,Google Domestic
-host-suffix,dl.l.google.com,Google Domestic
-host-suffix,google.cn,Google Domestic
-host-suffix,googletraveladservices.com,Google Domestic
-host-suffix,ssl.gstatic.com,Google Domestic
-host-suffix,tools.google.com,Google Domestic
-host-suffix,tools.l.google.com,Google Domestic
-host-suffix,update.googleapis.com,Google Domestic
+host, clientservices.googleapis.com, Google
+host, fonts.googleapis.com, Google
+host, fonts.gstatic.com, Google
+host, ocsp.pki.goog, Google
+host, crl.pki.goog, Google
+host, redirector.c.bigcache.googleapis.com, Google
+host, redirector.gvt1.com, Google
+host, safebrowsing.googleapis.com, Google
+host, safebrowsing-cache.google.com, Google
+host-suffix, dl.google.com, Google
+host-suffix, dl.l.google.com, Google
+host-suffix, google.cn, Google
+host-suffix, googletraveladservices.com, Google
+host-suffix, ssl.gstatic.com, Google
+host-suffix, tools.google.com, Google
+host-suffix, tools.l.google.com, Google
+host-suffix, update.googleapis.com, Google

@@ -1,0 +1,40 @@
+# NAME: OpenAI / ChatGPT / Codex / Sora
+# UPDATED: 2026-10-14
+# SCOPE: 第一方域名与 OpenAI 专属第三方端点；共享供应商见 OpenAI-Dependencies.list。
+# SOURCE: https://help.openai.com/en/articles/9247338-network-recommendations-for-chatgpt-errors-on-web-and-apps
+# 官方防火墙 allowlist 不等于域名全部归属 OpenAI；不要将通用供应商整站划给 OpenAI。
+# 此列表应在 Google / Microsoft / Global 等通用列表之前加载。
+# 策略组中的 direct 只约束匹配到的连接；不保证所在地网络或服务地区可用性。
+
+# > 核心服务、认证、静态资源、用户文件
+# chatgpt.com 已覆盖 ws.chatgpt.com；openai.com 已覆盖 auth.openai.com 等子域。
+HOST-SUFFIX, chatgpt.com, OpenAI
+HOST-SUFFIX, chat.com, OpenAI
+HOST-SUFFIX, openai.com, OpenAI
+HOST-SUFFIX, sora.com, OpenAI
+HOST-SUFFIX, oaistatic.com, OpenAI
+HOST-SUFFIX, oaiusercontent.com, OpenAI
+HOST-SUFFIX, oaistatsig.com, OpenAI
+HOST, cdn.openaimerge.com, OpenAI
+
+# > 专属第三方端点；保留已有兼容覆盖，不扩展到供应商的共享根域
+HOST, chat.openai.com.cdn.cloudflare.net, OpenAI
+HOST, openaiapi-site.azureedge.net, OpenAI
+HOST, openaicom.imgix.net, OpenAI
+HOST, production-openaicom-storage.azureedge.net, OpenAI
+HOST, openaicomproductionae4b.blob.core.windows.net, OpenAI
+HOST, openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net, OpenAI
+HOST, openai-api.arkoselabs.com, OpenAI
+HOST, o207216.ingest.sentry.io, OpenAI
+HOST, o33249.ingest.sentry.io, OpenAI
+
+# > 既有语音兼容域名（不是当前官方 allowlist 新增项）
+HOST-SUFFIX, chatgpt.livekit.cloud, OpenAI
+# openaiusercontent.com 在本次双解析器查询中均为 NXDOMAIN，已移除；勿与 oaiusercontent.com 混淆。
+
+# > 协议边界
+# ChatGPT: wss://ws.chatgpt.com；Codex: wss://chatgpt.com/。
+# 二者已由首条覆盖；出口须支持 TCP/443 WebSocket Upgrade 和长连接。
+# Voice UDP/3478 使用动态 IP；官方地址源 https://openai.com/chatgpt-voice.json。
+# HOST 规则无法保证裸 IP 语音连接归组。若需要语音，请同步官方 IP 清单或先验证 TCP/443 回退。
+# 不添加 HOST-KEYWORD, openai 或整站 azureedge.net / livekit.cloud / auth0.com 兜底。

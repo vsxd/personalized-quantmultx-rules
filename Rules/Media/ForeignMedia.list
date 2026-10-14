@@ -1,1791 +1,1778 @@
-# MIRRORED FROM: https://github.com/sve1r/Rules-For-Quantumult-X
+# MAINTENANCE: independently maintained and curated in vsxd/personalized-quantmultx-rules.
+# REFERENCE SOURCE: https://github.com/sve1r/Rules-For-Quantumult-X
+# CATEGORY POLICY: Global
+# REVIEWED: 2026-10-14; source fixes, category ownership and deliberate updates are maintained locally.
+# OWNERSHIP: required categories own exact type+target keys; optional dependency fallbacks are retained.
+# AUDIT: docs/category-partition.json; docs/rule-categories.json; docs/quarantine.json.
 # SOURCE COMMIT: 8061d2ebe160280f25d4b20d6d929d9e03caecbe
 # SOURCE LICENSE: MIT (Copyright (c) 2020 SVE1R)
-# MIRROR POLICY: reviewed copy; force-policy in the consuming config controls the policy.
 #
 # >> GlobalMedia
 # > AbemaTV
-host-suffix,abema.io,Foreign Media
-host-suffix,abema.tv,Foreign Media
-host-suffix,adx.promo,Foreign Media
-host-suffix,ameba.jp,Foreign Media
-host-suffix,amebame.com,Foreign Media
-host-suffix,amebaownd.com,Foreign Media
-host-suffix,amebaowndme.com,Foreign Media
-host-suffix,ameblo.jp,Foreign Media
-host-suffix,bucketeer.jp,Foreign Media
-host-suffix,dokusho-ojikan.jp,Foreign Media
-host-suffix,hayabusa.dev,Foreign Media
-host-suffix,hayabusa.io,Foreign Media
-host-suffix,hayabusa.media,Foreign Media
-host-suffix,winticket.jp,Foreign Media
+host-suffix, abema.io, Global
+host-suffix, abema.tv, Global
+host-suffix, adx.promo, Global
+host-suffix, ameba.jp, Global
+host-suffix, amebame.com, Global
+host-suffix, amebaownd.com, Global
+host-suffix, amebaowndme.com, Global
+host-suffix, ameblo.jp, Global
+host-suffix, bucketeer.jp, Global
+host-suffix, dokusho-ojikan.jp, Global
+host-suffix, hayabusa.dev, Global
+host-suffix, hayabusa.io, Global
+host-suffix, hayabusa.media, Global
+host-suffix, winticket.jp, Global
 
 # >> Abema TV CDN FQDN
-host-suffix,abematv.akamaized.net,Foreign Media
-host-suffix,d1otoma47x30pg.cloudfront.net,Foreign Media
-host-suffix,d2wy8f7a9ursnm.cloudfront.net,Foreign Media
-host-suffix,ds-linear-abematv.akamaized.net,Foreign Media
-host-suffix,ds-vod-abematv.akamaized.net,Foreign Media
-host-suffix,linear-abematv.akamaized.net,Foreign Media
-host-suffix,vod-abematv.akamaized.net,Foreign Media
+host-suffix, abematv.akamaized.net, Global
+host-suffix, d1otoma47x30pg.cloudfront.net, Global
+host-suffix, d2wy8f7a9ursnm.cloudfront.net, Global
+host-suffix, ds-linear-abematv.akamaized.net, Global
+host-suffix, ds-vod-abematv.akamaized.net, Global
+host-suffix, linear-abematv.akamaized.net, Global
+host-suffix, vod-abematv.akamaized.net, Global
 
 # > AFP
-host-suffix,afp.com,Foreign Media
-host-suffix,afpforum.com,Foreign Media
+host-suffix, afp.com, Global
+host-suffix, afpforum.com, Global
 
 # > All4
-host-suffix,c4assets.com,Foreign Media
-host-suffix,channel4.com,Foreign Media
+host-suffix, c4assets.com, Global
+host-suffix, channel4.com, Global
 
 # > Amazon Prime Video
-host-suffix,aiv-cdn.net,Foreign Media
-host-suffix,aiv-delivery.net,Foreign Media
-host-suffix,amazonprimevideo.cn,Foreign Media
-host-suffix,amazonprimevideo.com.cn,Foreign Media
-host-suffix,amazonprimevideos.com,Foreign Media
-host-suffix,amazonvideo.cc,Foreign Media
-host-suffix,amazonvideo.com,Foreign Media
-host-suffix,atv-ps.amazon.com,Foreign Media
-host-suffix,avodmp4s3ww-a.akamaihd.net,Foreign Media
-host-suffix,fls-na.amazon.com,Foreign Media
-host-suffix,llnwd.net,Foreign Media
-host-suffix,media-amazon.com,Foreign Media
-host-suffix,prime-video.com,Foreign Media
-host-suffix,primevideo.cc,Foreign Media
-host-suffix,primevideo.com,Foreign Media
-host-suffix,primevideo.info,Foreign Media
-host-suffix,primevideo.org,Foreign Media
-host-suffix,primevideo.tv,Foreign Media
-host,d1v5ir2lpwr8os.cloudfront.net,Foreign Media
-host,d22qjgkvxw22r6.cloudfront.net,Foreign Media
-host,d25xi40x97liuc.cloudfront.net,Foreign Media
-host,d27xxe7juh1us6.cloudfront.net,Foreign Media
-host,dmqdd6hw24ucf.cloudfront.net,Foreign Media
-host-keyword,avoddashs,Foreign Media
+host-suffix, aiv-cdn.net, Global
+host-suffix, aiv-delivery.net, Global
+host-suffix, amazonprimevideo.cn, Global
+host-suffix, amazonprimevideo.com.cn, Global
+host-suffix, amazonprimevideos.com, Global
+host-suffix, amazonvideo.cc, Global
+host-suffix, amazonvideo.com, Global
+host-suffix, atv-ps.amazon.com, Global
+host-suffix, avodmp4s3ww-a.akamaihd.net, Global
+host-suffix, fls-na.amazon.com, Global
+host-suffix, llnwd.net, Global
+host-suffix, media-amazon.com, Global
+host-suffix, prime-video.com, Global
+host-suffix, primevideo.cc, Global
+host-suffix, primevideo.com, Global
+host-suffix, primevideo.info, Global
+host-suffix, primevideo.org, Global
+host-suffix, primevideo.tv, Global
+host, d1v5ir2lpwr8os.cloudfront.net, Global
+host, d22qjgkvxw22r6.cloudfront.net, Global
+host, d25xi40x97liuc.cloudfront.net, Global
+host, d27xxe7juh1us6.cloudfront.net, Global
+host, dmqdd6hw24ucf.cloudfront.net, Global
+host-keyword, avoddashs, Global
 
 # > Americasvoice
-host-suffix,americasvoice.news,Foreign Media
+host-suffix, americasvoice.news, Global
 
 # > ATTWatchTV
-host-suffix,att.tv,Foreign Media
-host-suffix,atttvnow.com,Foreign Media
-host-suffix,attwatchtv.com,Foreign Media
-host-suffix,directv.com,Foreign Media
-host-suffix,dtvce.com,Foreign Media
-host-suffix,nettyinternet.com,Foreign Media
+host-suffix, att.tv, Global
+host-suffix, atttvnow.com, Global
+host-suffix, attwatchtv.com, Global
+host-suffix, directv.com, Global
+host-suffix, dtvce.com, Global
+host-suffix, nettyinternet.com, Global
 
 # > Bahamut
-host-suffix,bahamut.com.tw,Foreign Media
-host-suffix,gamer.com.tw,Foreign Media
-host,bahamut.akamaized.net,Foreign Media
-host,gamer-cds.cdn.hinet.net,Foreign Media
-host,gamer2-cds.cdn.hinet.net,Foreign Media
+host-suffix, bahamut.com.tw, Global
+host-suffix, gamer.com.tw, Global
+host, bahamut.akamaized.net, Global
+host, gamer-cds.cdn.hinet.net, Global
+host, gamer2-cds.cdn.hinet.net, Global
 
 # > BBC
-user-agent,BBCiPlayer*,Foreign Media
-host-suffix,bbc,Foreign Media
-host-suffix,bbc.co,Foreign Media
-host-suffix,bbc.co.uk,Foreign Media
-host-suffix,bbc.com,Foreign Media
-host-suffix,bbc.in,Foreign Media
-host-suffix,bbc.net.uk,Foreign Media
-host-suffix,bbcchinese.com,Foreign Media
-host-suffix,bbcfmt.hs.llnwd.net,Foreign Media
-host-suffix,bbcfmt.s.llnwi.net,Foreign Media
-host-suffix,bbci.co,Foreign Media
-host-suffix,bbci.co.uk,Foreign Media
-host-suffix,bbcmedia.co.uk,Foreign Media
-host-suffix,bbcpersian.com,Foreign Media
-host-suffix,bbcverticals.com,Foreign Media
-host-suffix,bidi.net.uk,Foreign Media
-host,aod-dash-uk-live.akamaized.net,Foreign Media
-host,aod-hls-uk-live.akamaized.net,Foreign Media
-host,as-dash-uk-live.akamaized.net,Foreign Media
-host,as-hls-uk-live.akamaized.net,Foreign Media
-host,vod-dash-uk-live.akamaized.net,Foreign Media
-host,vod-dash-uk-live.bbcfmt.hs.llnwd.net,Foreign Media
-host,vod-dash-ww-live.akamaized.net,Foreign Media
-host,vod-dash-ww-live.bbcfmt.s.llnwi.net,Foreign Media
-host,vod-hls-uk-live.akamaized.net,Foreign Media
-host,vod-sub-uk-live.akamaized.net,Foreign Media
-host,vod-thumb-uk-live.akamaized.net,Foreign Media
-host,vod-thumb-uk-live.bbcfmt.hs.llnwd.net,Foreign Media
-host,vod-thumb-ww-live.akamaized.net,Foreign Media
-host,vod-thumb-ww-live.bbcfmt.s.llnwi.net,Foreign Media
-host,vs-cmaf-push-uk-live.akamaized.net,Foreign Media
-host-keyword,bbcfmt,Foreign Media
-host-keyword,uk-live,Foreign Media
+user-agent, BBCiPlayer*, Global
+host-suffix, bbc, Global
+host-suffix, bbc.co, Global
+host-suffix, bbc.co.uk, Global
+host-suffix, bbc.com, Global
+host-suffix, bbc.in, Global
+host-suffix, bbc.net.uk, Global
+host-suffix, bbcchinese.com, Global
+host-suffix, bbcfmt.hs.llnwd.net, Global
+host-suffix, bbcfmt.s.llnwi.net, Global
+host-suffix, bbci.co, Global
+host-suffix, bbci.co.uk, Global
+host-suffix, bbcmedia.co.uk, Global
+host-suffix, bbcpersian.com, Global
+host-suffix, bbcverticals.com, Global
+host-suffix, bidi.net.uk, Global
+host, aod-dash-uk-live.akamaized.net, Global
+host, aod-hls-uk-live.akamaized.net, Global
+host, as-dash-uk-live.akamaized.net, Global
+host, as-hls-uk-live.akamaized.net, Global
+host, vod-dash-uk-live.akamaized.net, Global
+host, vod-dash-uk-live.bbcfmt.hs.llnwd.net, Global
+host, vod-dash-ww-live.akamaized.net, Global
+host, vod-dash-ww-live.bbcfmt.s.llnwi.net, Global
+host, vod-hls-uk-live.akamaized.net, Global
+host, vod-sub-uk-live.akamaized.net, Global
+host, vod-thumb-uk-live.akamaized.net, Global
+host, vod-thumb-uk-live.bbcfmt.hs.llnwd.net, Global
+host, vod-thumb-ww-live.akamaized.net, Global
+host, vod-thumb-ww-live.bbcfmt.s.llnwi.net, Global
+host, vs-cmaf-push-uk-live.akamaized.net, Global
+host-keyword, bbcfmt, Global
+host-keyword, uk-live, Global
 
 # > BoXun
-host-suffix,boxun.com,Foreign Media
-host-suffix,bowenpress.com,Foreign Media
+host-suffix, boxun.com, Global
+host-suffix, bowenpress.com, Global
 
 # > CableTV
-host-suffix,cabletv.com.hk,Foreign Media
-host-suffix,i-cable.com,Foreign Media
+host-suffix, cabletv.com.hk, Global
+host-suffix, i-cable.com, Global
 
 # > CBS
-host-suffix,cbs,Foreign Media
-host-suffix,cbs.com,Foreign Media
-host-suffix,cbscorporation.com,Foreign Media
-host-suffix,cbsi.video,Foreign Media
-host-suffix,cbsiam.com,Foreign Media
-host-suffix,cbsig.net,Foreign Media
-host-suffix,cbsimg.net,Foreign Media
-host-suffix,cbsinteractive.com,Foreign Media
-host-suffix,cbsistatic.com,Foreign Media
-host-suffix,cbsnews.com,Foreign Media
-host-suffix,cbspressexpress.com,Foreign Media
-host-suffix,cbssports.com,Foreign Media
-host-suffix,cbsstatic.com,Foreign Media
-host-suffix,cbsstore.com,Foreign Media
-host-suffix,cbssvideo.com,Foreign Media
-host-suffix,cbstelevisioncity.com,Foreign Media
-host-suffix,viacbs.com,Foreign Media
-host-suffix,viacom.com,Foreign Media
-host-suffix,viacomcbs.com,Foreign Media
-host-suffix,viacomcbspressexpress.com,Foreign Media
+host-suffix, cbs, Global
+host-suffix, cbs.com, Global
+host-suffix, cbscorporation.com, Global
+host-suffix, cbsi.video, Global
+host-suffix, cbsiam.com, Global
+host-suffix, cbsig.net, Global
+host-suffix, cbsimg.net, Global
+host-suffix, cbsinteractive.com, Global
+host-suffix, cbsistatic.com, Global
+host-suffix, cbsnews.com, Global
+host-suffix, cbspressexpress.com, Global
+host-suffix, cbssports.com, Global
+host-suffix, cbsstatic.com, Global
+host-suffix, cbsstore.com, Global
+host-suffix, cbssvideo.com, Global
+host-suffix, cbstelevisioncity.com, Global
+host-suffix, viacbs.com, Global
+host-suffix, viacom.com, Global
+host-suffix, viacomcbs.com, Global
+host-suffix, viacomcbspressexpress.com, Global
 
 # >> CBS Radio
-host-suffix,cbsradio.com,Foreign Media
+host-suffix, cbsradio.com, Global
 
 # >> Paramount
-user-agent,PPlus*,Foreign Media
-host-suffix,amlg.io,Foreign Media
-host-suffix,cbsaavideo.com,Foreign Media
-host-suffix,cbsi.com,Foreign Media
-host-suffix,cbsi.live.ott.irdeto.com,Foreign Media
-host-suffix,cbsivideo.com,Foreign Media
-host-suffix,cbsplaylistserver.aws.syncbak.com,Foreign Media
-host-suffix,cbsservice.aws.syncbak.com,Foreign Media
-host-suffix,mtvnservices.com,Foreign Media
-host-suffix,paramount.com,Foreign Media
-host-suffix,paramountplus.com,Foreign Media
-host-suffix,pplusstatic.com,Foreign Media
+user-agent, PPlus*, Global
+host-suffix, amlg.io, Global
+host-suffix, cbsaavideo.com, Global
+host-suffix, cbsi.com, Global
+host-suffix, cbsi.live.ott.irdeto.com, Global
+host-suffix, cbsivideo.com, Global
+host-suffix, cbsplaylistserver.aws.syncbak.com, Global
+host-suffix, cbsservice.aws.syncbak.com, Global
+host-suffix, mtvnservices.com, Global
+host-suffix, paramount.com, Global
+host-suffix, paramountplus.com, Global
+host-suffix, pplusstatic.com, Global
 
 # >> Pluto TV
-host-suffix,pluto.tv,Foreign Media
+host-suffix, pluto.tv, Global
 
 # >> ShowTime
-host-suffix,showtime.com,Foreign Media
+host-suffix, showtime.com, Global
 
 # > CNN
-host-suffix,cnn.com,Foreign Media
-host-suffix,cnn.io,Foreign Media
-host-suffix,cnn.it,Foreign Media
-host-suffix,cnnarabic.com,Foreign Media
-host-suffix,cnnlabs.com,Foreign Media
-host-suffix,cnnmoney.ch,Foreign Media
+host-suffix, cnn.com, Global
+host-suffix, cnn.io, Global
+host-suffix, cnn.it, Global
+host-suffix, cnnarabic.com, Global
+host-suffix, cnnlabs.com, Global
+host-suffix, cnnmoney.ch, Global
 
 # > CW Seed
-host-suffix,cwseed.com,Foreign Media
-host-suffix,cwtv.com,Foreign Media
-host-suffix,thecwvideo.com,Foreign Media
-host,cwtv-amd-akamai.akamaized.net,Foreign Media
-host,edge.cwtv-vod-ext.top.comcast.net,Foreign Media
+host-suffix, cwseed.com, Global
+host-suffix, cwtv.com, Global
+host-suffix, thecwvideo.com, Global
+host, cwtv-amd-akamai.akamaized.net, Global
+host, edge.cwtv-vod-ext.top.comcast.net, Global
 
 # > Dailymotion
-host-suffix,dai.ly,Foreign Media
-host-suffix,dailymotion.com,Foreign Media
-host-suffix,dm-event.net,Foreign Media
-host-suffix,dmcdn.net,Foreign Media
-host-suffix,dmxleo.com,Foreign Media
+host-suffix, dai.ly, Global
+host-suffix, dailymotion.com, Global
+host-suffix, dm-event.net, Global
+host-suffix, dmcdn.net, Global
+host-suffix, dmxleo.com, Global
 
 # > DAZN
-user-agent,DAZN*,Foreign Media
-host-suffix,control.kochava.com,Foreign Media
-host-suffix,d151l6v8er5bdm.cloudfront.net,Foreign Media
-host-suffix,d1sgwhnao7452x.cloudfront.net,Foreign Media
-host-suffix,dazn-api.com,Foreign Media
-host-suffix,dazn.com,Foreign Media
-host-suffix,dazndn.com,Foreign Media
-host-suffix,dc2-vodhls-perform.secure.footprint.net,Foreign Media
-host-suffix,dca-ll-livedazn-dznlivejp.s.llnwi.net,Foreign Media
-host-suffix,dca-ll-voddazn-dznvodjp.s.llnwi.net,Foreign Media
-host-suffix,dcalivedazn.akamaized.net,Foreign Media
-host-suffix,dcblivedazn.akamaized.net,Foreign Media
-host-suffix,indazn.com,Foreign Media
-host-suffix,indaznlab.com,Foreign Media
-host-suffix,intercom.io,Foreign Media
-host-suffix,logx.optimizely.com,Foreign Media
-host-suffix,onboarding.indazn.com,Foreign Media
-host-suffix,pubby.indazn.com,Foreign Media
-host-suffix,rail.discovery.indazn.com,Foreign Media
-host-suffix,s.yimg.jp,Foreign Media
-host-suffix,sentry.io,Foreign Media
-host,d151l6v8er5bdm.cloudfront.net,Foreign Media
-host,d1sgwhnao7452x.cloudfront.net,Foreign Media
-host-keyword,voddazn,Foreign Media
+user-agent, DAZN*, Global
+host-suffix, control.kochava.com, Global
+host-suffix, d151l6v8er5bdm.cloudfront.net, Global
+host-suffix, d1sgwhnao7452x.cloudfront.net, Global
+host-suffix, dazn-api.com, Global
+host-suffix, dazn.com, Global
+host-suffix, dazndn.com, Global
+host-suffix, dc2-vodhls-perform.secure.footprint.net, Global
+host-suffix, dca-ll-livedazn-dznlivejp.s.llnwi.net, Global
+host-suffix, dca-ll-voddazn-dznvodjp.s.llnwi.net, Global
+host-suffix, dcalivedazn.akamaized.net, Global
+host-suffix, dcblivedazn.akamaized.net, Global
+host-suffix, indazn.com, Global
+host-suffix, indaznlab.com, Global
+host-suffix, intercom.io, Global
+host-suffix, logx.optimizely.com, Global
+host-suffix, onboarding.indazn.com, Global
+host-suffix, pubby.indazn.com, Global
+host-suffix, rail.discovery.indazn.com, Global
+host-suffix, s.yimg.jp, Global
+host, d151l6v8er5bdm.cloudfront.net, Global
+host, d1sgwhnao7452x.cloudfront.net, Global
+host-keyword, voddazn, Global
 
 # > Deezer
-host-suffix,deezer.com,Foreign Media
-host-suffix,dzcdn.net,Foreign Media
+host-suffix, deezer.com, Global
+host-suffix, dzcdn.net, Global
 
 # > Discovery Plus
-user-agent,discovery+*,Foreign Media
-user-agent,DPlus*,Foreign Media
-host-suffix,content-ause1-ur-discovery1.uplynk.com,Foreign Media
-host-suffix,disco-api.com,Foreign Media
-host-suffix,discovery.com,Foreign Media
-host-suffix,discoveryplus.co.uk,Foreign Media
-host-suffix,discoveryplus.com,Foreign Media
-host-suffix,discoveryplus.in,Foreign Media
-host-suffix,dnitv.com,Foreign Media
-host-suffix,fwmrm.net,Foreign Media
-host-suffix,getblueshift.com,Foreign Media
-host-suffix,litix.io,Foreign Media
-host-suffix,mobile-collector.newrelic.com,Foreign Media
+user-agent, discovery+*, Global
+user-agent, DPlus*, Global
+host-suffix, content-ause1-ur-discovery1.uplynk.com, Global
+host-suffix, disco-api.com, Global
+host-suffix, discovery.com, Global
+host-suffix, discoveryplus.co.uk, Global
+host-suffix, discoveryplus.com, Global
+host-suffix, discoveryplus.in, Global
+host-suffix, dnitv.com, Global
+host-suffix, fwmrm.net, Global
+host-suffix, getblueshift.com, Global
+host-suffix, litix.io, Global
+host-suffix, mobile-collector.newrelic.com, Global
 
 # > Disney
-host-suffix,20thcenturystudios.com.au,Foreign Media
-host-suffix,20thcenturystudios.com.br,Foreign Media
-host-suffix,20thcenturystudios.jp,Foreign Media
-host-suffix,adobedtm.com,Foreign Media
-host-suffix,adventuresbydisney.com,Foreign Media
-host-suffix,babble.com,Foreign Media
-host-suffix,babyzone.com,Foreign Media
-host-suffix,bam.nr-data.net,Foreign Media
-host-suffix,beautyandthebeastmusical.co.uk,Foreign Media
-host-suffix,braze.com,Foreign Media
-host-suffix,cdn.optimizely.com,Foreign Media
-host-suffix,cdn.registerdisney.go.com,Foreign Media
-host-suffix,cdn.unid.go.com,Foreign Media
-host-suffix,conviva.com,Foreign Media
-host-suffix,d9.flashtalking.com,Foreign Media
-host-suffix,dilcdn.com,Foreign Media
-host-suffix,disney-asia.com,Foreign Media
-host-suffix,disney-discount.com,Foreign Media
-host-suffix,disney-plus.net,Foreign Media
-host-suffix,disney-portal.my.onetrust.com,Foreign Media
-host-suffix,disney-studio.com,Foreign Media
-host-suffix,disney-studio.net,Foreign Media
-host-suffix,disney.asia,Foreign Media
-host-suffix,disney.be,Foreign Media
-host-suffix,disney.bg,Foreign Media
-host-suffix,disney.ca,Foreign Media
-host-suffix,disney.ch,Foreign Media
-host-suffix,disney.co.il,Foreign Media
-host-suffix,disney.co.jp,Foreign Media
-host-suffix,disney.co.kr,Foreign Media
-host-suffix,disney.co.th,Foreign Media
-host-suffix,disney.co.uk,Foreign Media
-host-suffix,disney.co.za,Foreign Media
-host-suffix,disney.com,Foreign Media
-host-suffix,disney.com.au,Foreign Media
-host-suffix,disney.com.br,Foreign Media
-host-suffix,disney.com.hk,Foreign Media
-host-suffix,disney.com.tw,Foreign Media
-host-suffix,disney.cz,Foreign Media
-host-suffix,disney.de,Foreign Media
-host-suffix,disney.demdex.net,Foreign Media
-host-suffix,disney.dk,Foreign Media
-host-suffix,disney.es,Foreign Media
-host-suffix,disney.fi,Foreign Media
-host-suffix,disney.fr,Foreign Media
-host-suffix,disney.gr,Foreign Media
-host-suffix,disney.hu,Foreign Media
-host-suffix,disney.id,Foreign Media
-host-suffix,disney.in,Foreign Media
-host-suffix,disney.io,Foreign Media
-host-suffix,disney.it,Foreign Media
-host-suffix,disney.my,Foreign Media
-host-suffix,disney.my.sentry.io,Foreign Media
-host-suffix,disney.nl,Foreign Media
-host-suffix,disney.no,Foreign Media
-host-suffix,disney.ph,Foreign Media
-host-suffix,disney.pl,Foreign Media
-host-suffix,disney.pt,Foreign Media
-host-suffix,disney.ro,Foreign Media
-host-suffix,disney.ru,Foreign Media
-host-suffix,disney.se,Foreign Media
-host-suffix,disney.sg,Foreign Media
-host-suffix,disneyadsales.com,Foreign Media
-host-suffix,disneyarena.com,Foreign Media
-host-suffix,disneyaulani.com,Foreign Media
-host-suffix,disneybaby.com,Foreign Media
-host-suffix,disneycareers.com,Foreign Media
-host-suffix,disneychannelonstage.com,Foreign Media
-host-suffix,disneychannelroadtrip.com,Foreign Media
-host-suffix,disneycruisebrasil.com,Foreign Media
-host-suffix,disneyenconcert.com,Foreign Media
-host-suffix,disneyiejobs.com,Foreign Media
-host-suffix,disneyinflight.com,Foreign Media
-host-suffix,disneyinternational.com,Foreign Media
-host-suffix,disneyinternationalhd.com,Foreign Media
-host-suffix,disneyjunior.com,Foreign Media
-host-suffix,disneyjuniortreataday.com,Foreign Media
-host-suffix,disneylatino.com,Foreign Media
-host-suffix,disneymagicmoments.co.il,Foreign Media
-host-suffix,disneymagicmoments.co.uk,Foreign Media
-host-suffix,disneymagicmoments.co.za,Foreign Media
-host-suffix,disneymagicmoments.de,Foreign Media
-host-suffix,disneymagicmoments.es,Foreign Media
-host-suffix,disneymagicmoments.fr,Foreign Media
-host-suffix,disneymagicmoments.gen.tr,Foreign Media
-host-suffix,disneymagicmoments.gr,Foreign Media
-host-suffix,disneymagicmoments.it,Foreign Media
-host-suffix,disneymagicmoments.pl,Foreign Media
-host-suffix,disneymagicmomentsme.com,Foreign Media
-host-suffix,disneyme.com,Foreign Media
-host-suffix,disneymeetingsandevents.com,Foreign Media
-host-suffix,disneymovieinsiders.com,Foreign Media
-host-suffix,disneymusicpromotion.com,Foreign Media
-host-suffix,disneynewseries.com,Foreign Media
-host-suffix,disneynow.com,Foreign Media
-host-suffix,disneypeoplesurveys.com,Foreign Media
-host-suffix,disneyplus.bn5x.net,Foreign Media
-host-suffix,disneyplus.com,Foreign Media
-host-suffix,disneyplus.com.ssl.sc.omtrdc.net,Foreign Media
-host-suffix,disneyredirects.com,Foreign Media
-host-suffix,disneysrivieraresort.com,Foreign Media
-host-suffix,disneystore.com,Foreign Media
-host-suffix,disneystreaming.com,Foreign Media
-host-suffix,disneysubscription.com,Foreign Media
-host-suffix,disneytickets.co.uk,Foreign Media
-host-suffix,disneyturkiye.com.tr,Foreign Media
-host-suffix,disneytvajobs.com,Foreign Media
-host-suffix,disneyworld-go.com,Foreign Media
-host-suffix,dssott.com,Foreign Media
-host-suffix,execute-api.us-east-1.amazonaws.com,Foreign Media
-host-suffix,go-disneyworldgo.com,Foreign Media
-host-suffix,go.com,Foreign Media
-host-suffix,js-agent.newrelic.com,Foreign Media
-host-suffix,mickey.tv,Foreign Media
-host-suffix,moviesanywhere.com,Foreign Media
-host-suffix,nomadlandmovie.ch,Foreign Media
-host-suffix,playmation.com,Foreign Media
-host-suffix,shopdisney.com,Foreign Media
-host-suffix,shops-disney.com,Foreign Media
-host-suffix,sorcerersarena.com,Foreign Media
-host-suffix,spaindisney.com,Foreign Media
-host-suffix,star-brasil.com,Foreign Media
-host-suffix,star-latam.com,Foreign Media
-host-suffix,starwars.com,Foreign Media
-host-suffix,starwarsgalacticstarcruiser.com,Foreign Media
-host-suffix,starwarskids.com,Foreign Media
-host-suffix,streamingdisney.net,Foreign Media
-host-suffix,thestationbymaker.com,Foreign Media
-host-suffix,thisispolaris.com,Foreign Media
-host-suffix,watchdisneyfe.com,Foreign Media
+host-suffix, 20thcenturystudios.com.au, Global
+host-suffix, 20thcenturystudios.com.br, Global
+host-suffix, 20thcenturystudios.jp, Global
+host-suffix, adobedtm.com, Global
+host-suffix, adventuresbydisney.com, Global
+host-suffix, babble.com, Global
+host-suffix, babyzone.com, Global
+host-suffix, bam.nr-data.net, Global
+host-suffix, beautyandthebeastmusical.co.uk, Global
+host-suffix, braze.com, Global
+host-suffix, cdn.optimizely.com, Global
+host-suffix, cdn.registerdisney.go.com, Global
+host-suffix, cdn.unid.go.com, Global
+host-suffix, conviva.com, Global
+host-suffix, d9.flashtalking.com, Global
+host-suffix, dilcdn.com, Global
+host-suffix, disney-asia.com, Global
+host-suffix, disney-discount.com, Global
+host-suffix, disney-plus.net, Global
+host-suffix, disney-portal.my.onetrust.com, Global
+host-suffix, disney-studio.com, Global
+host-suffix, disney-studio.net, Global
+host-suffix, disney.asia, Global
+host-suffix, disney.be, Global
+host-suffix, disney.bg, Global
+host-suffix, disney.ca, Global
+host-suffix, disney.ch, Global
+host-suffix, disney.co.il, Global
+host-suffix, disney.co.jp, Global
+host-suffix, disney.co.kr, Global
+host-suffix, disney.co.th, Global
+host-suffix, disney.co.uk, Global
+host-suffix, disney.co.za, Global
+host-suffix, disney.com, Global
+host-suffix, disney.com.au, Global
+host-suffix, disney.com.br, Global
+host-suffix, disney.com.hk, Global
+host-suffix, disney.com.tw, Global
+host-suffix, disney.cz, Global
+host-suffix, disney.de, Global
+host-suffix, disney.demdex.net, Global
+host-suffix, disney.dk, Global
+host-suffix, disney.es, Global
+host-suffix, disney.fi, Global
+host-suffix, disney.fr, Global
+host-suffix, disney.gr, Global
+host-suffix, disney.hu, Global
+host-suffix, disney.id, Global
+host-suffix, disney.in, Global
+host-suffix, disney.io, Global
+host-suffix, disney.it, Global
+host-suffix, disney.my, Global
+host-suffix, disney.my.sentry.io, Global
+host-suffix, disney.nl, Global
+host-suffix, disney.no, Global
+host-suffix, disney.ph, Global
+host-suffix, disney.pl, Global
+host-suffix, disney.pt, Global
+host-suffix, disney.ro, Global
+host-suffix, disney.ru, Global
+host-suffix, disney.se, Global
+host-suffix, disney.sg, Global
+host-suffix, disneyadsales.com, Global
+host-suffix, disneyarena.com, Global
+host-suffix, disneyaulani.com, Global
+host-suffix, disneybaby.com, Global
+host-suffix, disneycareers.com, Global
+host-suffix, disneychannelonstage.com, Global
+host-suffix, disneychannelroadtrip.com, Global
+host-suffix, disneycruisebrasil.com, Global
+host-suffix, disneyenconcert.com, Global
+host-suffix, disneyiejobs.com, Global
+host-suffix, disneyinflight.com, Global
+host-suffix, disneyinternational.com, Global
+host-suffix, disneyinternationalhd.com, Global
+host-suffix, disneyjunior.com, Global
+host-suffix, disneyjuniortreataday.com, Global
+host-suffix, disneylatino.com, Global
+host-suffix, disneymagicmoments.co.il, Global
+host-suffix, disneymagicmoments.co.uk, Global
+host-suffix, disneymagicmoments.co.za, Global
+host-suffix, disneymagicmoments.de, Global
+host-suffix, disneymagicmoments.es, Global
+host-suffix, disneymagicmoments.fr, Global
+host-suffix, disneymagicmoments.gen.tr, Global
+host-suffix, disneymagicmoments.gr, Global
+host-suffix, disneymagicmoments.it, Global
+host-suffix, disneymagicmoments.pl, Global
+host-suffix, disneymagicmomentsme.com, Global
+host-suffix, disneyme.com, Global
+host-suffix, disneymeetingsandevents.com, Global
+host-suffix, disneymovieinsiders.com, Global
+host-suffix, disneymusicpromotion.com, Global
+host-suffix, disneynewseries.com, Global
+host-suffix, disneynow.com, Global
+host-suffix, disneypeoplesurveys.com, Global
+host-suffix, disneyplus.bn5x.net, Global
+host-suffix, disneyplus.com, Global
+host-suffix, disneyplus.com.ssl.sc.omtrdc.net, Global
+host-suffix, disneyredirects.com, Global
+host-suffix, disneysrivieraresort.com, Global
+host-suffix, disneystore.com, Global
+host-suffix, disneystreaming.com, Global
+host-suffix, disneysubscription.com, Global
+host-suffix, disneytickets.co.uk, Global
+host-suffix, disneyturkiye.com.tr, Global
+host-suffix, disneytvajobs.com, Global
+host-suffix, disneyworld-go.com, Global
+host-suffix, dssott.com, Global
+host-suffix, go-disneyworldgo.com, Global
+host-suffix, go.com, Global
+host-suffix, js-agent.newrelic.com, Global
+host-suffix, mickey.tv, Global
+host-suffix, moviesanywhere.com, Global
+host-suffix, nomadlandmovie.ch, Global
+host-suffix, playmation.com, Global
+host-suffix, shopdisney.com, Global
+host-suffix, shops-disney.com, Global
+host-suffix, sorcerersarena.com, Global
+host-suffix, spaindisney.com, Global
+host-suffix, star-brasil.com, Global
+host-suffix, star-latam.com, Global
+host-suffix, starwars.com, Global
+host-suffix, starwarsgalacticstarcruiser.com, Global
+host-suffix, starwarskids.com, Global
+host-suffix, streamingdisney.net, Global
+host-suffix, thestationbymaker.com, Global
+host-suffix, thisispolaris.com, Global
+host-suffix, watchdisneyfe.com, Global
 
 # >> ABC
-host-suffix,abc-studios.com,Foreign Media
-host-suffix,abc.com,Foreign Media
-host-suffix,edgedatg.com,Foreign Media
+host-suffix, abc-studios.com, Global
+host-suffix, abc.com, Global
+host-suffix, edgedatg.com, Global
 
 # >> Bamtech
-host-suffix,bamgrid.com,Foreign Media
-host-suffix,dmed.technology,Foreign Media
+host-suffix, bamgrid.com, Global
+host-suffix, dmed.technology, Global
 
 # >> Espn
-host-suffix,dtci.co,Foreign Media
-host-suffix,dtci.technology,Foreign Media
-host-suffix,espn.co.uk,Foreign Media
-host-suffix,espn.com,Foreign Media
-host-suffix,espn.net,Foreign Media
-host-suffix,espncdn.com,Foreign Media
-host-suffix,espnqa.com,Foreign Media
-host-suffix,watchespn.com,Foreign Media
-host-suffix,espn.hb.omtrdc.net,Foreign Media
-host-suffix,espndotcom.tt.omtrdc.net,Foreign Media
+host-suffix, dtci.co, Global
+host-suffix, dtci.technology, Global
+host-suffix, espn.co.uk, Global
+host-suffix, espn.com, Global
+host-suffix, espn.net, Global
+host-suffix, espncdn.com, Global
+host-suffix, espnqa.com, Global
+host-suffix, watchespn.com, Global
+host-suffix, espn.hb.omtrdc.net, Global
+host-suffix, espndotcom.tt.omtrdc.net, Global
 
 # >> Marvel
-host-suffix,marvel.com,Foreign Media
-host-suffix,marvel10thanniversary.com,Foreign Media
-host-suffix,marveldimensionofheroes.com,Foreign Media
-host-suffix,marvelparty.net,Foreign Media
-host-suffix,marvelpinball.com,Foreign Media
-host-suffix,marvelsdoubleagent.com,Foreign Media
-host-suffix,marvelspotlightplays.com,Foreign Media
-host-suffix,marvelsuperheroseptember.com,Foreign Media
-host-suffix,marvelsuperwar.com,Foreign Media
-host-suffix,themarvelexperiencetour.com,Foreign Media
+host-suffix, marvel.com, Global
+host-suffix, marvel10thanniversary.com, Global
+host-suffix, marveldimensionofheroes.com, Global
+host-suffix, marvelparty.net, Global
+host-suffix, marvelpinball.com, Global
+host-suffix, marvelsdoubleagent.com, Global
+host-suffix, marvelspotlightplays.com, Global
+host-suffix, marvelsuperheroseptember.com, Global
+host-suffix, marvelsuperwar.com, Global
+host-suffix, themarvelexperiencetour.com, Global
 
 # >> Nationalgeographic
-host-suffix,natgeomaps.com,Foreign Media
-host-suffix,nationalgeographic.com,Foreign Media
-host-suffix,nationalgeographicpartners.com,Foreign Media
-host-suffix,ngeo.com,Foreign Media
+host-suffix, natgeomaps.com, Global
+host-suffix, nationalgeographic.com, Global
+host-suffix, nationalgeographicpartners.com, Global
+host-suffix, ngeo.com, Global
 
 # > E-Hentai Gallery
-host-suffix,e-hentai.org,Foreign Media
-host-suffix,ehgt.org,Foreign Media
-host-suffix,ehwiki.org,Foreign Media
-host-suffix,exhentai.org,Foreign Media
-host-suffix,hath.network,Foreign Media
-host-suffix,hentaiverse.org,Foreign Media
+host-suffix, e-hentai.org, Global
+host-suffix, ehgt.org, Global
+host-suffix, ehwiki.org, Global
+host-suffix, exhentai.org, Global
+host-suffix, hath.network, Global
+host-suffix, hentaiverse.org, Global
 
 # > Fox
-host-suffix,fox,Foreign Media
-host-suffix,cdn-fox-networks-group-green.akamaized.net,Foreign Media
-host-suffix,d3cv4a9a9wh0bt.cloudfront.net,Foreign Media
-host-suffix,dashasiafox.akamaized.net,Foreign Media
-host-suffix,fox-corporation.com,Foreign Media
-host-suffix,fox-news.com,Foreign Media
-host-suffix,fox.com,Foreign Media
-host-suffix,fox.tv,Foreign Media
-host-suffix,fox10.tv,Foreign Media
-host-suffix,fox10news.com,Foreign Media
-host-suffix,fox10phoenix.com,Foreign Media
-host-suffix,fox11.com,Foreign Media
-host-suffix,fox13memphis.com,Foreign Media
-host-suffix,fox13news.com,Foreign Media
-host-suffix,fox23.com,Foreign Media
-host-suffix,fox23maine.com,Foreign Media
-host-suffix,fox247.com,Foreign Media
-host-suffix,fox247.tv,Foreign Media
-host-suffix,fox26.com,Foreign Media
-host-suffix,fox26houston.com,Foreign Media
-host-suffix,fox28media.com,Foreign Media
-host-suffix,fox29.com,Foreign Media
-host-suffix,fox2detroit.com,Foreign Media
-host-suffix,fox2news.com,Foreign Media
-host-suffix,fox32.com,Foreign Media
-host-suffix,fox32chicago.com,Foreign Media
-host-suffix,fox35orlando.com,Foreign Media
-host-suffix,fox38corpuschristi.com,Foreign Media
-host-suffix,fox42kptm.com,Foreign Media
-host-suffix,fox46.com,Foreign Media
-host-suffix,fox46charlotte.com,Foreign Media
-host-suffix,fox47.com,Foreign Media
-host-suffix,fox49.tv,Foreign Media
-host-suffix,fox4news.com,Foreign Media
-host-suffix,fox51tns.net,Foreign Media
-host-suffix,fox5atlanta.com,Foreign Media
-host-suffix,fox5dc.com,Foreign Media
-host-suffix,fox5ny.com,Foreign Media
-host-suffix,fox5storm.com,Foreign Media
-host-suffix,fox6now.com,Foreign Media
-host-suffix,fox7.com,Foreign Media
-host-suffix,fox7austin.com,Foreign Media
-host-suffix,fox9.com,Foreign Media
-host-suffix,foxacrossamerica.com,Foreign Media
-host-suffix,foxaffiliateportal.com,Foreign Media
-host-suffix,foxandfriends.com,Foreign Media
-host-suffix,foxbet.com,Foreign Media
-host-suffix,foxbroadcasting.zendesk.com,Foreign Media
-host-suffix,foxbusiness.com,Foreign Media
-host-suffix,foxbusiness.tv,Foreign Media
-host-suffix,foxbusinessgo.com,Foreign Media
-host-suffix,foxcanvasroom.com,Foreign Media
-host-suffix,foxcareers.com,Foreign Media
-host-suffix,foxcharlotte.com,Foreign Media
-host-suffix,foxcincy.com,Foreign Media
-host-suffix,foxcincy.jobs,Foreign Media
-host-suffix,foxcincy.net,Foreign Media
-host-suffix,foxcollegesports.com,Foreign Media
-host-suffix,foxcorporation.com,Foreign Media
-host-suffix,foxcreativeuniversity.com,Foreign Media
-host-suffix,foxcredit.com,Foreign Media
-host-suffix,foxcredit.org,Foreign Media
-host-suffix,foxd.tv,Foreign Media
-host-suffix,foxdcg.com,Foreign Media
-host-suffix,foxdeportes.com,Foreign Media
-host-suffix,foxdeportes.net,Foreign Media
-host-suffix,foxdeportes.tv,Foreign Media
-host-suffix,foxdigitalmovies.com,Foreign Media
-host-suffix,foxdoua.com,Foreign Media
-host-suffix,foxentertainment.com,Foreign Media
-host-suffix,foxest.com,Foreign Media
-host-suffix,foxfaq.com,Foreign Media
-host-suffix,foxfdm.com,Foreign Media
-host-suffix,foxfiles.com,Foreign Media
-host-suffix,foxinc.com,Foreign Media
-host-suffix,foxkansas.com,Foreign Media
-host-suffix,foxla.com,Foreign Media
-host-suffix,foxla.tv,Foreign Media
-host-suffix,foxlexington.com,Foreign Media
-host-suffix,foxmediacloud.com,Foreign Media
-host-suffix,foxnation.com,Foreign Media
-host-suffix,foxnebraska.com,Foreign Media
-host-suffix,foxneo.com,Foreign Media
-host-suffix,foxneodigital.com,Foreign Media
-host-suffix,foxnetworks.info,Foreign Media
-host-suffix,foxnetworksinfo.com,Foreign Media
-host-suffix,foxnews.cc,Foreign Media
-host-suffix,foxnews.com,Foreign Media
-host-suffix,foxnews.net,Foreign Media
-host-suffix,foxnews.org,Foreign Media
-host-suffix,foxnews.tv,Foreign Media
-host-suffix,foxnewsaffiliates.com,Foreign Media
-host-suffix,foxnewsaroundtheworld.com,Foreign Media
-host-suffix,foxnewsb2b.com,Foreign Media
-host-suffix,foxnewschannel.com,Foreign Media
-host-suffix,foxnewsgo.net,Foreign Media
-host-suffix,foxnewsgo.org,Foreign Media
-host-suffix,foxnewsgo.tv,Foreign Media
-host-suffix,foxnewshealth.com,Foreign Media
-host-suffix,foxnewslatino.com,Foreign Media
-host-suffix,foxnewsmagazine.com,Foreign Media
-host-suffix,foxnewsnetwork.com,Foreign Media
-host-suffix,foxnewsopinion.com,Foreign Media
-host-suffix,foxnewsplayer-a.akamaihd.net,Foreign Media
-host-suffix,foxnewspodcasts.com,Foreign Media
-host-suffix,foxnewspolitics.com,Foreign Media
-host-suffix,foxnewsradio.com,Foreign Media
-host-suffix,foxnewsrundown.com,Foreign Media
-host-suffix,foxnewssunday.com,Foreign Media
-host-suffix,foxnow.com,Foreign Media
-host-suffix,foxon.com,Foreign Media
-host-suffix,foxphiladelphia.com,Foreign Media
-host-suffix,foxplay.com,Foreign Media
-host-suffix,foxplus.com,Foreign Media
-host-suffix,foxpoker.com,Foreign Media
-host-suffix,foxrad.io,Foreign Media
-host-suffix,foxredeem.com,Foreign Media
-host-suffix,foxrelease.com,Foreign Media
-host-suffix,foxrichmond.com,Foreign Media
-host-suffix,foxrobots.com,Foreign Media
-host-suffix,foxsmallbusinesscenter.com,Foreign Media
-host-suffix,foxsmallbusinesscenter.net,Foreign Media
-host-suffix,foxsmallbusinesscenter.org,Foreign Media
-host-suffix,foxsoccer.net,Foreign Media
-host-suffix,foxsoccer.tv,Foreign Media
-host-suffix,foxsoccermatchpass.com,Foreign Media
-host-suffix,foxsoccerplus.com,Foreign Media
-host-suffix,foxsoccerplus.net,Foreign Media
-host-suffix,foxsoccerplus.tv,Foreign Media
-host-suffix,foxsoccershop.com,Foreign Media
-host-suffix,foxsports-chicago.com,Foreign Media
-host-suffix,foxsports-newyork.com,Foreign Media
-host-suffix,foxsports-world.com,Foreign Media
-host-suffix,foxsports.cl,Foreign Media
-host-suffix,foxsports.co,Foreign Media
-host-suffix,foxsports.co.ve,Foreign Media
-host-suffix,foxsports.com,Foreign Media
-host-suffix,foxsports.com.ar,Foreign Media
-host-suffix,foxsports.com.bo,Foreign Media
-host-suffix,foxsports.com.br,Foreign Media
-host-suffix,foxsports.com.co,Foreign Media
-host-suffix,foxsports.com.ec,Foreign Media
-host-suffix,foxsports.com.gt,Foreign Media
-host-suffix,foxsports.com.mx,Foreign Media
-host-suffix,foxsports.com.pe,Foreign Media
-host-suffix,foxsports.com.py,Foreign Media
-host-suffix,foxsports.com.uy,Foreign Media
-host-suffix,foxsports.com.ve,Foreign Media
-host-suffix,foxsports.gt,Foreign Media
-host-suffix,foxsports.info,Foreign Media
-host-suffix,foxsports.net,Foreign Media
-host-suffix,foxsports.net.br,Foreign Media
-host-suffix,foxsports.pe,Foreign Media
-host-suffix,foxsports.sv,Foreign Media
-host-suffix,foxsports.uy,Foreign Media
-host-suffix,foxsports01-i.akamaihd.net,Foreign Media
-host-suffix,foxsports02-i.akamaihd.net,Foreign Media
-host-suffix,foxsports03-i.akamaihd.net,Foreign Media
-host-suffix,foxsports2.com,Foreign Media
-host-suffix,foxsportsflorida.com,Foreign Media
-host-suffix,foxsportsgo.com,Foreign Media
-host-suffix,foxsportsla.com,Foreign Media
-host-suffix,foxsportsnetmilwaukee.com,Foreign Media
-host-suffix,foxsportsneworleans.com,Foreign Media
-host-suffix,foxsportsracing.com,Foreign Media
-host-suffix,foxsportssupports.com,Foreign Media
-host-suffix,foxsportsuniversity.com,Foreign Media
-host-suffix,foxsportsworld.com,Foreign Media
-host-suffix,foxstudiolot.com,Foreign Media
-host-suffix,foxsuper6.com,Foreign Media
-host-suffix,foxtel.com,Foreign Media
-host-suffix,foxtel.com.au,Foreign Media
-host-suffix,foxtelevisionstations.com,Foreign Media
-host-suffix,foxtv.com,Foreign Media
-host-suffix,foxtvdvd.com,Foreign Media
-host-suffix,foxuv.com,Foreign Media
-host-suffix,foxweatherwatch.com,Foreign Media
-host-suffix,fssta.com,Foreign Media
-host-suffix,fxn.ws,Foreign Media
-host-suffix,fxnetwork.com,Foreign Media
-host-suffix,fxnetworks.com,Foreign Media
-host-suffix,now.com,Foreign Media
-host-suffix,staticasiafox.akamaized.net,Foreign Media
-host-suffix,theplatform.com,Foreign Media
-host-suffix,uplynk.com,Foreign Media
-host-suffix,afewmomentswith.com,Foreign Media
-host-suffix,anidom.com,Foreign Media
-host-suffix,casoneexchange.com,Foreign Media
-host-suffix,coronavirusnow.com,Foreign Media
-host-suffix,fse.tv,Foreign Media
-host-suffix,geraldoatlarge.com,Foreign Media
-host-suffix,gooddaychicago.com,Foreign Media
-host-suffix,joeswall.com,Foreign Media
-host-suffix,kilmeadeandfriends.com,Foreign Media
-host-suffix,maskedsingerfox.com,Foreign Media
-host-suffix,my13la.com,Foreign Media
-host-suffix,my20dc.com,Foreign Media
-host-suffix,my20houston.com,Foreign Media
-host-suffix,my29tv.com,Foreign Media
-host-suffix,my45.com,Foreign Media
-host-suffix,my9nj.com,Foreign Media
-host-suffix,myfoxatlanta.com,Foreign Media
-host-suffix,myfoxaustin.com,Foreign Media
-host-suffix,myfoxboston.com,Foreign Media
-host-suffix,myfoxcharlotte.com,Foreign Media
-host-suffix,myfoxchicago.com,Foreign Media
-host-suffix,myfoxdc.com,Foreign Media
-host-suffix,myfoxdetroit.com,Foreign Media
-host-suffix,myfoxdfw.com,Foreign Media
-host-suffix,myfoxhouston.com,Foreign Media
-host-suffix,myfoxhurricane.com,Foreign Media
-host-suffix,myfoxla.com,Foreign Media
-host-suffix,myfoxlosangeles.com,Foreign Media
-host-suffix,myfoxlubbock.com,Foreign Media
-host-suffix,myfoxmaine.com,Foreign Media
-host-suffix,myfoxny.com,Foreign Media
-host-suffix,myfoxorlando.com,Foreign Media
-host-suffix,myfoxphilly.com,Foreign Media
-host-suffix,myfoxphoenix.com,Foreign Media
-host-suffix,myfoxtampa.com,Foreign Media
-host-suffix,myfoxtampabay.com,Foreign Media
-host-suffix,myfoxtwincities.com,Foreign Media
-host-suffix,myfoxzone.com,Foreign Media
-host-suffix,myq2.com,Foreign Media
-host-suffix,newsnowfox.com,Foreign Media
-host-suffix,orlandohurricane.com,Foreign Media
-host-suffix,paradisehotelquizfox.com,Foreign Media
-host-suffix,q13.com,Foreign Media
-host-suffix,q13fox.com,Foreign Media
-host-suffix,realamericanstories.com,Foreign Media
-host-suffix,realamericanstories.info,Foreign Media
-host-suffix,realamericanstories.net,Foreign Media
-host-suffix,realamericanstories.org,Foreign Media
-host-suffix,realamericanstories.tv,Foreign Media
-host-suffix,realmilwaukeenow.com,Foreign Media
-host-suffix,rprimelab.com,Foreign Media
-host-suffix,shopspeedtv.com,Foreign Media
-host-suffix,soccermatchpass.com,Foreign Media
-host-suffix,speeddreamride.com,Foreign Media
-host-suffix,speedfantasybid.com,Foreign Media
-host-suffix,speedracegear.com,Foreign Media
-host-suffix,speedxtra.com,Foreign Media
-host-suffix,teenchoice.com,Foreign Media
-host-suffix,testonfox.com,Foreign Media
-host-suffix,theclasshroom.com,Foreign Media
-host-suffix,thefoxnation.com,Foreign Media
-host-suffix,thegeorgiascene.com,Foreign Media
-host-suffix,whatthefox.com,Foreign Media
-host-suffix,whosthehost.com,Foreign Media
-host-suffix,wofl.tv,Foreign Media
-host-suffix,woflthenewsstation.com,Foreign Media
-host-suffix,wogx.com,Foreign Media
+host-suffix, fox, Global
+host-suffix, cdn-fox-networks-group-green.akamaized.net, Global
+host-suffix, d3cv4a9a9wh0bt.cloudfront.net, Global
+host-suffix, dashasiafox.akamaized.net, Global
+host-suffix, fox-corporation.com, Global
+host-suffix, fox-news.com, Global
+host-suffix, fox.com, Global
+host-suffix, fox.tv, Global
+host-suffix, fox10.tv, Global
+host-suffix, fox10news.com, Global
+host-suffix, fox10phoenix.com, Global
+host-suffix, fox11.com, Global
+host-suffix, fox13memphis.com, Global
+host-suffix, fox13news.com, Global
+host-suffix, fox23.com, Global
+host-suffix, fox23maine.com, Global
+host-suffix, fox247.com, Global
+host-suffix, fox247.tv, Global
+host-suffix, fox26.com, Global
+host-suffix, fox26houston.com, Global
+host-suffix, fox28media.com, Global
+host-suffix, fox29.com, Global
+host-suffix, fox2detroit.com, Global
+host-suffix, fox2news.com, Global
+host-suffix, fox32.com, Global
+host-suffix, fox32chicago.com, Global
+host-suffix, fox35orlando.com, Global
+host-suffix, fox38corpuschristi.com, Global
+host-suffix, fox42kptm.com, Global
+host-suffix, fox46.com, Global
+host-suffix, fox46charlotte.com, Global
+host-suffix, fox47.com, Global
+host-suffix, fox49.tv, Global
+host-suffix, fox4news.com, Global
+host-suffix, fox51tns.net, Global
+host-suffix, fox5atlanta.com, Global
+host-suffix, fox5dc.com, Global
+host-suffix, fox5ny.com, Global
+host-suffix, fox5storm.com, Global
+host-suffix, fox6now.com, Global
+host-suffix, fox7.com, Global
+host-suffix, fox7austin.com, Global
+host-suffix, fox9.com, Global
+host-suffix, foxacrossamerica.com, Global
+host-suffix, foxaffiliateportal.com, Global
+host-suffix, foxandfriends.com, Global
+host-suffix, foxbet.com, Global
+host-suffix, foxbroadcasting.zendesk.com, Global
+host-suffix, foxbusiness.com, Global
+host-suffix, foxbusiness.tv, Global
+host-suffix, foxbusinessgo.com, Global
+host-suffix, foxcanvasroom.com, Global
+host-suffix, foxcareers.com, Global
+host-suffix, foxcharlotte.com, Global
+host-suffix, foxcincy.com, Global
+host-suffix, foxcincy.jobs, Global
+host-suffix, foxcincy.net, Global
+host-suffix, foxcollegesports.com, Global
+host-suffix, foxcorporation.com, Global
+host-suffix, foxcreativeuniversity.com, Global
+host-suffix, foxcredit.com, Global
+host-suffix, foxcredit.org, Global
+host-suffix, foxd.tv, Global
+host-suffix, foxdcg.com, Global
+host-suffix, foxdeportes.com, Global
+host-suffix, foxdeportes.net, Global
+host-suffix, foxdeportes.tv, Global
+host-suffix, foxdigitalmovies.com, Global
+host-suffix, foxdoua.com, Global
+host-suffix, foxentertainment.com, Global
+host-suffix, foxest.com, Global
+host-suffix, foxfaq.com, Global
+host-suffix, foxfdm.com, Global
+host-suffix, foxfiles.com, Global
+host-suffix, foxinc.com, Global
+host-suffix, foxkansas.com, Global
+host-suffix, foxla.com, Global
+host-suffix, foxla.tv, Global
+host-suffix, foxlexington.com, Global
+host-suffix, foxmediacloud.com, Global
+host-suffix, foxnation.com, Global
+host-suffix, foxnebraska.com, Global
+host-suffix, foxneo.com, Global
+host-suffix, foxneodigital.com, Global
+host-suffix, foxnetworks.info, Global
+host-suffix, foxnetworksinfo.com, Global
+host-suffix, foxnews.cc, Global
+host-suffix, foxnews.com, Global
+host-suffix, foxnews.net, Global
+host-suffix, foxnews.org, Global
+host-suffix, foxnews.tv, Global
+host-suffix, foxnewsaffiliates.com, Global
+host-suffix, foxnewsaroundtheworld.com, Global
+host-suffix, foxnewsb2b.com, Global
+host-suffix, foxnewschannel.com, Global
+host-suffix, foxnewsgo.net, Global
+host-suffix, foxnewsgo.org, Global
+host-suffix, foxnewsgo.tv, Global
+host-suffix, foxnewshealth.com, Global
+host-suffix, foxnewslatino.com, Global
+host-suffix, foxnewsmagazine.com, Global
+host-suffix, foxnewsnetwork.com, Global
+host-suffix, foxnewsopinion.com, Global
+host-suffix, foxnewsplayer-a.akamaihd.net, Global
+host-suffix, foxnewspodcasts.com, Global
+host-suffix, foxnewspolitics.com, Global
+host-suffix, foxnewsradio.com, Global
+host-suffix, foxnewsrundown.com, Global
+host-suffix, foxnewssunday.com, Global
+host-suffix, foxnow.com, Global
+host-suffix, foxon.com, Global
+host-suffix, foxphiladelphia.com, Global
+host-suffix, foxplay.com, Global
+host-suffix, foxplus.com, Global
+host-suffix, foxpoker.com, Global
+host-suffix, foxrad.io, Global
+host-suffix, foxredeem.com, Global
+host-suffix, foxrelease.com, Global
+host-suffix, foxrichmond.com, Global
+host-suffix, foxrobots.com, Global
+host-suffix, foxsmallbusinesscenter.com, Global
+host-suffix, foxsmallbusinesscenter.net, Global
+host-suffix, foxsmallbusinesscenter.org, Global
+host-suffix, foxsoccer.net, Global
+host-suffix, foxsoccer.tv, Global
+host-suffix, foxsoccermatchpass.com, Global
+host-suffix, foxsoccerplus.com, Global
+host-suffix, foxsoccerplus.net, Global
+host-suffix, foxsoccerplus.tv, Global
+host-suffix, foxsoccershop.com, Global
+host-suffix, foxsports-chicago.com, Global
+host-suffix, foxsports-newyork.com, Global
+host-suffix, foxsports-world.com, Global
+host-suffix, foxsports.cl, Global
+host-suffix, foxsports.co, Global
+host-suffix, foxsports.co.ve, Global
+host-suffix, foxsports.com, Global
+host-suffix, foxsports.com.ar, Global
+host-suffix, foxsports.com.bo, Global
+host-suffix, foxsports.com.br, Global
+host-suffix, foxsports.com.co, Global
+host-suffix, foxsports.com.ec, Global
+host-suffix, foxsports.com.gt, Global
+host-suffix, foxsports.com.mx, Global
+host-suffix, foxsports.com.pe, Global
+host-suffix, foxsports.com.py, Global
+host-suffix, foxsports.com.uy, Global
+host-suffix, foxsports.com.ve, Global
+host-suffix, foxsports.gt, Global
+host-suffix, foxsports.info, Global
+host-suffix, foxsports.net, Global
+host-suffix, foxsports.net.br, Global
+host-suffix, foxsports.pe, Global
+host-suffix, foxsports.sv, Global
+host-suffix, foxsports.uy, Global
+host-suffix, foxsports01-i.akamaihd.net, Global
+host-suffix, foxsports02-i.akamaihd.net, Global
+host-suffix, foxsports03-i.akamaihd.net, Global
+host-suffix, foxsports2.com, Global
+host-suffix, foxsportsflorida.com, Global
+host-suffix, foxsportsgo.com, Global
+host-suffix, foxsportsla.com, Global
+host-suffix, foxsportsnetmilwaukee.com, Global
+host-suffix, foxsportsneworleans.com, Global
+host-suffix, foxsportsracing.com, Global
+host-suffix, foxsportssupports.com, Global
+host-suffix, foxsportsuniversity.com, Global
+host-suffix, foxsportsworld.com, Global
+host-suffix, foxstudiolot.com, Global
+host-suffix, foxsuper6.com, Global
+host-suffix, foxtel.com, Global
+host-suffix, foxtel.com.au, Global
+host-suffix, foxtelevisionstations.com, Global
+host-suffix, foxtv.com, Global
+host-suffix, foxtvdvd.com, Global
+host-suffix, foxuv.com, Global
+host-suffix, foxweatherwatch.com, Global
+host-suffix, fssta.com, Global
+host-suffix, fxn.ws, Global
+host-suffix, fxnetwork.com, Global
+host-suffix, fxnetworks.com, Global
+host-suffix, now.com, Global
+host-suffix, staticasiafox.akamaized.net, Global
+host-suffix, theplatform.com, Global
+host-suffix, uplynk.com, Global
+host-suffix, afewmomentswith.com, Global
+host-suffix, anidom.com, Global
+host-suffix, casoneexchange.com, Global
+host-suffix, coronavirusnow.com, Global
+host-suffix, fse.tv, Global
+host-suffix, geraldoatlarge.com, Global
+host-suffix, gooddaychicago.com, Global
+host-suffix, joeswall.com, Global
+host-suffix, kilmeadeandfriends.com, Global
+host-suffix, maskedsingerfox.com, Global
+host-suffix, my13la.com, Global
+host-suffix, my20dc.com, Global
+host-suffix, my20houston.com, Global
+host-suffix, my29tv.com, Global
+host-suffix, my45.com, Global
+host-suffix, my9nj.com, Global
+host-suffix, myfoxatlanta.com, Global
+host-suffix, myfoxaustin.com, Global
+host-suffix, myfoxboston.com, Global
+host-suffix, myfoxcharlotte.com, Global
+host-suffix, myfoxchicago.com, Global
+host-suffix, myfoxdc.com, Global
+host-suffix, myfoxdetroit.com, Global
+host-suffix, myfoxdfw.com, Global
+host-suffix, myfoxhouston.com, Global
+host-suffix, myfoxhurricane.com, Global
+host-suffix, myfoxla.com, Global
+host-suffix, myfoxlosangeles.com, Global
+host-suffix, myfoxlubbock.com, Global
+host-suffix, myfoxmaine.com, Global
+host-suffix, myfoxny.com, Global
+host-suffix, myfoxorlando.com, Global
+host-suffix, myfoxphilly.com, Global
+host-suffix, myfoxphoenix.com, Global
+host-suffix, myfoxtampa.com, Global
+host-suffix, myfoxtampabay.com, Global
+host-suffix, myfoxtwincities.com, Global
+host-suffix, myfoxzone.com, Global
+host-suffix, myq2.com, Global
+host-suffix, newsnowfox.com, Global
+host-suffix, orlandohurricane.com, Global
+host-suffix, paradisehotelquizfox.com, Global
+host-suffix, q13.com, Global
+host-suffix, q13fox.com, Global
+host-suffix, realamericanstories.com, Global
+host-suffix, realamericanstories.info, Global
+host-suffix, realamericanstories.net, Global
+host-suffix, realamericanstories.org, Global
+host-suffix, realamericanstories.tv, Global
+host-suffix, realmilwaukeenow.com, Global
+host-suffix, rprimelab.com, Global
+host-suffix, shopspeedtv.com, Global
+host-suffix, soccermatchpass.com, Global
+host-suffix, speeddreamride.com, Global
+host-suffix, speedfantasybid.com, Global
+host-suffix, speedracegear.com, Global
+host-suffix, speedxtra.com, Global
+host-suffix, teenchoice.com, Global
+host-suffix, testonfox.com, Global
+host-suffix, theclasshroom.com, Global
+host-suffix, thefoxnation.com, Global
+host-suffix, thegeorgiascene.com, Global
+host-suffix, whatthefox.com, Global
+host-suffix, whosthehost.com, Global
+host-suffix, wofl.tv, Global
+host-suffix, woflthenewsstation.com, Global
+host-suffix, wogx.com, Global
 
 # >> Bento Box Entertainment
-host-suffix,bentobox.tv,Foreign Media
+host-suffix, bentobox.tv, Global
 
 # >> KTVU FOX 2
-host-suffix,kicu.tv,Foreign Media
-host-suffix,ktvu.com,Foreign Media
-host-suffix,myfoxsanfran.com,Foreign Media
+host-suffix, kicu.tv, Global
+host-suffix, ktvu.com, Global
+host-suffix, myfoxsanfran.com, Global
 
 # > friDay
-host-suffix,fetnet.net,Foreign Media
-host-suffix,friday.tw,Foreign Media
+host-suffix, fetnet.net, Global
+host-suffix, friday.tw, Global
 
 # > FuboTV
-host-suffix,fubo.tv,Foreign Media
-host-suffix,fubotv.com,Foreign Media
+host-suffix, fubo.tv, Global
+host-suffix, fubotv.com, Global
 
 # > HBO GO HKG & HBO MAX
-user-agent,HBO%20NOW*,Foreign Media
-user-agent,HBOMAX*,Foreign Media
-host-suffix,cinemax.com,Foreign Media
-host-suffix,forthethrone.com,Foreign Media
-host-suffix,hbo.com,Foreign Media
-host-suffix,hbogo.com,Foreign Media
-host-suffix,hbomax.com,Foreign Media
-host-suffix,hbomaxcdn.com,Foreign Media
-host-suffix,hbonow.com,Foreign Media
-host-suffix,maxgo.com,Foreign Media
-host-suffix,youboranqs01.com,Foreign Media
-host-suffix,execute-api.ap-southeast-1.amazonaws.com,Foreign Media
-host-suffix,manifest.prod.boltdns.net,Foreign Media
-host-suffix,hbogeo.cust.footprint.net,Foreign Media
+user-agent, HBO%20NOW*, Global
+user-agent, HBOMAX*, Global
+host-suffix, cinemax.com, Global
+host-suffix, forthethrone.com, Global
+host-suffix, hbo.com, Global
+host-suffix, hbogo.com, Global
+host-suffix, hbomax.com, Global
+host-suffix, hbomaxcdn.com, Global
+host-suffix, hbonow.com, Global
+host-suffix, maxgo.com, Global
+host-suffix, youboranqs01.com, Global
+host-suffix, manifest.prod.boltdns.net, Global
+host-suffix, hbogeo.cust.footprint.net, Global
 
 # >> HBO Asia
-host-suffix,hboasia.com,Foreign Media
-host-suffix,hbogoasia.com,Foreign Media
-host-suffix,hbogoasia.hk,Foreign Media
-host-suffix,bcbolthboa-a.akamaihd.net,Foreign Media
-host-suffix,hboasia1-i.akamaihd.net,Foreign Media
-host-suffix,hboasia2-i.akamaihd.net,Foreign Media
-host-suffix,hboasia3-i.akamaihd.net,Foreign Media
-host-suffix,hboasia4-i.akamaihd.net,Foreign Media
-host-suffix,hboasia5-i.akamaihd.net,Foreign Media
-host-suffix,hboasialive.akamaized.net,Foreign Media
-host-suffix,hbogoprod-vod.akamaized.net,Foreign Media
-host-suffix,44wilhpljf.execute-api.ap-southeast-1.amazonaws.com,Foreign Media
-host-suffix,s3-ap-southeast-1.amazonaws.com,Foreign Media
-host-suffix,cf-images.ap-southeast-1.prod.boltdns.net,Foreign Media
-host-suffix,dai3fd1oh325y.cloudfront.net,Foreign Media
-host-suffix,hbolb.onwardsmg.com,Foreign Media
-host-suffix,hbounify-prod.evergent.com,Foreign Media
-host-suffix,players.brightcove.net,Foreign Media
+host-suffix, hboasia.com, Global
+host-suffix, hbogoasia.com, Global
+host-suffix, hbogoasia.hk, Global
+host-suffix, bcbolthboa-a.akamaihd.net, Global
+host-suffix, hboasia1-i.akamaihd.net, Global
+host-suffix, hboasia2-i.akamaihd.net, Global
+host-suffix, hboasia3-i.akamaihd.net, Global
+host-suffix, hboasia4-i.akamaihd.net, Global
+host-suffix, hboasia5-i.akamaihd.net, Global
+host-suffix, hboasialive.akamaized.net, Global
+host-suffix, hbogoprod-vod.akamaized.net, Global
+host-suffix, 44wilhpljf.execute-api.ap-southeast-1.amazonaws.com, Global
+host-suffix, cf-images.ap-southeast-1.prod.boltdns.net, Global
+host-suffix, dai3fd1oh325y.cloudfront.net, Global
+host-suffix, hbolb.onwardsmg.com, Global
+host-suffix, hbounify-prod.evergent.com, Global
+host-suffix, players.brightcove.net, Global
 
 # >> HBO NOW
-host-suffix,now-ashare.com,Foreign Media
-host-suffix,now-tv.com,Foreign Media
-host-suffix,now.com.hk,Foreign Media
-host-suffix,nowe.com,Foreign Media
-host-suffix,nowe.hk,Foreign Media
+host-suffix, now-ashare.com, Global
+host-suffix, now-tv.com, Global
+host-suffix, now.com.hk, Global
+host-suffix, nowe.com, Global
+host-suffix, nowe.hk, Global
 
 # > Huffpost
-host-suffix,huffingtonpost.ca,Foreign Media
-host-suffix,huffingtonpost.co.uk,Foreign Media
-host-suffix,huffingtonpost.co.za,Foreign Media
-host-suffix,huffingtonpost.com,Foreign Media
-host-suffix,huffingtonpost.com.au,Foreign Media
-host-suffix,huffingtonpost.com.mx,Foreign Media
-host-suffix,huffingtonpost.de,Foreign Media
-host-suffix,huffingtonpost.es,Foreign Media
-host-suffix,huffingtonpost.fr,Foreign Media
-host-suffix,huffingtonpost.gr,Foreign Media
-host-suffix,huffingtonpost.in,Foreign Media
-host-suffix,huffingtonpost.it,Foreign Media
-host-suffix,huffingtonpost.jp,Foreign Media
-host-suffix,huffingtonpost.kr,Foreign Media
-host-suffix,huffpost.com,Foreign Media
-host-suffix,huffpostarabi.com,Foreign Media
-host-suffix,huffpostbrasil.com,Foreign Media
-host-suffix,huffpostmaghreb.com,Foreign Media
+host-suffix, huffingtonpost.ca, Global
+host-suffix, huffingtonpost.co.uk, Global
+host-suffix, huffingtonpost.co.za, Global
+host-suffix, huffingtonpost.com, Global
+host-suffix, huffingtonpost.com.au, Global
+host-suffix, huffingtonpost.com.mx, Global
+host-suffix, huffingtonpost.de, Global
+host-suffix, huffingtonpost.es, Global
+host-suffix, huffingtonpost.fr, Global
+host-suffix, huffingtonpost.gr, Global
+host-suffix, huffingtonpost.in, Global
+host-suffix, huffingtonpost.it, Global
+host-suffix, huffingtonpost.jp, Global
+host-suffix, huffingtonpost.kr, Global
+host-suffix, huffpost.com, Global
+host-suffix, huffpostarabi.com, Global
+host-suffix, huffpostbrasil.com, Global
+host-suffix, huffpostmaghreb.com, Global
 
 # > Hulu
-host-suffix,112263.com,Foreign Media
-host-suffix,assetshuluimcom-a.akamaihd.net,Foreign Media
-host-suffix,callhulu.com,Foreign Media
-host-suffix,cws-hulu.conviva.com,Foreign Media
-host-suffix,findyourlimits.com,Foreign Media
-host-suffix,freehulu.com,Foreign Media
-host-suffix,hooloo.tv,Foreign Media
-host-suffix,hoolu.com,Foreign Media
-host-suffix,hoolu.tv,Foreign Media
-host-suffix,hu1u.com,Foreign Media
-host-suffix,huloo.cc,Foreign Media
-host-suffix,huloo.tv,Foreign Media
-host-suffix,hulu.com,Foreign Media
-host-suffix,hulu.hb.omtrdc.net,Foreign Media
-host-suffix,hulu.sc.omtrdc.net,Foreign Media
-host-suffix,hulu.tv,Foreign Media
-host-suffix,hulu.us,Foreign Media
-host-suffix,huluaction.com,Foreign Media
-host-suffix,huluad.com,Foreign Media
-host-suffix,huluapp.com,Foreign Media
-host-suffix,huluasks.com,Foreign Media
-host-suffix,hulucall.com,Foreign Media
-host-suffix,hulufree.com,Foreign Media
-host-suffix,hulugans.com,Foreign Media
-host-suffix,hulugermany.com,Foreign Media
-host-suffix,hulugo.com,Foreign Media
-host-suffix,huluim.com,Foreign Media
-host-suffix,huluinstantmessenger.com,Foreign Media
-host-suffix,huluitaly.com,Foreign Media
-host-suffix,hulunet.com,Foreign Media
-host-suffix,hulunetwork.com,Foreign Media
-host-suffix,huluplus.com,Foreign Media
-host-suffix,hulupremium.com,Foreign Media
-host-suffix,hulupurchase.com,Foreign Media
-host-suffix,huluqa.com,Foreign Media
-host-suffix,hulurussia.com,Foreign Media
-host-suffix,huluspain.com,Foreign Media
-host-suffix,hulusports.com,Foreign Media
-host-suffix,hulustream.com,Foreign Media
-host-suffix,huluteam.com,Foreign Media
-host-suffix,hulutv.com,Foreign Media
-host-suffix,huluusa.com,Foreign Media
-host-suffix,joinmaidez.com,Foreign Media
-host-suffix,mushymush.tv,Foreign Media
-host-suffix,myhulu.com,Foreign Media
-host-suffix,originalhulu.com,Foreign Media
-host-suffix,payhulu.com,Foreign Media
-host-suffix,registerhulu.com,Foreign Media
-host-suffix,thehulubraintrust.com,Foreign Media
-host-suffix,wwwhuluplus.com,Foreign Media
+host-suffix, 112263.com, Global
+host-suffix, assetshuluimcom-a.akamaihd.net, Global
+host-suffix, callhulu.com, Global
+host-suffix, cws-hulu.conviva.com, Global
+host-suffix, findyourlimits.com, Global
+host-suffix, freehulu.com, Global
+host-suffix, hooloo.tv, Global
+host-suffix, hoolu.com, Global
+host-suffix, hoolu.tv, Global
+host-suffix, hu1u.com, Global
+host-suffix, huloo.cc, Global
+host-suffix, huloo.tv, Global
+host-suffix, hulu.com, Global
+host-suffix, hulu.hb.omtrdc.net, Global
+host-suffix, hulu.sc.omtrdc.net, Global
+host-suffix, hulu.tv, Global
+host-suffix, hulu.us, Global
+host-suffix, huluaction.com, Global
+host-suffix, huluad.com, Global
+host-suffix, huluapp.com, Global
+host-suffix, huluasks.com, Global
+host-suffix, hulucall.com, Global
+host-suffix, hulufree.com, Global
+host-suffix, hulugans.com, Global
+host-suffix, hulugermany.com, Global
+host-suffix, hulugo.com, Global
+host-suffix, huluim.com, Global
+host-suffix, huluinstantmessenger.com, Global
+host-suffix, huluitaly.com, Global
+host-suffix, hulunet.com, Global
+host-suffix, hulunetwork.com, Global
+host-suffix, huluplus.com, Global
+host-suffix, hulupremium.com, Global
+host-suffix, hulupurchase.com, Global
+host-suffix, huluqa.com, Global
+host-suffix, hulurussia.com, Global
+host-suffix, huluspain.com, Global
+host-suffix, hulusports.com, Global
+host-suffix, hulustream.com, Global
+host-suffix, huluteam.com, Global
+host-suffix, hulutv.com, Global
+host-suffix, huluusa.com, Global
+host-suffix, joinmaidez.com, Global
+host-suffix, mushymush.tv, Global
+host-suffix, myhulu.com, Global
+host-suffix, originalhulu.com, Global
+host-suffix, payhulu.com, Global
+host-suffix, registerhulu.com, Global
+host-suffix, thehulubraintrust.com, Global
+host-suffix, wwwhuluplus.com, Global
 
 # >> HuluJapan
-host-suffix,happyon.jp,Foreign Media
-host-suffix,hjholdings.jp,Foreign Media
-host-suffix,hulu.jp,Foreign Media
-host-suffix,prod.hjholdings.tv,Foreign Media
-host-suffix,streaks.jp,Foreign Media
-host-suffix,yb.uncn.jp,Foreign Media
+host-suffix, happyon.jp, Global
+host-suffix, hjholdings.jp, Global
+host-suffix, hulu.jp, Global
+host-suffix, prod.hjholdings.tv, Global
+host-suffix, streaks.jp, Global
+host-suffix, yb.uncn.jp, Global
 
 # > 5itv
-host-suffix,5itv.tv,Foreign Media
-host-suffix,ocnttv.com,Foreign Media
+host-suffix, 5itv.tv, Global
+host-suffix, ocnttv.com, Global
 
 # > iQIYI 国际版
-host-suffix,iq.com,Foreign Media
-host-suffix,inter.iqiyi.com,Foreign Media
-host-suffix,intl-rcd.iqiyi.com,Foreign Media
-host-suffix,intl-subscription.iqiyi.com,Foreign Media
-host-suffix,intl.iqiyi.com,Foreign Media
-ip-cidr,23.40.242.10/32,Foreign Media
-ip-cidr,23.59.252.0/24,Foreign Media
-ip-cidr,23.200.145.146/32,Foreign Media
-ip-cidr,23.210.215.186/32,Foreign Media
-ip-cidr,23.211.15.0/24,Foreign Media
-ip-cidr,23.219.172.0/24,Foreign Media
-ip-cidr,104.85.165.17/32,Foreign Media
-ip-cidr,110.238.107.47/32,Foreign Media
-ip-cidr,118.26.32.162/32,Foreign Media
-ip-cidr,159.138.102.146/32,Foreign Media
-ip-cidr,184.51.102.0/24,Foreign Media
-ip-cidr,203.74.95.130/28,Foreign Media
-ip-cidr,203.80.97.203/32,Foreign Media
-ip-cidr,210.71.227.202/32,Foreign Media
+host-suffix, inter.iqiyi.com, Global
+host-suffix, intl-rcd.iqiyi.com, Global
+host-suffix, intl-subscription.iqiyi.com, Global
+host-suffix, intl.iqiyi.com, Global
+ip-cidr, 23.59.252.0/24, Global
+ip-cidr, 23.200.145.146/32, Global
+ip-cidr, 23.210.215.186/32, Global
+ip-cidr, 23.211.15.0/24, Global
+ip-cidr, 23.219.172.0/24, Global
+ip-cidr, 104.85.165.17/32, Global
+ip-cidr, 118.26.32.162/32, Global
+ip-cidr, 159.138.102.146/32, Global
+ip-cidr, 184.51.102.0/24, Global
+ip-cidr, 203.74.95.128/28, Global
+ip-cidr, 203.80.97.203/32, Global
 
 # > iTalkBB
-host-suffix,api.tv.colnv.com,Foreign Media
-host-suffix,italkbb.com,Foreign Media
-host-suffix,italkbbtv.com,Foreign Media
+host-suffix, api.tv.colnv.com, Global
+host-suffix, italkbb.com, Global
+host-suffix, italkbbtv.com, Global
 
 # > ITV
-host-suffix,itv.com,Foreign Media
-host-suffix,itvstatic.com,Foreign Media
-host,itvpnpmobile-a.akamaihd.net,Foreign Media
+host-suffix, itv.com, Global
+host-suffix, itvstatic.com, Global
+host, itvpnpmobile-a.akamaihd.net, Global
 
 # > Japonx
-host-suffix,japonx.com,Foreign Media
-host-suffix,japonx.net,Foreign Media
-host-suffix,japonx.tv,Foreign Media
-host-suffix,japonx.vip,Foreign Media
-host-suffix,japronx.com,Foreign Media
-host-suffix,japronx.net,Foreign Media
-host-suffix,japronx.tv,Foreign Media
-host-suffix,japronx.vip,Foreign Media
-host-keyword,japonx,Foreign Media
-host-keyword,japronx,Foreign Media
+host-suffix, japonx.com, Global
+host-suffix, japonx.net, Global
+host-suffix, japonx.tv, Global
+host-suffix, japonx.vip, Global
+host-suffix, japronx.com, Global
+host-suffix, japronx.net, Global
+host-suffix, japronx.tv, Global
+host-suffix, japronx.vip, Global
 
 # > JOOX
-user-agent,WeMusic*,Foreign Media
-user-agent,JOOX*,Foreign Media
-host-suffix,joox.com,Foreign Media
-host-keyword,jooxweb-api,Foreign Media
+user-agent, WeMusic*, Global
+user-agent, JOOX*, Global
+host-suffix, joox.com, Global
+host-keyword, jooxweb-api, Global
 
 # > Kakao
-host-suffix,kakao.com,Foreign Media
-host-suffix,kakao.co.kr,Foreign Media
-host-suffix,kakaocdn.net,Foreign Media
-host-suffix,kakaocorp.com,Foreign Media
-host-suffix,daum.net,Foreign Media
-host-suffix,daumcdn.net,Foreign Media
-host-suffix,daumkakao.io,Foreign Media
-ip-cidr,1.201.0.0/24,Foreign Media
-ip-cidr,103.246.56.0/22,Foreign Media
-ip-cidr,103.27.148.0/22,Foreign Media
-ip-cidr,110.76.140.0/22,Foreign Media
-ip-cidr,113.61.104.0/22,Foreign Media
-ip-cidr,27.0.236.0/22,Foreign Media
+host-suffix, kakao.com, Global
+host-suffix, kakao.co.kr, Global
+host-suffix, kakaocdn.net, Global
+host-suffix, kakaocorp.com, Global
+host-suffix, daum.net, Global
+host-suffix, daumcdn.net, Global
+host-suffix, daumkakao.io, Global
+ip-cidr, 1.201.0.0/24, Global
+ip-cidr, 103.246.56.0/22, Global
+ip-cidr, 103.27.148.0/22, Global
+ip-cidr, 110.76.140.0/22, Global
+ip-cidr, 113.61.104.0/22, Global
+ip-cidr, 27.0.236.0/22, Global
 
 # >> Potplayer
-host-suffix,daumpotplayer.com,Foreign Media
-host-suffix,potplayer.tv,Foreign Media
+host-suffix, daumpotplayer.com, Global
+host-suffix, potplayer.tv, Global
 
 # > Kantv
-host-suffix,imkan.tv,Foreign Media
+host-suffix, imkan.tv, Global
 
 # > KKBOX
-host-suffix,kfs.io,Foreign Media
-host-suffix,kk.stream,Foreign Media
-host-suffix,kkbox-prime.com,Foreign Media
-host-suffix,kkbox.com,Foreign Media
-host-suffix,kkbox.com.tw,Foreign Media
-host-suffix,kktix.com,Foreign Media
-host-suffix,kktv.com.tw,Foreign Media
-host-suffix,kktv.me,Foreign Media
-host-suffix,theater-kktv.cdn.hinet.net,Foreign Media
+host-suffix, kfs.io, Global
+host-suffix, kk.stream, Global
+host-suffix, kkbox-prime.com, Global
+host-suffix, kkbox.com, Global
+host-suffix, kkbox.com.tw, Global
+host-suffix, kktix.com, Global
+host-suffix, kktv.com.tw, Global
+host-suffix, kktv.me, Global
+host-suffix, theater-kktv.cdn.hinet.net, Global
 
 # > Litv
-host-suffix,litv.tv,Foreign Media
-host,litvfreemobile-hichannel.cdn.hinet.net,Foreign Media
+host-suffix, litv.tv, Global
+host, litvfreemobile-hichannel.cdn.hinet.net, Global
 
 # > LineTV
-user-agent,LINE%20TV*,Foreign Media
-host-suffix,chocotv.com.tw,Foreign Media
-host-suffix,line-cdn.net,Foreign Media
-host-suffix,line-scdn.net,Foreign Media
-host-suffix,linetv.tw,Foreign Media
-host,d3c7rimkq79yfu.cloudfront.net,Foreign Media
-host,d17lx9ucc6k9fc.cloudfront.net,Foreign Media
+user-agent, LINE%20TV*, Global
+host-suffix, chocotv.com.tw, Global
+host-suffix, line-cdn.net, Global
+host-suffix, line-scdn.net, Global
+host-suffix, linetv.tw, Global
+host, d3c7rimkq79yfu.cloudfront.net, Global
+host, d17lx9ucc6k9fc.cloudfront.net, Global
 
 # > LondonReal
-host-suffix,freedomplatform.tv,Foreign Media
-host-suffix,londonreal.tv,Foreign Media
+host-suffix, freedomplatform.tv, Global
+host-suffix, londonreal.tv, Global
 
 # > MeWatch
-host-suffix,mewatch.sg,Foreign Media
+host-suffix, mewatch.sg, Global
 
 # > MOOV
-host-suffix,moov.hk,Foreign Media
-host-suffix,mtg.now.com,Foreign Media
+host-suffix, moov.hk, Global
+host-suffix, mtg.now.com, Global
 
 # > My5
-host-suffix,channel5.com,Foreign Media
-host-suffix,my5.tv,Foreign Media
-host,d349g9zuie06uo.cloudfront.net,Foreign Media
+host-suffix, channel5.com, Global
+host-suffix, my5.tv, Global
+host, d349g9zuie06uo.cloudfront.net, Global
 
 # > Naver TV
-user-agent,Naver%20TV*,Foreign Media
-host-suffix,naver.com,Foreign Media
-host-suffix,smartmediarep.com,Foreign Media
+user-agent, Naver%20TV*, Global
+host-suffix, naver.com, Global
+host-suffix, smartmediarep.com, Global
 
 # > NBC
-host-suffix,nbc-sports.go-vip.net,Foreign Media
-host-suffix,nbc.co,Foreign Media
-host-suffix,nbc.com,Foreign Media
-host-suffix,nbcnews.com,Foreign Media
-host-suffix,nbcsports.com,Foreign Media
-host-suffix,nbcsports.h-cdn.com,Foreign Media
-host-suffix,nbcuni.com,Foreign Media
-host-suffix,s-nbcnews.com,Foreign Media
-host-suffix,usanetwork.com,Foreign Media
+host-suffix, nbc-sports.go-vip.net, Global
+host-suffix, nbc.co, Global
+host-suffix, nbc.com, Global
+host-suffix, nbcnews.com, Global
+host-suffix, nbcsports.com, Global
+host-suffix, nbcsports.h-cdn.com, Global
+host-suffix, nbcuni.com, Global
+host-suffix, s-nbcnews.com, Global
+host-suffix, usanetwork.com, Global
 
 # >> BravoTV
-host-suffix,bravotv.com,Foreign Media
+host-suffix, bravotv.com, Global
 
 # >> CNBC
-host-suffix,cnbc.com,Foreign Media
-host-suffix,cnbcfm.com,Foreign Media
-host-suffix,nbcudigitaladops.com,Foreign Media
+host-suffix, cnbc.com, Global
+host-suffix, cnbcfm.com, Global
+host-suffix, nbcudigitaladops.com, Global
 
 # >> EL Universo
-host-suffix,eluniverso.com,Foreign Media
+host-suffix, eluniverso.com, Global
 
 # >> E!
-host-suffix,eonline.com,Foreign Media
+host-suffix, eonline.com, Global
 
 # >> MSNBC
-host-suffix,msnbc.com,Foreign Media
+host-suffix, msnbc.com, Global
 
 # >> Oxygen
-host-suffix,oxygen.com,Foreign Media
+host-suffix, oxygen.com, Global
 
 # >> PeacockTV
-host-suffix,peacocktv.com,Foreign Media
+host-suffix, peacocktv.com, Global
 
 # >> SYFY
-host-suffix,syfy.com,Foreign Media
+host-suffix, syfy.com, Global
 
 # >> Telemundo
-host-suffix,telemundo.com,Foreign Media
+host-suffix, telemundo.com, Global
 
 # >> Universalkids
-host-suffix,universalkids.com,Foreign Media
+host-suffix, universalkids.com, Global
 
 # > Netflix
-user-agent,Argo*,Foreign Media
-host-suffix,fast.com,Foreign Media
-host-suffix,netflix.ca,Foreign Media
-host-suffix,netflix.com,Foreign Media
-host-suffix,netflix.com.edgesuite.net,Foreign Media
-host-suffix,netflix.net,Foreign Media
-host-suffix,netflixinvestor.com,Foreign Media
-host-suffix,netflixtechblog.com,Foreign Media
-host-suffix,nflxext.com,Foreign Media
-host-suffix,nflximg.com,Foreign Media
-host-suffix,nflximg.net,Foreign Media
-host-suffix,nflxsearch.net,Foreign Media
-host-suffix,nflxso.net,Foreign Media
-host-suffix,nflxvideo.net,Foreign Media
-host-suffix,us-west-2.amazonaws.com,Foreign Media
-host-keyword,dualstack.apiproxy-device-prod-nlb-,Foreign Media
-host-keyword,dualstack.ichnaea-web-,Foreign Media
+user-agent, Argo*, Global
+host-suffix, fast.com, Global
+host-suffix, netflix.ca, Global
+host-suffix, netflix.com, Global
+host-suffix, netflix.com.edgesuite.net, Global
+host-suffix, netflix.net, Global
+host-suffix, netflixinvestor.com, Global
+host-suffix, netflixtechblog.com, Global
+host-suffix, nflxext.com, Global
+host-suffix, nflximg.com, Global
+host-suffix, nflximg.net, Global
+host-suffix, nflxsearch.net, Global
+host-suffix, nflxso.net, Global
+host-suffix, nflxvideo.net, Global
+host-keyword, dualstack.apiproxy-device-prod-nlb-, Global
+host-keyword, dualstack.ichnaea-web-, Global
 
 # >> DNS test
-host-wildcard,netflixdnstest*.com,Foreign Media
-ip-cidr,8.41.4.0/24,Foreign Media
-ip-cidr,23.78.0.0/16,Foreign Media
-ip-cidr,23.246.0.0/18,Foreign Media
-ip-cidr,23.246.2.0/24,Foreign Media
-ip-cidr,23.246.3.0/24,Foreign Media
-ip-cidr,23.246.6.0/24,Foreign Media
-ip-cidr,23.246.7.0/24,Foreign Media
-ip-cidr,23.246.10.0/24,Foreign Media
-ip-cidr,23.246.11.0/24,Foreign Media
-ip-cidr,23.246.12.0/24,Foreign Media
-ip-cidr,23.246.13.0/24,Foreign Media
-ip-cidr,23.246.14.0/24,Foreign Media
-ip-cidr,23.246.15.0/24,Foreign Media
-ip-cidr,23.246.16.0/24,Foreign Media
-ip-cidr,23.246.17.0/24,Foreign Media
-ip-cidr,23.246.20.0/24,Foreign Media
-ip-cidr,23.246.21.0/24,Foreign Media
-ip-cidr,23.246.26.0/24,Foreign Media
-ip-cidr,23.246.27.0/24,Foreign Media
-ip-cidr,23.246.30.0/24,Foreign Media
-ip-cidr,23.246.31.0/24,Foreign Media
-ip-cidr,23.246.36.0/24,Foreign Media
-ip-cidr,23.246.38.0/24,Foreign Media
-ip-cidr,23.246.39.0/24,Foreign Media
-ip-cidr,23.246.41.0/24,Foreign Media
-ip-cidr,23.246.42.0/24,Foreign Media
-ip-cidr,23.246.44.0/24,Foreign Media
-ip-cidr,23.246.45.0/24,Foreign Media
-ip-cidr,23.246.46.0/24,Foreign Media
-ip-cidr,23.246.47.0/24,Foreign Media
-ip-cidr,23.246.48.0/24,Foreign Media
-ip-cidr,23.246.49.0/24,Foreign Media
-ip-cidr,23.246.50.0/24,Foreign Media
-ip-cidr,23.246.51.0/24,Foreign Media
-ip-cidr,23.246.52.0/24,Foreign Media
-ip-cidr,23.246.54.0/24,Foreign Media
-ip-cidr,23.246.55.0/24,Foreign Media
-ip-cidr,23.246.56.0/24,Foreign Media
-ip-cidr,23.246.57.0/24,Foreign Media
-ip-cidr,23.246.58.0/24,Foreign Media
-ip-cidr,23.246.59.0/24,Foreign Media
-ip-cidr,34.192.0.0/16,Foreign Media
-ip-cidr,34.208.0.0/12,Foreign Media
-ip-cidr,34.248.0.0/13,Foreign Media
-ip-cidr,35.160.0.0/13,Foreign Media
-ip-cidr,37.77.184.0/21,Foreign Media
-ip-cidr,37.77.184.0/24,Foreign Media
-ip-cidr,37.77.186.0/24,Foreign Media
-ip-cidr,37.77.187.0/24,Foreign Media
-ip-cidr,37.77.188.0/24,Foreign Media
-ip-cidr,37.77.189.0/24,Foreign Media
-ip-cidr,38.72.126.0/24,Foreign Media
-ip-cidr,44.224.0.0/16,Foreign Media
-ip-cidr,44.230.0.0/16,Foreign Media
-ip-cidr,45.57.0.0/17,Foreign Media
-ip-cidr,45.57.0.0/24,Foreign Media
-ip-cidr,45.57.1.0/24,Foreign Media
-ip-cidr,45.57.4.0/24,Foreign Media
-ip-cidr,45.57.5.0/24,Foreign Media
-ip-cidr,45.57.6.0/24,Foreign Media
-ip-cidr,45.57.7.0/24,Foreign Media
-ip-cidr,45.57.10.0/24,Foreign Media
-ip-cidr,45.57.11.0/24,Foreign Media
-ip-cidr,45.57.12.0/24,Foreign Media
-ip-cidr,45.57.13.0/24,Foreign Media
-ip-cidr,45.57.14.0/24,Foreign Media
-ip-cidr,45.57.15.0/24,Foreign Media
-ip-cidr,45.57.16.0/24,Foreign Media
-ip-cidr,45.57.17.0/24,Foreign Media
-ip-cidr,45.57.18.0/24,Foreign Media
-ip-cidr,45.57.19.0/24,Foreign Media
-ip-cidr,45.57.20.0/24,Foreign Media
-ip-cidr,45.57.21.0/24,Foreign Media
-ip-cidr,45.57.22.0/24,Foreign Media
-ip-cidr,45.57.23.0/24,Foreign Media
-ip-cidr,45.57.28.0/24,Foreign Media
-ip-cidr,45.57.29.0/24,Foreign Media
-ip-cidr,45.57.32.0/24,Foreign Media
-ip-cidr,45.57.33.0/24,Foreign Media
-ip-cidr,45.57.34.0/24,Foreign Media
-ip-cidr,45.57.35.0/24,Foreign Media
-ip-cidr,45.57.36.0/24,Foreign Media
-ip-cidr,45.57.37.0/24,Foreign Media
-ip-cidr,45.57.44.0/24,Foreign Media
-ip-cidr,45.57.45.0/24,Foreign Media
-ip-cidr,45.57.46.0/24,Foreign Media
-ip-cidr,45.57.47.0/24,Foreign Media
-ip-cidr,45.57.48.0/24,Foreign Media
-ip-cidr,45.57.49.0/24,Foreign Media
-ip-cidr,45.57.50.0/24,Foreign Media
-ip-cidr,45.57.51.0/24,Foreign Media
-ip-cidr,45.57.56.0/24,Foreign Media
-ip-cidr,45.57.58.0/24,Foreign Media
-ip-cidr,45.57.59.0/24,Foreign Media
-ip-cidr,45.57.60.0/24,Foreign Media
-ip-cidr,45.57.62.0/24,Foreign Media
-ip-cidr,45.57.63.0/24,Foreign Media
-ip-cidr,45.57.64.0/24,Foreign Media
-ip-cidr,45.57.65.0/24,Foreign Media
-ip-cidr,45.57.68.0/24,Foreign Media
-ip-cidr,45.57.69.0/24,Foreign Media
-ip-cidr,45.57.70.0/24,Foreign Media
-ip-cidr,45.57.71.0/24,Foreign Media
-ip-cidr,45.57.72.0/24,Foreign Media
-ip-cidr,45.57.73.0/24,Foreign Media
-ip-cidr,45.57.74.0/24,Foreign Media
-ip-cidr,45.57.75.0/24,Foreign Media
-ip-cidr,45.57.78.0/24,Foreign Media
-ip-cidr,45.57.79.0/24,Foreign Media
-ip-cidr,45.57.80.0/24,Foreign Media
-ip-cidr,45.57.81.0/24,Foreign Media
-ip-cidr,45.57.82.0/24,Foreign Media
-ip-cidr,45.57.83.0/24,Foreign Media
-ip-cidr,45.57.88.0/24,Foreign Media
-ip-cidr,45.57.89.0/24,Foreign Media
-ip-cidr,45.57.92.0/24,Foreign Media
-ip-cidr,45.57.93.0/24,Foreign Media
-ip-cidr,45.57.94.0/24,Foreign Media
-ip-cidr,45.57.95.0/24,Foreign Media
-ip-cidr,45.57.96.0/24,Foreign Media
-ip-cidr,45.57.97.0/24,Foreign Media
-ip-cidr,45.57.98.0/24,Foreign Media
-ip-cidr,45.57.99.0/24,Foreign Media
-ip-cidr,45.57.100.0/24,Foreign Media
-ip-cidr,45.57.101.0/24,Foreign Media
-ip-cidr,45.57.102.0/24,Foreign Media
-ip-cidr,45.57.103.0/24,Foreign Media
-ip-cidr,45.57.104.0/24,Foreign Media
-ip-cidr,45.57.105.0/24,Foreign Media
-ip-cidr,45.57.106.0/24,Foreign Media
-ip-cidr,45.57.108.0/24,Foreign Media
-ip-cidr,45.57.109.0/24,Foreign Media
-ip-cidr,52.0.0.0/15,Foreign Media
-ip-cidr,52.5.0.0/16,Foreign Media
-ip-cidr,52.7.0.0/16,Foreign Media
-ip-cidr,52.10.0.0/15,Foreign Media
-ip-cidr,52.12.0.0/15,Foreign Media
-ip-cidr,52.22.0.0/16,Foreign Media
-ip-cidr,52.24.0.0/14,Foreign Media
-ip-cidr,52.32.0.0/14,Foreign Media
-ip-cidr,52.40.0.0/14,Foreign Media
-ip-cidr,52.48.0.0/14,Foreign Media
-ip-cidr,52.54.0.0/16,Foreign Media
-ip-cidr,52.71.40.0/16,Foreign Media
-ip-cidr,52.72.0.0/16,Foreign Media
-ip-cidr,52.88.0.0/15,Foreign Media
-ip-cidr,54.0.0.0/16,Foreign Media
-ip-cidr,54.68.0.0/15,Foreign Media
-ip-cidr,54.74.0.0/15,Foreign Media
-ip-cidr,54.76.0.0/15,Foreign Media
-ip-cidr,54.85.0.0/16,Foreign Media
-ip-cidr,54.86.0.0/16,Foreign Media
-ip-cidr,54.148.0.0/15,Foreign Media
-ip-cidr,54.175.0.0/16,Foreign Media
-ip-cidr,54.186.0.0/15,Foreign Media
-ip-cidr,54.188.0.0/15,Foreign Media
-ip-cidr,54.213.0.0/16,Foreign Media
-ip-cidr,54.214.128.0/17,Foreign Media
-ip-cidr,64.120.128.0/17,Foreign Media
-ip-cidr,66.197.128.0/17,Foreign Media
-ip-cidr,69.53.224.0/19,Foreign Media
-ip-cidr,69.53.225.0/24,Foreign Media
-ip-cidr,69.53.226.0/24,Foreign Media
-ip-cidr,69.53.230.0/24,Foreign Media
-ip-cidr,69.53.231.0/24,Foreign Media
-ip-cidr,69.53.232.0/24,Foreign Media
-ip-cidr,69.53.233.0/24,Foreign Media
-ip-cidr,69.53.234.0/24,Foreign Media
-ip-cidr,69.53.235.0/24,Foreign Media
-ip-cidr,69.53.240.0/24,Foreign Media
-ip-cidr,69.53.241.0/24,Foreign Media
-ip-cidr,69.53.245.0/24,Foreign Media
-ip-cidr,69.53.246.0/24,Foreign Media
-ip-cidr,69.53.247.0/24,Foreign Media
-ip-cidr,69.53.248.0/24,Foreign Media
-ip-cidr,69.53.249.0/24,Foreign Media
-ip-cidr,69.53.254.0/24,Foreign Media
-ip-cidr,103.87.204.0/22,Foreign Media
-ip-cidr,103.87.205.0/24,Foreign Media
-ip-cidr,103.87.206.0/24,Foreign Media
-ip-cidr,103.87.207.0/24,Foreign Media
-ip-cidr,108.175.32.0/20,Foreign Media
-ip-cidr,185.2.220.0/22,Foreign Media
-ip-cidr,185.9.188.0/22,Foreign Media
-ip-cidr,192.173.64.0/18,Foreign Media
-ip-cidr,192.173.65.0/24,Foreign Media
-ip-cidr,192.173.67.0/24,Foreign Media
-ip-cidr,192.173.68.0/24,Foreign Media
-ip-cidr,192.173.70.0/24,Foreign Media
-ip-cidr,192.173.72.0/24,Foreign Media
-ip-cidr,192.173.73.0/24,Foreign Media
-ip-cidr,192.173.74.0/24,Foreign Media
-ip-cidr,192.173.75.0/24,Foreign Media
-ip-cidr,192.173.76.0/24,Foreign Media
-ip-cidr,192.173.77.0/24,Foreign Media
-ip-cidr,192.173.78.0/24,Foreign Media
-ip-cidr,192.173.79.0/24,Foreign Media
-ip-cidr,192.173.80.0/24,Foreign Media
-ip-cidr,192.173.82.0/24,Foreign Media
-ip-cidr,192.173.83.0/24,Foreign Media
-ip-cidr,192.173.84.0/24,Foreign Media
-ip-cidr,192.173.86.0/24,Foreign Media
-ip-cidr,192.173.87.0/24,Foreign Media
-ip-cidr,192.173.88.0/24,Foreign Media
-ip-cidr,192.173.89.0/24,Foreign Media
-ip-cidr,192.173.92.0/24,Foreign Media
-ip-cidr,192.173.94.0/24,Foreign Media
-ip-cidr,192.173.96.0/24,Foreign Media
-ip-cidr,192.173.99.0/24,Foreign Media
-ip-cidr,198.38.100.0/24,Foreign Media
-ip-cidr,198.38.108.0/24,Foreign Media
-ip-cidr,198.38.109.0/24,Foreign Media
-ip-cidr,198.38.110.0/24,Foreign Media
-ip-cidr,198.38.111.0/24,Foreign Media
-ip-cidr,198.38.112.0/24,Foreign Media
-ip-cidr,198.38.113.0/24,Foreign Media
-ip-cidr,198.38.114.0/24,Foreign Media
-ip-cidr,198.38.115.0/24,Foreign Media
-ip-cidr,198.38.120.0/24,Foreign Media
-ip-cidr,198.38.121.0/24,Foreign Media
-ip-cidr,198.38.122.0/24,Foreign Media
-ip-cidr,198.38.96.0/19,Foreign Media
-ip-cidr,198.38.98.0/24,Foreign Media
-ip-cidr,198.38.99.0/24,Foreign Media
-ip-cidr,198.45.48.0/20,Foreign Media
-ip-cidr,198.45.48.0/24,Foreign Media
-ip-cidr,198.45.49.0/24,Foreign Media
-ip-cidr,198.45.50.0/24,Foreign Media
-ip-cidr,198.45.56.0/24,Foreign Media
-ip-cidr,208.75.76.0/22,Foreign Media
-ip-cidr,203.75.84.0/24,Foreign Media
-ip-cidr,203.83.220.0/22,Foreign Media
-ip-cidr,203.116.0.0/16,Foreign Media
-ip-cidr,203.198.0.0/20,Foreign Media
-ip-cidr,203.198.80.0/21,Foreign Media
-ip-cidr,207.45.72.0/22,Foreign Media
-ip-cidr,207.45.73.0/24,Foreign Media
-ip-cidr,218.102.32.0/19,Foreign Media
-ip-cidr,219.76.0.0/17,Foreign Media
-ip6-cidr,2607:fb10:16::/48,Foreign Media
-ip6-cidr,2607:fb10:2011::/48,Foreign Media
-ip6-cidr,2607:fb10:2012::/48,Foreign Media
-ip6-cidr,2607:fb10:2014::/48,Foreign Media
-ip6-cidr,2607:fb10:2033::/48,Foreign Media
-ip6-cidr,2607:fb10:2034::/48,Foreign Media
-ip6-cidr,2607:fb10:31::/48,Foreign Media
-ip6-cidr,2607:fb10:45::/48,Foreign Media
-ip6-cidr,2607:fb10:46::/48,Foreign Media
-ip6-cidr,2607:fb10:5014::/48,Foreign Media
-ip6-cidr,2607:fb10:5015::/48,Foreign Media
-ip6-cidr,2607:fb10:5016::/48,Foreign Media
-ip6-cidr,2607:fb10:5020::/44,Foreign Media
-ip6-cidr,2607:fb10:5021::/48,Foreign Media
-ip6-cidr,2607:fb10:5036::/48,Foreign Media
-ip6-cidr,2607:fb10:5037::/48,Foreign Media
-ip6-cidr,2607:fb10:5039::/48,Foreign Media
-ip6-cidr,2607:fb10:503c::/48,Foreign Media
-ip6-cidr,2607:fb10:503d::/48,Foreign Media
-ip6-cidr,2607:fb10:5040::/48,Foreign Media
-ip6-cidr,2607:fb10:5042::/48,Foreign Media
-ip6-cidr,2607:fb10:5062::/48,Foreign Media
-ip6-cidr,2607:fb10:5063::/48,Foreign Media
-ip6-cidr,2607:fb10:7011::/48,Foreign Media
-ip6-cidr,2607:fb10:7020::/44,Foreign Media
-ip6-cidr,2607:fb10:7035::/48,Foreign Media
-ip6-cidr,2607:fb10:7038::/48,Foreign Media
-ip6-cidr,2607:fb10:7039::/48,Foreign Media
-ip6-cidr,2607:fb10:7040::/44,Foreign Media
-ip6-cidr,2607:fb10:7050::/44,Foreign Media
-ip6-cidr,2607:fb10:7051::/48,Foreign Media
-ip6-cidr,2607:fb10:7061::/48,Foreign Media
-ip6-cidr,2607:fb10:7071::/48,Foreign Media
-ip6-cidr,2607:fb10:7080::/44,Foreign Media
-ip6-cidr,2607:fb10:7082::/48,Foreign Media
-ip6-cidr,2607:fb10:7083::/48,Foreign Media
-ip6-cidr,2607:fb10:7085::/48,Foreign Media
-ip6-cidr,2607:fb10:7086::/48,Foreign Media
-ip6-cidr,2607:fb10:7090::/44,Foreign Media
-ip6-cidr,2607:fb10:7091::/48,Foreign Media
-ip6-cidr,2607:fb10:70b0::/44,Foreign Media
-ip6-cidr,2607:fb10:70d0::/44,Foreign Media
-ip6-cidr,2607:fb10:70d1::/48,Foreign Media
-ip6-cidr,2607:fb10:70e1::/48,Foreign Media
-ip6-cidr,2607:fb10:7110::/44,Foreign Media
-ip6-cidr,2607:fb10:7120::/44,Foreign Media
-ip6-cidr,2607:fb10:7131::/48,Foreign Media
-ip6-cidr,2607:fb10:7132::/48,Foreign Media
-ip6-cidr,2607:fb10:7141::/48,Foreign Media
-ip6-cidr,2607:fb10:7143::/48,Foreign Media
-ip6-cidr,2607:fb10:7146::/48,Foreign Media
-ip6-cidr,2607:fb10:7147::/48,Foreign Media
-ip6-cidr,2607:fb10:7151::/48,Foreign Media
-ip6-cidr,2607:fb10:7161::/48,Foreign Media
-ip6-cidr,2607:fb10:7171::/48,Foreign Media
-ip6-cidr,2607:fb10:7172::/48,Foreign Media
-ip6-cidr,2607:fb10:7181::/48,Foreign Media
-ip6-cidr,2607:fb10:7182::/48,Foreign Media
-ip6-cidr,2607:fb10:7190::/48,Foreign Media
-ip6-cidr,2607:fb10:7191::/48,Foreign Media
-ip6-cidr,2607:fb10:71b1::/48,Foreign Media
-ip6-cidr,2607:fb10:71b2::/48,Foreign Media
-ip6-cidr,2607:fb10:71c0::/44,Foreign Media
-ip6-cidr,2607:fb10:71e1::/48,Foreign Media
-ip6-cidr,2607:fb10:71e2::/48,Foreign Media
-ip6-cidr,2607:fb10:71f1::/48,Foreign Media
-ip6-cidr,2607:fb10:71f2::/48,Foreign Media
-ip6-cidr,2607:fb10:7201::/48,Foreign Media
-ip6-cidr,2607:fb10:9015::/48,Foreign Media
-ip6-cidr,2607:fb10::/32,Foreign Media
-ip6-cidr,2620:10c:7000::/44,Foreign Media
-ip6-cidr,2620:10c:7008::/48,Foreign Media
-ip6-cidr,2620:10c:700d::/48,Foreign Media
-ip6-cidr,2a00:86c0:1000::/48,Foreign Media
-ip6-cidr,2a00:86c0:1001::/48,Foreign Media
-ip6-cidr,2a00:86c0:1002::/48,Foreign Media
-ip6-cidr,2a00:86c0:1003::/48,Foreign Media
-ip6-cidr,2a00:86c0:1004::/48,Foreign Media
-ip6-cidr,2a00:86c0:1005::/48,Foreign Media
-ip6-cidr,2a00:86c0:1008::/48,Foreign Media
-ip6-cidr,2a00:86c0:1009::/48,Foreign Media
-ip6-cidr,2a00:86c0:100::/48,Foreign Media
-ip6-cidr,2a00:86c0:1012::/48,Foreign Media
-ip6-cidr,2a00:86c0:1013::/48,Foreign Media
-ip6-cidr,2a00:86c0:1014::/48,Foreign Media
-ip6-cidr,2a00:86c0:1015::/48,Foreign Media
-ip6-cidr,2a00:86c0:1018::/48,Foreign Media
-ip6-cidr,2a00:86c0:1021::/48,Foreign Media
-ip6-cidr,2a00:86c0:1026::/48,Foreign Media
-ip6-cidr,2a00:86c0:1027::/48,Foreign Media
-ip6-cidr,2a00:86c0:1034::/48,Foreign Media
-ip6-cidr,2a00:86c0:1042::/48,Foreign Media
-ip6-cidr,2a00:86c0:1044::/48,Foreign Media
-ip6-cidr,2a00:86c0:1046::/48,Foreign Media
-ip6-cidr,2a00:86c0:1047::/48,Foreign Media
-ip6-cidr,2a00:86c0:1048::/48,Foreign Media
-ip6-cidr,2a00:86c0:1049::/48,Foreign Media
-ip6-cidr,2a00:86c0:1050::/48,Foreign Media
-ip6-cidr,2a00:86c0:1051::/48,Foreign Media
-ip6-cidr,2a00:86c0:1052::/48,Foreign Media
-ip6-cidr,2a00:86c0:1054::/48,Foreign Media
-ip6-cidr,2a00:86c0:1055::/48,Foreign Media
-ip6-cidr,2a00:86c0:1056::/48,Foreign Media
-ip6-cidr,2a00:86c0:1057::/48,Foreign Media
-ip6-cidr,2a00:86c0:1062::/48,Foreign Media
-ip6-cidr,2a00:86c0:108::/48,Foreign Media
-ip6-cidr,2a00:86c0:109::/48,Foreign Media
-ip6-cidr,2a00:86c0:110::/48,Foreign Media
-ip6-cidr,2a00:86c0:111::/48,Foreign Media
-ip6-cidr,2a00:86c0:112::/48,Foreign Media
-ip6-cidr,2a00:86c0:113::/48,Foreign Media
-ip6-cidr,2a00:86c0:114::/48,Foreign Media
-ip6-cidr,2a00:86c0:115::/48,Foreign Media
-ip6-cidr,2a00:86c0:120::/48,Foreign Media
-ip6-cidr,2a00:86c0:121::/48,Foreign Media
-ip6-cidr,2a00:86c0:122::/48,Foreign Media
-ip6-cidr,2a00:86c0:124::/48,Foreign Media
-ip6-cidr,2a00:86c0:125::/48,Foreign Media
-ip6-cidr,2a00:86c0:126::/48,Foreign Media
-ip6-cidr,2a00:86c0:127::/48,Foreign Media
-ip6-cidr,2a00:86c0:2000::/48,Foreign Media
-ip6-cidr,2a00:86c0:2001::/48,Foreign Media
-ip6-cidr,2a00:86c0:2004::/48,Foreign Media
-ip6-cidr,2a00:86c0:2005::/48,Foreign Media
-ip6-cidr,2a00:86c0:2006::/48,Foreign Media
-ip6-cidr,2a00:86c0:2007::/48,Foreign Media
-ip6-cidr,2a00:86c0:2010::/48,Foreign Media
-ip6-cidr,2a00:86c0:2011::/48,Foreign Media
-ip6-cidr,2a00:86c0:2012::/48,Foreign Media
-ip6-cidr,2a00:86c0:2013::/48,Foreign Media
-ip6-cidr,2a00:86c0:2014::/48,Foreign Media
-ip6-cidr,2a00:86c0:2015::/48,Foreign Media
-ip6-cidr,2a00:86c0:2016::/48,Foreign Media
-ip6-cidr,2a00:86c0:2017::/48,Foreign Media
-ip6-cidr,2a00:86c0:2018::/48,Foreign Media
-ip6-cidr,2a00:86c0:2019::/48,Foreign Media
-ip6-cidr,2a00:86c0:2020::/48,Foreign Media
-ip6-cidr,2a00:86c0:2021::/48,Foreign Media
-ip6-cidr,2a00:86c0:2022::/48,Foreign Media
-ip6-cidr,2a00:86c0:2023::/48,Foreign Media
-ip6-cidr,2a00:86c0:2036::/48,Foreign Media
-ip6-cidr,2a00:86c0:2037::/48,Foreign Media
-ip6-cidr,2a00:86c0:2044::/48,Foreign Media
-ip6-cidr,2a00:86c0:2045::/48,Foreign Media
-ip6-cidr,2a00:86c0:2048::/48,Foreign Media
-ip6-cidr,2a00:86c0:2049::/48,Foreign Media
-ip6-cidr,2a00:86c0:2050::/48,Foreign Media
-ip6-cidr,2a00:86c0:2051::/48,Foreign Media
-ip6-cidr,2a00:86c0:2056::/48,Foreign Media
-ip6-cidr,2a00:86c0:2058::/48,Foreign Media
-ip6-cidr,2a00:86c0:2059::/48,Foreign Media
-ip6-cidr,2a00:86c0:2060::/48,Foreign Media
-ip6-cidr,2a00:86c0:2062::/48,Foreign Media
-ip6-cidr,2a00:86c0:2063::/48,Foreign Media
-ip6-cidr,2a00:86c0:2064::/48,Foreign Media
-ip6-cidr,2a00:86c0:2065::/48,Foreign Media
-ip6-cidr,2a00:86c0:2068::/48,Foreign Media
-ip6-cidr,2a00:86c0:2069::/48,Foreign Media
-ip6-cidr,2a00:86c0:2070::/48,Foreign Media
-ip6-cidr,2a00:86c0:2071::/48,Foreign Media
-ip6-cidr,2a00:86c0:2072::/48,Foreign Media
-ip6-cidr,2a00:86c0:2073::/48,Foreign Media
-ip6-cidr,2a00:86c0:2074::/48,Foreign Media
-ip6-cidr,2a00:86c0:2075::/48,Foreign Media
-ip6-cidr,2a00:86c0:2078::/48,Foreign Media
-ip6-cidr,2a00:86c0:2079::/48,Foreign Media
-ip6-cidr,2a00:86c0:2080::/48,Foreign Media
-ip6-cidr,2a00:86c0:2081::/48,Foreign Media
-ip6-cidr,2a00:86c0:2082::/48,Foreign Media
-ip6-cidr,2a00:86c0:2083::/48,Foreign Media
-ip6-cidr,2a00:86c0:2084::/48,Foreign Media
-ip6-cidr,2a00:86c0:2085::/48,Foreign Media
-ip6-cidr,2a00:86c0:2088::/48,Foreign Media
-ip6-cidr,2a00:86c0:2089::/48,Foreign Media
-ip6-cidr,2a00:86c0:2095::/48,Foreign Media
-ip6-cidr,2a00:86c0:2096::/48,Foreign Media
-ip6-cidr,2a00:86c0:2097::/48,Foreign Media
-ip6-cidr,2a00:86c0:2098::/48,Foreign Media
-ip6-cidr,2a00:86c0:2099::/48,Foreign Media
-ip6-cidr,2a00:86c0:2100::/48,Foreign Media
-ip6-cidr,2a00:86c0:2101::/48,Foreign Media
-ip6-cidr,2a00:86c0:2102::/48,Foreign Media
-ip6-cidr,2a00:86c0:2103::/48,Foreign Media
-ip6-cidr,2a00:86c0:2104::/48,Foreign Media
-ip6-cidr,2a00:86c0:2105::/48,Foreign Media
-ip6-cidr,2a00:86c0:2106::/48,Foreign Media
-ip6-cidr,2a00:86c0:2108::/48,Foreign Media
-ip6-cidr,2a00:86c0:2109::/48,Foreign Media
-ip6-cidr,2a00:86c0:21::/48,Foreign Media
-ip6-cidr,2a00:86c0:262::/48,Foreign Media
-ip6-cidr,2a00:86c0:39bc::/48,Foreign Media
-ip6-cidr,2a00:86c0:39bd::/48,Foreign Media
-ip6-cidr,2a00:86c0:4::/48,Foreign Media
-ip6-cidr,2a00:86c0:5::/48,Foreign Media
-ip6-cidr,2a00:86c0:98::/48,Foreign Media
-ip6-cidr,2a00:86c0:99::/48,Foreign Media
-ip6-cidr,2a00:86c0::/32,Foreign Media
-ip6-cidr,2a00:86c0:ff0a::/48,Foreign Media
-ip6-cidr,2a03:5640::/32,Foreign Media
+host-wildcard, netflixdnstest*.com, Global
+ip-cidr, 8.41.4.0/24, Global
+ip-cidr, 23.78.0.0/16, Global
+ip-cidr, 23.246.0.0/18, Global
+ip-cidr, 23.246.2.0/24, Global
+ip-cidr, 23.246.3.0/24, Global
+ip-cidr, 23.246.6.0/24, Global
+ip-cidr, 23.246.7.0/24, Global
+ip-cidr, 23.246.10.0/24, Global
+ip-cidr, 23.246.11.0/24, Global
+ip-cidr, 23.246.12.0/24, Global
+ip-cidr, 23.246.13.0/24, Global
+ip-cidr, 23.246.14.0/24, Global
+ip-cidr, 23.246.15.0/24, Global
+ip-cidr, 23.246.16.0/24, Global
+ip-cidr, 23.246.17.0/24, Global
+ip-cidr, 23.246.20.0/24, Global
+ip-cidr, 23.246.21.0/24, Global
+ip-cidr, 23.246.26.0/24, Global
+ip-cidr, 23.246.27.0/24, Global
+ip-cidr, 23.246.30.0/24, Global
+ip-cidr, 23.246.31.0/24, Global
+ip-cidr, 23.246.36.0/24, Global
+ip-cidr, 23.246.38.0/24, Global
+ip-cidr, 23.246.39.0/24, Global
+ip-cidr, 23.246.41.0/24, Global
+ip-cidr, 23.246.42.0/24, Global
+ip-cidr, 23.246.44.0/24, Global
+ip-cidr, 23.246.45.0/24, Global
+ip-cidr, 23.246.46.0/24, Global
+ip-cidr, 23.246.47.0/24, Global
+ip-cidr, 23.246.48.0/24, Global
+ip-cidr, 23.246.49.0/24, Global
+ip-cidr, 23.246.50.0/24, Global
+ip-cidr, 23.246.51.0/24, Global
+ip-cidr, 23.246.52.0/24, Global
+ip-cidr, 23.246.54.0/24, Global
+ip-cidr, 23.246.55.0/24, Global
+ip-cidr, 23.246.56.0/24, Global
+ip-cidr, 23.246.57.0/24, Global
+ip-cidr, 23.246.58.0/24, Global
+ip-cidr, 23.246.59.0/24, Global
+ip-cidr, 34.192.0.0/16, Global
+ip-cidr, 34.208.0.0/12, Global
+ip-cidr, 34.248.0.0/13, Global
+ip-cidr, 35.160.0.0/13, Global
+ip-cidr, 37.77.184.0/21, Global
+ip-cidr, 37.77.184.0/24, Global
+ip-cidr, 37.77.186.0/24, Global
+ip-cidr, 37.77.187.0/24, Global
+ip-cidr, 37.77.188.0/24, Global
+ip-cidr, 37.77.189.0/24, Global
+ip-cidr, 38.72.126.0/24, Global
+ip-cidr, 44.224.0.0/16, Global
+ip-cidr, 44.230.0.0/16, Global
+ip-cidr, 45.57.0.0/17, Global
+ip-cidr, 45.57.0.0/24, Global
+ip-cidr, 45.57.1.0/24, Global
+ip-cidr, 45.57.4.0/24, Global
+ip-cidr, 45.57.5.0/24, Global
+ip-cidr, 45.57.6.0/24, Global
+ip-cidr, 45.57.7.0/24, Global
+ip-cidr, 45.57.10.0/24, Global
+ip-cidr, 45.57.11.0/24, Global
+ip-cidr, 45.57.12.0/24, Global
+ip-cidr, 45.57.13.0/24, Global
+ip-cidr, 45.57.14.0/24, Global
+ip-cidr, 45.57.15.0/24, Global
+ip-cidr, 45.57.16.0/24, Global
+ip-cidr, 45.57.17.0/24, Global
+ip-cidr, 45.57.18.0/24, Global
+ip-cidr, 45.57.19.0/24, Global
+ip-cidr, 45.57.20.0/24, Global
+ip-cidr, 45.57.21.0/24, Global
+ip-cidr, 45.57.22.0/24, Global
+ip-cidr, 45.57.23.0/24, Global
+ip-cidr, 45.57.28.0/24, Global
+ip-cidr, 45.57.29.0/24, Global
+ip-cidr, 45.57.32.0/24, Global
+ip-cidr, 45.57.33.0/24, Global
+ip-cidr, 45.57.34.0/24, Global
+ip-cidr, 45.57.35.0/24, Global
+ip-cidr, 45.57.36.0/24, Global
+ip-cidr, 45.57.37.0/24, Global
+ip-cidr, 45.57.44.0/24, Global
+ip-cidr, 45.57.45.0/24, Global
+ip-cidr, 45.57.46.0/24, Global
+ip-cidr, 45.57.47.0/24, Global
+ip-cidr, 45.57.48.0/24, Global
+ip-cidr, 45.57.49.0/24, Global
+ip-cidr, 45.57.50.0/24, Global
+ip-cidr, 45.57.51.0/24, Global
+ip-cidr, 45.57.56.0/24, Global
+ip-cidr, 45.57.58.0/24, Global
+ip-cidr, 45.57.59.0/24, Global
+ip-cidr, 45.57.60.0/24, Global
+ip-cidr, 45.57.62.0/24, Global
+ip-cidr, 45.57.63.0/24, Global
+ip-cidr, 45.57.64.0/24, Global
+ip-cidr, 45.57.65.0/24, Global
+ip-cidr, 45.57.68.0/24, Global
+ip-cidr, 45.57.69.0/24, Global
+ip-cidr, 45.57.70.0/24, Global
+ip-cidr, 45.57.71.0/24, Global
+ip-cidr, 45.57.72.0/24, Global
+ip-cidr, 45.57.73.0/24, Global
+ip-cidr, 45.57.74.0/24, Global
+ip-cidr, 45.57.75.0/24, Global
+ip-cidr, 45.57.78.0/24, Global
+ip-cidr, 45.57.79.0/24, Global
+ip-cidr, 45.57.80.0/24, Global
+ip-cidr, 45.57.81.0/24, Global
+ip-cidr, 45.57.82.0/24, Global
+ip-cidr, 45.57.83.0/24, Global
+ip-cidr, 45.57.88.0/24, Global
+ip-cidr, 45.57.89.0/24, Global
+ip-cidr, 45.57.92.0/24, Global
+ip-cidr, 45.57.93.0/24, Global
+ip-cidr, 45.57.94.0/24, Global
+ip-cidr, 45.57.95.0/24, Global
+ip-cidr, 45.57.96.0/24, Global
+ip-cidr, 45.57.97.0/24, Global
+ip-cidr, 45.57.98.0/24, Global
+ip-cidr, 45.57.99.0/24, Global
+ip-cidr, 45.57.100.0/24, Global
+ip-cidr, 45.57.101.0/24, Global
+ip-cidr, 45.57.102.0/24, Global
+ip-cidr, 45.57.103.0/24, Global
+ip-cidr, 45.57.104.0/24, Global
+ip-cidr, 45.57.105.0/24, Global
+ip-cidr, 45.57.106.0/24, Global
+ip-cidr, 45.57.108.0/24, Global
+ip-cidr, 45.57.109.0/24, Global
+ip-cidr, 52.0.0.0/15, Global
+ip-cidr, 52.5.0.0/16, Global
+ip-cidr, 52.7.0.0/16, Global
+ip-cidr, 52.10.0.0/15, Global
+ip-cidr, 52.12.0.0/15, Global
+ip-cidr, 52.22.0.0/16, Global
+ip-cidr, 52.24.0.0/14, Global
+ip-cidr, 52.32.0.0/14, Global
+ip-cidr, 52.40.0.0/14, Global
+ip-cidr, 52.48.0.0/14, Global
+ip-cidr, 52.54.0.0/16, Global
+ip-cidr, 52.72.0.0/16, Global
+ip-cidr, 52.88.0.0/15, Global
+ip-cidr, 54.0.0.0/16, Global
+ip-cidr, 54.68.0.0/15, Global
+ip-cidr, 54.74.0.0/15, Global
+ip-cidr, 54.76.0.0/15, Global
+ip-cidr, 54.85.0.0/16, Global
+ip-cidr, 54.86.0.0/16, Global
+ip-cidr, 54.148.0.0/15, Global
+ip-cidr, 54.175.0.0/16, Global
+ip-cidr, 54.186.0.0/15, Global
+ip-cidr, 54.188.0.0/15, Global
+ip-cidr, 54.213.0.0/16, Global
+ip-cidr, 54.214.128.0/17, Global
+ip-cidr, 64.120.128.0/17, Global
+ip-cidr, 66.197.128.0/17, Global
+ip-cidr, 69.53.224.0/19, Global
+ip-cidr, 69.53.225.0/24, Global
+ip-cidr, 69.53.226.0/24, Global
+ip-cidr, 69.53.230.0/24, Global
+ip-cidr, 69.53.231.0/24, Global
+ip-cidr, 69.53.232.0/24, Global
+ip-cidr, 69.53.233.0/24, Global
+ip-cidr, 69.53.234.0/24, Global
+ip-cidr, 69.53.235.0/24, Global
+ip-cidr, 69.53.240.0/24, Global
+ip-cidr, 69.53.241.0/24, Global
+ip-cidr, 69.53.245.0/24, Global
+ip-cidr, 69.53.246.0/24, Global
+ip-cidr, 69.53.247.0/24, Global
+ip-cidr, 69.53.248.0/24, Global
+ip-cidr, 69.53.249.0/24, Global
+ip-cidr, 69.53.254.0/24, Global
+ip-cidr, 103.87.204.0/22, Global
+ip-cidr, 103.87.205.0/24, Global
+ip-cidr, 103.87.206.0/24, Global
+ip-cidr, 103.87.207.0/24, Global
+ip-cidr, 108.175.32.0/20, Global
+ip-cidr, 185.2.220.0/22, Global
+ip-cidr, 185.9.188.0/22, Global
+ip-cidr, 192.173.64.0/18, Global
+ip-cidr, 192.173.65.0/24, Global
+ip-cidr, 192.173.67.0/24, Global
+ip-cidr, 192.173.68.0/24, Global
+ip-cidr, 192.173.70.0/24, Global
+ip-cidr, 192.173.72.0/24, Global
+ip-cidr, 192.173.73.0/24, Global
+ip-cidr, 192.173.74.0/24, Global
+ip-cidr, 192.173.75.0/24, Global
+ip-cidr, 192.173.76.0/24, Global
+ip-cidr, 192.173.77.0/24, Global
+ip-cidr, 192.173.78.0/24, Global
+ip-cidr, 192.173.79.0/24, Global
+ip-cidr, 192.173.80.0/24, Global
+ip-cidr, 192.173.82.0/24, Global
+ip-cidr, 192.173.83.0/24, Global
+ip-cidr, 192.173.84.0/24, Global
+ip-cidr, 192.173.86.0/24, Global
+ip-cidr, 192.173.87.0/24, Global
+ip-cidr, 192.173.88.0/24, Global
+ip-cidr, 192.173.89.0/24, Global
+ip-cidr, 192.173.92.0/24, Global
+ip-cidr, 192.173.94.0/24, Global
+ip-cidr, 192.173.96.0/24, Global
+ip-cidr, 192.173.99.0/24, Global
+ip-cidr, 198.38.100.0/24, Global
+ip-cidr, 198.38.108.0/24, Global
+ip-cidr, 198.38.109.0/24, Global
+ip-cidr, 198.38.110.0/24, Global
+ip-cidr, 198.38.111.0/24, Global
+ip-cidr, 198.38.112.0/24, Global
+ip-cidr, 198.38.113.0/24, Global
+ip-cidr, 198.38.114.0/24, Global
+ip-cidr, 198.38.115.0/24, Global
+ip-cidr, 198.38.120.0/24, Global
+ip-cidr, 198.38.121.0/24, Global
+ip-cidr, 198.38.122.0/24, Global
+ip-cidr, 198.38.96.0/19, Global
+ip-cidr, 198.38.98.0/24, Global
+ip-cidr, 198.38.99.0/24, Global
+ip-cidr, 198.45.48.0/20, Global
+ip-cidr, 198.45.48.0/24, Global
+ip-cidr, 198.45.49.0/24, Global
+ip-cidr, 198.45.50.0/24, Global
+ip-cidr, 198.45.56.0/24, Global
+ip-cidr, 208.75.76.0/22, Global
+ip-cidr, 203.75.84.0/24, Global
+ip-cidr, 203.83.220.0/22, Global
+ip-cidr, 203.116.0.0/16, Global
+ip-cidr, 203.198.0.0/20, Global
+ip-cidr, 203.198.80.0/21, Global
+ip-cidr, 207.45.72.0/22, Global
+ip-cidr, 207.45.73.0/24, Global
+ip-cidr, 218.102.32.0/19, Global
+ip-cidr, 219.76.0.0/17, Global
+ip6-cidr, 2607:fb10:16::/48, Global
+ip6-cidr, 2607:fb10:2011::/48, Global
+ip6-cidr, 2607:fb10:2012::/48, Global
+ip6-cidr, 2607:fb10:2014::/48, Global
+ip6-cidr, 2607:fb10:2033::/48, Global
+ip6-cidr, 2607:fb10:2034::/48, Global
+ip6-cidr, 2607:fb10:31::/48, Global
+ip6-cidr, 2607:fb10:45::/48, Global
+ip6-cidr, 2607:fb10:46::/48, Global
+ip6-cidr, 2607:fb10:5014::/48, Global
+ip6-cidr, 2607:fb10:5015::/48, Global
+ip6-cidr, 2607:fb10:5016::/48, Global
+ip6-cidr, 2607:fb10:5020::/44, Global
+ip6-cidr, 2607:fb10:5021::/48, Global
+ip6-cidr, 2607:fb10:5036::/48, Global
+ip6-cidr, 2607:fb10:5037::/48, Global
+ip6-cidr, 2607:fb10:5039::/48, Global
+ip6-cidr, 2607:fb10:503c::/48, Global
+ip6-cidr, 2607:fb10:503d::/48, Global
+ip6-cidr, 2607:fb10:5040::/48, Global
+ip6-cidr, 2607:fb10:5042::/48, Global
+ip6-cidr, 2607:fb10:5062::/48, Global
+ip6-cidr, 2607:fb10:5063::/48, Global
+ip6-cidr, 2607:fb10:7011::/48, Global
+ip6-cidr, 2607:fb10:7020::/44, Global
+ip6-cidr, 2607:fb10:7035::/48, Global
+ip6-cidr, 2607:fb10:7038::/48, Global
+ip6-cidr, 2607:fb10:7039::/48, Global
+ip6-cidr, 2607:fb10:7040::/44, Global
+ip6-cidr, 2607:fb10:7050::/44, Global
+ip6-cidr, 2607:fb10:7051::/48, Global
+ip6-cidr, 2607:fb10:7061::/48, Global
+ip6-cidr, 2607:fb10:7071::/48, Global
+ip6-cidr, 2607:fb10:7080::/44, Global
+ip6-cidr, 2607:fb10:7082::/48, Global
+ip6-cidr, 2607:fb10:7083::/48, Global
+ip6-cidr, 2607:fb10:7085::/48, Global
+ip6-cidr, 2607:fb10:7086::/48, Global
+ip6-cidr, 2607:fb10:7090::/44, Global
+ip6-cidr, 2607:fb10:7091::/48, Global
+ip6-cidr, 2607:fb10:70b0::/44, Global
+ip6-cidr, 2607:fb10:70d0::/44, Global
+ip6-cidr, 2607:fb10:70d1::/48, Global
+ip6-cidr, 2607:fb10:70e1::/48, Global
+ip6-cidr, 2607:fb10:7110::/44, Global
+ip6-cidr, 2607:fb10:7120::/44, Global
+ip6-cidr, 2607:fb10:7131::/48, Global
+ip6-cidr, 2607:fb10:7132::/48, Global
+ip6-cidr, 2607:fb10:7141::/48, Global
+ip6-cidr, 2607:fb10:7143::/48, Global
+ip6-cidr, 2607:fb10:7146::/48, Global
+ip6-cidr, 2607:fb10:7147::/48, Global
+ip6-cidr, 2607:fb10:7151::/48, Global
+ip6-cidr, 2607:fb10:7161::/48, Global
+ip6-cidr, 2607:fb10:7171::/48, Global
+ip6-cidr, 2607:fb10:7172::/48, Global
+ip6-cidr, 2607:fb10:7181::/48, Global
+ip6-cidr, 2607:fb10:7182::/48, Global
+ip6-cidr, 2607:fb10:7190::/48, Global
+ip6-cidr, 2607:fb10:7191::/48, Global
+ip6-cidr, 2607:fb10:71b1::/48, Global
+ip6-cidr, 2607:fb10:71b2::/48, Global
+ip6-cidr, 2607:fb10:71c0::/44, Global
+ip6-cidr, 2607:fb10:71e1::/48, Global
+ip6-cidr, 2607:fb10:71e2::/48, Global
+ip6-cidr, 2607:fb10:71f1::/48, Global
+ip6-cidr, 2607:fb10:71f2::/48, Global
+ip6-cidr, 2607:fb10:7201::/48, Global
+ip6-cidr, 2607:fb10:9015::/48, Global
+ip6-cidr, 2607:fb10::/32, Global
+ip6-cidr, 2620:10c:7000::/44, Global
+ip6-cidr, 2620:10c:7008::/48, Global
+ip6-cidr, 2620:10c:700d::/48, Global
+ip6-cidr, 2a00:86c0:1000::/48, Global
+ip6-cidr, 2a00:86c0:1001::/48, Global
+ip6-cidr, 2a00:86c0:1002::/48, Global
+ip6-cidr, 2a00:86c0:1003::/48, Global
+ip6-cidr, 2a00:86c0:1004::/48, Global
+ip6-cidr, 2a00:86c0:1005::/48, Global
+ip6-cidr, 2a00:86c0:1008::/48, Global
+ip6-cidr, 2a00:86c0:1009::/48, Global
+ip6-cidr, 2a00:86c0:100::/48, Global
+ip6-cidr, 2a00:86c0:1012::/48, Global
+ip6-cidr, 2a00:86c0:1013::/48, Global
+ip6-cidr, 2a00:86c0:1014::/48, Global
+ip6-cidr, 2a00:86c0:1015::/48, Global
+ip6-cidr, 2a00:86c0:1018::/48, Global
+ip6-cidr, 2a00:86c0:1021::/48, Global
+ip6-cidr, 2a00:86c0:1026::/48, Global
+ip6-cidr, 2a00:86c0:1027::/48, Global
+ip6-cidr, 2a00:86c0:1034::/48, Global
+ip6-cidr, 2a00:86c0:1042::/48, Global
+ip6-cidr, 2a00:86c0:1044::/48, Global
+ip6-cidr, 2a00:86c0:1046::/48, Global
+ip6-cidr, 2a00:86c0:1047::/48, Global
+ip6-cidr, 2a00:86c0:1048::/48, Global
+ip6-cidr, 2a00:86c0:1049::/48, Global
+ip6-cidr, 2a00:86c0:1050::/48, Global
+ip6-cidr, 2a00:86c0:1051::/48, Global
+ip6-cidr, 2a00:86c0:1052::/48, Global
+ip6-cidr, 2a00:86c0:1054::/48, Global
+ip6-cidr, 2a00:86c0:1055::/48, Global
+ip6-cidr, 2a00:86c0:1056::/48, Global
+ip6-cidr, 2a00:86c0:1057::/48, Global
+ip6-cidr, 2a00:86c0:1062::/48, Global
+ip6-cidr, 2a00:86c0:108::/48, Global
+ip6-cidr, 2a00:86c0:109::/48, Global
+ip6-cidr, 2a00:86c0:110::/48, Global
+ip6-cidr, 2a00:86c0:111::/48, Global
+ip6-cidr, 2a00:86c0:112::/48, Global
+ip6-cidr, 2a00:86c0:113::/48, Global
+ip6-cidr, 2a00:86c0:114::/48, Global
+ip6-cidr, 2a00:86c0:115::/48, Global
+ip6-cidr, 2a00:86c0:120::/48, Global
+ip6-cidr, 2a00:86c0:121::/48, Global
+ip6-cidr, 2a00:86c0:122::/48, Global
+ip6-cidr, 2a00:86c0:124::/48, Global
+ip6-cidr, 2a00:86c0:125::/48, Global
+ip6-cidr, 2a00:86c0:126::/48, Global
+ip6-cidr, 2a00:86c0:127::/48, Global
+ip6-cidr, 2a00:86c0:2000::/48, Global
+ip6-cidr, 2a00:86c0:2001::/48, Global
+ip6-cidr, 2a00:86c0:2004::/48, Global
+ip6-cidr, 2a00:86c0:2005::/48, Global
+ip6-cidr, 2a00:86c0:2006::/48, Global
+ip6-cidr, 2a00:86c0:2007::/48, Global
+ip6-cidr, 2a00:86c0:2010::/48, Global
+ip6-cidr, 2a00:86c0:2011::/48, Global
+ip6-cidr, 2a00:86c0:2012::/48, Global
+ip6-cidr, 2a00:86c0:2013::/48, Global
+ip6-cidr, 2a00:86c0:2014::/48, Global
+ip6-cidr, 2a00:86c0:2015::/48, Global
+ip6-cidr, 2a00:86c0:2016::/48, Global
+ip6-cidr, 2a00:86c0:2017::/48, Global
+ip6-cidr, 2a00:86c0:2018::/48, Global
+ip6-cidr, 2a00:86c0:2019::/48, Global
+ip6-cidr, 2a00:86c0:2020::/48, Global
+ip6-cidr, 2a00:86c0:2021::/48, Global
+ip6-cidr, 2a00:86c0:2022::/48, Global
+ip6-cidr, 2a00:86c0:2023::/48, Global
+ip6-cidr, 2a00:86c0:2036::/48, Global
+ip6-cidr, 2a00:86c0:2037::/48, Global
+ip6-cidr, 2a00:86c0:2044::/48, Global
+ip6-cidr, 2a00:86c0:2045::/48, Global
+ip6-cidr, 2a00:86c0:2048::/48, Global
+ip6-cidr, 2a00:86c0:2049::/48, Global
+ip6-cidr, 2a00:86c0:2050::/48, Global
+ip6-cidr, 2a00:86c0:2051::/48, Global
+ip6-cidr, 2a00:86c0:2056::/48, Global
+ip6-cidr, 2a00:86c0:2058::/48, Global
+ip6-cidr, 2a00:86c0:2059::/48, Global
+ip6-cidr, 2a00:86c0:2060::/48, Global
+ip6-cidr, 2a00:86c0:2062::/48, Global
+ip6-cidr, 2a00:86c0:2063::/48, Global
+ip6-cidr, 2a00:86c0:2064::/48, Global
+ip6-cidr, 2a00:86c0:2065::/48, Global
+ip6-cidr, 2a00:86c0:2068::/48, Global
+ip6-cidr, 2a00:86c0:2069::/48, Global
+ip6-cidr, 2a00:86c0:2070::/48, Global
+ip6-cidr, 2a00:86c0:2071::/48, Global
+ip6-cidr, 2a00:86c0:2072::/48, Global
+ip6-cidr, 2a00:86c0:2073::/48, Global
+ip6-cidr, 2a00:86c0:2074::/48, Global
+ip6-cidr, 2a00:86c0:2075::/48, Global
+ip6-cidr, 2a00:86c0:2078::/48, Global
+ip6-cidr, 2a00:86c0:2079::/48, Global
+ip6-cidr, 2a00:86c0:2080::/48, Global
+ip6-cidr, 2a00:86c0:2081::/48, Global
+ip6-cidr, 2a00:86c0:2082::/48, Global
+ip6-cidr, 2a00:86c0:2083::/48, Global
+ip6-cidr, 2a00:86c0:2084::/48, Global
+ip6-cidr, 2a00:86c0:2085::/48, Global
+ip6-cidr, 2a00:86c0:2088::/48, Global
+ip6-cidr, 2a00:86c0:2089::/48, Global
+ip6-cidr, 2a00:86c0:2095::/48, Global
+ip6-cidr, 2a00:86c0:2096::/48, Global
+ip6-cidr, 2a00:86c0:2097::/48, Global
+ip6-cidr, 2a00:86c0:2098::/48, Global
+ip6-cidr, 2a00:86c0:2099::/48, Global
+ip6-cidr, 2a00:86c0:2100::/48, Global
+ip6-cidr, 2a00:86c0:2101::/48, Global
+ip6-cidr, 2a00:86c0:2102::/48, Global
+ip6-cidr, 2a00:86c0:2103::/48, Global
+ip6-cidr, 2a00:86c0:2104::/48, Global
+ip6-cidr, 2a00:86c0:2105::/48, Global
+ip6-cidr, 2a00:86c0:2106::/48, Global
+ip6-cidr, 2a00:86c0:2108::/48, Global
+ip6-cidr, 2a00:86c0:2109::/48, Global
+ip6-cidr, 2a00:86c0:21::/48, Global
+ip6-cidr, 2a00:86c0:262::/48, Global
+ip6-cidr, 2a00:86c0:39bc::/48, Global
+ip6-cidr, 2a00:86c0:39bd::/48, Global
+ip6-cidr, 2a00:86c0:4::/48, Global
+ip6-cidr, 2a00:86c0:5::/48, Global
+ip6-cidr, 2a00:86c0:98::/48, Global
+ip6-cidr, 2a00:86c0:99::/48, Global
+ip6-cidr, 2a00:86c0::/32, Global
+ip6-cidr, 2a00:86c0:ff0a::/48, Global
+ip6-cidr, 2a03:5640::/32, Global
 
 # > Niconico
-host-suffix,dmc.nico,Foreign Media
-host-suffix,nicodic.jp,Foreign Media
-host-suffix,nicomanga.jp,Foreign Media
-host-suffix,niconico.com,Foreign Media
-host-suffix,nicoseiga.jp,Foreign Media
-host-suffix,nicovideo.jp,Foreign Media
-host-suffix,nimg.jp,Foreign Media
-host-suffix,simg.jp,Foreign Media
-host-suffix,socdm.com,Foreign Media
+host-suffix, dmc.nico, Global
+host-suffix, nicodic.jp, Global
+host-suffix, nicomanga.jp, Global
+host-suffix, niconico.com, Global
+host-suffix, nicoseiga.jp, Global
+host-suffix, nicovideo.jp, Global
+host-suffix, nimg.jp, Global
+host-suffix, simg.jp, Global
+host-suffix, socdm.com, Global
 
 # > Nikkei
-host-suffix,nikkei.com,Foreign Media
-host-suffix,nikkei.jp,Foreign Media
-host-suffix,nikkei.co.jp,Foreign Media
+host-suffix, nikkei.com, Global
+host-suffix, nikkei.jp, Global
+host-suffix, nikkei.co.jp, Global
 
 # > NYPost
-host-suffix,nypost.com,Foreign Media
-host-suffix,nypost.help,Foreign Media
-host-suffix,nypostreprints.com,Foreign Media
+host-suffix, nypost.com, Global
+host-suffix, nypost.help, Global
+host-suffix, nypostreprints.com, Global
 
 # > NY Times
-host-suffix,d1f1eryiqyjs0r.cloudfront.net,Foreign Media
-host-suffix,d3lar09xbwlsge.cloudfront.net,Foreign Media
-host-suffix,d3q1qj9jzsu8nw.cloudfront.net,Foreign Media
-host-suffix,dc8xl0ndzn2cb.cloudfront.net,Foreign Media
-host-suffix,nyt.com,Foreign Media
-host-suffix,nyt.net,Foreign Media
-host-suffix,nytchina.com,Foreign Media
-host-suffix,nytcn.me,Foreign Media
-host-suffix,nytco.com,Foreign Media
-host-suffix,nyti.ms,Foreign Media
-host-suffix,nytimes.com,Foreign Media
-host-suffix,nytimg.com,Foreign Media
-host-suffix,nytlog.com,Foreign Media
-host-suffix,nytstyle.com,Foreign Media
-host-suffix,timestalks.com,Foreign Media
-host-suffix,tynt.com,Foreign Media
+host-suffix, d1f1eryiqyjs0r.cloudfront.net, Global
+host-suffix, d3lar09xbwlsge.cloudfront.net, Global
+host-suffix, d3q1qj9jzsu8nw.cloudfront.net, Global
+host-suffix, dc8xl0ndzn2cb.cloudfront.net, Global
+host-suffix, nyt.com, Global
+host-suffix, nyt.net, Global
+host-suffix, nytchina.com, Global
+host-suffix, nytcn.me, Global
+host-suffix, nytco.com, Global
+host-suffix, nyti.ms, Global
+host-suffix, nytimes.com, Global
+host-suffix, nytimg.com, Global
+host-suffix, nytlog.com, Global
+host-suffix, nytstyle.com, Global
+host-suffix, timestalks.com, Global
+host-suffix, tynt.com, Global
 
 # > Pandora
-host-suffix,pandora.com,Foreign Media
-host-suffix,p-cdn.us,Foreign Media
+host-suffix, pandora.com, Global
+host-suffix, p-cdn.us, Global
 
 # > PandoraTV
-host-suffix,pandora.tv,Foreign Media
-host-suffix,kmplayer.com,Foreign Media
+host-suffix, pandora.tv, Global
+host-suffix, kmplayer.com, Global
 
 # > PBS
-host-suffix,pbs.org,Foreign Media
+host-suffix, pbs.org, Global
 
 # > Pornhub
-host-suffix,phncdn.com,Foreign Media
-host-suffix,pornhub.com,Foreign Media
-host-suffix,pornhubpremium.com,Foreign Media
-host-suffix,pronstore.com,Foreign Media
-host-suffix,phprcdn.com,Foreign Media
+host-suffix, phncdn.com, Global
+host-suffix, pornhub.com, Global
+host-suffix, pornhubpremium.com, Global
+host-suffix, pronstore.com, Global
+host-suffix, phprcdn.com, Global
 
 # > Qobuz
-host-suffix,cobeuz.fr,Foreign Media
-host-suffix,cobuz.fr,Foreign Media
-host-suffix,cobuzz.fr,Foreign Media
-host-suffix,kobuz.fr,Foreign Media
-host-suffix,qobuz.at,Foreign Media
-host-suffix,qobuz.be,Foreign Media
-host-suffix,qobuz.biz,Foreign Media
-host-suffix,qobuz.ca,Foreign Media
-host-suffix,qobuz.ch,Foreign Media
-host-suffix,qobuz.co.uk,Foreign Media
-host-suffix,qobuz.com,Foreign Media
-host-suffix,qobuz.de,Foreign Media
-host-suffix,qobuz.eu,Foreign Media
-host-suffix,qobuz.fi,Foreign Media
-host-suffix,qobuz.fr,Foreign Media
-host-suffix,qobuz.gr,Foreign Media
-host-suffix,qobuz.hk,Foreign Media
-host-suffix,qobuz.info,Foreign Media
-host-suffix,qobuz.it,Foreign Media
-host-suffix,qobuz.lt,Foreign Media
-host-suffix,qobuz.lu,Foreign Media
-host-suffix,qobuz.net,Foreign Media
-host-suffix,qobuz.org,Foreign Media
-host-suffix,qobuz.pl,Foreign Media
-host-suffix,qobuz.ro,Foreign Media
-host-suffix,qobuz.se,Foreign Media
-host-suffix,qobuz.tv,Foreign Media
-host-suffix,qobuz.us,Foreign Media
-host-suffix,quobuz.com,Foreign Media
-host-suffix,quobuz.fr,Foreign Media
-host-suffix,static-qobuz.com,Foreign Media
-ip-cidr,52.211.1.180/32,Foreign Media
-ip-cidr,99.81.97.56/32,Foreign Media
+host-suffix, cobeuz.fr, Global
+host-suffix, cobuz.fr, Global
+host-suffix, cobuzz.fr, Global
+host-suffix, kobuz.fr, Global
+host-suffix, qobuz.at, Global
+host-suffix, qobuz.be, Global
+host-suffix, qobuz.biz, Global
+host-suffix, qobuz.ca, Global
+host-suffix, qobuz.ch, Global
+host-suffix, qobuz.co.uk, Global
+host-suffix, qobuz.com, Global
+host-suffix, qobuz.de, Global
+host-suffix, qobuz.eu, Global
+host-suffix, qobuz.fi, Global
+host-suffix, qobuz.fr, Global
+host-suffix, qobuz.gr, Global
+host-suffix, qobuz.hk, Global
+host-suffix, qobuz.info, Global
+host-suffix, qobuz.it, Global
+host-suffix, qobuz.lt, Global
+host-suffix, qobuz.lu, Global
+host-suffix, qobuz.net, Global
+host-suffix, qobuz.org, Global
+host-suffix, qobuz.pl, Global
+host-suffix, qobuz.ro, Global
+host-suffix, qobuz.se, Global
+host-suffix, qobuz.tv, Global
+host-suffix, qobuz.us, Global
+host-suffix, quobuz.com, Global
+host-suffix, quobuz.fr, Global
+host-suffix, static-qobuz.com, Global
+ip-cidr, 52.211.1.180/32, Global
+ip-cidr, 99.81.97.56/32, Global
 
 # > RTHK 棣欐腐鐢靛彴
-host-suffix,rthk.hk,Foreign Media
-host-suffix,rthk.org.hk,Foreign Media
-host,rthklive2-lh.akamaihd.net,Foreign Media
+host-suffix, rthk.hk, Global
+host-suffix, rthk.org.hk, Global
+host, rthklive2-lh.akamaihd.net, Global
 
 # > Sky GO
-host-suffix,sky.com,Foreign Media
-host-suffix,skygo.co.nz,Foreign Media
+host-suffix, sky.com, Global
+host-suffix, skygo.co.nz, Global
 
 # > Sony
-host,sonyliveevents-nonssai.akamaized.net,Foreign Media
+host, sonyliveevents-nonssai.akamaized.net, Global
 
 # > SoundCloud
-host-suffix,sndcdn.com,Foreign Media
-host-suffix,soundcloud.com,Foreign Media
+host-suffix, sndcdn.com, Global
+host-suffix, soundcloud.com, Global
 
 # > Spotify
-user-agent,Spotify*,Foreign Media
-host-suffix,audio-ak-spotify-com.akamaized.net,Foreign Media
-host-suffix,byspotify.com,Foreign Media
-host-suffix,heads4-ak-spotify-com.akamaized.net,Foreign Media
-host-suffix,pscdn.co,Foreign Media
-host-suffix,scdn.co,Foreign Media
-host-suffix,spoti.fi,Foreign Media
-host-suffix,spotify-com.akamaized.net,Foreign Media
-host-suffix,spotify-everywhere.com,Foreign Media
-host-suffix,spotify.com,Foreign Media
-host-suffix,spotify.design,Foreign Media
-host-suffix,spotifycdn.com,Foreign Media
-host-suffix,spotifycdn.net,Foreign Media
-host-suffix,spotifycharts.com,Foreign Media
-host-suffix,spotifycodes.com,Foreign Media
-host-suffix,spotifyforbrands.com,Foreign Media
-host-suffix,spotifyjobs.com,Foreign Media
-host-keyword,-spotify-com,Foreign Media
-ip-cidr,35.186.224.47/32,Foreign Media
+user-agent, Spotify*, Global
+host-suffix, audio-ak-spotify-com.akamaized.net, Global
+host-suffix, byspotify.com, Global
+host-suffix, heads4-ak-spotify-com.akamaized.net, Global
+host-suffix, pscdn.co, Global
+host-suffix, scdn.co, Global
+host-suffix, spoti.fi, Global
+host-suffix, spotify-com.akamaized.net, Global
+host-suffix, spotify-everywhere.com, Global
+host-suffix, spotify.com, Global
+host-suffix, spotify.design, Global
+host-suffix, spotifycdn.com, Global
+host-suffix, spotifycdn.net, Global
+host-suffix, spotifycharts.com, Global
+host-suffix, spotifycodes.com, Global
+host-suffix, spotifyforbrands.com, Global
+host-suffix, spotifyjobs.com, Global
+host-keyword, -spotify-com, Global
+ip-cidr, 35.186.224.47/32, Global
 
 # > 鍙版咕濂�
-host-suffix,skyking.com.tw,Foreign Media
-host,hamifans.emome.net,Foreign Media
+host-suffix, skyking.com.tw, Global
+host, hamifans.emome.net, Global
 
 # > TIDAL
-user-agent,TIDAL*dia,Foreign Media
-host-suffix,tidal-cms.s3.amazonaws.com,Foreign Media
-host-suffix,tidal.com,Foreign Media
-host-suffix,tidalhifi.com,Foreign Media
-host-suffix,wimpmusic.com,Foreign Media
+user-agent, TIDAL*dia, Global
+host-suffix, tidal-cms.s3.amazonaws.com, Global
+host-suffix, tidal.com, Global
+host-suffix, tidalhifi.com, Global
+host-suffix, wimpmusic.com, Global
 
 # > TikTok
-user-agent,TikTok*,Foreign Media
-host-keyword,-tiktokcdn-com,Foreign Media
-host,p16-tiktokcdn-com.akamaized.net,Foreign Media
-host-suffix,byteoversea.com,Foreign Media
-host-suffix,ibytedtos.com,Foreign Media
-host-suffix,ibyteimg.com,Foreign Media
-host-suffix,ipstatp.com,Foreign Media
-host-suffix,muscdn.com,Foreign Media
-host-suffix,musical.ly,Foreign Media
-host-suffix,sgpstatp.com,Foreign Media
-host-suffix,snssdk.com,Foreign Media
-host-suffix,tik-tokapi.com,Foreign Media
-host-suffix,tiktok.com,Foreign Media
-host-suffix,tiktokcdn.com,Foreign Media
-host-suffix,tiktokv.com,Foreign Media
+user-agent, TikTok*, Global
+host-keyword, -tiktokcdn-com, Global
+host, p16-tiktokcdn-com.akamaized.net, Global
+host-suffix, byteoversea.com, Global
+host-suffix, ibytedtos.com, Global
+host-suffix, ibyteimg.com, Global
+host-suffix, ipstatp.com, Global
+host-suffix, muscdn.com, Global
+host-suffix, musical.ly, Global
+host-suffix, sgpstatp.com, Global
+host-suffix, snssdk.com, Global
+host-suffix, tik-tokapi.com, Global
+host-suffix, tiktok.com, Global
+host-suffix, tiktokcdn.com, Global
+host-suffix, tiktokv.com, Global
 
 # > TVB
-host-suffix,bigbigchannel.com.hk,Foreign Media
-host-suffix,bigbigshop.com,Foreign Media
-host-suffix,tvb.com,Foreign Media
-host-suffix,tvb.com.au,Foreign Media
-host-suffix,tvbanywhere.com,Foreign Media
-host-suffix,tvbanywhere.com.sg,Foreign Media
-host-suffix,tvbc.com.cn,Foreign Media
-host-suffix,tvbeventpower.com.hk,Foreign Media
-host-suffix,tvbusa.com,Foreign Media
-host-suffix,tvbweekly.com,Foreign Media
-host-suffix,tvmedia.net.au,Foreign Media
+host-suffix, bigbigchannel.com.hk, Global
+host-suffix, bigbigshop.com, Global
+host-suffix, tvb.com, Global
+host-suffix, tvb.com.au, Global
+host-suffix, tvbanywhere.com, Global
+host-suffix, tvbanywhere.com.sg, Global
+host-suffix, tvbc.com.cn, Global
+host-suffix, tvbeventpower.com.hk, Global
+host-suffix, tvbusa.com, Global
+host-suffix, tvbweekly.com, Global
+host-suffix, tvmedia.net.au, Global
 
 # >> EncoreTVB
-host-suffix,encoretvb.com,Foreign Media
-host-suffix,content.jwplatform.com,Foreign Media
-host-suffix,videos-f.jwpsrv.com,Foreign Media
-host,edge.api.brightcove.com,Foreign Media
-host,bcbolt446c5271-a.akamaihd.net,Foreign Media
+host-suffix, encoretvb.com, Global
+host-suffix, content.jwplatform.com, Global
+host-suffix, videos-f.jwpsrv.com, Global
+host, edge.api.brightcove.com, Global
+host, bcbolt446c5271-a.akamaihd.net, Global
 
 # >> MyTV SUPER
-user-agent,mytv*,Foreign Media
-host-suffix,mytvsuper.com,Foreign Media
-host-suffix,mytvsuperlimited.hb.omtrdc.net,Foreign Media
-host-suffix,mytvsuperlimited.sc.omtrdc.net,Foreign Media
+user-agent, mytv*, Global
+host-suffix, mytvsuper.com, Global
+host-suffix, mytvsuperlimited.hb.omtrdc.net, Global
+host-suffix, mytvsuperlimited.sc.omtrdc.net, Global
 
 # > TVER
-user-agent,TVer-Release*,Foreign Media
-host-suffix,dogatch.jp,Foreign Media
-host-suffix,edge.api.brightcove.com,Foreign Media
-host-suffix,gorin.jp,Foreign Media
-host-suffix,screens-lab.jp,Foreign Media
-host-suffix,tver.co.jp,Foreign Media
-host-suffix,tver.jp,Foreign Media
+user-agent, TVer-Release*, Global
+host-suffix, dogatch.jp, Global
+host-suffix, edge.api.brightcove.com, Global
+host-suffix, gorin.jp, Global
+host-suffix, screens-lab.jp, Global
+host-suffix, tver.co.jp, Global
+host-suffix, tver.jp, Global
 
 # > Vidol TV
-host-suffix,vidol.tv,Foreign Media
+host-suffix, vidol.tv, Global
 
 # > Viki
-host-suffix,viki.io,Foreign Media
-host-suffix,viki.com,Foreign Media
-host-suffix,viki.net,Foreign Media
-host-suffix,vikiplatform.com,Foreign Media
-host-suffix,m-content-viki.s.llnwi.net,Foreign Media
-host-suffix,vikidash.akamaized.net,Foreign Media
-host-suffix,twemoji.maxcdn.com,Foreign Media
-host-suffix,kalhlspd-a.akamaihd.net,Foreign Media
+host-suffix, viki.io, Global
+host-suffix, viki.com, Global
+host-suffix, viki.net, Global
+host-suffix, vikiplatform.com, Global
+host-suffix, m-content-viki.s.llnwi.net, Global
+host-suffix, vikidash.akamaized.net, Global
+host-suffix, twemoji.maxcdn.com, Global
+host-suffix, kalhlspd-a.akamaihd.net, Global
 
 # > Vimeo
-host-suffix,vhx.tv,Foreign Media
-host-suffix,vhxqa1.com,Foreign Media
-host-suffix,vhxqa2.com,Foreign Media
-host-suffix,vhxqa3.com,Foreign Media
-host-suffix,vhxqa4.com,Foreign Media
-host-suffix,vhxqa6.com,Foreign Media
-host-suffix,vimeo-staging.com,Foreign Media
-host-suffix,vimeo-staging2.com,Foreign Media
-host-suffix,vimeo.com,Foreign Media
-host-suffix,vimeo.fr,Foreign Media
-host-suffix,vimeobusiness.com,Foreign Media
-host-suffix,vimeocdn.com,Foreign Media
-host-suffix,vimeogoods.com,Foreign Media
-host-suffix,vimeoondemand.com,Foreign Media
-host-suffix,vimeostatus.com,Foreign Media
-host-suffix,livestream.com,Foreign Media
+host-suffix, vhx.tv, Global
+host-suffix, vhxqa1.com, Global
+host-suffix, vhxqa2.com, Global
+host-suffix, vhxqa3.com, Global
+host-suffix, vhxqa4.com, Global
+host-suffix, vhxqa6.com, Global
+host-suffix, vimeo-staging.com, Global
+host-suffix, vimeo-staging2.com, Global
+host-suffix, vimeo.com, Global
+host-suffix, vimeo.fr, Global
+host-suffix, vimeobusiness.com, Global
+host-suffix, vimeocdn.com, Global
+host-suffix, vimeogoods.com, Global
+host-suffix, vimeoondemand.com, Global
+host-suffix, vimeostatus.com, Global
+host-suffix, livestream.com, Global
 
 # > ViuTV
-host-suffix,viu.com,Foreign Media
-host-suffix,viu.tv,Foreign Media
-host-suffix,viu.now.com,Foreign Media
-host-suffix,cognito-identity.us-east-1.amazonaws.com,Foreign Media
-host-suffix,mobileanalytics.us-east-1.amazonaws.com,Foreign Media
-host-suffix,d1k2us671qcoau.cloudfront.net,Foreign Media
-host-suffix,d2anahhhmp1ffz.cloudfront.net,Foreign Media
-host-suffix,dfp6rglgjqszk.cloudfront.net,Foreign Media
+host-suffix, viu.com, Global
+host-suffix, viu.tv, Global
+host-suffix, viu.now.com, Global
+host-suffix, d1k2us671qcoau.cloudfront.net, Global
+host-suffix, d2anahhhmp1ffz.cloudfront.net, Global
+host-suffix, dfp6rglgjqszk.cloudfront.net, Global
 
 # > VOA
-host-suffix,amerikaninsesi.com,Foreign Media
-host-suffix,amerikaninsesi.org,Foreign Media
-host-suffix,amerikaovozi.com,Foreign Media
-host-suffix,amerikayidzayn.com,Foreign Media
-host-suffix,amerikiskhma.com,Foreign Media
-host-suffix,bbg.gov,Foreign Media
-host-suffix,dandalinvoa.com,Foreign Media
-host-suffix,darivoa.com,Foreign Media
-host-suffix,dengeamerika.com,Foreign Media
-host-suffix,dengiamerika.com,Foreign Media
-host-suffix,glasamerike.net,Foreign Media
-host-suffix,golos-ameriki.ru,Foreign Media
-host-suffix,golosameriki.com,Foreign Media
-host-suffix,insidevoa.com,Foreign Media
-host-suffix,pashtovoa.com,Foreign Media
-host-suffix,persagg.com,Foreign Media
-host-suffix,radiyoyacuvoa.com,Foreign Media
-host-suffix,urduvoa.com,Foreign Media
-host-suffix,voa-11.akacast.akamaistream.net,Foreign Media
-host-suffix,voa.gov,Foreign Media
-host-suffix,voa.mobi,Foreign Media
-host-suffix,voaafaanoromoo.com,Foreign Media
-host-suffix,voaafrique.com,Foreign Media
-host-suffix,voabambara.com,Foreign Media
-host-suffix,voabangla.com,Foreign Media
-host-suffix,voacambodia.com,Foreign Media
-host-suffix,voacantonese.com,Foreign Media
-host-suffix,voachinese.com,Foreign Media
-host-suffix,voachineseblog.com,Foreign Media
-host-suffix,voadeewanews.com,Foreign Media
-host-suffix,voadeewaradio.com,Foreign Media
-host-suffix,voahausa.com,Foreign Media
-host-suffix,voaindonesia.com,Foreign Media
-host-suffix,voakorea.com,Foreign Media
-host-suffix,voalingala.com,Foreign Media
-host-suffix,voandebele.com,Foreign Media
-host-suffix,voanews.com,Foreign Media
-host-suffix,voanews.eu,Foreign Media
-host-suffix,voanoticias.com,Foreign Media
-host-suffix,voanouvel.com,Foreign Media
-host-suffix,voaportugues.com,Foreign Media
-host-suffix,voashona.com,Foreign Media
-host-suffix,voasomali.com,Foreign Media
-host-suffix,voaswahili.com,Foreign Media
-host-suffix,voathai.com,Foreign Media
-host-suffix,voatibetan.com,Foreign Media
-host-suffix,voatibetanenglish.com,Foreign Media
-host-suffix,voatiengviet.com,Foreign Media
-host-suffix,voatour.com,Foreign Media
-host-suffix,voazimbabwe.com,Foreign Media
-host-suffix,zeriamerikes.com,Foreign Media
+host-suffix, amerikaninsesi.com, Global
+host-suffix, amerikaninsesi.org, Global
+host-suffix, amerikaovozi.com, Global
+host-suffix, amerikayidzayn.com, Global
+host-suffix, amerikiskhma.com, Global
+host-suffix, bbg.gov, Global
+host-suffix, dandalinvoa.com, Global
+host-suffix, darivoa.com, Global
+host-suffix, dengeamerika.com, Global
+host-suffix, dengiamerika.com, Global
+host-suffix, glasamerike.net, Global
+host-suffix, golos-ameriki.ru, Global
+host-suffix, golosameriki.com, Global
+host-suffix, insidevoa.com, Global
+host-suffix, pashtovoa.com, Global
+host-suffix, persagg.com, Global
+host-suffix, radiyoyacuvoa.com, Global
+host-suffix, urduvoa.com, Global
+host-suffix, voa-11.akacast.akamaistream.net, Global
+host-suffix, voa.gov, Global
+host-suffix, voa.mobi, Global
+host-suffix, voaafaanoromoo.com, Global
+host-suffix, voaafrique.com, Global
+host-suffix, voabambara.com, Global
+host-suffix, voabangla.com, Global
+host-suffix, voacambodia.com, Global
+host-suffix, voacantonese.com, Global
+host-suffix, voachinese.com, Global
+host-suffix, voachineseblog.com, Global
+host-suffix, voadeewanews.com, Global
+host-suffix, voadeewaradio.com, Global
+host-suffix, voahausa.com, Global
+host-suffix, voaindonesia.com, Global
+host-suffix, voakorea.com, Global
+host-suffix, voalingala.com, Global
+host-suffix, voandebele.com, Global
+host-suffix, voanews.com, Global
+host-suffix, voanews.eu, Global
+host-suffix, voanoticias.com, Global
+host-suffix, voanouvel.com, Global
+host-suffix, voaportugues.com, Global
+host-suffix, voashona.com, Global
+host-suffix, voasomali.com, Global
+host-suffix, voaswahili.com, Global
+host-suffix, voathai.com, Global
+host-suffix, voatibetan.com, Global
+host-suffix, voatibetanenglish.com, Global
+host-suffix, voatiengviet.com, Global
+host-suffix, voatour.com, Global
+host-suffix, voazimbabwe.com, Global
+host-suffix, zeriamerikes.com, Global
 
 # > WeTV
-host-suffix,wetv.vip,Foreign Media
-host-suffix,wetvinfo.com,Foreign Media
-host-suffix,v.smtcdns.com,Foreign Media
-host-suffix,v.smtcdns.net,Foreign Media
+host-suffix, wetv.vip, Global
+host-suffix, wetvinfo.com, Global
+host-suffix, v.smtcdns.net, Global
 
 # >> iflix
-host-suffix,iflix.com,Foreign Media
-host-suffix,iflix-images.akamaized.net,Foreign Media
+host-suffix, iflix.com, Global
+host-suffix, iflix-images.akamaized.net, Global
 
 # > Voxmedia
-host-suffix,cstatic.net,Foreign Media
-host-suffix,curbed.com,Foreign Media
-host-suffix,eater.com,Foreign Media
-host-suffix,funnyordie.com,Foreign Media
-host-suffix,meridian.net,Foreign Media
-host-suffix,polygon.com,Foreign Media
-host-suffix,racked.com,Foreign Media
-host-suffix,recode.net,Foreign Media
-host-suffix,sbnation.com,Foreign Media
-host-suffix,theverge.com,Foreign Media
-host-suffix,vox-cdn.com,Foreign Media
-host-suffix,vox.com,Foreign Media
-host-suffix,voxcreative.com,Foreign Media
-host-suffix,voxfieldguide.com,Foreign Media
-host-suffix,voxmedia.com,Foreign Media
-host-suffix,voxops.net,Foreign Media
+host-suffix, cstatic.net, Global
+host-suffix, curbed.com, Global
+host-suffix, eater.com, Global
+host-suffix, funnyordie.com, Global
+host-suffix, meridian.net, Global
+host-suffix, polygon.com, Global
+host-suffix, racked.com, Global
+host-suffix, recode.net, Global
+host-suffix, sbnation.com, Global
+host-suffix, theverge.com, Global
+host-suffix, vox-cdn.com, Global
+host-suffix, vox.com, Global
+host-suffix, voxcreative.com, Global
+host-suffix, voxfieldguide.com, Global
+host-suffix, voxmedia.com, Global
+host-suffix, voxops.net, Global
 
 # > YouTube
-user-agent,com.google.ios.youtube*,Foreign Media
-user-agent,YouTube*,Foreign Media
-host-suffix,googlevideo.com,Foreign Media
-host-suffix,youtube.com,Foreign Media
-host,youtubei.googleapis.com,Foreign Media
-host-wildcard,youtube.*,Foreign Media
-host-wildcard,youtube.com.*,Foreign Media
-host-wildcard,youtube.co.*,Foreign Media
-host-wildcard,youtubego.*,Foreign Media
-host-wildcard,youtubego.co.*,Foreign Media
-host-wildcard,youtubego.com.*,Foreign Media
-host-suffix,youtube,Foreign Media
-host-suffix,ggpht.cn,Foreign Media
-host-suffix,ggpht.com,Foreign Media
-host-suffix,googlevideo.com,Foreign Media
-host-suffix,gvt2.com,Foreign Media
-host-suffix,withyoutube.com,Foreign Media
-host-suffix,youtu.be,Foreign Media
-host-suffix,youtube-nocookie.com,Foreign Media
-host-suffix,youtube.co,Foreign Media
-host-suffix,youtube.com,Foreign Media
-host-suffix,youtubeeducation.com,Foreign Media
-host-suffix,youtubefanfest.com,Foreign Media
-host-suffix,youtubegaming.com,Foreign Media
-host-suffix,youtubei.googleapis.com,Foreign Media
-host-suffix,youtubekids.com,Foreign Media
-host-suffix,youtubemobilesupport.com,Foreign Media
-host-suffix,yt.be,Foreign Media
-host-suffix,ytimg.com,Foreign Media
-ip-cidr,172.110.32.0/21,Foreign Media
-ip-cidr,216.73.80.0/20,Foreign Media
-ip6-cidr,2620:120:e000::/40,Foreign Media
+user-agent, com.google.ios.youtube*, Global
+user-agent, YouTube*, Global
+host-suffix, googlevideo.com, Global
+host-suffix, youtube.com, Global
+host, youtubei.googleapis.com, Global
+host-wildcard, youtube.*, Global
+host-wildcard, youtube.com.*, Global
+host-wildcard, youtube.co.*, Global
+host-wildcard, youtubego.*, Global
+host-wildcard, youtubego.co.*, Global
+host-wildcard, youtubego.com.*, Global
+host-suffix, youtube, Global
+host-suffix, ggpht.cn, Global
+host-suffix, ggpht.com, Global
+host-suffix, gvt2.com, Global
+host-suffix, withyoutube.com, Global
+host-suffix, youtu.be, Global
+host-suffix, youtube-nocookie.com, Global
+host-suffix, youtube.co, Global
+host-suffix, youtubeeducation.com, Global
+host-suffix, youtubefanfest.com, Global
+host-suffix, youtubegaming.com, Global
+host-suffix, youtubei.googleapis.com, Global
+host-suffix, youtubekids.com, Global
+host-suffix, youtubemobilesupport.com, Global
+host-suffix, yt.be, Global
+host-suffix, ytimg.com, Global
+ip-cidr, 172.110.32.0/21, Global
+ip-cidr, 216.73.80.0/20, Global
+ip6-cidr, 2620:120:e000::/40, Global
 
 # > ZeeTV
-host-suffix,z5.app,Foreign Media
-host-suffix,z5.com,Foreign Media
-host-suffix,zee5.com,Foreign Media
-host-suffix,zee5.in,Foreign Media
-host-suffix,zee5.tv,Foreign Media
-host-suffix,zeebioskop.com,Foreign Media
-host-suffix,zeetv.co.uk,Foreign Media
-host-suffix,zeetv.com,Foreign Media
-host-suffix,zeeuk.com,Foreign Media
+host-suffix, z5.app, Global
+host-suffix, z5.com, Global
+host-suffix, zee5.com, Global
+host-suffix, zee5.in, Global
+host-suffix, zee5.tv, Global
+host-suffix, zeebioskop.com, Global
+host-suffix, zeetv.co.uk, Global
+host-suffix, zeetv.com, Global
+host-suffix, zeeuk.com, Global

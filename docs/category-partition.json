@@ -1,0 +1,2082 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-10-14",
+  "key_definition": "lowercase rule type + lowercase target, except user-agent retains case; options and policy do not define category ownership",
+  "required_order": [
+    "Rules/Services/HSBC.list",
+    "Rules/Services/OpenAI.list",
+    "Rules/Services/Claude.list",
+    "Rules/Services/Apple.list",
+    "Rules/Services/Microsoft.list",
+    "Rules/Services/Google.list",
+    "Rules/Games/GamesAll.list",
+    "Rules/Media/DomesticMedia.list",
+    "Rules/Services/SNS/Discord.list",
+    "Rules/Media/ForeignMedia.list",
+    "Rules/Region/China.list",
+    "Rules/Region/Global.list"
+  ],
+  "optional_resources": [
+    "Rules/Services/OpenAI-Dependencies.list",
+    "Rules/Optional/BilibiliPCDNReject.list"
+  ],
+  "notes": [
+    "OpenAI-Dependencies is optional: matching broad fallback keys remain intentionally.",
+    "A required category owns each exact key. Suffix/keyword/IP overlaps are not silently deleted by this operation.",
+    "For duplicate target keys the first required category wins; differing options are logged for review.",
+    "Source line numbers identify the pre-partition 2026-10-14 reviewed input; current files moved after header and rule cleanup."
+  ],
+  "policy_by_general_list": {
+    "Rules/Services/Apple.list": "Apple",
+    "Rules/Services/Microsoft.list": "Microsoft",
+    "Rules/Services/Google.list": "Google",
+    "Rules/Games/GamesAll.list": "Game",
+    "Rules/Media/DomesticMedia.list": "China",
+    "Rules/Services/SNS/Discord.list": "Global",
+    "Rules/Media/ForeignMedia.list": "Global",
+    "Rules/Region/China.list": "China",
+    "Rules/Region/Global.list": "Global"
+  },
+  "stats": [
+    {
+      "file": "Rules/Services/HSBC.list",
+      "before": 11,
+      "after": 11,
+      "removed": 0
+    },
+    {
+      "file": "Rules/Services/OpenAI.list",
+      "before": 18,
+      "after": 18,
+      "removed": 0
+    },
+    {
+      "file": "Rules/Services/Claude.list",
+      "before": 5,
+      "after": 5,
+      "removed": 0
+    },
+    {
+      "file": "Rules/Services/OpenAI-Dependencies.list",
+      "before": 13,
+      "after": 13,
+      "removed": 0
+    },
+    {
+      "file": "Rules/Services/Apple.list",
+      "before": 114,
+      "after": 114,
+      "removed": 0
+    },
+    {
+      "file": "Rules/Services/Microsoft.list",
+      "before": 412,
+      "after": 411,
+      "removed": 1
+    },
+    {
+      "file": "Rules/Services/Google.list",
+      "before": 77,
+      "after": 77,
+      "removed": 0
+    },
+    {
+      "file": "Rules/Games/GamesAll.list",
+      "before": 23,
+      "after": 22,
+      "removed": 1
+    },
+    {
+      "file": "Rules/Media/DomesticMedia.list",
+      "before": 236,
+      "after": 236,
+      "removed": 0
+    },
+    {
+      "file": "Rules/Services/SNS/Discord.list",
+      "before": 6,
+      "after": 6,
+      "removed": 0
+    },
+    {
+      "file": "Rules/Media/ForeignMedia.list",
+      "before": 1581,
+      "after": 1576,
+      "removed": 5
+    },
+    {
+      "file": "Rules/Region/China.list",
+      "before": 275,
+      "after": 264,
+      "removed": 11
+    },
+    {
+      "file": "Rules/Region/Global.list",
+      "before": 634,
+      "after": 557,
+      "removed": 77
+    }
+  ],
+  "removed_rules": [
+    {
+      "removed": {
+        "file": "Rules/Services/Microsoft.list",
+        "line": 437,
+        "type": "host-suffix",
+        "value": "msftconnecttest.com",
+        "policy": "Microsoft",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Services/Microsoft.list",
+        "line": 357,
+        "type": "host-suffix",
+        "value": "msftconnecttest.com",
+        "policy": "Microsoft",
+        "options": []
+      },
+      "reason": "duplicate-target-in-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Games/GamesAll.list",
+        "line": 36,
+        "type": "host-suffix",
+        "value": "helpshift.com",
+        "policy": "Game",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Services/Microsoft.list",
+        "line": 289,
+        "type": "host-suffix",
+        "value": "helpshift.com",
+        "policy": "Microsoft",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Media/ForeignMedia.list",
+        "line": 817,
+        "type": "host-suffix",
+        "value": "iq.com",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Media/DomesticMedia.list",
+        "line": 103,
+        "type": "host-suffix",
+        "value": "iq.com",
+        "policy": "China",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Media/ForeignMedia.list",
+        "line": 822,
+        "type": "ip-cidr",
+        "value": "23.40.242.10/32",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Media/DomesticMedia.list",
+        "line": 148,
+        "type": "ip-cidr",
+        "value": "23.40.242.10/32",
+        "policy": "China",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Media/ForeignMedia.list",
+        "line": 829,
+        "type": "ip-cidr",
+        "value": "110.238.107.47/32",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Media/DomesticMedia.list",
+        "line": 133,
+        "type": "ip-cidr",
+        "value": "110.238.107.47/32",
+        "policy": "China",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Media/ForeignMedia.list",
+        "line": 835,
+        "type": "ip-cidr",
+        "value": "210.71.227.202/32",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Media/DomesticMedia.list",
+        "line": 145,
+        "type": "ip-cidr",
+        "value": "210.71.227.202/32",
+        "policy": "China",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Media/ForeignMedia.list",
+        "line": 1723,
+        "type": "host-suffix",
+        "value": "v.smtcdns.com",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Media/DomesticMedia.list",
+        "line": 170,
+        "type": "host-suffix",
+        "value": "v.smtcdns.com",
+        "policy": "China",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/China.list",
+        "line": 54,
+        "type": "host-suffix",
+        "value": "snssdk.com",
+        "policy": "China",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Media/ForeignMedia.list",
+        "line": 1585,
+        "type": "host-suffix",
+        "value": "snssdk.com",
+        "policy": "Global",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/China.list",
+        "line": 70,
+        "type": "user-agent",
+        "value": "%E4%BC%98%E9%85%B7*",
+        "policy": "China",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Media/DomesticMedia.list",
+        "line": 245,
+        "type": "user-agent",
+        "value": "%E4%BC%98%E9%85%B7*",
+        "policy": "China",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/China.list",
+        "line": 81,
+        "type": "host-suffix",
+        "value": "soku.com",
+        "policy": "China",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Media/DomesticMedia.list",
+        "line": 228,
+        "type": "host-suffix",
+        "value": "soku.com",
+        "policy": "China",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/China.list",
+        "line": 85,
+        "type": "host-suffix",
+        "value": "ykimg.com",
+        "policy": "China",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Media/DomesticMedia.list",
+        "line": 234,
+        "type": "host-suffix",
+        "value": "ykimg.com",
+        "policy": "China",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/China.list",
+        "line": 86,
+        "type": "host-suffix",
+        "value": "youku.com",
+        "policy": "China",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Media/DomesticMedia.list",
+        "line": 241,
+        "type": "host-suffix",
+        "value": "youku.com",
+        "policy": "China",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/China.list",
+        "line": 167,
+        "type": "host-suffix",
+        "value": "battle.net",
+        "policy": "China",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Games/GamesAll.list",
+        "line": 15,
+        "type": "host-suffix",
+        "value": "battle.net",
+        "policy": "Game",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/China.list",
+        "line": 207,
+        "type": "host-suffix",
+        "value": "google.cn",
+        "policy": "China",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Services/Google.list",
+        "line": 117,
+        "type": "host-suffix",
+        "value": "google.cn",
+        "policy": "Google",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/China.list",
+        "line": 258,
+        "type": "host-suffix",
+        "value": "qiyi.com",
+        "policy": "China",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Media/DomesticMedia.list",
+        "line": 119,
+        "type": "host-suffix",
+        "value": "qiyi.com",
+        "policy": "China",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/China.list",
+        "line": 259,
+        "type": "host-suffix",
+        "value": "qiyipic.com",
+        "policy": "China",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Media/DomesticMedia.list",
+        "line": 120,
+        "type": "host-suffix",
+        "value": "qiyipic.com",
+        "policy": "China",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/China.list",
+        "line": 279,
+        "type": "host-suffix",
+        "value": "tudou.com",
+        "policy": "China",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Media/DomesticMedia.list",
+        "line": 229,
+        "type": "host-suffix",
+        "value": "tudou.com",
+        "policy": "China",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/China.list",
+        "line": 312,
+        "type": "host-suffix",
+        "value": "acgvideo.com",
+        "policy": "China",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Media/DomesticMedia.list",
+        "line": 23,
+        "type": "host-suffix",
+        "value": "acgvideo.com",
+        "policy": "China",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 17,
+        "type": "host-suffix",
+        "value": "android.com",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Services/Google.list",
+        "line": 16,
+        "type": "host-suffix",
+        "value": "android.com",
+        "policy": "Google",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 27,
+        "type": "host-suffix",
+        "value": "aspnetcdn.com",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Services/Microsoft.list",
+        "line": 258,
+        "type": "host-suffix",
+        "value": "aspnetcdn.com",
+        "policy": "Microsoft",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 30,
+        "type": "host-suffix",
+        "value": "azureedge.net",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Services/Microsoft.list",
+        "line": 26,
+        "type": "host-suffix",
+        "value": "azureedge.net",
+        "policy": "Microsoft",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 31,
+        "type": "host-suffix",
+        "value": "azurewebsites.net",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Services/Microsoft.list",
+        "line": 33,
+        "type": "host-suffix",
+        "value": "azurewebsites.net",
+        "policy": "Microsoft",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 41,
+        "type": "host-suffix",
+        "value": "blogger.com",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Services/Google.list",
+        "line": 41,
+        "type": "host-suffix",
+        "value": "blogger.com",
+        "policy": "Google",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 49,
+        "type": "host-suffix",
+        "value": "chromium.org",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Services/Google.list",
+        "line": 26,
+        "type": "host-suffix",
+        "value": "chromium.org",
+        "policy": "Google",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 74,
+        "type": "host-suffix",
+        "value": "dytt8.net",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Region/China.list",
+        "line": 193,
+        "type": "host-suffix",
+        "value": "dytt8.net",
+        "policy": "China",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 78,
+        "type": "host-suffix",
+        "value": "edgesuite.net",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Services/Microsoft.list",
+        "line": 109,
+        "type": "host-suffix",
+        "value": "edgesuite.net",
+        "policy": "Microsoft",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 83,
+        "type": "host-suffix",
+        "value": "fabric.io",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Services/Microsoft.list",
+        "line": 278,
+        "type": "host-suffix",
+        "value": "fabric.io",
+        "policy": "Microsoft",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 84,
+        "type": "host-suffix",
+        "value": "fast.com",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Media/ForeignMedia.list",
+        "line": 977,
+        "type": "host-suffix",
+        "value": "fast.com",
+        "policy": "Global",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 98,
+        "type": "host-suffix",
+        "value": "gfx.ms",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Services/Microsoft.list",
+        "line": 287,
+        "type": "host-suffix",
+        "value": "gfx.ms",
+        "policy": "Microsoft",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 99,
+        "type": "host-suffix",
+        "value": "ggpht.com",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Media/ForeignMedia.list",
+        "line": 1762,
+        "type": "host-suffix",
+        "value": "ggpht.com",
+        "policy": "Global",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 104,
+        "type": "host-suffix",
+        "value": "gmodules.com",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Services/Google.list",
+        "line": 76,
+        "type": "host-suffix",
+        "value": "gmodules.com",
+        "policy": "Google",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 106,
+        "type": "host-suffix",
+        "value": "golang.org",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Services/Google.list",
+        "line": 51,
+        "type": "host-suffix",
+        "value": "golang.org",
+        "policy": "Google",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 112,
+        "type": "host-suffix",
+        "value": "gstatic.com",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Services/Google.list",
+        "line": 75,
+        "type": "host-suffix",
+        "value": "gstatic.com",
+        "policy": "Google",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 113,
+        "type": "host-suffix",
+        "value": "gvt0.com",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Services/Google.list",
+        "line": 78,
+        "type": "host-suffix",
+        "value": "gvt0.com",
+        "policy": "Google",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 114,
+        "type": "host-suffix",
+        "value": "hockeyapp.net",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Services/Microsoft.list",
+        "line": 290,
+        "type": "host-suffix",
+        "value": "hockeyapp.net",
+        "policy": "Microsoft",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 144,
+        "type": "host-suffix",
+        "value": "live.com",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Services/Microsoft.list",
+        "line": 129,
+        "type": "host-suffix",
+        "value": "live.com",
+        "policy": "Microsoft",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 145,
+        "type": "host-suffix",
+        "value": "live.net",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Services/Microsoft.list",
+        "line": 130,
+        "type": "host-suffix",
+        "value": "live.net",
+        "policy": "Microsoft",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 146,
+        "type": "host-suffix",
+        "value": "livefilestore.com",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Services/Microsoft.list",
+        "line": 134,
+        "type": "host-suffix",
+        "value": "livefilestore.com",
+        "policy": "Microsoft",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 147,
+        "type": "host-suffix",
+        "value": "llnwd.net",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Media/ForeignMedia.list",
+        "line": 52,
+        "type": "host-suffix",
+        "value": "llnwd.net",
+        "policy": "Global",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 157,
+        "type": "host-suffix",
+        "value": "microsofttranslator.com",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Services/Microsoft.list",
+        "line": 343,
+        "type": "host-suffix",
+        "value": "microsofttranslator.com",
+        "policy": "Microsoft",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 161,
+        "type": "host-suffix",
+        "value": "msedge.net",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Services/Microsoft.list",
+        "line": 113,
+        "type": "host-suffix",
+        "value": "msedge.net",
+        "policy": "Microsoft",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 167,
+        "type": "host-suffix",
+        "value": "nyt.com",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Media/ForeignMedia.list",
+        "line": 1460,
+        "type": "host-suffix",
+        "value": "nyt.com",
+        "policy": "Global",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 168,
+        "type": "host-suffix",
+        "value": "nytimes.com",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Media/ForeignMedia.list",
+        "line": 1466,
+        "type": "host-suffix",
+        "value": "nytimes.com",
+        "policy": "Global",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 189,
+        "type": "host-suffix",
+        "value": "playstation.com",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Games/GamesAll.list",
+        "line": 40,
+        "type": "host-suffix",
+        "value": "playstation.com",
+        "policy": "Game",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 191,
+        "type": "host-suffix",
+        "value": "playstation.net",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Games/GamesAll.list",
+        "line": 41,
+        "type": "host-suffix",
+        "value": "playstation.net",
+        "policy": "Game",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 192,
+        "type": "host-suffix",
+        "value": "playstationnetwork.com",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Games/GamesAll.list",
+        "line": 42,
+        "type": "host-suffix",
+        "value": "playstationnetwork.com",
+        "policy": "Game",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 196,
+        "type": "host-suffix",
+        "value": "sfx.ms",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Services/Microsoft.list",
+        "line": 400,
+        "type": "host-suffix",
+        "value": "sfx.ms",
+        "policy": "Microsoft",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 200,
+        "type": "host-suffix",
+        "value": "skype.com",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Services/Microsoft.list",
+        "line": 186,
+        "type": "host-suffix",
+        "value": "skype.com",
+        "policy": "Microsoft",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 203,
+        "type": "host-suffix",
+        "value": "sndcdn.com",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Media/ForeignMedia.list",
+        "line": 1539,
+        "type": "host-suffix",
+        "value": "sndcdn.com",
+        "policy": "Global",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 204,
+        "type": "host-suffix",
+        "value": "sony.com",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Games/GamesAll.list",
+        "line": 43,
+        "type": "host-suffix",
+        "value": "sony.com",
+        "policy": "Game",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 205,
+        "type": "host-suffix",
+        "value": "soundcloud.com",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Media/ForeignMedia.list",
+        "line": 1540,
+        "type": "host-suffix",
+        "value": "soundcloud.com",
+        "policy": "Global",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 207,
+        "type": "host-suffix",
+        "value": "spotify.com",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Media/ForeignMedia.list",
+        "line": 1552,
+        "type": "host-suffix",
+        "value": "spotify.com",
+        "policy": "Global",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 214,
+        "type": "host-suffix",
+        "value": "steamcommunity.com",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Games/GamesAll.list",
+        "line": 24,
+        "type": "host-suffix",
+        "value": "steamcommunity.com",
+        "policy": "Game",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 217,
+        "type": "host-suffix",
+        "value": "symcd.com",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Region/China.list",
+        "line": 271,
+        "type": "host-suffix",
+        "value": "symcd.com",
+        "policy": "China",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 224,
+        "type": "host-suffix",
+        "value": "theverge.com",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Media/ForeignMedia.list",
+        "line": 1740,
+        "type": "host-suffix",
+        "value": "theverge.com",
+        "policy": "Global",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 248,
+        "type": "host-suffix",
+        "value": "vimeo.com",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Media/ForeignMedia.list",
+        "line": 1648,
+        "type": "host-suffix",
+        "value": "vimeo.com",
+        "policy": "Global",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 249,
+        "type": "host-suffix",
+        "value": "vimeocdn.com",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Media/ForeignMedia.list",
+        "line": 1651,
+        "type": "host-suffix",
+        "value": "vimeocdn.com",
+        "policy": "Global",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 252,
+        "type": "host-suffix",
+        "value": "vox-cdn.com",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Media/ForeignMedia.list",
+        "line": 1741,
+        "type": "host-suffix",
+        "value": "vox-cdn.com",
+        "policy": "Global",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 278,
+        "type": "host-suffix",
+        "value": "ytimg.com",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Media/ForeignMedia.list",
+        "line": 1775,
+        "type": "host-suffix",
+        "value": "ytimg.com",
+        "policy": "Global",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 280,
+        "type": "host-suffix",
+        "value": "chocotv.com.tw",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Media/ForeignMedia.list",
+        "line": 904,
+        "type": "host-suffix",
+        "value": "chocotv.com.tw",
+        "policy": "Global",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 286,
+        "type": "host-suffix",
+        "value": "adobedtm.com",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Media/ForeignMedia.list",
+        "line": 244,
+        "type": "host-suffix",
+        "value": "adobedtm.com",
+        "policy": "Global",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 296,
+        "type": "host-suffix",
+        "value": "androidify.com",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Services/Google.list",
+        "line": 17,
+        "type": "host-suffix",
+        "value": "androidify.com",
+        "policy": "Google",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 320,
+        "type": "host-suffix",
+        "value": "boxun.com",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Media/ForeignMedia.list",
+        "line": 121,
+        "type": "host-suffix",
+        "value": "boxun.com",
+        "policy": "Global",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 326,
+        "type": "host-suffix",
+        "value": "certificate-transparency.org",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Services/Google.list",
+        "line": 91,
+        "type": "host-suffix",
+        "value": "certificate-transparency.org",
+        "policy": "Google",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 328,
+        "type": "host-suffix",
+        "value": "chrome.com",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Services/Google.list",
+        "line": 23,
+        "type": "host-suffix",
+        "value": "chrome.com",
+        "policy": "Google",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 331,
+        "type": "host-suffix",
+        "value": "chromestatus.com",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Services/Google.list",
+        "line": 25,
+        "type": "host-suffix",
+        "value": "chromestatus.com",
+        "policy": "Google",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 332,
+        "type": "host-suffix",
+        "value": "cnn.com",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Media/ForeignMedia.list",
+        "line": 174,
+        "type": "host-suffix",
+        "value": "cnn.com",
+        "policy": "Global",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 358,
+        "type": "host-suffix",
+        "value": "getmdl.io",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Services/Google.list",
+        "line": 86,
+        "type": "host-suffix",
+        "value": "getmdl.io",
+        "policy": "Google",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 362,
+        "type": "host-suffix",
+        "value": "go.com",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Media/ForeignMedia.list",
+        "line": 352,
+        "type": "host-suffix",
+        "value": "go.com",
+        "policy": "Global",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 365,
+        "type": "host-suffix",
+        "value": "helpshift.com",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Services/Microsoft.list",
+        "line": 289,
+        "type": "host-suffix",
+        "value": "helpshift.com",
+        "policy": "Microsoft",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 379,
+        "type": "host-suffix",
+        "value": "kakao.co.kr",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Media/ForeignMedia.list",
+        "line": 867,
+        "type": "host-suffix",
+        "value": "kakao.co.kr",
+        "policy": "Global",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 380,
+        "type": "host-suffix",
+        "value": "kakao.com",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Media/ForeignMedia.list",
+        "line": 866,
+        "type": "host-suffix",
+        "value": "kakao.com",
+        "policy": "Global",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 381,
+        "type": "host-suffix",
+        "value": "kakaocdn.net",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Media/ForeignMedia.list",
+        "line": 868,
+        "type": "host-suffix",
+        "value": "kakaocdn.net",
+        "policy": "Global",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 408,
+        "type": "host-suffix",
+        "value": "nytimg.com",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Media/ForeignMedia.list",
+        "line": 1467,
+        "type": "host-suffix",
+        "value": "nytimg.com",
+        "policy": "Global",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 409,
+        "type": "host-suffix",
+        "value": "nytstyle.com",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Media/ForeignMedia.list",
+        "line": 1469,
+        "type": "host-suffix",
+        "value": "nytstyle.com",
+        "policy": "Global",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 410,
+        "type": "host-suffix",
+        "value": "optimizely.com",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Services/Microsoft.list",
+        "line": 381,
+        "type": "host-suffix",
+        "value": "optimizely.com",
+        "policy": "Microsoft",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 413,
+        "type": "host-suffix",
+        "value": "pandora.com",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Media/ForeignMedia.list",
+        "line": 1474,
+        "type": "host-suffix",
+        "value": "pandora.com",
+        "policy": "Global",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 419,
+        "type": "host-suffix",
+        "value": "polymer-project.org",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Services/Google.list",
+        "line": 96,
+        "type": "host-suffix",
+        "value": "polymer-project.org",
+        "policy": "Google",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 461,
+        "type": "host-suffix",
+        "value": "sonyentertainmentnetwork.com",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Games/GamesAll.list",
+        "line": 44,
+        "type": "host-suffix",
+        "value": "sonyentertainmentnetwork.com",
+        "policy": "Game",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 490,
+        "type": "host-suffix",
+        "value": "tiltbrush.com",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Services/Google.list",
+        "line": 83,
+        "type": "host-suffix",
+        "value": "tiltbrush.com",
+        "policy": "Google",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 545,
+        "type": "host-suffix",
+        "value": "voachinese.com",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Media/ForeignMedia.list",
+        "line": 1695,
+        "type": "host-suffix",
+        "value": "voachinese.com",
+        "policy": "Global",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 560,
+        "type": "host-suffix",
+        "value": "whatbrowser.org",
+        "policy": "Global",
+        "options": []
+      },
+      "owner": {
+        "file": "Rules/Services/Google.list",
+        "line": 27,
+        "type": "host-suffix",
+        "value": "whatbrowser.org",
+        "policy": "Google",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": false
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 589,
+        "type": "host-keyword",
+        "value": "blogspot",
+        "policy": "Global",
+        "options": [
+          "force-remote-dns"
+        ]
+      },
+      "owner": {
+        "file": "Rules/Services/Google.list",
+        "line": 40,
+        "type": "host-keyword",
+        "value": "blogspot",
+        "policy": "Google",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": true,
+      "option_resolution": "Retain earlier required category options; do not transplant a later shadowed DNS flag to a different policy."
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 605,
+        "type": "host-suffix",
+        "value": "abc.xyz",
+        "policy": "Global",
+        "options": [
+          "force-remote-dns"
+        ]
+      },
+      "owner": {
+        "file": "Rules/Services/Google.list",
+        "line": 12,
+        "type": "host-suffix",
+        "value": "abc.xyz",
+        "policy": "Google",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": true,
+      "option_resolution": "Retain earlier required category options; do not transplant a later shadowed DNS flag to a different policy."
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 607,
+        "type": "host-suffix",
+        "value": "autodraw.com",
+        "policy": "Global",
+        "options": [
+          "force-remote-dns"
+        ]
+      },
+      "owner": {
+        "file": "Rules/Services/Google.list",
+        "line": 30,
+        "type": "host-suffix",
+        "value": "autodraw.com",
+        "policy": "Google",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": true,
+      "option_resolution": "Retain earlier required category options; do not transplant a later shadowed DNS flag to a different policy."
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 610,
+        "type": "host-suffix",
+        "value": "chromeexperiments.com",
+        "policy": "Global",
+        "options": [
+          "force-remote-dns"
+        ]
+      },
+      "owner": {
+        "file": "Rules/Services/Google.list",
+        "line": 24,
+        "type": "host-suffix",
+        "value": "chromeexperiments.com",
+        "policy": "Google",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": true,
+      "option_resolution": "Retain earlier required category options; do not transplant a later shadowed DNS flag to a different policy."
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 611,
+        "type": "host-suffix",
+        "value": "creativelab5.com",
+        "policy": "Global",
+        "options": [
+          "force-remote-dns"
+        ]
+      },
+      "owner": {
+        "file": "Rules/Services/Google.list",
+        "line": 93,
+        "type": "host-suffix",
+        "value": "creativelab5.com",
+        "policy": "Google",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": true,
+      "option_resolution": "Retain earlier required category options; do not transplant a later shadowed DNS flag to a different policy."
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 621,
+        "type": "host-suffix",
+        "value": "gvt1.com",
+        "policy": "Global",
+        "options": [
+          "force-remote-dns"
+        ]
+      },
+      "owner": {
+        "file": "Rules/Services/Google.list",
+        "line": 79,
+        "type": "host-suffix",
+        "value": "gvt1.com",
+        "policy": "Google",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": true,
+      "option_resolution": "Retain earlier required category options; do not transplant a later shadowed DNS flag to a different policy."
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 622,
+        "type": "host-suffix",
+        "value": "gwtproject.org",
+        "policy": "Global",
+        "options": [
+          "force-remote-dns"
+        ]
+      },
+      "owner": {
+        "file": "Rules/Services/Google.list",
+        "line": 53,
+        "type": "host-suffix",
+        "value": "gwtproject.org",
+        "policy": "Google",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": true,
+      "option_resolution": "Retain earlier required category options; do not transplant a later shadowed DNS flag to a different policy."
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 628,
+        "type": "host-suffix",
+        "value": "madewithcode.com",
+        "policy": "Global",
+        "options": [
+          "force-remote-dns"
+        ]
+      },
+      "owner": {
+        "file": "Rules/Services/Google.list",
+        "line": 63,
+        "type": "host-suffix",
+        "value": "madewithcode.com",
+        "policy": "Google",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": true,
+      "option_resolution": "Retain earlier required category options; do not transplant a later shadowed DNS flag to a different policy."
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 629,
+        "type": "host-suffix",
+        "value": "material.io",
+        "policy": "Global",
+        "options": [
+          "force-remote-dns"
+        ]
+      },
+      "owner": {
+        "file": "Rules/Services/Google.list",
+        "line": 87,
+        "type": "host-suffix",
+        "value": "material.io",
+        "policy": "Google",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": true,
+      "option_resolution": "Retain earlier required category options; do not transplant a later shadowed DNS flag to a different policy."
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 636,
+        "type": "host-suffix",
+        "value": "tensorflow.org",
+        "policy": "Global",
+        "options": [
+          "force-remote-dns"
+        ]
+      },
+      "owner": {
+        "file": "Rules/Services/Google.list",
+        "line": 32,
+        "type": "host-suffix",
+        "value": "tensorflow.org",
+        "policy": "Google",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": true,
+      "option_resolution": "Retain earlier required category options; do not transplant a later shadowed DNS flag to a different policy."
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 643,
+        "type": "host-suffix",
+        "value": "waveprotocol.org",
+        "policy": "Global",
+        "options": [
+          "force-remote-dns"
+        ]
+      },
+      "owner": {
+        "file": "Rules/Services/Google.list",
+        "line": 57,
+        "type": "host-suffix",
+        "value": "waveprotocol.org",
+        "policy": "Google",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": true,
+      "option_resolution": "Retain earlier required category options; do not transplant a later shadowed DNS flag to a different policy."
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 644,
+        "type": "host-suffix",
+        "value": "webmproject.org",
+        "policy": "Global",
+        "options": [
+          "force-remote-dns"
+        ]
+      },
+      "owner": {
+        "file": "Rules/Services/Google.list",
+        "line": 58,
+        "type": "host-suffix",
+        "value": "webmproject.org",
+        "policy": "Google",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": true,
+      "option_resolution": "Retain earlier required category options; do not transplant a later shadowed DNS flag to a different policy."
+    },
+    {
+      "removed": {
+        "file": "Rules/Region/Global.list",
+        "line": 645,
+        "type": "host-suffix",
+        "value": "webrtc.org",
+        "policy": "Global",
+        "options": [
+          "force-remote-dns"
+        ]
+      },
+      "owner": {
+        "file": "Rules/Services/Google.list",
+        "line": 59,
+        "type": "host-suffix",
+        "value": "webrtc.org",
+        "policy": "Google",
+        "options": []
+      },
+      "reason": "owned-by-earlier-required-category",
+      "different_options": true,
+      "option_resolution": "Retain earlier required category options; do not transplant a later shadowed DNS flag to a different policy."
+    }
+  ],
+  "conditional_overlaps": [
+    {
+      "optional": {
+        "file": "Rules/Services/OpenAI-Dependencies.list",
+        "line": 23,
+        "type": "host-suffix",
+        "value": "intercom.io",
+        "policy": "OpenAI",
+        "options": []
+      },
+      "fallback": {
+        "file": "Rules/Media/ForeignMedia.list",
+        "line": 210,
+        "type": "host-suffix",
+        "value": "intercom.io",
+        "policy": "Global",
+        "options": []
+      },
+      "reason": "retain fallback when optional dependencies resource is disabled"
+    }
+  ]
+}

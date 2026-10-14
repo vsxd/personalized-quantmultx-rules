@@ -1,260 +1,249 @@
-# MIRRORED FROM: https://github.com/sve1r/Rules-For-Quantumult-X
+# MAINTENANCE: independently maintained and curated in vsxd/personalized-quantmultx-rules.
+# REFERENCE SOURCE: https://github.com/sve1r/Rules-For-Quantumult-X
+# CATEGORY POLICY: China
+# REVIEWED: 2026-10-14; source fixes, category ownership and deliberate updates are maintained locally.
+# OWNERSHIP: required categories own exact type+target keys; optional dependency fallbacks are retained.
+# AUDIT: docs/category-partition.json; docs/rule-categories.json; docs/quarantine.json.
 # SOURCE COMMIT: 8061d2ebe160280f25d4b20d6d929d9e03caecbe
 # SOURCE LICENSE: MIT (Copyright (c) 2020 SVE1R)
-# MIRROR POLICY: reviewed copy; force-policy in the consuming config controls the policy.
 #
 # > All Domestic Media
 
 # >> BiliBili
-user-agent,*bili*,Domestic Media
-user-agent,bili*,Domestic Media
-user-agent,Domestic Media*,Domestic Media
-user-agent,bili-inter*,Domestic Media
-host-suffix,Domestic Media.cc,Domestic Media
-host-suffix,Domestic Media.cn,Domestic Media
-host-suffix,Domestic Media.co,Domestic Media
-host-suffix,Domestic Media.com,Domestic Media
-host-suffix,Domestic Media.net,Domestic Media
-host-suffix,Domestic Media.tv,Domestic Media
-host-suffix,biliapi.com,Domestic Media
-host-suffix,biliapi.net,Domestic Media
-host-suffix,biliintl.com,Domestic Media
-host-suffix,acg.tv,Domestic Media
-host-suffix,acgvideo.com,Domestic Media
-host-suffix,animetamashi.cn,Domestic Media
-host-suffix,animetamashi.com,Domestic Media
-host-suffix,anitama.cn,Domestic Media
-host-suffix,anitama.net,Domestic Media
-host-suffix,b23.tv,Domestic Media
-host-suffix,baka.im,Domestic Media
-host-suffix,bigfun.cn,Domestic Media
-host-suffix,bigfunapp.cn,Domestic Media
-host-suffix,bili22.cn,Domestic Media
-host-suffix,bili2233.cn,Domestic Media
-host-suffix,bili23.cn,Domestic Media
-host-suffix,bili33.cn,Domestic Media
-host-suffix,bilicdn1.com,Domestic Media
-host-suffix,bilicdn2.com,Domestic Media
-host-suffix,bilicdn3.com,Domestic Media
-host-suffix,bilicdn4.com,Domestic Media
-host-suffix,bilicdn5.com,Domestic Media
-host-suffix,biliimg.com,Domestic Media
-host-suffix,hdslb.com,Domestic Media
-host-suffix,hdslb.com.w.kunlunhuf.com,Domestic Media
-host-suffix,hdslb.com.w.kunlunpi.com,Domestic Media
-host-suffix,hdslb.net,Domestic Media
-host-suffix,hdslb.org,Domestic Media
-host-suffix,maoercdn.com,Domestic Media
-host-suffix,mcbbs.net,Domestic Media
-host-suffix,mincdn.com,Domestic Media
-host-suffix,smtcdns.net,Domestic Media
-host-suffix,p-bstarstatic.akamaized.net,Domestic Media
-host-suffix,p.bstarstatic.com,Domestic Media
-host-suffix,upos-bstar-mirrorakam.akamaized.net,Domestic Media
-host-suffix,upos-bstar1-mirrorakam.akamaized.net,Domestic Media
-host-suffix,upos-hz-mirrorakam.akamaized.net,Domestic Media
-host-suffix,biligame.com,Domestic Media
-host-suffix,biligame.net,Domestic Media
-host-suffix,biligame.cn,Domestic Media
-host-suffix,biligame.co,Domestic Media
-host-suffix,Domestic Mediagame.cn,Domestic Media
-host-suffix,Domestic Mediagame.co,Domestic Media
-host-suffix,Domestic Mediagame.net,Domestic Media
-host-suffix,biligo.com,Domestic Media
-host-suffix,bilicomics.com,Domestic Media
-host-suffix,Domestic Mediapay.cn,Domestic Media
-host-suffix,Domestic Mediapay.com,Domestic Media
-host-suffix,corari.com,Domestic Media
-host-suffix,dreamcast.hk,Domestic Media
-host-suffix,dyhgames.com,Domestic Media
-host-suffix,im9.com,Domestic Media
-host-suffix,sharejoytech.com,Domestic Media
-host-suffix,yo9.com,Domestic Media
-ip-cidr,45.43.32.234/32,Domestic Media
-ip-cidr,106.75.74.76/32,Domestic Media
-ip-cidr,111.206.25.147/32,Domestic Media
-ip-cidr,119.3.238.64/32,Domestic Media
-ip-cidr,119.29.29.29/32,Domestic Media
-ip-cidr,120.92.108.182/32,Domestic Media
-ip-cidr,120.92.113.99/32,Domestic Media
-ip-cidr,120.92.153.217/32,Domestic Media
-ip-cidr,128.1.62.200/32,Domestic Media
-ip-cidr,128.1.62.201/32,Domestic Media
-ip-cidr,134.175.207.130/32,Domestic Media
-ip-cidr,150.116.92.250/32,Domestic Media
-ip-cidr,164.52.76.18/32,Domestic Media
-ip-cidr,203.107.1.0/24,Domestic Media
+user-agent, *bili*, China
+user-agent, bili*, China
+user-agent, bili-inter*, China
+host-suffix, bilibili.cc, China
+host-suffix, bilibili.cn, China
+host-suffix, bilibili.co, China
+host-suffix, bilibili.com, China
+host-suffix, bilibili.net, China
+host-suffix, bilibili.tv, China
+host-suffix, biliapi.com, China
+host-suffix, biliapi.net, China
+host-suffix, biliintl.com, China
+host-suffix, acg.tv, China
+host-suffix, acgvideo.com, China
+host-suffix, animetamashi.cn, China
+host-suffix, animetamashi.com, China
+host-suffix, anitama.cn, China
+host-suffix, anitama.net, China
+host-suffix, b23.tv, China
+host-suffix, baka.im, China
+host-suffix, bigfun.cn, China
+host-suffix, bigfunapp.cn, China
+host-suffix, bili22.cn, China
+host-suffix, bili2233.cn, China
+host-suffix, bili23.cn, China
+host-suffix, bili33.cn, China
+host-suffix, bilicdn1.com, China
+host-suffix, bilicdn2.com, China
+host-suffix, bilicdn3.com, China
+host-suffix, bilicdn4.com, China
+host-suffix, bilicdn5.com, China
+host-suffix, biliimg.com, China
+host-suffix, hdslb.com, China
+host-suffix, hdslb.com.w.kunlunhuf.com, China
+host-suffix, hdslb.com.w.kunlunpi.com, China
+host-suffix, hdslb.net, China
+host-suffix, hdslb.org, China
+host-suffix, maoercdn.com, China
+host-suffix, mcbbs.net, China
+host-suffix, mincdn.com, China
+host-suffix, smtcdns.net, China
+host-suffix, p-bstarstatic.akamaized.net, China
+host-suffix, p.bstarstatic.com, China
+host-suffix, upos-bstar-mirrorakam.akamaized.net, China
+host-suffix, upos-bstar1-mirrorakam.akamaized.net, China
+host-suffix, upos-hz-mirrorakam.akamaized.net, China
+host-suffix, biligame.com, China
+host-suffix, biligame.net, China
+host-suffix, biligame.cn, China
+host-suffix, biligame.co, China
+host-suffix, bilibiligame.cn, China
+host-suffix, bilibiligame.co, China
+host-suffix, bilibiligame.net, China
+host-suffix, biligo.com, China
+host-suffix, bilicomics.com, China
+host-suffix, bilibilipay.cn, China
+host-suffix, bilibilipay.com, China
+host-suffix, corari.com, China
+host-suffix, dreamcast.hk, China
+host-suffix, dyhgames.com, China
+host-suffix, im9.com, China
+host-suffix, sharejoytech.com, China
+host-suffix, yo9.com, China
+ip-cidr, 45.43.32.234/32, China
+ip-cidr, 106.75.74.76/32, China
+ip-cidr, 111.206.25.147/32, China
+ip-cidr, 119.3.238.64/32, China
+ip-cidr, 120.92.108.182/32, China
+ip-cidr, 120.92.113.99/32, China
+ip-cidr, 120.92.153.217/32, China
+ip-cidr, 128.1.62.200/32, China
+ip-cidr, 128.1.62.201/32, China
+ip-cidr, 134.175.207.130/32, China
+ip-cidr, 150.116.92.250/32, China
+ip-cidr, 164.52.76.18/32, China
+ip-cidr, 203.107.1.0/24, China
 # >> B站 PCDN 屏蔽
-host-suffix, v1d.szbdyd.com, reject
-host-suffix, mcdn.bilivideo.cn, reject
 
 # >> iQiyi
-host-suffix,71.am,Domestic Media
-host-suffix,71.am.com,Domestic Media
-host-suffix,71edge.com,Domestic Media
-host-suffix,71edge.net,Domestic Media
-host-suffix,aianno.cn,Domestic Media
-host-suffix,aianno.com,Domestic Media
-host-suffix,aiQiyicloud-mgmt.com,Domestic Media
-host-suffix,aiQiyicloud.com,Domestic Media
-host-suffix,aiQiyicloud.net,Domestic Media
-host-suffix,baiying.com,Domestic Media
-host-suffix,gitv.cn,Domestic Media
-host-suffix,gitv.tv,Domestic Media
-host-suffix,ibkstore.com,Domestic Media
-host-suffix,iq.com,Domestic Media
-host-suffix,iqiyi.com,Domestic Media
-host-suffix,iqiyi.demo.uwp,Domestic Media
-host-suffix,iqiyiedge.com,Domestic Media
-host-suffix,iqiyiedge.net,Domestic Media
-host-suffix,iqiyipic.com,Domestic Media
-host-suffix,jiangbing.cn,Domestic Media
-host-suffix,pps.tv,Domestic Media
-host-suffix,ppsimg.com,Domestic Media
-host-suffix,ppstream.cn,Domestic Media
-host-suffix,ppstream.com,Domestic Media
-host-suffix,ppstream.com.cn,Domestic Media
-host-suffix,ppstream.net,Domestic Media
-host-suffix,ppstream.net.cn,Domestic Media
-host-suffix,ppsurl.com,Domestic Media
-host-suffix,qiyi.cn,Domestic Media
-host-suffix,qiyi.com,Domestic Media
-host-suffix,qiyipic.com,Domestic Media
-host-suffix,qy.com,Domestic Media
-host-suffix,qy.net,Domestic Media
-host-suffix,suike.cn,Domestic Media
-host-KEYWORD,qiyi,Domestic Media
-user-agent,PPStream*,Domestic Media
-user-agent,QIYI*,Domestic Media
-user-agent,QYPlayer*,Domestic Media
-user-agent,iQiyi*,Domestic Media
-user-agent,Domestic Media*,Domestic Media
-ip-cidr,101.224.0.0/13,Domestic Media
-ip-cidr,103.44.56.0/22,Domestic Media
-ip-cidr,103.5.34.153/32,Domestic Media
-ip-cidr,104.109.129.153/32,Domestic Media
-ip-cidr,110.238.107.47/32,Domestic Media
-ip-cidr,118.26.120.0/24,Domestic Media
-ip-cidr,118.26.32.0/23,Domestic Media
-ip-cidr,119.176.0.0/12,Domestic Media
-ip-cidr,203.211.4.169/32,Domestic Media
-ip-cidr,203.211.4.193/32,Domestic Media
-ip-cidr,203.74.95.131/32,Domestic Media
-ip-cidr,203.74.95.139/32,Domestic Media
-ip-cidr,203.74.95.153/32,Domestic Media
-ip-cidr,210.201.32.11/32,Domestic Media
-ip-cidr,210.201.32.8/32,Domestic Media
-ip-cidr,210.71.227.200/32,Domestic Media
-ip-cidr,210.71.227.202/32,Domestic Media
-ip-cidr,23.211.15.99/32,Domestic Media
-ip-cidr,23.40.241.251/32,Domestic Media
-ip-cidr,23.40.242.10/32,Domestic Media
-ip-cidr,23.53.32.88/32,Domestic Media
+host-suffix, 71.am, China
+host-suffix, 71.am.com, China
+host-suffix, 71edge.com, China
+host-suffix, 71edge.net, China
+host-suffix, aianno.cn, China
+host-suffix, aianno.com, China
+host-suffix, aiqiyicloud-mgmt.com, China
+host-suffix, aiqiyicloud.com, China
+host-suffix, aiqiyicloud.net, China
+host-suffix, baiying.com, China
+host-suffix, gitv.cn, China
+host-suffix, gitv.tv, China
+host-suffix, ibkstore.com, China
+host-suffix, iq.com, China
+host-suffix, iqiyi.com, China
+host-suffix, iqiyi.demo.uwp, China
+host-suffix, iqiyiedge.com, China
+host-suffix, iqiyiedge.net, China
+host-suffix, iqiyipic.com, China
+host-suffix, jiangbing.cn, China
+host-suffix, pps.tv, China
+host-suffix, ppsimg.com, China
+host-suffix, ppstream.cn, China
+host-suffix, ppstream.com, China
+host-suffix, ppstream.com.cn, China
+host-suffix, ppstream.net, China
+host-suffix, ppstream.net.cn, China
+host-suffix, ppsurl.com, China
+host-suffix, qiyi.cn, China
+host-suffix, qiyi.com, China
+host-suffix, qiyipic.com, China
+host-suffix, qy.com, China
+host-suffix, qy.net, China
+host-suffix, suike.cn, China
+user-agent, PPStream*, China
+user-agent, QIYI*, China
+user-agent, QYPlayer*, China
+user-agent, iQiyi*, China
+ip-cidr, 103.5.34.153/32, China
+ip-cidr, 104.109.129.153/32, China
+ip-cidr, 110.238.107.47/32, China
+ip-cidr, 118.26.120.0/24, China
+ip-cidr, 203.211.4.169/32, China
+ip-cidr, 203.211.4.193/32, China
+ip-cidr, 203.74.95.131/32, China
+ip-cidr, 203.74.95.139/32, China
+ip-cidr, 203.74.95.153/32, China
+ip-cidr, 210.201.32.11/32, China
+ip-cidr, 210.201.32.8/32, China
+ip-cidr, 210.71.227.200/32, China
+ip-cidr, 210.71.227.202/32, China
+ip-cidr, 23.211.15.99/32, China
+ip-cidr, 23.40.241.251/32, China
+ip-cidr, 23.40.242.10/32, China
+ip-cidr, 23.53.32.88/32, China
 
 
 # >> Tencent Video
-host,00713915daab0be43def5c338c02c80b.dlied1.cdntips.net,Domestic Media
-host,17caa75e77d31e1f5a7841e0b3374569.dlied1.cdntips.net,Domestic Media
-host,apd-pcdnvodstat.teg.tencent-cloud.net,Domestic Media
-host,dldir1.qq.com,Domestic Media
-host,iacc.qq.com,Domestic Media
-host,ins-eeww7kom.ias.tencent-cloud.net,Domestic Media
-host,ios.video.mpush.qq.com,Domestic Media
-host,rdelivery.qq.com,Domestic Media
-host,ts.qq.com,Domestic Media
-host,v.streaming.qq.com,Domestic Media
-host,video-public-1258344701.shiply-cdn.qq.com,Domestic Media
-host,video-search-1258344701.shiply-cdn.qq.com,Domestic Media
-host,video-vip-1258344701.shiply-cdn.qq.com,Domestic Media
-host,yoo.gtimg.com,Domestic Media
-host-suffix,pgdt.gtimg.cn,Domestic Media
-host-suffix,qqvideo.gtimg.com,Domestic Media
-host-suffix,v.qq.com,Domestic Media
-host-suffix,v.smtcdns.com,Domestic Media
-host-suffix,video.qq.com,Domestic Media
-user-agent,MOO*,Domestic Media
-user-agent,TencentMidasConnect*,Domestic Media
-ip-cidr,58.49.111.117/32,Domestic Media
-ip-cidr,58.49.111.79/32,Domestic Media
-ip-cidr,58.49.111.95/32,Domestic Media
-ip6-cidr,::ffff:113.248.172.245/128,Domestic Media
-ip6-cidr,::ffff:114.235.96.186/128,Domestic Media
-ip6-cidr,::ffff:115.236.128.112/128,Domestic Media
-ip6-cidr,::ffff:115.236.128.120/128,Domestic Media
-ip6-cidr,::ffff:115.236.128.24/128,Domestic Media
-ip6-cidr,::ffff:115.236.128.80/128,Domestic Media
-ip6-cidr,::ffff:117.64.75.196/128,Domestic Media
-ip6-cidr,::ffff:117.68.200.210/128,Domestic Media
-ip6-cidr,::ffff:117.87.144.24/128,Domestic Media
-ip6-cidr,::ffff:121.56.126.255/128,Domestic Media
-ip6-cidr,::ffff:124.73.198.81/128,Domestic Media
-ip6-cidr,::ffff:124.73.200.142/128,Domestic Media
-ip6-cidr,::ffff:175.6.84.30/128,Domestic Media
-ip6-cidr,::ffff:175.6.84.96/128,Domestic Media
-ip6-cidr,::ffff:183.161.144.133/128,Domestic Media
-ip6-cidr,::ffff:183.161.144.230/128,Domestic Media
-ip6-cidr,::ffff:183.161.149.105/128,Domestic Media
-ip6-cidr,::ffff:198.18.5.138/128,Domestic Media
-ip6-cidr,::ffff:198.18.6.81/128,Domestic Media
-ip6-cidr,::ffff:198.18.6.83/128,Domestic Media
-ip6-cidr,::ffff:223.240.191.238/128,Domestic Media
-ip6-cidr,::ffff:27.157.209.46/128,Domestic Media
-ip6-cidr,::ffff:58.217.232.117/128,Domestic Media
-ip6-cidr,::ffff:58.217.232.68/128,Domestic Media
-ip6-cidr,::ffff:58.217.232.79/128,Domestic Media
-ip6-cidr,::ffff:58.58.0.90/128,Domestic Media
-ip6-cidr,::ffff:60.171.183.161/128,Domestic Media
-ip6-cidr,::ffff:60.171.183.186/128,Domestic Media
-ip6-cidr,::ffff:60.171.183.98/128,Domestic Media
+host, 00713915daab0be43def5c338c02c80b.dlied1.cdntips.net, China
+host, 17caa75e77d31e1f5a7841e0b3374569.dlied1.cdntips.net, China
+host, apd-pcdnvodstat.teg.tencent-cloud.net, China
+host, dldir1.qq.com, China
+host, iacc.qq.com, China
+host, ins-eeww7kom.ias.tencent-cloud.net, China
+host, ios.video.mpush.qq.com, China
+host, rdelivery.qq.com, China
+host, ts.qq.com, China
+host, v.streaming.qq.com, China
+host, video-public-1258344701.shiply-cdn.qq.com, China
+host, video-search-1258344701.shiply-cdn.qq.com, China
+host, video-vip-1258344701.shiply-cdn.qq.com, China
+host, yoo.gtimg.com, China
+host-suffix, pgdt.gtimg.cn, China
+host-suffix, qqvideo.gtimg.com, China
+host-suffix, v.qq.com, China
+host-suffix, v.smtcdns.com, China
+host-suffix, video.qq.com, China
+user-agent, MOO*, China
+user-agent, TencentMidasConnect*, China
+ip-cidr, 58.49.111.117/32, China
+ip-cidr, 58.49.111.79/32, China
+ip-cidr, 58.49.111.95/32, China
+ip6-cidr, ::ffff:113.248.172.245/128, China
+ip6-cidr, ::ffff:114.235.96.186/128, China
+ip6-cidr, ::ffff:115.236.128.112/128, China
+ip6-cidr, ::ffff:115.236.128.120/128, China
+ip6-cidr, ::ffff:115.236.128.24/128, China
+ip6-cidr, ::ffff:115.236.128.80/128, China
+ip6-cidr, ::ffff:117.64.75.196/128, China
+ip6-cidr, ::ffff:117.68.200.210/128, China
+ip6-cidr, ::ffff:117.87.144.24/128, China
+ip6-cidr, ::ffff:121.56.126.255/128, China
+ip6-cidr, ::ffff:124.73.198.81/128, China
+ip6-cidr, ::ffff:124.73.200.142/128, China
+ip6-cidr, ::ffff:175.6.84.30/128, China
+ip6-cidr, ::ffff:175.6.84.96/128, China
+ip6-cidr, ::ffff:183.161.144.133/128, China
+ip6-cidr, ::ffff:183.161.144.230/128, China
+ip6-cidr, ::ffff:183.161.149.105/128, China
+ip6-cidr, ::ffff:223.240.191.238/128, China
+ip6-cidr, ::ffff:27.157.209.46/128, China
+ip6-cidr, ::ffff:58.217.232.117/128, China
+ip6-cidr, ::ffff:58.217.232.68/128, China
+ip6-cidr, ::ffff:58.217.232.79/128, China
+ip6-cidr, ::ffff:58.58.0.90/128, China
+ip6-cidr, ::ffff:60.171.183.161/128, China
+ip6-cidr, ::ffff:60.171.183.186/128, China
+ip6-cidr, ::ffff:60.171.183.98/128, China
 
 
 # >> Youku
-host-suffix,0co3geye.cn,Domestic Media
-host-suffix,2isbbess.cn,Domestic Media
-host-suffix,33lwhaoinc.cn,Domestic Media
-host-suffix,52mtkvideo.cn,Domestic Media
-host-suffix,9xsecndns.cn,Domestic Media
-host-suffix,b82yxres.cn,Domestic Media
-host-suffix,cibntv.net,Domestic Media
-host-suffix,e8h2ty.tdum.alibaba.com,Domestic Media
-host-suffix,gamenow.club,Domestic Media
-host-suffix,kumiao.com,Domestic Media
-host-suffix,kumiao.tv,Domestic Media
-host-suffix,kuxiaomiao.cn,Domestic Media
-host-suffix,kuxiaomiao.com,Domestic Media
-host-suffix,kuxiaomiao.com.cn,Domestic Media
-host-suffix,kuxiaomiao.net,Domestic Media
-host-suffix,mmstat.com,Domestic Media
-host-suffix,ns6mitkxo.cn,Domestic Media
-host-suffix,sk2cdsnw.cn,Domestic Media
-host-suffix,sogoodtech1.cn,Domestic Media
-host-suffix,soku.com,Domestic Media
-host-suffix,tudou.com,Domestic Media
-host-suffix,ukoo.com.cn,Domestic Media
-host-suffix,wenyupages.com,Domestic Media
-host-suffix,wingsmobiletek.cn,Domestic Media
-host-suffix,wwc.alicdn.com,Domestic Media
-host-suffix,ykimg.com,Domestic Media
-host-suffix,yodou.com,Domestic Media
-host-suffix,yoku.net.cn,Domestic Media
-host-suffix,yoqoo.com,Domestic Media
-host-suffix,yoqoo.net,Domestic Media
-host-suffix,yoqoo.net.cn,Domestic Media
-host-suffix,yoqoo.tv,Domestic Media
-host-suffix,youku.com,Domestic Media
-host-suffix,youku.com.cn,Domestic Media
-host-suffix,youku.org,Domestic Media
-host-suffix,youqoo.net,Domestic Media
-user-agent,%E4%BC%98%E9%85%B7*,Domestic Media
-user-agent,youku*,Domestic Media
-ip-cidr,106.11.0.0/16,Domestic Media
+host-suffix, 0co3geye.cn, China
+host-suffix, 2isbbess.cn, China
+host-suffix, 33lwhaoinc.cn, China
+host-suffix, 52mtkvideo.cn, China
+host-suffix, 9xsecndns.cn, China
+host-suffix, b82yxres.cn, China
+host-suffix, cibntv.net, China
+host-suffix, e8h2ty.tdum.alibaba.com, China
+host-suffix, gamenow.club, China
+host-suffix, kumiao.com, China
+host-suffix, kumiao.tv, China
+host-suffix, kuxiaomiao.cn, China
+host-suffix, kuxiaomiao.com, China
+host-suffix, kuxiaomiao.com.cn, China
+host-suffix, kuxiaomiao.net, China
+host-suffix, mmstat.com, China
+host-suffix, ns6mitkxo.cn, China
+host-suffix, sk2cdsnw.cn, China
+host-suffix, sogoodtech1.cn, China
+host-suffix, soku.com, China
+host-suffix, tudou.com, China
+host-suffix, ukoo.com.cn, China
+host-suffix, wenyupages.com, China
+host-suffix, wingsmobiletek.cn, China
+host-suffix, wwc.alicdn.com, China
+host-suffix, ykimg.com, China
+host-suffix, yodou.com, China
+host-suffix, yoku.net.cn, China
+host-suffix, yoqoo.com, China
+host-suffix, yoqoo.net, China
+host-suffix, yoqoo.net.cn, China
+host-suffix, yoqoo.tv, China
+host-suffix, youku.com, China
+host-suffix, youku.com.cn, China
+host-suffix, youku.org, China
+host-suffix, youqoo.net, China
+user-agent, %E4%BC%98%E9%85%B7*, China
+user-agent, youku*, China
 
 # > 芒果TV
-user-agent,MGTV*,Domestic Media
-host-suffix,hifuntv.com,Domestic Media
-host-suffix,hitv.com,Domestic Media
-host-suffix,hunaniptv.com,Domestic Media
-host-suffix,MgTV.com,Domestic Media
-host-suffix,imgo.tv,Domestic Media
-host-suffix,mgtv.com,Domestic Media
-host-suffix,tazai.com,Domestic Media
+user-agent, MGTV*, China
+host-suffix, hifuntv.com, China
+host-suffix, hitv.com, China
+host-suffix, hunaniptv.com, China
+host-suffix, mgtv.com, China
+host-suffix, imgo.tv, China
+host-suffix, tazai.com, China

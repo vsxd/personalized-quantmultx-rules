@@ -1,45 +1,47 @@
-# MIRRORED FROM: https://github.com/sve1r/Rules-For-Quantumult-X
+# MAINTENANCE: independently maintained and curated in vsxd/personalized-quantmultx-rules.
+# REFERENCE SOURCE: https://github.com/sve1r/Rules-For-Quantumult-X
+# CATEGORY POLICY: Game
+# REVIEWED: 2026-10-14; source fixes, category ownership and deliberate updates are maintained locally.
+# OWNERSHIP: required categories own exact type+target keys; optional dependency fallbacks are retained.
+# AUDIT: docs/category-partition.json; docs/rule-categories.json; docs/quarantine.json.
 # SOURCE COMMIT: 8061d2ebe160280f25d4b20d6d929d9e03caecbe
 # SOURCE LICENSE: MIT (Copyright (c) 2020 SVE1R)
-# MIRROR POLICY: reviewed copy; force-policy in the consuming config controls the policy.
 #
 # 常用游戏平台整合
 
 # Humble bundle
-host-suffix,humblebundle.com,Game
+host-suffix, humblebundle.com, Game
 
 # > Blizzard
 # - user-agent,hearthstone*,Domestic
-host,cdp.cloud.unity3d.com,Domestic
-host-suffix,battle.net,Domestic
-host-suffix,battlenet.com,Domestic
-host-suffix,blizzard.com,Domestic
+host, cdp.cloud.unity3d.com, Game
+host-suffix, battle.net, Game
+host-suffix, battlenet.com, Game
+host-suffix, blizzard.com, Game
 
 # Fanatical
-host-suffix,fanatical.com,Game
+host-suffix, fanatical.com, Game
 
 # Steam
-host,api.steampowered.com,Game
-host-suffix,steamcommunity.com,Game
-host-suffix,steampowered.com,Game
-host-suffix,steamstatic.com,Game
-host-suffix,steam-chat.com,Game
-host-suffix,steamgames.com,Game
-host-suffix,steamusercontent.com,Game
-host-suffix,steamcontent.com,Game
-host-suffix,steamstatic.com,Game
-host-suffix,steamcdn-a.akamaihd.net,Game
-host-suffix,steamstat.us,Game
+host, api.steampowered.com, Game
+host-suffix, steamcommunity.com, Game
+host-suffix, steampowered.com, Game
+host-suffix, steamstatic.com, Game
+host-suffix, steam-chat.com, Game
+host-suffix, steamgames.com, Game
+host-suffix, steamusercontent.com, Game
+host-suffix, steamcontent.com, Game
+host-suffix, steamcdn-a.akamaihd.net, Game
+host-suffix, steamstat.us, Game
 
 # Epicgames
-host-keyword,epicgames,Game
-host-suffix,helpshift.com,Game
+host-suffix, epicgames.com, Game
 
 # Sony
 # > Sony
-host-suffix,playstation.com,Game
-host-suffix,playstation.net,Game
-host-suffix,playstationnetwork.com,Game
-host-suffix,sony.com,Game
-host-suffix,sonyentertainmentnetwork.com,Game
+host-suffix, playstation.com, Game
+host-suffix, playstation.net, Game
+host-suffix, playstationnetwork.com, Game
+host-suffix, sony.com, Game
+host-suffix, sonyentertainmentnetwork.com, Game
 

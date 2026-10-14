@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-10-14",
+  "published_branch": "master",
+  "update_policy": "Independently maintain local categories and policy decisions. Fetch immutable upstream inputs only for reviewed comparisons; never overwrite local curated rules automatically. Hashes identify historical reference inputs, not local outputs.",
+  "sources": {
+    "sve1r": {
+      "repository": "https://github.com/sve1r/Rules-For-Quantumult-X",
+      "source_branch": "develop",
+      "commit": "8061d2ebe160280f25d4b20d6d929d9e03caecbe",
+      "commit_date": "2026-02-09T10:58:17Z",
+      "license": "MIT",
+      "license_file": "LICENSES/sve1r-MIT.txt",
+      "status": "reference-input-for-independently-maintained-rules",
+      "files": [
+        {
+          "path": "Rules/Games/GamesAll.list",
+          "url": "https://raw.githubusercontent.com/sve1r/Rules-For-Quantumult-X/8061d2ebe160280f25d4b20d6d929d9e03caecbe/Rules/Games/GamesAll.list",
+          "sha256": "17c20c41f29709476ce3dd1e5867eef333051489c6e2ab2011e76956b7ce1dc6"
+        },
+        {
+          "path": "Rules/Media/DomesticMedia.list",
+          "url": "https://raw.githubusercontent.com/sve1r/Rules-For-Quantumult-X/8061d2ebe160280f25d4b20d6d929d9e03caecbe/Rules/Media/DomesticMedia.list",
+          "sha256": "8acc1e173cc2c78fdcb225d18ce905dacbd9bd184d740404543497d2014fa286"
+        },
+        {
+          "path": "Rules/Media/ForeignMedia.list",
+          "url": "https://raw.githubusercontent.com/sve1r/Rules-For-Quantumult-X/8061d2ebe160280f25d4b20d6d929d9e03caecbe/Rules/Media/ForeignMedia.list",
+          "sha256": "f7dd7d2da25625a8015286b850b857c715fa87beb1217ef8632ee9d21a9a43e9"
+        },
+        {
+          "path": "Rules/Region/China.list",
+          "url": "https://raw.githubusercontent.com/sve1r/Rules-For-Quantumult-X/8061d2ebe160280f25d4b20d6d929d9e03caecbe/Rules/Region/China.list",
+          "sha256": "9fcc04d42430d2d73c34181c9ed1ad5192094692e7a1ed2b052ade8ee645ddfe"
+        },
+        {
+          "path": "Rules/Region/Global.list",
+          "url": "https://raw.githubusercontent.com/sve1r/Rules-For-Quantumult-X/8061d2ebe160280f25d4b20d6d929d9e03caecbe/Rules/Region/Global.list",
+          "sha256": "9dbd5581cb3b553036f09fc458ef7c91a6414b3968194ecf4c10f43c703471ec"
+        },
+        {
+          "path": "Rules/Services/Apple.list",
+          "url": "https://raw.githubusercontent.com/sve1r/Rules-For-Quantumult-X/8061d2ebe160280f25d4b20d6d929d9e03caecbe/Rules/Services/Apple.list",
+          "sha256": "16d380995d425fa222d0e7aa578c3208585f839c654ba00022069a2f5ca5c2ff"
+        },
+        {
+          "path": "Rules/Services/Google.list",
+          "url": "https://raw.githubusercontent.com/sve1r/Rules-For-Quantumult-X/8061d2ebe160280f25d4b20d6d929d9e03caecbe/Rules/Services/Google.list",
+          "sha256": "382ad7a10090f2126b03336261e8b84f883c0531a49b27292ebcd1a529fa2838"
+        },
+        {
+          "path": "Rules/Services/Microsoft.list",
+          "url": "https://raw.githubusercontent.com/sve1r/Rules-For-Quantumult-X/8061d2ebe160280f25d4b20d6d929d9e03caecbe/Rules/Services/Microsoft.list",
+          "sha256": "5307efb6edc5bfa1756d4d27121f435d23464a6d8558cbedc208c8c2f678d53b"
+        },
+        {
+          "path": "Rules/Services/SNS/Discord.list",
+          "url": "https://raw.githubusercontent.com/sve1r/Rules-For-Quantumult-X/8061d2ebe160280f25d4b20d6d929d9e03caecbe/Rules/Services/SNS/Discord.list",
+          "sha256": "4a32f1711aac40cbe4b208eebb42b8f3b8bba4041f31dd7d46e4f9f87b968c57"
+        }
+      ],
+      "repair_reference": {
+        "path": "Rules/Media/Domestic/BiliBili.list",
+        "url": "https://raw.githubusercontent.com/sve1r/Rules-For-Quantumult-X/8061d2ebe160280f25d4b20d6d929d9e03caecbe/Rules/Media/Domestic/BiliBili.list",
+        "sha256": "3e6ae8670834b77a448278d25a07e5cabd307c4212776b201d1abc82448a3b04"
+      }
+    },
+    "ppmina": {
+      "repository": "https://github.com/ppmina/Quantumult_X-rules",
+      "source_branch": "master",
+      "source_commit": "2d48fa9ad7d9b763653e5b9d0d52b70adbd55948",
+      "release_commit": "82925ea21cdebe6f27212cd3938dc9187cc6f600",
+      "release_date": "2026-10-13T14:27:59Z",
+      "license": "GPL-3.0",
+      "status": "reviewed-not-imported",
+      "reason": "Broad direct/proxy/reject lists are alternatives to existing general classification, not safe additive unions. Optional imports require separate provenance and license retention."
+    }
+  }
+}

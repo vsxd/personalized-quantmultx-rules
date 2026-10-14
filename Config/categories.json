@@ -1,0 +1,15 @@
+[
+  {"path":"Rules/Services/HSBC.list","tag":"HSBC","policy":"direct"},
+  {"path":"Rules/Services/OpenAI.list","tag":"OpenAI","policy":"OpenAI"},
+  {"path":"Rules/Services/Claude.list","tag":"Claude","policy":"Claude"},
+  {"path":"Rules/Services/OpenAI-Dependencies.list","tag":"AI-Dependencies","policy":"AI-Dependencies"},
+  {"path":"Rules/Services/Apple.list","tag":"Apple","policy":"Apple"},
+  {"path":"Rules/Services/Microsoft.list","tag":"Microsoft","policy":"Microsoft"},
+  {"path":"Rules/Services/Google.list","tag":"Google","policy":"Google"},
+  {"path":"Rules/Games/GamesAll.list","tag":"Game","policy":"Game"},
+  {"path":"Rules/Media/DomesticMedia.list","tag":"DomesticMedia","policy":"China"},
+  {"path":"Rules/Services/SNS/Discord.list","tag":"Discord","policy":"Global"},
+  {"path":"Rules/Media/ForeignMedia.list","tag":"ForeignMedia","policy":"Global"},
+  {"path":"Rules/Region/China.list","tag":"China","policy":"China"},
+  {"path":"Rules/Region/Global.list","tag":"Global","policy":"Global"}
+]

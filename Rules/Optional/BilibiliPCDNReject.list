@@ -1,0 +1,5 @@
+# Optional Bilibili PCDN blocking; not enabled in the routing baseline.
+# Source: sve1r/Rules-For-Quantumult-X, MIT; see upstream-lock.json.
+# Keep a dedicated force-policy=reject when enabling. May affect playback.
+host-suffix, v1d.szbdyd.com, reject
+host-suffix, mcdn.bilivideo.cn, reject

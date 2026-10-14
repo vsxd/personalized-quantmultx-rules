@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-10-14",
+  "maintenance_model": "independently curated; upstream is a reviewed reference, never an automatic mirror",
+  "rule_key": "type.lower(), target.lower(); preserve user-agent target case",
+  "required_order": [
+    "Rules/Services/HSBC.list",
+    "Rules/Services/OpenAI.list",
+    "Rules/Services/Claude.list",
+    "Rules/Services/Apple.list",
+    "Rules/Services/Microsoft.list",
+    "Rules/Services/Google.list",
+    "Rules/Games/GamesAll.list",
+    "Rules/Media/DomesticMedia.list",
+    "Rules/Services/SNS/Discord.list",
+    "Rules/Media/ForeignMedia.list",
+    "Rules/Region/China.list",
+    "Rules/Region/Global.list"
+  ],
+  "optional_resources": [
+    "Rules/Services/OpenAI-Dependencies.list",
+    "Rules/Optional/BilibiliPCDNReject.list"
+  ],
+  "policy_by_general_list": {
+    "Rules/Services/Apple.list": "Apple",
+    "Rules/Services/Microsoft.list": "Microsoft",
+    "Rules/Services/Google.list": "Google",
+    "Rules/Games/GamesAll.list": "Game",
+    "Rules/Media/DomesticMedia.list": "China",
+    "Rules/Services/SNS/Discord.list": "Global",
+    "Rules/Media/ForeignMedia.list": "Global",
+    "Rules/Region/China.list": "China",
+    "Rules/Region/Global.list": "Global"
+  },
+  "conditional_duplicate_keys": [
+    {
+      "type": "host-suffix",
+      "target": "intercom.io",
+      "files": [
+        "Rules/Services/OpenAI-Dependencies.list",
+        "Rules/Media/ForeignMedia.list"
+      ],
+      "reason": "optional dependency policy may be disabled; Global fallback remains"
+    }
+  ]
+}
