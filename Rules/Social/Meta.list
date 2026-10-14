@@ -1,0 +1,22 @@
+# Independently curated Quantumult X destinations: Meta
+# Reviewed: 2026-10-14. Scope and exact decisions: docs/corpus-review.json.
+# Service names are separate from transport IP lists; no geography/final fallback here.
+# Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
+# Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+# Selected domain references: v2fly/domain-list-community@c6adacf29cc4fb05e04651fcf03e00989ef9f797.
+# MIT (Copyright (c) 2018-2019 V2Ray); full notices in LICENSES/.
+
+host, fbcdn-a.akamaihd.net, Global
+host-suffix, accountkit.com, Global
+host-suffix, facebook.com, Global
+host-suffix, facebook.net, Global
+host-suffix, facebook.org, Global
+host-suffix, facebookmail.com, Global
+host-suffix, fb.com, Global
+host-suffix, fb.gg, Global
+host-suffix, fb.me, Global
+host-suffix, fb.watch, Global
+host-suffix, fbcdn.com, Global
+host-suffix, fbcdn.net, Global
+host-suffix, fbsbx.net, Global
+host-suffix, thefacebook.com, Global

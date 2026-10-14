@@ -1,0 +1,17 @@
+# Independently curated Quantumult X destinations: Bilibili
+# Reviewed: 2026-10-14. Scope and exact decisions: docs/corpus-review.json.
+# Service names are separate from transport IP lists; no geography/final fallback here.
+# Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
+# Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+
+host-suffix, bilibiligame.cn, China
+host-suffix, bilibiligame.co, China
+host-suffix, bilibiligame.net, China
+host-suffix, biligame.cn, China
+host-suffix, biligame.co, China
+host-suffix, biligame.com, China
+host-suffix, biligame.net, China
+host-suffix, biligo.com, China
+host-suffix, dyhgames.com, China
+host-suffix, sharejoytech.com, China
+host-suffix, yo9.com, China

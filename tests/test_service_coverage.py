@@ -6,13 +6,14 @@ claiming a device's policy selection, precedence, DNS or reachability.
 """
 import importlib.util
 import fnmatch
+import json
 from pathlib import Path
 import sys
 import unittest
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SERVICES = ROOT / 'Rules' / 'Services'
+MANIFEST = ROOT / 'Config/categories.json'
 spec = importlib.util.spec_from_file_location('service_rule_validator', ROOT / 'scripts' / 'validate_rules.py')
 validator = importlib.util.module_from_spec(spec)
 sys.modules[spec.name] = validator
@@ -74,8 +75,12 @@ class ServiceCoverageTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.lists = {}
+        manifest = {item['tag']: item for item in json.loads(MANIFEST.read_text())}
+        cls.paths = {}
         for name in ('OpenAI', 'OpenAI-Dependencies', 'HSBC', 'Claude'):
-            path = SERVICES / f'{name}.list'
+            tag = 'AI-Dependencies' if name == 'OpenAI-Dependencies' else name
+            path = ROOT / manifest[tag]['path']
+            cls.paths[name] = path
             rules, diagnostics = validator.inspect_text(path.read_text(), str(path.relative_to(ROOT)))
             errors = [finding for finding in diagnostics if finding.severity == 'error']
             if errors:
@@ -86,7 +91,7 @@ class ServiceCoverageTest(unittest.TestCase):
         for name in self.lists:
             with self.subTest(service=name):
                 self.assertFalse((ROOT / f'{name}.list').exists(), 'do not restore legacy root copies')
-                self.assertTrue((SERVICES / f'{name}.list').is_file())
+                self.assertTrue(self.paths[name].is_file())
 
     def test_service_lists_do_not_gain_keyword_ip_or_final_catchalls(self):
         for name, rules in self.lists.items():
@@ -166,7 +171,7 @@ class ServiceCoverageTest(unittest.TestCase):
     def test_claude_covers_first_party_without_capturing_tool_infrastructure(self):
         for hostname in ('api.anthropic.com', 'platform.claude.com', 'downloads.claude.ai',
                          'mcp-proxy.anthropic.com', 'bridge.claudeusercontent.com',
-                         'example.frame.claudeusercontent.com'):
+                         'example.frame.claudeusercontent.com', 'widget.claudemcpcontent.com'):
             self.assertTrue(covering_rules(self.lists['Claude'], hostname), hostname)
         for hostname in ('storage.googleapis.com', 'github.com', 'raw.githubusercontent.com',
                          'registry.npmjs.org', 'formulae.brew.sh',
@@ -219,17 +224,18 @@ class ServiceCoverageTest(unittest.TestCase):
     def test_remote_profile_binds_canonical_service_files_to_effective_policies(self):
         config = builder.sections(builder.build(mode='remote'))
         imports = builder.active(config['[filter_remote]'])
-        expected = (
-            ('HSBC', 'direct'), ('OpenAI', 'OpenAI'),
-            ('Claude', 'Claude'), ('OpenAI-Dependencies', 'AI-Dependencies'),
-        )
-        for line, (name, policy) in zip(imports[:4], expected):
-            with self.subTest(service=name):
-                fields = [part.strip() for part in line.split(',')]
-                self.assertEqual(builder.BASE + 'master/Rules/Services/' + name + '.list', fields[0])
-                self.assertIn('force-policy=' + policy, fields)
-                self.assertIn('enabled=true', fields)
-        self.assertEqual(4, len(imports[:4]))
+        declarations = {}
+        for line in imports:
+            url, *options = [part.strip() for part in line.split(',')]
+            opts = dict(option.split('=', 1) for option in options)
+            declarations[opts['tag']] = (url, opts)
+        manifest = {item['tag']: item for item in json.loads(MANIFEST.read_text())}
+        for tag, policy in (('HSBC', 'direct'), ('OpenAI', 'OpenAI'),
+                            ('Claude', 'Claude'), ('AI-Dependencies', 'AI-Dependencies')):
+            url, opts = declarations[tag]
+            self.assertEqual(builder.BASE + 'master/' + manifest[tag]['path'], url)
+            self.assertEqual(policy, opts['force-policy'])
+            self.assertEqual('true', opts['enabled'])
 
     def test_service_policy_defaults_preserve_explicit_direct_and_dependency_inheritance(self):
         config = builder.sections(builder.build(mode='standalone'))

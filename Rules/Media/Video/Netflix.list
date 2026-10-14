@@ -1,0 +1,32 @@
+# Independently curated Quantumult X destinations: Netflix
+# Reviewed: 2026-10-14. Scope and exact decisions: docs/corpus-review.json.
+# Service names are separate from transport IP lists; no geography/final fallback here.
+# Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
+# Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+# Selected domain references: v2fly/domain-list-community@c6adacf29cc4fb05e04651fcf03e00989ef9f797.
+# MIT (Copyright (c) 2018-2019 V2Ray); full notices in LICENSES/.
+
+host-suffix, fast.com, Global
+host-suffix, netflix.ca, Global
+host-suffix, netflix.com, Global
+host-suffix, netflix.com.edgesuite.net, Global
+host-suffix, netflix.net, Global
+host-suffix, netflixdnstest0.com, Global
+host-suffix, netflixdnstest1.com, Global
+host-suffix, netflixdnstest10.com, Global
+host-suffix, netflixdnstest2.com, Global
+host-suffix, netflixdnstest3.com, Global
+host-suffix, netflixdnstest4.com, Global
+host-suffix, netflixdnstest5.com, Global
+host-suffix, netflixdnstest6.com, Global
+host-suffix, netflixdnstest7.com, Global
+host-suffix, netflixdnstest8.com, Global
+host-suffix, netflixdnstest9.com, Global
+host-suffix, netflixinvestor.com, Global
+host-suffix, netflixtechblog.com, Global
+host-suffix, nflxext.com, Global
+host-suffix, nflximg.com, Global
+host-suffix, nflximg.net, Global
+host-suffix, nflxsearch.net, Global
+host-suffix, nflxso.net, Global
+host-suffix, nflxvideo.net, Global

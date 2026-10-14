@@ -1,0 +1,62 @@
+# Independently curated Quantumult X destinations: Hulu
+# Reviewed: 2026-10-14. Scope and exact decisions: docs/corpus-review.json.
+# Service names are separate from transport IP lists; no geography/final fallback here.
+# Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
+# Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+
+host-suffix, 112263.com, Global
+host-suffix, assetshuluimcom-a.akamaihd.net, Global
+host-suffix, callhulu.com, Global
+host-suffix, cws-hulu.conviva.com, Global
+host-suffix, findyourlimits.com, Global
+host-suffix, freehulu.com, Global
+host-suffix, happyon.jp, Global
+host-suffix, hjholdings.jp, Global
+host-suffix, hooloo.tv, Global
+host-suffix, hoolu.com, Global
+host-suffix, hoolu.tv, Global
+host-suffix, hu1u.com, Global
+host-suffix, huloo.cc, Global
+host-suffix, huloo.tv, Global
+host-suffix, hulu.com, Global
+host-suffix, hulu.hb.omtrdc.net, Global
+host-suffix, hulu.jp, Global
+host-suffix, hulu.sc.omtrdc.net, Global
+host-suffix, hulu.tv, Global
+host-suffix, hulu.us, Global
+host-suffix, huluaction.com, Global
+host-suffix, huluad.com, Global
+host-suffix, huluapp.com, Global
+host-suffix, huluasks.com, Global
+host-suffix, hulucall.com, Global
+host-suffix, hulufree.com, Global
+host-suffix, hulugans.com, Global
+host-suffix, hulugermany.com, Global
+host-suffix, hulugo.com, Global
+host-suffix, huluim.com, Global
+host-suffix, huluinstantmessenger.com, Global
+host-suffix, huluitaly.com, Global
+host-suffix, hulunet.com, Global
+host-suffix, hulunetwork.com, Global
+host-suffix, huluplus.com, Global
+host-suffix, hulupremium.com, Global
+host-suffix, hulupurchase.com, Global
+host-suffix, huluqa.com, Global
+host-suffix, hulurussia.com, Global
+host-suffix, huluspain.com, Global
+host-suffix, hulusports.com, Global
+host-suffix, hulustream.com, Global
+host-suffix, huluteam.com, Global
+host-suffix, hulutv.com, Global
+host-suffix, huluusa.com, Global
+host-suffix, joinmaidez.com, Global
+host-suffix, mushymush.tv, Global
+host-suffix, myhulu.com, Global
+host-suffix, originalhulu.com, Global
+host-suffix, payhulu.com, Global
+host-suffix, prod.hjholdings.tv, Global
+host-suffix, registerhulu.com, Global
+host-suffix, streaks.jp, Global
+host-suffix, thehulubraintrust.com, Global
+host-suffix, wwwhuluplus.com, Global
+host-suffix, yb.uncn.jp, Global

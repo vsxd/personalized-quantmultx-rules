@@ -1,0 +1,13 @@
+# Independently curated Quantumult X destinations: Bilibili-International
+# Reviewed: 2026-10-14. Scope and exact decisions: docs/corpus-review.json.
+# Service names are separate from transport IP lists; no geography/final fallback here.
+# Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
+# Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+
+host-suffix, bilibili.tv, Global
+host-suffix, biliintl.com, Global
+host-suffix, dreamcast.hk, Global
+host-suffix, p-bstarstatic.akamaized.net, Global
+host-suffix, p.bstarstatic.com, Global
+host-suffix, upos-bstar-mirrorakam.akamaized.net, Global
+host-suffix, upos-bstar1-mirrorakam.akamaized.net, Global

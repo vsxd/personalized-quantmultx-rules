@@ -1,82 +1,89 @@
-"""Prevent category drift when curated rules are extended or imported."""
-import importlib.util
+"""Destination ownership contracts and negative controls for the published corpus."""
 import json
 from pathlib import Path
 import sys
 import unittest
 
 ROOT = Path(__file__).resolve().parents[1]
-spec = importlib.util.spec_from_file_location('category_validator', ROOT / 'scripts' / 'validate_rules.py')
-validator = importlib.util.module_from_spec(spec)
-sys.modules[spec.name] = validator
-spec.loader.exec_module(validator)
+sys.path[:0] = [str(ROOT / 'scripts'), str(ROOT / 'tests')]
+from validate_rules import inspect_text
+import build_config
+from test_service_coverage import covering_rules, first_hostname_policy
 
 
 class RepositoryCategoriesTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        cls.categories = json.loads((ROOT / 'docs' / 'rule-categories.json').read_text())
+        cls.categories = json.loads((ROOT / 'Config/categories.json').read_text())
+        cls.rules = {}
+        for item in cls.categories:
+            cls.rules[item['tag']], diagnostics = inspect_text((ROOT / item['path']).read_text(), item['path'])
+            if any(d.severity == 'error' for d in diagnostics):
+                raise AssertionError(diagnostics)
 
-    def test_required_categories_have_one_exact_target_owner(self):
-        owners = {}
-        conflicts = []
-        for filename in self.categories['required_order']:
-            rules, _ = validator.inspect_text((ROOT / filename).read_text(), filename)
-            for rule in rules:
-                target = rule.value if rule.kind == 'user-agent' else rule.value.lower()
-                key = (rule.kind, target)
-                if key in owners:
-                    conflicts.append(f'{filename}:{rule.line}: {key} already owned by {owners[key]}')
-                else:
-                    owners[key] = filename
-        self.assertEqual([], conflicts, '\n'.join(conflicts))
+    def test_manifest_covers_every_published_leaf_once_including_disabled(self):
+        paths = [item['path'] for item in self.categories]
+        self.assertEqual(len(paths), len(set(paths)))
+        self.assertEqual(len(paths), len({item['tag'] for item in self.categories}))
+        self.assertEqual(set(paths), {str(p.relative_to(ROOT)) for p in (ROOT / 'Rules').rglob('*.list')})
+        for item in self.categories:
+            self.assertIsInstance(item['default_enabled'], bool)
 
-    def test_general_policies_are_native_to_our_repository(self):
-        for filename, policy in self.categories['policy_by_general_list'].items():
-            rules, _ = validator.inspect_text((ROOT / filename).read_text(), filename)
-            self.assertEqual({policy}, {r.policy for r in rules}, filename)
-            self.assertTrue((ROOT / filename).read_text().startswith('# MAINTENANCE: independently maintained'), filename)
+    def test_exact_destination_owner_is_unique_across_all_published_leaves(self):
+        seen = {}
+        for item in self.categories:
+            for rule in self.rules[item['tag']]:
+                key = (rule.kind, rule.value.lower())
+                self.assertNotIn(key, seen, f'{key}: {seen.get(key)} and {item["path"]}')
+                seen[key] = item['path']
 
-    def test_optional_dependencies_have_a_recorded_fallback(self):
-        for allowed in self.categories['conditional_duplicate_keys']:
-            for filename in allowed['files']:
-                rules, _ = validator.inspect_text((ROOT / filename).read_text(), filename)
-                keys = {(r.kind, r.value.lower()) for r in rules}
-                self.assertIn((allowed['type'], allowed['target']), keys, filename)
+    def test_domain_lists_do_not_inherit_patterns_ua_ip_or_fallback(self):
+        for item in self.categories:
+            kinds = {r.kind for r in self.rules[item['tag']]}
+            if item['path'].startswith('Rules/IP/'):
+                self.assertTrue(kinds <= {'ip-cidr', 'ip6-cidr'})
+            else:
+                self.assertTrue(kinds <= {'host', 'host-suffix'}, item['path'])
 
-    def test_shared_cloud_is_not_owned_by_microsoft_or_media(self):
-        checks = {
-            'Rules/Services/Microsoft.list': {'azureedge.net', 'azurewebsites.net'},
-            'Rules/Media/ForeignMedia.list': {'sentry.io', 'execute-api.us-east-1.amazonaws.com',
-                                            'execute-api.ap-southeast-1.amazonaws.com',
-                                            's3-ap-southeast-1.amazonaws.com', 'us-west-2.amazonaws.com'},
+    def test_microsoft_core_endpoints_have_explicit_owned_suffix_coverage(self):
+        for name in ('office.com', 'office.net', 'outlook.com', 'hotmail.com', 'onenote.com',
+                     'windows.com', 'onedrive.com', '1drv.ms', '1drv.com', 'bing.com',
+                     'msauth.net', 'msftauth.net', 'skypeassets.com'):
+            self.assertTrue(covering_rules(self.rules['Microsoft'], name), name)
+
+    def test_platform_scopes_exclude_unrelated_hosts_and_cloud_tenants(self):
+        negative = {
+            'Microsoft': ('onedrive.evil.example', 'office.evil.example', 'unrelated.windows.net',
+                          'tenant.azureedge.net', 'tenant.azurewebsites.net', 'fabric.io', 'tenor.com',
+                          'cdn.unrelated.edgesuite.net', 'foo.uservoice.com'),
+            'Apple': ('apple.evil.example', 'iphone.evil.example', 'macbook.evil.example'),
+            'Google': ('unrelated-google.example', 'blogspot-unrelated.example', 'tenant.appspot.com'),
         }
-        global_rules, _ = validator.inspect_text((ROOT / 'Rules/Region/Global.list').read_text())
-        global_targets = {r.value for r in global_rules}
-        for filename, targets in checks.items():
-            rules, _ = validator.inspect_text((ROOT / filename).read_text())
-            self.assertFalse(targets & {r.value for r in rules})
-            self.assertTrue(targets <= global_targets)
+        for tag, hosts in negative.items():
+            for host in hosts:
+                self.assertFalse(covering_rules(self.rules[tag], host), f'{tag}: {host}')
 
-    def test_domestic_media_does_not_claim_broad_ranges_or_public_dns(self):
-        import ipaddress
-        rules, _ = validator.inspect_text((ROOT / 'Rules/Media/DomesticMedia.list').read_text())
-        for rule in rules:
-            if rule.kind == 'ip-cidr':
-                self.assertGreaterEqual(ipaddress.ip_network(rule.value).prefixlen, 24)
-                self.assertNotEqual('119.29.29.29/32', rule.value)
-            if rule.kind == 'ip6-cidr':
-                address = ipaddress.ip_network(rule.value).network_address
-                if address.ipv4_mapped:
-                    self.assertNotIn(address.ipv4_mapped, ipaddress.ip_network('198.18.0.0/15'))
+    def test_assembled_domain_model_preserves_named_service_ownership(self):
+        config = build_config.sections(build_config.build('standalone'))
+        rules, _ = inspect_text('\n'.join(config['[filter_local]']))
+        expected = {
+            'office.com': 'Microsoft', 'outlook.com': 'Microsoft', 'bing.com': 'Microsoft',
+            'onedrive.com': 'Microsoft', 'msauth.net': 'Microsoft',
+            'www.google.com': 'Google', 'www.google.co.jp': 'Google',
+            'www.apple.com': 'Apple', 'widget.claudemcpcontent.com': 'Claude',
+            'hsbc.edge.sdk.awswaf.com': 'direct', 'ws.chatgpt.com': 'OpenAI',
+            'cdn.workos.com': 'AI-Dependencies',
+        }
+        for host, policy in expected.items():
+            self.assertEqual(policy, first_hostname_policy(rules, host), host)
 
-    def test_specific_google_and_game_domains_use_suffix_boundaries(self):
-        for filename, domains in {
-            'Rules/Services/Google.list': {'appspot.com', 'googlesource.com', 'gmail.com', 'recaptcha.net'},
-            'Rules/Games/GamesAll.list': {'epicgames.com'},
-        }.items():
-            rules, _ = validator.inspect_text((ROOT / filename).read_text())
-            self.assertTrue(domains <= {r.value for r in rules if r.kind == 'host-suffix'})
+    def test_unrelated_provider_tenants_are_left_for_geographic_fallback(self):
+        enabled = build_config.load_categories()
+        rules = [r for item in enabled for r in self.rules[item['tag']]]
+        for host in ('tenant.azureedge.net', 'tenant.azurewebsites.net', 'unrelated.windows.net',
+                     'tenant.cloudfront.net', 'tenant.amazonaws.com', 'tenant.appspot.com',
+                     'tenant.akadns.net', 'tenant.edgesuite.net', 'tenant.sentry.io'):
+            self.assertFalse(covering_rules(rules, host), host)
 
 
 if __name__ == '__main__':

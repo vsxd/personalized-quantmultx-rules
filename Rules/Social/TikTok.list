@@ -1,0 +1,18 @@
+# Independently curated Quantumult X destinations: TikTok
+# Reviewed: 2026-10-14. Scope and exact decisions: docs/corpus-review.json.
+# Service names are separate from transport IP lists; no geography/final fallback here.
+# Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
+# Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+
+host, p16-tiktokcdn-com.akamaized.net, Global
+host-suffix, byteoversea.com, Global
+host-suffix, ibytedtos.com, Global
+host-suffix, ibyteimg.com, Global
+host-suffix, ipstatp.com, Global
+host-suffix, muscdn.com, Global
+host-suffix, musical.ly, Global
+host-suffix, sgpstatp.com, Global
+host-suffix, tik-tokapi.com, Global
+host-suffix, tiktok.com, Global
+host-suffix, tiktokcdn.com, Global
+host-suffix, tiktokv.com, Global

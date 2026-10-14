@@ -1,0 +1,16 @@
+# Independently curated Quantumult X destinations: ChineseLanguageNews
+# Reviewed: 2026-10-14. Scope and exact decisions: docs/corpus-review.json.
+# Service names are separate from transport IP lists; no geography/final fallback here.
+# Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
+# Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+
+host-suffix, appledaily.com, Global
+host-suffix, bowenpress.com, Global
+host-suffix, boxun.com, Global
+host-suffix, chinatimes.com, Global
+host-suffix, nextmedia.com, Global
+host-suffix, sydneytoday.com, Global
+host-suffix, theinitium.com, Global
+host-suffix, udn.com, Global
+host-suffix, wenxuecity.com, Global
+host-suffix, zaobao.com.sg, Global

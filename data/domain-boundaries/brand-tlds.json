@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "note": "These verified corporate namespaces may be service-owned. All other delegated single-label suffixes fail the routing boundary gate; this is deliberately not an ownership inference for every branded-looking name.",
+  "entries": [
+    {
+      "tld": "apple",
+      "registry": "Apple Inc.",
+      "evidence": "https://www.iana.org/domains/root/db/apple.html",
+      "evidence_sha256": "9d2e1a3154a92314a0cf72ae0055dd811711435f71c864a5868b8ac146793668",
+      "reviewed_at": "2026-10-14"
+    },
+    {
+      "tld": "google",
+      "registry": "Charleston Road Registry Inc.",
+      "evidence": "https://www.iana.org/domains/root/db/google.html",
+      "evidence_sha256": "4e9b4961b26e89ff32aa0110837dc9b9ac60ec6cf8339d1a25857fb7a382c284",
+      "reviewed_at": "2026-10-14"
+    },
+    {
+      "tld": "microsoft",
+      "registry": "Microsoft Corporation",
+      "evidence": "https://www.iana.org/domains/root/db/microsoft.html",
+      "evidence_sha256": "da4551bef019fb39b4042ae4af967b0629ad63a2f04966036aa0718f1e8905d3",
+      "reviewed_at": "2026-10-14"
+    }
+  ]
+}

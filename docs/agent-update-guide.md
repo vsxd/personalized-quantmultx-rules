@@ -1,79 +1,81 @@
 # 让 Codex 检查并维护上游更新
 
-本仓库维护自己的服务分类、例外规则和策略边界。上游提供候选变更及出处，不直接决定本仓库的分流行为。以后可在本仓库聊天中直接说：
+本仓库维护自己的服务分类、例外规则和策略边界。以后可以直接说：
 
-> 检查其他规则仓库最新规则，按本仓库的分类和策略维护要求，有选择地更新我的规则，验证后整理变更。
+> 检查其他规则仓库最新规则，按本仓库的分类和策略要求，有选择地更新我的规则，验证后整理变更。
 
-按用户约定，“检查下别的规则仓库最新规则”“检查其他规则仓库最新规则”等简写默认包含比较、证据审查、选择性更新本仓库及验证；不需要再次询问是否更新。只有明确说“只检查”“不修改”等只读范围时，才停留在比较报告。是否提交、推送、创建 PR 按本次用户授权执行。任何仓库更新都不会自动导入 Quantumult X、切换策略或重连正在运行的 VPN。
+“检查下别的规则仓库最新规则”等简写包含比较、证据审查、选择性更新本仓库和验证。只有明确说“只检查”“不修改”时才停在报告。提交、推送、PR 和合入按本次用户授权执行，无需重复确认已授权动作。仓库维护不自动导入 Quantumult X、改变当前策略或重连 VPN。
 
-## 1. 固定检查对象并保留工作区
+## 1. 保留现场，固定参考输入
 
-先读 `AGENTS.md`、`upstream-lock.json`、`THIRD_PARTY.md`，以及 `docs/rule-categories.json`、`docs/category-partition.md`、`docs/quarantine.json`。执行 `git status --short`，保留已有修改，不用 reset 或全目录覆盖清理工作区。检查 `master` 是否仍为发布分支；不要因为上游叫 `main` 就修改本仓库订阅 URL。
+先读 `AGENTS.md`、`upstream-lock.json`、`THIRD_PARTY.md`、`Config/categories.json`、`docs/category-partition.md`、`docs/corpus-review.json`、`docs/quarantine.json` 和 `docs/semantic-exceptions.json`。`Config/categories.json` 是当前发布分类的唯一配置清单；`docs/history/` 只是旧审查记录。执行 `git status --short`，保留已有修改，不使用 reset 或全目录覆盖。核对 `master` 仍为发布分支，不根据上游分支名更改订阅地址。
 
-使用 Python 3.10+ 和 git：
+使用 Python 3.10+、git；安装并登录 `gh` 后可使用其 GitHub API 配额：
 
 ```sh
 python3 scripts/check_upstreams.py
+python3 scripts/check_upstreams.py --source blackmatrix7
+python3 scripts/check_upstreams.py --source v2fly
 ```
 
-也可以限制检查范围：
+脚本从锁文件发现全部来源，不限于某两个仓库。`git ls-remote` 解析最新分支 SHA，原文下载使用完整 SHA。**Git 树目录发现会调用 GitHub API**：可用时使用 `gh api`；未安装 gh 时使用匿名 API，配额较低。API 限流、认证失败、网络错误、树被截断都是真实检查失败，不是“没有更新”。可用 `gh api rate_limit` 查看剩余额度；不要输出认证令牌。
 
-```sh
-python3 scripts/check_upstreams.py --source sve1r
-python3 scripts/check_upstreams.py --source ppmina
-```
+报告、原始参考文件和清单位于忽略目录 `work/upstream-check/<UTC时间戳>/`。检查器不改本地规则、配置或锁文件，不执行远程脚本。锁定的文件与许可证 SHA256 均校验；404、哈希不一致、目录或依赖不完整产生非零退出码和 INCOMPLETE 报告；所有比较完成但原始条目存在语法问题则报告 REVIEW_REQUIRED，同样非零退出。后者与本仓库规则测试失败是两回事，不能为了返回 0 而豁免源文件缺陷。
 
-脚本通过 `git ls-remote` 获取最新分支 SHA，再从完整 SHA 下载内容，不依赖 GitHub API 配额。生成的报告、原始文件和规则清单位于忽略目录 `work/upstream-check/<UTC时间戳>/`，不写入现有规则、配置或锁文件。不执行下载的 JavaScript、安装脚本或上游工作流。
+## 2. 七类参考来源与原生格式
 
-检查范围：
+| 来源 | 检查内容 | 使用边界 |
+| --- | --- | --- |
+| sve1r | `develop` 的历史真实路径及 Bilibili `repair_reference`；`Rules` 目录发现 | MIT 历史素材，保留本地修正和服务边界。 |
+| ppmina | `release` 的六个生成规则文件；`master` 的许可证 | GPL-3.0，比较但不复制整个 direct/proxy/reject 分类。 |
+| blackmatrix7 | QX **及 Surge** 的选定 AI、平台、通讯、游戏、媒体服务列表；两个格式目录发现 | GPL-2.0，交叉核实服务划分和覆盖，不能默认采纳宽泛匹配。 |
+| SukkaW | `Source/domainset`、`Source/non_ip`、`Source/ip` 及选定内容 | AGPL-3.0，参考域名/IP 分离、下载与服务区分；保持 DOMAIN-SET 原生语义。 |
+| v2fly | 选定服务、地区及游戏/媒体分类；`data` 目录发现；所有可达 include 依赖 | MIT，显式域名按归属选择采纳；include、属性、正则仍是待审查证据。 |
+| ACL4SSR | Clash 的平台、AI、通讯、开发者等选定列表和目录发现 | CC-BY-SA-4.0，README 页脚是许可声明；格式按兼容的 Surge 风格规则清单检查，不能称为 QX 文件。 |
+| Loyalsoldier | `release` 的 DOMAIN-SET、RULE-SET、CIDR；`master` 许可证 | GPL-3.0，比较大型地区集与生成语义，不批量并入。 |
 
-- sve1r 的 `develop`，对比锁文件中 `files` 的真实上游路径，并包含 `repair_reference` 中的 Bilibili 原始文件。不要拿本仓库经过分类的文件反推上游路径。
-- ppmina 的 `release`，对比 `release_commit` 下 `ruleset/direct.txt`、`proxy.txt`、`reject.txt`、`apple.txt`、`icloud.txt`、`telegramcidr.txt`。`master` 是生成器源码分支，不能用它的 SHA 代替已发布规则基线。
-- 两者的许可证文本；ppmina 的许可证按源码分支 SHA 获取，发布内容仍按 release SHA 获取。
+`rule_branch`/`rule_commit` 指定生成规则，`license_branch`/`license_commit` 独立指定许可证来源；不要用生成器的提交替代 release。`license_path` 可指向 README 等真实许可声明。`files` 或 `reference_files` 每项可声明 `format` 与原文 SHA256。空文件清单必须有实际目录检查范围，或显式说明仅作背景参考；不能让空范围报告为规则已全面检查。
 
-即使分支 SHA 没变，也验证锁定内容并生成清单。sve1r 已有逐文件 SHA256 时，任何基线哈希不一致均令检查失败。ppmina 当前基线仅固定完整 release SHA：脚本记录实取文件哈希，不冒充已存在逐文件锁定校验。源文件 404、下载失败或许可证读取失败均产生不完整报告和非零退出码，不能报告为“没有变化”。
+格式必须保持区别：QX 的 `host-suffix` 与 Surge 的 `DOMAIN-SUFFIX` 不自动互换；Surge DOMAIN-SET 的 `.example.com` 包含后代，而 `example.com` 仅精确主机。v2fly 的 `include:x @cn` 是筛选依赖，`@-!cn` 是排除名为 `!cn` 的属性，不能当作所有子规则增加一个标签。正则、include 文件名大小写与属性保留，不把 v2fly、Surge 的表达式直接写进 QX。比如 ppmina 的 Telegram 参考文件出现 Surge 风格 `IP-CIDR6`，不能静默改名为 QX `ip6-cidr` 后宣称原文件有效；原始问题必须仍在报告里。
 
-## 2. 审查变化，分别决定接受、拒绝或待查
+## 3. 检查显式文件、目录及间接依赖
 
-读 `report.md` 和 `report.json`。`<来源>/diffs/` 保留全部新增/删除规则，不只是样例；`baseline/`、`latest/` 保留原文及 `*.inventory.json`。比较规范化类型、域名大小写、内置策略大小写，保留自定义策略、选项和用户代理大小写。策略变化是旧规则删除加新规则增加；规则顺序变化及重复数量另列。无法识别的行原样保留并标记异常，不能静默忽略。
+读 `report.md` 和 `report.json`。`<来源>/diffs/` 包含选定文件全部新增/删除条目；`baseline/`、`latest/` 保留原文及 `*.inventory.json`。策略、选项、顺序和重复变化均可见；未知行保留原文并标记异常。COMPLETE 只代表配置的参考比较完成，不代表差异已接受、服务可访问或所有外部仓库均已覆盖。
 
-对每组变化记录：上游完整 SHA、文件/行、所属服务、证据、拟采用的本地类别和原因。建议保存一份可提交的简短维护记录，分为已采用、明确不采用、仍待查三类。上游删除可能是过期或分类调整，也可能误删；新增也可能误归类，不能原样自动接受。
+`tree-diff.json` 列出检查子树中新建、删除和修改的路径，发现新增服务分类。**目录发现没有逐个审阅其中所有文件内容**：对相关的新文件固定 SHA 后下载并评审，必要时加入锁文件选定清单。目录太大导致截断时缩小 `inventory_paths`，不能接受部分树当完整结果。
 
-重点审查：
+v2fly 另使用完整 SHA 的有界源码归档，读取 `data/` 中的普通文件，避免逐一请求上千个依赖；不会执行或解压任意路径/链接。`dependencies/baseline.json`、`latest.json` 记录选定根文件的完整可达 include 图、原文哈希、原生条目和属性；`dependencies/diff.json` 与 `dependencies/diffs/` 揭示父文件不变但间接子文件变化的情况。缺失依赖、循环、未知语法均令检查不完整。这个图用于**发现和审阅**，不应用属性过滤，不自动生成或导入规则。需要采用依赖中的域名时，必须单独决定服务边界。
 
-- **服务与域名归属**：优先服务官方网络文档、官方页面及经授权的实际请求日志。域名含 `openai`、`hsbc` 或 `google` 字样并不能证明归属。第三方 CDN/WAF/验证码尽量使用有证据的精确主机，避免整体接管 `amazonaws.com`、`cloudflare.com`、`azureedge.net`、`sentry.io` 等共享后缀。
-- **单一类别归属**：保持服务、地区、媒体、游戏分类一致。已归给 OpenAI、HSBC、Apple、Microsoft 等专用类别的目标不应重新出现在 Global、ForeignMedia 等通用类别。补充 HTTPS 登录、WAF、WebSocket、资源和语音依赖时，也检查其他服务是否共用。
-- **隔离项**：重读 `docs/quarantine.json` 的原因，不因上游再次出现就恢复旧的广告追踪、拼写错误、非法行或宽泛关键词。若新证据支持恢复，连同隔离记录和回归用例一并修改。
-- **许可证**：sve1r MIT 来源保留归属和许可。ppmina GPL-3.0 及其数据来源需单独审查复制范围与许可义务；此仓库当前是“审查但未导入”。大规模复制前明确出处和适用许可，不把 GPL 内容改个名字当作自有规则。检查结果可作为人工核实域名的线索；许可证检查结果不能由“已下载”替代。
-- **量级变化**：几万条 direct/proxy/reject 是分类方案候选，不适合追加到已有通用集。比较覆盖缺口与冲突，再选择少量有证据的条目；如果确实要替换分类体系，作为独立设计变更完成迁移与回归。
+本轮维护决定见 `docs/upstream-review-2026-10-14.json`：它保留源文件缺陷、未采纳的最新变化和真实比较范围；原始下载与完整差异仍留在忽略的 `work/`。
 
-## 3. 修改自维护类别并验证 Quantumult X 语义
+对每组变化记录来源完整 SHA、文件/行、归属、证据、采用类别以及理由，分为已采用、明确拒绝、仍待查。上游删除可能是过期、改分类或误删；新增也可能是共享基础设施，均不能自动接受。
 
-只改采纳变更涉及的本地列表、分类/隔离文档、服务覆盖测试和必要配置。不要复制整个上游仓库，不引入会员解锁、响应篡改或任意重写脚本。
+## 4. 审查规则边界与冲突
 
-必须考虑这些运行语义：
+- 服务归属以官方网络文档、官方页面及授权范围内的实际请求为先。名字带品牌不证明归属。认证、WAF、验证码、WebSocket、资源、语音依赖需分清第一方、专属租户和共享平台，避免接管整个 `amazonaws.com`、`azureedge.net`、`sentry.io` 等。
+- 每个服务有一个明确叶子文件；使用场景不同可细分，不能把通讯、新闻、社交塞进海外媒体。平台公司和所属独立服务分开，例如开发者/GitHub、游戏/Xbox、视频/YouTube。现有策略名由配置映射决定，不从文件夹名字推断最终出口。
+- 当前默认域名清单只使用精确主机和有边界的后缀。拒绝笼统关键词、品牌通配符、国家 TLD 兜底和 User-Agent 猜测。不为消除审查失败加大范围例外。
+- 共享 CDN/云 IP 会承载无关租户；动态 DNS 解析结果不能当永久服务 IP。只有当前官方材料确实要求的 IP 路由才独立放入 IP 清单，记录出处、日期和复核要求。仅在配置末尾保留一个 `geoip, cn, direct`，之后 `final`；服务子列表不得自带 GeoIP/Final。
+- `data/domain-boundaries/` 的 IANA 与 PSL 快照检验已委派 TLD、注册/共享租户边界。PSL PRIVATE 后缀不是该供应商应用全体域名。更新这份数据时连同来源、许可和哈希核对；不能只改哈希掩盖错误。
+- 重读隔离记录和语义例外；上游再次出现不构成恢复理由。`docs/semantic-exceptions.json` 只记录精确目标/策略对和必要原因；对默认关闭的可选列表同样审查。地区兜底、正反域名和服务依赖一起验证。
+- MIT 衍生条目保留许可与归属；GPL、AGPL、CC-BY-SA 参考源当前没有批量导入。未来复制须单独处理许可，不能把其内容改名当 MIT。许可证已下载不代表已履行所有复制义务。
 
-- `force-policy=服务组` 会覆盖列表内策略，但仍受该组当前选项影响；`static` 第一候选不代表用户当前选择。
-- 开启“分流匹配优化”时，host 相关规则偏向精度，相同精度再按加载顺序；“放在前面”不能消除所有冲突。本地优先和 inserted-resource 也是独立设置。维护消除重叠的分类比依赖顺序更稳定。
-- `direct` 仍经过 QX；`dns_exclusion_list` 只影响 Fake-IP；MITM、重写、HTTP 抓取额外主机、IPv6、UDP 支持分别检查。不要为了“修复代理”批量增加 DNS 排除、共享 CDN 或默认路由。
-- 纯 IP、动态语音端点、应用自带 DNS 以及其他应用共用的基础设施，不能仅靠静态主机清单声称完全覆盖。服务器测速结果也不等于服务登录可用。
+## 5. 验证并交付
 
-运行：
+修改涉及的叶子清单、分类清单、覆盖/隔离证据和测试。不可引入会员解锁、响应篡改或任意远程重写脚本。运行：
 
 ```sh
 python3 scripts/build_config.py --mode remote --output Config/quantumult-x.conf
 python3 scripts/validate_rules.py
+python3 scripts/audit_semantics.py
 python3 -m unittest discover -s tests -v
+git diff --check
 ```
 
-更改 `Config/base.conf` 或 `Config/categories.json` 后，必须重新构建公开配置，检查 `Config/quantumult-x.conf` 与模板及分类映射一致。公开构建不得使用 `--private-from`；需要私有导入配置时单独生成到仓库外，保持订阅和节点凭证私密。
+验证每项采纳的正例，以及不应受影响的邻近域名、共享租户或 IP。语义审查包括父子后缀、精确主机重叠、选项/策略以及 CIDR 交集；不可通过批量豁免或只改测试期望消除错误。更新 `Config/categories.json` 或 `Config/base.conf` 后重新生成配置。公开构建不带 `--private-from`；私有配置输出到仓库外。
 
-验证新增规则的实际归属和至少一个不应受影响的邻近域名/共享服务。规则解析器测试、服务覆盖测试、分类唯一性测试须随必要行为变化更新；不要仅修改期望让错误通过。脚本的静态检查不模拟 QX 全部精度匹配、DNS、系统设置或服务可访问性。需要设备验证时先确认用户授权，并报告静态验证与设备验证的边界。
+QX 开启匹配优化时偏向精确规则，同精度再受顺序和加载方式影响；单靠“放前面”不能解决冲突。`force-policy=服务组` 仍受该组当前选择影响，只有字面的 `direct` 才固定直连策略。DNS/Fake-IP、系统代理、IPv6、UDP、MITM、重写及应用自带解析各有运行边界，静态清单不能证明所有动态端点可访问。设备验证按已有用户授权执行，并清楚区分静态通过与真实应用通过。
 
-## 4. 最后更新基线并交付
+锁文件是已审核参考输入的基线。只有相关新增、删除、顺序和依赖变化已处理、拒绝理由记录完整、采纳项验证通过，才人工更新对应 SHA、日期与哈希。若有未解决差异，保留旧基线或清楚的逐文件审核状态，确保下次仍能看到；检查器不会自动推进。报告中应列出检查范围和仍未采用的变化。
 
-`upstream-lock.json` 是已审核参考输入的历史基线。检查脚本不会自动推进它。只有本次新增/删除/排序变化已经逐类处理、决定记录完整且采纳项验证通过后，才人工更新对应完整 SHA、日期和所有对应参考文件哈希。未采用条目须记录明确理由；仍待查的变化不得通过推进基线藏掉。若只采纳部分而未处理剩余差异，保留旧基线或增加清晰的逐文件审核记录，保证下次仍会看到未解决变化。
-
-注意：锁文件哈希描述**上游原始参考文件**，不是经过本地重新分类后的输出文件。ppmina 仅完成下载/比较时保持 `reviewed-not-imported`；实际采纳须同步来源及许可证说明。
-
-最后审查 `git diff --check`、差异及文件列表，保证 `work/`、私有订阅、节点口令、CA、抓包内容未进入提交。按授权提交或创建可审阅 PR，并报告：哪些分类变化、哪些上游变化未采用、验证结果、是否已推送，以及尚未导入 QX 的事实。若用户要求发布，发布后回读实际 raw URL；推送仓库成功并不代表设备已同步或应用访问已验证。
+最后检查差异、公开机密扫描、生成配置一致性和完整测试，保证 `work/`、订阅凭证、CA、请求内容不提交。按用户授权提交、更新 PR 或合入；发布后回读真实 raw URL。分支推送、master 合入、设备同步和应用访问成功是不同事实，分别报告。

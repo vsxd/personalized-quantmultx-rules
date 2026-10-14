@@ -1,15 +1,680 @@
 [
-  {"path":"Rules/Services/HSBC.list","tag":"HSBC","policy":"direct"},
-  {"path":"Rules/Services/OpenAI.list","tag":"OpenAI","policy":"OpenAI"},
-  {"path":"Rules/Services/Claude.list","tag":"Claude","policy":"Claude"},
-  {"path":"Rules/Services/OpenAI-Dependencies.list","tag":"AI-Dependencies","policy":"AI-Dependencies"},
-  {"path":"Rules/Services/Apple.list","tag":"Apple","policy":"Apple"},
-  {"path":"Rules/Services/Microsoft.list","tag":"Microsoft","policy":"Microsoft"},
-  {"path":"Rules/Services/Google.list","tag":"Google","policy":"Google"},
-  {"path":"Rules/Games/GamesAll.list","tag":"Game","policy":"Game"},
-  {"path":"Rules/Media/DomesticMedia.list","tag":"DomesticMedia","policy":"China"},
-  {"path":"Rules/Services/SNS/Discord.list","tag":"Discord","policy":"Global"},
-  {"path":"Rules/Media/ForeignMedia.list","tag":"ForeignMedia","policy":"Global"},
-  {"path":"Rules/Region/China.list","tag":"China","policy":"China"},
-  {"path":"Rules/Region/Global.list","tag":"Global","policy":"Global"}
+  {
+    "path": "Rules/Optional/BilibiliPCDNReject.list",
+    "tag": "BilibiliPCDNReject",
+    "policy": "reject",
+    "default_enabled": false
+  },
+  {
+    "path": "Rules/Banking/HSBC.list",
+    "tag": "HSBC",
+    "policy": "direct",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/AI/OpenAI.list",
+    "tag": "OpenAI",
+    "policy": "OpenAI",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/AI/Claude.list",
+    "tag": "Claude",
+    "policy": "Claude",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Optional/OpenAI-SharedDependencies.list",
+    "tag": "AI-Dependencies",
+    "policy": "AI-Dependencies",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Video/IQIYI-International.list",
+    "tag": "IQIYI-International",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Banking/ChinaBanks.list",
+    "tag": "ChinaBanks",
+    "policy": "China",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Developer/GitHub.list",
+    "tag": "GitHub",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Developer/Tools.list",
+    "tag": "Tools",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Games/Bethesda.list",
+    "tag": "Bethesda",
+    "policy": "Game",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Games/Bilibili.list",
+    "tag": "BilibiliGames",
+    "policy": "China",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Games/Blizzard.list",
+    "tag": "Blizzard",
+    "policy": "Game",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Games/Epic.list",
+    "tag": "Epic",
+    "policy": "Game",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Games/Minecraft.list",
+    "tag": "Minecraft",
+    "policy": "Game",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Games/Nintendo.list",
+    "tag": "Nintendo",
+    "policy": "Game",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Games/OtherGames.list",
+    "tag": "OtherGames",
+    "policy": "Game",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Games/PlayStation.list",
+    "tag": "PlayStation",
+    "policy": "Game",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Games/Steam.list",
+    "tag": "Steam",
+    "policy": "Game",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Games/Stores.list",
+    "tag": "Stores",
+    "policy": "Game",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Games/Xbox.list",
+    "tag": "Xbox",
+    "policy": "Game",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Adult/EHentai.list",
+    "tag": "EHentai",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Adult/Japonx.list",
+    "tag": "Japonx",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Adult/OtherAdult.list",
+    "tag": "OtherAdult",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Adult/Pornhub.list",
+    "tag": "Pornhub",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Community/Bahamut.list",
+    "tag": "Bahamut",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Community/Niconico.list",
+    "tag": "Niconico",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Music/ChinaAudio.list",
+    "tag": "ChinaAudio",
+    "policy": "China",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Music/Deezer.list",
+    "tag": "Deezer",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Music/JOOX.list",
+    "tag": "JOOX",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Music/KKBOX.list",
+    "tag": "KKBOX",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Music/MOOV.list",
+    "tag": "MOOV",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Music/Pandora.list",
+    "tag": "Pandora",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Music/Qobuz.list",
+    "tag": "Qobuz",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Music/SoundCloud.list",
+    "tag": "SoundCloud",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Music/Spotify.list",
+    "tag": "Spotify",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Music/TIDAL.list",
+    "tag": "TIDAL",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Networks/BBC.list",
+    "tag": "BBC",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Networks/CW.list",
+    "tag": "CW",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Networks/Discovery.list",
+    "tag": "Discovery",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Networks/Disney.list",
+    "tag": "Disney",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Networks/Fox.list",
+    "tag": "Fox",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Networks/HBO.list",
+    "tag": "HBO",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Networks/HongKongTV.list",
+    "tag": "HongKongTV",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Networks/InternationalTV.list",
+    "tag": "InternationalTV",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Networks/LineTV.list",
+    "tag": "LineTV",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Networks/NBC.list",
+    "tag": "NBC",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Networks/Now.list",
+    "tag": "Now",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Networks/Paramount.list",
+    "tag": "Paramount",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Networks/Sky.list",
+    "tag": "Sky",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Networks/Sony.list",
+    "tag": "SonyMedia",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Networks/TVB.list",
+    "tag": "TVB",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Networks/TVer.list",
+    "tag": "TVer",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Networks/TaiwanTV.list",
+    "tag": "TaiwanTV",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Networks/UKTV.list",
+    "tag": "UKTV",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Networks/USPayTV.list",
+    "tag": "USPayTV",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Networks/USPublicTV.list",
+    "tag": "USPublicTV",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Networks/Viu.list",
+    "tag": "Viu",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Networks/Zee.list",
+    "tag": "Zee",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/News/CNN.list",
+    "tag": "CNN",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/News/ChinaNews.list",
+    "tag": "ChinaNews",
+    "policy": "China",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/News/ChineseLanguageNews.list",
+    "tag": "ChineseLanguageNews",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/News/HuffPost.list",
+    "tag": "HuffPost",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/News/InternationalNews.list",
+    "tag": "InternationalNews",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/News/NYPost.list",
+    "tag": "NYPost",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/News/NYTimes.list",
+    "tag": "NYTimes",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/News/Nikkei.list",
+    "tag": "Nikkei",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/News/Technology.list",
+    "tag": "Technology",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/News/VOA.list",
+    "tag": "VOA",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/News/VoxMedia.list",
+    "tag": "VoxMedia",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Video/AbemaTV.list",
+    "tag": "AbemaTV",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Video/Bilibili-International.list",
+    "tag": "Bilibili-International",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Video/Bilibili.list",
+    "tag": "Bilibili",
+    "policy": "China",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Video/ChinaVideo.list",
+    "tag": "ChinaVideo",
+    "policy": "China",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Video/DAZN.list",
+    "tag": "DAZN",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Video/Dailymotion.list",
+    "tag": "Dailymotion",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Video/Hulu.list",
+    "tag": "Hulu",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Video/IQIYI.list",
+    "tag": "IQIYI",
+    "policy": "China",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Video/MangoTV.list",
+    "tag": "MangoTV",
+    "policy": "China",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Video/Netflix.list",
+    "tag": "Netflix",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Video/PandoraTV.list",
+    "tag": "PandoraTV",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Video/PrimeVideo.list",
+    "tag": "PrimeVideo",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Video/TencentVideo.list",
+    "tag": "TencentVideo",
+    "policy": "China",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Video/Twitch.list",
+    "tag": "Twitch",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Video/Viki.list",
+    "tag": "Viki",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Video/Vimeo.list",
+    "tag": "Vimeo",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Video/WeTV.list",
+    "tag": "WeTV",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Video/YouTube.list",
+    "tag": "YouTube",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Media/Video/Youku.list",
+    "tag": "Youku",
+    "policy": "China",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Messaging/Discord.list",
+    "tag": "Discord",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Messaging/Kakao.list",
+    "tag": "Kakao",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Messaging/Line.list",
+    "tag": "Line",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Messaging/Messenger.list",
+    "tag": "Messenger",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Messaging/OtherMessaging.list",
+    "tag": "OtherMessaging",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Messaging/Slack.list",
+    "tag": "Slack",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Messaging/Telegram.list",
+    "tag": "Telegram",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Messaging/WhatsApp.list",
+    "tag": "WhatsApp",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Platforms/Apple.list",
+    "tag": "Apple",
+    "policy": "Apple",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Platforms/Dropbox.list",
+    "tag": "Dropbox",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Platforms/Google.list",
+    "tag": "Google",
+    "policy": "Google",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Platforms/Microsoft.list",
+    "tag": "Microsoft",
+    "policy": "Microsoft",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Platforms/Naver.list",
+    "tag": "Naver",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Platforms/Sony.list",
+    "tag": "Sony",
+    "policy": "Game",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Platforms/Utilities.list",
+    "tag": "Utilities",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Social/ChinaCommunities.list",
+    "tag": "ChinaCommunities",
+    "policy": "China",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Social/Communities.list",
+    "tag": "Communities",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Social/Instagram.list",
+    "tag": "Instagram",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Social/Meta.list",
+    "tag": "Meta",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Social/Reddit.list",
+    "tag": "Reddit",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Social/TikTok.list",
+    "tag": "TikTok",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Social/X.list",
+    "tag": "X",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Regional/ChinaDomains.list",
+    "tag": "ChinaDomains",
+    "policy": "China",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/Regional/GlobalDomains.list",
+    "tag": "GlobalDomains",
+    "policy": "Global",
+    "default_enabled": true
+  },
+  {
+    "path": "Rules/IP/Telegram.list",
+    "tag": "TelegramIP",
+    "policy": "Global",
+    "default_enabled": true
+  }
 ]

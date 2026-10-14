@@ -1,0 +1,18 @@
+# Independently curated Quantumult X destinations: DAZN
+# Reviewed: 2026-10-14. Scope and exact decisions: docs/corpus-review.json.
+# Service names are separate from transport IP lists; no geography/final fallback here.
+# Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
+# Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+
+host-suffix, d151l6v8er5bdm.cloudfront.net, Global
+host-suffix, d1sgwhnao7452x.cloudfront.net, Global
+host-suffix, dazn-api.com, Global
+host-suffix, dazn.com, Global
+host-suffix, dazndn.com, Global
+host-suffix, dc2-vodhls-perform.secure.footprint.net, Global
+host-suffix, dca-ll-livedazn-dznlivejp.s.llnwi.net, Global
+host-suffix, dca-ll-voddazn-dznvodjp.s.llnwi.net, Global
+host-suffix, dcalivedazn.akamaized.net, Global
+host-suffix, dcblivedazn.akamaized.net, Global
+host-suffix, indazn.com, Global
+host-suffix, indaznlab.com, Global

@@ -1,0 +1,29 @@
+# Independently curated Quantumult X destinations: Tools
+# Reviewed: 2026-10-14. Scope and exact decisions: docs/corpus-review.json.
+# Service names are separate from transport IP lists; no geography/final fallback here.
+# Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
+# Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+
+host-suffix, adblockplus.org, Global
+host-suffix, anaconda.com, Global
+host-suffix, android-x86.org, Global
+host-suffix, angularjs.org, Global
+host-suffix, bitbucket.org, Global
+host-suffix, cocoapods.org, Global
+host-suffix, docker.com, Global
+host-suffix, eclipse.org, Global
+host-suffix, gitbook.com, Global
+host-suffix, hackmd.io, Global
+host-suffix, howtoforge.com, Global
+host-suffix, jshint.com, Global
+host-suffix, leetcode.com, Global
+host-suffix, mathjax.org, Global
+host-suffix, maven.org, Global
+host-suffix, sourceforge.net, Global
+host-suffix, sstatic.net, Global
+host-suffix, stackoverflow.com, Global
+host-suffix, tablesgenerator.com, Global
+host-suffix, v2ray.com, Global
+host-suffix, vimperator.org, Global
+host-suffix, w3schools.com, Global
+host-suffix, xda-developers.com, Global

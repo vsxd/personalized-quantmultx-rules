@@ -1,0 +1,38 @@
+# Independently curated Quantumult X destinations: IQIYI
+# Reviewed: 2026-10-14. Scope and exact decisions: docs/corpus-review.json.
+# Service names are separate from transport IP lists; no geography/final fallback here.
+# Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
+# Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+
+host-suffix, 71.am, China
+host-suffix, 71.am.com, China
+host-suffix, 71edge.com, China
+host-suffix, 71edge.net, China
+host-suffix, aianno.cn, China
+host-suffix, aianno.com, China
+host-suffix, aiqiyicloud-mgmt.com, China
+host-suffix, aiqiyicloud.com, China
+host-suffix, aiqiyicloud.net, China
+host-suffix, baiying.com, China
+host-suffix, gitv.cn, China
+host-suffix, gitv.tv, China
+host-suffix, ibkstore.com, China
+host-suffix, iqiyi.com, China
+host-suffix, iqiyiedge.com, China
+host-suffix, iqiyiedge.net, China
+host-suffix, iqiyipic.com, China
+host-suffix, jiangbing.cn, China
+host-suffix, pps.tv, China
+host-suffix, ppsimg.com, China
+host-suffix, ppstream.cn, China
+host-suffix, ppstream.com, China
+host-suffix, ppstream.com.cn, China
+host-suffix, ppstream.net, China
+host-suffix, ppstream.net.cn, China
+host-suffix, ppsurl.com, China
+host-suffix, qiyi.cn, China
+host-suffix, qiyi.com, China
+host-suffix, qiyipic.com, China
+host-suffix, qy.com, China
+host-suffix, qy.net, China
+host-suffix, suike.cn, China

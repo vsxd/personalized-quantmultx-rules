@@ -1,0 +1,40 @@
+# Independently curated Quantumult X destinations: GitHub
+# Reviewed: 2026-10-14. Scope and exact decisions: docs/corpus-review.json.
+# Service names are separate from transport IP lists; no geography/final fallback here.
+# Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
+# Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+# Selected domain references: v2fly/domain-list-community@c6adacf29cc4fb05e04651fcf03e00989ef9f797.
+# MIT (Copyright (c) 2018-2019 V2Ray); full notices in LICENSES/.
+
+host, github-api.arkoselabs.com, Global
+host, github-cloud.s3.amazonaws.com, Global
+host, github-production-release-asset-2e65be.s3.amazonaws.com, Global
+host, github-production-repository-file-5c1aeb.s3.amazonaws.com, Global
+host, github-production-repository-image-32fea6.s3.amazonaws.com, Global
+host, github-production-upload-manifest-file-7fdce7.s3.amazonaws.com, Global
+host, github-production-user-asset-6210df.s3.amazonaws.com, Global
+host-suffix, atom.io, Global
+host-suffix, dependabot.com, Global
+host-suffix, gh.io, Global
+host-suffix, ghcr.io, Global
+host-suffix, ghe.com, Global
+host-suffix, git.io, Global
+host-suffix, github.ai, Global
+host-suffix, github.blog, Global
+host-suffix, github.career, Global
+host-suffix, github.com, Global
+host-suffix, github.community, Global
+host-suffix, github.dev, Global
+host-suffix, githubapp.com, Global
+host-suffix, githubassets.com, Global
+host-suffix, githubhackathon.com, Global
+host-suffix, githubnext.com, Global
+host-suffix, githubstatus.com, Global
+host-suffix, githubsupport.com, Global
+host-suffix, githubuniverse.com, Global
+host-suffix, githubusercontent.com, Global
+host-suffix, myoctocat.com, Global
+host-suffix, octocaptcha.com, Global
+host-suffix, opensource.guide, Global
+host-suffix, repo.new, Global
+host-suffix, thegithubshop.com, Global

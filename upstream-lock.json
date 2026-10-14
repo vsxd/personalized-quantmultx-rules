@@ -1,8 +1,8 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "reviewed_at": "2026-10-14",
   "published_branch": "master",
-  "update_policy": "Independently maintain local categories and policy decisions. Fetch immutable upstream inputs only for reviewed comparisons; never overwrite local curated rules automatically. Hashes identify historical reference inputs, not local outputs.",
+  "update_policy": "Independently maintain local categories and routing decisions. Immutable hashes identify reviewed external reference inputs, not local outputs or blanket adoption. Preserve unresolved differences; never automatically advance baselines or import upstream bundles.",
   "sources": {
     "sve1r": {
       "repository": "https://github.com/sve1r/Rules-For-Quantumult-X",
@@ -63,17 +63,859 @@
         "path": "Rules/Media/Domestic/BiliBili.list",
         "url": "https://raw.githubusercontent.com/sve1r/Rules-For-Quantumult-X/8061d2ebe160280f25d4b20d6d929d9e03caecbe/Rules/Media/Domestic/BiliBili.list",
         "sha256": "3e6ae8670834b77a448278d25a07e5cabd307c4212776b201d1abc82448a3b04"
-      }
+      },
+      "format": "qx",
+      "license_path": "LICENSE",
+      "inventory_paths": [
+        "Rules"
+      ],
+      "license_sha256": "63814d59a40b61e1090074dac3bbda145d4c0f6a37486b2ef225075880ea2bac"
     },
     "ppmina": {
       "repository": "https://github.com/ppmina/Quantumult_X-rules",
       "source_branch": "master",
       "source_commit": "2d48fa9ad7d9b763653e5b9d0d52b70adbd55948",
-      "release_commit": "82925ea21cdebe6f27212cd3938dc9187cc6f600",
-      "release_date": "2026-10-13T14:27:59Z",
       "license": "GPL-3.0",
       "status": "reviewed-not-imported",
-      "reason": "Broad direct/proxy/reject lists are alternatives to existing general classification, not safe additive unions. Optional imports require separate provenance and license retention."
+      "reason": "Broad direct/proxy/reject lists are alternatives to existing general classification, not safe additive unions. Optional imports require separate provenance and license retention.",
+      "rule_branch": "release",
+      "rule_commit": "82925ea21cdebe6f27212cd3938dc9187cc6f600",
+      "license_branch": "master",
+      "license_commit": "2d48fa9ad7d9b763653e5b9d0d52b70adbd55948",
+      "license_path": "LICENSE",
+      "inventory_paths": [
+        "ruleset"
+      ],
+      "format": "qx",
+      "license_sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "files": [
+        {
+          "path": "ruleset/direct.txt",
+          "url": "https://raw.githubusercontent.com/ppmina/Quantumult_X-rules/82925ea21cdebe6f27212cd3938dc9187cc6f600/ruleset/direct.txt",
+          "sha256": "fe13fd051b0d4e369da5939c20ffdce5f629fffb0bd42e9d352367a81f7a0a82",
+          "format": "qx"
+        },
+        {
+          "path": "ruleset/proxy.txt",
+          "url": "https://raw.githubusercontent.com/ppmina/Quantumult_X-rules/82925ea21cdebe6f27212cd3938dc9187cc6f600/ruleset/proxy.txt",
+          "sha256": "5aff1d70c8adff156ffa357dee6414f83ce465f973cc637ca67f3ca574d37427",
+          "format": "qx"
+        },
+        {
+          "path": "ruleset/reject.txt",
+          "url": "https://raw.githubusercontent.com/ppmina/Quantumult_X-rules/82925ea21cdebe6f27212cd3938dc9187cc6f600/ruleset/reject.txt",
+          "sha256": "4d420b6ad631eba085ad3d719f13912db18543ee0d1ced4fbf21dd0b7b473eb0",
+          "format": "qx"
+        },
+        {
+          "path": "ruleset/apple.txt",
+          "url": "https://raw.githubusercontent.com/ppmina/Quantumult_X-rules/82925ea21cdebe6f27212cd3938dc9187cc6f600/ruleset/apple.txt",
+          "sha256": "eb5ccd049514170b5adb0f0d52d39d4e6e5cedf6ed7eca0352673d9663a54c67",
+          "format": "qx"
+        },
+        {
+          "path": "ruleset/icloud.txt",
+          "url": "https://raw.githubusercontent.com/ppmina/Quantumult_X-rules/82925ea21cdebe6f27212cd3938dc9187cc6f600/ruleset/icloud.txt",
+          "sha256": "72b003ec847dad7d94a65ef5824f8cd7b51a086701979eef398f1dae283048e2",
+          "format": "qx"
+        },
+        {
+          "path": "ruleset/telegramcidr.txt",
+          "url": "https://raw.githubusercontent.com/ppmina/Quantumult_X-rules/82925ea21cdebe6f27212cd3938dc9187cc6f600/ruleset/telegramcidr.txt",
+          "sha256": "d6a741f24db377b8303d03ee05897cfb98886460413edc622837bfb3c04ef0b0",
+          "format": "qx"
+        }
+      ],
+      "rule_commit_date": "2026-10-13T14:27:59Z"
+    },
+    "blackmatrix7": {
+      "repository": "https://github.com/blackmatrix7/ios_rule_script",
+      "source_branch": "master",
+      "commit": "d8363caa2c1e47fb735615316032bed3f475ee57",
+      "commit_date": "2026-10-13T22:14:18Z",
+      "license": "GPL-2.0",
+      "status": "reference-only-not-imported",
+      "files": [
+        {
+          "path": "rule/QuantumultX/Apple/Apple.list",
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/QuantumultX/Apple/Apple.list",
+          "sha256": "5beba6036776de5a38b4b2f5e19e8e94ab94b3a8cdd50b5db2b4ad6bbd0b1bf0",
+          "format": "qx"
+        },
+        {
+          "path": "rule/QuantumultX/Microsoft/Microsoft.list",
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/QuantumultX/Microsoft/Microsoft.list",
+          "sha256": "7de40c9424a4a1ab793a38f58dbf64c25ef68f9e812618abf3751a853561c800",
+          "format": "qx"
+        },
+        {
+          "path": "rule/QuantumultX/Google/Google.list",
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/QuantumultX/Google/Google.list",
+          "sha256": "eb56706413fab41ded77194ae73f690af583bd56ad7d470273e026fa5ccb7b93",
+          "format": "qx"
+        },
+        {
+          "path": "rule/QuantumultX/OpenAI/OpenAI.list",
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/QuantumultX/OpenAI/OpenAI.list",
+          "sha256": "6ec16f5da986a15c62e80192f5b445dcdaf88607987923120761c1388eeb243d",
+          "format": "qx"
+        },
+        {
+          "path": "rule/QuantumultX/Anthropic/Anthropic.list",
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/QuantumultX/Anthropic/Anthropic.list",
+          "sha256": "b1e7ccfe4a5d39e297d030ad53ee93b1b0b1d558dd1134956ca114321eb0bd3a",
+          "format": "qx"
+        },
+        {
+          "path": "rule/QuantumultX/Claude/Claude.list",
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/QuantumultX/Claude/Claude.list",
+          "sha256": "bcf41ba79464a16d8305cf1c6f18c69d023ccd33ea1b84834daaa47cc0d5dfea",
+          "format": "qx"
+        },
+        {
+          "path": "rule/QuantumultX/Telegram/Telegram.list",
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/QuantumultX/Telegram/Telegram.list",
+          "sha256": "986f8e7d587ce42c3bb472e6a2e9cffd42a413240d32c02cc363c4d6367141fe",
+          "format": "qx"
+        },
+        {
+          "path": "rule/QuantumultX/Discord/Discord.list",
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/QuantumultX/Discord/Discord.list",
+          "sha256": "8b4ea92aa617fc9697f45a1cd276b47d3b96bd07019584aebcde5f6aae0fddf2",
+          "format": "qx"
+        },
+        {
+          "path": "rule/QuantumultX/Steam/Steam.list",
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/QuantumultX/Steam/Steam.list",
+          "sha256": "a69fc21f4e9203ebb7888c70b4ba0210233bbcf41356ba9df78d1c8e026b28c7",
+          "format": "qx"
+        },
+        {
+          "path": "rule/QuantumultX/Epic/Epic.list",
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/QuantumultX/Epic/Epic.list",
+          "sha256": "e0528b31301024b59817c22f098540823e43ae2e4dd1eaa7096699b8deba0449",
+          "format": "qx"
+        },
+        {
+          "path": "rule/QuantumultX/Nintendo/Nintendo.list",
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/QuantumultX/Nintendo/Nintendo.list",
+          "sha256": "9c4cd128da1fe44ef824faa8da6ac583017340b1fd888ae48645e721d59b3058",
+          "format": "qx"
+        },
+        {
+          "path": "rule/QuantumultX/Sony/Sony.list",
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/QuantumultX/Sony/Sony.list",
+          "sha256": "5229773194340f72dd9d50f3309d42c345d00e999312329cd71b611cee2ce1d1",
+          "format": "qx"
+        },
+        {
+          "path": "rule/QuantumultX/Xbox/Xbox.list",
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/QuantumultX/Xbox/Xbox.list",
+          "sha256": "6b0b8efa5c2beb7fbc8d3005d92929f6de11207941dc91762938dfdc01b8e0f0",
+          "format": "qx"
+        },
+        {
+          "path": "rule/QuantumultX/Spotify/Spotify.list",
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/QuantumultX/Spotify/Spotify.list",
+          "sha256": "d29fa087d00317231e7de7c8cd4aa9ca91ed0c51660fbf76101b719d8ac5e78c",
+          "format": "qx"
+        },
+        {
+          "path": "rule/QuantumultX/Netflix/Netflix.list",
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/QuantumultX/Netflix/Netflix.list",
+          "sha256": "eb95ba340fc9b3013e6b66a64270d20e4142b0f9b8cde1bac060725742331ec7",
+          "format": "qx"
+        },
+        {
+          "path": "rule/QuantumultX/YouTube/YouTube.list",
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/QuantumultX/YouTube/YouTube.list",
+          "sha256": "6c011f1b2d03f664799bd8f01718bef9c8b071209d5602bfed18bb5db4a8c9e4",
+          "format": "qx"
+        },
+        {
+          "path": "rule/QuantumultX/Disney/Disney.list",
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/QuantumultX/Disney/Disney.list",
+          "sha256": "f2682e12018f9019b2edae52ceee57cb1964d792ae4b3647c88b81f30fe41022",
+          "format": "qx"
+        },
+        {
+          "path": "rule/QuantumultX/BiliBili/BiliBili.list",
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/QuantumultX/BiliBili/BiliBili.list",
+          "sha256": "fd0f422e30fb78a490adfd23cae3cb02ddc9c85a1a1c46a1e620c2de5b987df6",
+          "format": "qx"
+        },
+        {
+          "path": "rule/Surge/Apple/Apple.list",
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Apple/Apple.list",
+          "sha256": "98f443186519710a030ef6e7c578c4c701d5a5668bc784c703b371b5a7216be8",
+          "format": "surge"
+        },
+        {
+          "path": "rule/Surge/Microsoft/Microsoft.list",
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Microsoft/Microsoft.list",
+          "sha256": "a2854b28dc9f903a64933c74fff5b50166e9bbebc70fdfce18c592f75793ff14",
+          "format": "surge"
+        },
+        {
+          "path": "rule/Surge/Google/Google.list",
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Google/Google.list",
+          "sha256": "4b08fd3ef47e2668d2a4bb79777773e2408394fdda60ac36014e1a4d3456ba6f",
+          "format": "surge"
+        },
+        {
+          "path": "rule/Surge/OpenAI/OpenAI.list",
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/OpenAI/OpenAI.list",
+          "sha256": "6f4047cdbf6953cf5d9b38c4ccd6da7bc6f1acb91b7a87134f25d5b8f5d2408b",
+          "format": "surge"
+        },
+        {
+          "path": "rule/Surge/Anthropic/Anthropic.list",
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Anthropic/Anthropic.list",
+          "sha256": "ee68bf42bf5666943067127776e40643f6f52bdd911152b1be62b3ecb187dc8e",
+          "format": "surge"
+        },
+        {
+          "path": "rule/Surge/Claude/Claude.list",
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Claude/Claude.list",
+          "sha256": "870e7e25d798e7f00338507f773b0eea4dfd15e25e9df0a27d5ae421ae1ab378",
+          "format": "surge"
+        },
+        {
+          "path": "rule/Surge/Telegram/Telegram.list",
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Telegram/Telegram.list",
+          "sha256": "3b375bee8b2ff16d6c955804a5a3638e6e8fdfcc58d209506a928bdd4cc9891a",
+          "format": "surge"
+        },
+        {
+          "path": "rule/Surge/Discord/Discord.list",
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Discord/Discord.list",
+          "sha256": "3d18c8fe716de06891ba3d6c34dba254cb65138a10f79e1a1a0628b5237ecb2c",
+          "format": "surge"
+        },
+        {
+          "path": "rule/Surge/Steam/Steam.list",
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Steam/Steam.list",
+          "sha256": "35826051b8797c7636210389fafadea23a16af51378feee20ededbb652b43332",
+          "format": "surge"
+        },
+        {
+          "path": "rule/Surge/Epic/Epic.list",
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Epic/Epic.list",
+          "sha256": "8f5fcadadd967023aa81273803de80beb2ceadd9af4e9352b565b3b00ccf464d",
+          "format": "surge"
+        },
+        {
+          "path": "rule/Surge/Nintendo/Nintendo.list",
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Nintendo/Nintendo.list",
+          "sha256": "ca3cf3ea5051ed220c255fbccbdd93e477f1c558e26ada6bf3dbcc2ba0487da2",
+          "format": "surge"
+        },
+        {
+          "path": "rule/Surge/Sony/Sony.list",
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Sony/Sony.list",
+          "sha256": "c3c96668d832b2b4e94ab185c14e2931d6af99d5a106bb658b0d83160fc9a19f",
+          "format": "surge"
+        },
+        {
+          "path": "rule/Surge/Xbox/Xbox.list",
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Xbox/Xbox.list",
+          "sha256": "8112c4b70412939a028de87b4c871e40b62aa30eda197034a55b5980297af134",
+          "format": "surge"
+        },
+        {
+          "path": "rule/Surge/Spotify/Spotify.list",
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Spotify/Spotify.list",
+          "sha256": "33bd52e8f23cda9374876259621c8fba21554035e20fa55daffbfcaee2109079",
+          "format": "surge"
+        },
+        {
+          "path": "rule/Surge/Netflix/Netflix.list",
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Netflix/Netflix.list",
+          "sha256": "aa03f015949e8f6f981d90a7d8b1acf7e88472ee48601632bd964b0bb740f8aa",
+          "format": "surge"
+        },
+        {
+          "path": "rule/Surge/YouTube/YouTube.list",
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/YouTube/YouTube.list",
+          "sha256": "42274e143447066e26e1ebbf21ae03ce6efb40827f41e2775a84fb16d390713d",
+          "format": "surge"
+        },
+        {
+          "path": "rule/Surge/Disney/Disney.list",
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/Disney/Disney.list",
+          "sha256": "d0cfd6aee89d9d3075aef9dfadd98a2a3c6a2dba487f5091c801d1bcd70e9884",
+          "format": "surge"
+        },
+        {
+          "path": "rule/Surge/BiliBili/BiliBili.list",
+          "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/d8363caa2c1e47fb735615316032bed3f475ee57/rule/Surge/BiliBili/BiliBili.list",
+          "sha256": "8537129301d5e4040d9f2b2255217458a16c96eef850ec22367352c512bc3988",
+          "format": "surge"
+        }
+      ],
+      "license_path": "LICENSE",
+      "license_sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643",
+      "inventory_paths": [
+        "rule/QuantumultX",
+        "rule/Surge"
+      ],
+      "reason": "Reference scope for coverage, classification and overbroad-rule review; inclusion in this lock is not adoption into the published corpus."
+    },
+    "SukkaW": {
+      "repository": "https://github.com/SukkaW/Surge",
+      "source_branch": "master",
+      "commit": "7c67f6c8f0eb0e990097f3f94b39992151644d88",
+      "commit_date": "2026-10-12T11:45:24Z",
+      "license": "AGPL-3.0",
+      "status": "reference-only-not-imported",
+      "files": [
+        {
+          "path": "Source/non_ip/ai.conf",
+          "url": "https://raw.githubusercontent.com/SukkaW/Surge/7c67f6c8f0eb0e990097f3f94b39992151644d88/Source/non_ip/ai.conf",
+          "sha256": "fdd9b5bebf65d755cefff467d151386d8e6fce74a7f706f564c6b1fbbee48375",
+          "format": "surge"
+        },
+        {
+          "path": "Source/non_ip/apple_cn.conf",
+          "url": "https://raw.githubusercontent.com/SukkaW/Surge/7c67f6c8f0eb0e990097f3f94b39992151644d88/Source/non_ip/apple_cn.conf",
+          "sha256": "0df672d130fecb1d9a082ac5215fbd96501ab35d07552805b385ed9877c480d3",
+          "format": "surge"
+        },
+        {
+          "path": "Source/non_ip/apple_services.conf",
+          "url": "https://raw.githubusercontent.com/SukkaW/Surge/7c67f6c8f0eb0e990097f3f94b39992151644d88/Source/non_ip/apple_services.conf",
+          "sha256": "f68a78fdb896030f6dea0b971273f7e8b3d3d5f4e50a97f46df459cb0af1dc80",
+          "format": "surge"
+        },
+        {
+          "path": "Source/non_ip/microsoft.conf",
+          "url": "https://raw.githubusercontent.com/SukkaW/Surge/7c67f6c8f0eb0e990097f3f94b39992151644d88/Source/non_ip/microsoft.conf",
+          "sha256": "6c797564aa7264d6f69c682783ea7c925018205e4e22c133cf4c0c6693e24ed7",
+          "format": "surge"
+        },
+        {
+          "path": "Source/non_ip/direct.conf",
+          "url": "https://raw.githubusercontent.com/SukkaW/Surge/7c67f6c8f0eb0e990097f3f94b39992151644d88/Source/non_ip/direct.conf",
+          "sha256": "20636e45425a8d0d8a75da560de8657122959cc40a03e34775a1b4621309e486",
+          "format": "surge"
+        },
+        {
+          "path": "Source/non_ip/domestic.conf",
+          "url": "https://raw.githubusercontent.com/SukkaW/Surge/7c67f6c8f0eb0e990097f3f94b39992151644d88/Source/non_ip/domestic.conf",
+          "sha256": "4551f3332ea149de50d3bdaa7ab902cf3354c0f72371b81dd20bf6cc940fb979",
+          "format": "surge"
+        },
+        {
+          "path": "Source/non_ip/global.conf",
+          "url": "https://raw.githubusercontent.com/SukkaW/Surge/7c67f6c8f0eb0e990097f3f94b39992151644d88/Source/non_ip/global.conf",
+          "sha256": "43ab6e136b20f9f28cd54f0c565a6d81198053f62425c4a4beba9e2992b42471",
+          "format": "surge"
+        },
+        {
+          "path": "Source/non_ip/telegram.conf",
+          "url": "https://raw.githubusercontent.com/SukkaW/Surge/7c67f6c8f0eb0e990097f3f94b39992151644d88/Source/non_ip/telegram.conf",
+          "sha256": "8eab4b09048a3b0174c413290e0b036035e8a711aa340cda55a88bc260e124be",
+          "format": "surge"
+        },
+        {
+          "path": "Source/ip/apple_services.conf",
+          "url": "https://raw.githubusercontent.com/SukkaW/Surge/7c67f6c8f0eb0e990097f3f94b39992151644d88/Source/ip/apple_services.conf",
+          "sha256": "aa8aa4e1235e551fbabb7a7d1d9caf3d45390fe1c79bcea4c577b3d1bb62a4b8",
+          "format": "surge"
+        },
+        {
+          "path": "Source/domainset/cdn.conf",
+          "url": "https://raw.githubusercontent.com/SukkaW/Surge/7c67f6c8f0eb0e990097f3f94b39992151644d88/Source/domainset/cdn.conf",
+          "sha256": "31fcf826a9d07beb05895c0bc784ad4753a4f9506659b8fb8a413cd436cbcda9",
+          "format": "domainset"
+        },
+        {
+          "path": "Source/domainset/game-download.conf",
+          "url": "https://raw.githubusercontent.com/SukkaW/Surge/7c67f6c8f0eb0e990097f3f94b39992151644d88/Source/domainset/game-download.conf",
+          "sha256": "096214d4531ef980f2c4dc22754cc0636448a3d544eed139541e872388ceb152",
+          "format": "domainset"
+        }
+      ],
+      "license_path": "LICENSE",
+      "license_sha256": "8486a10c4393cee1c25392769ddd3b2d6c242d6ec7928e1414efff7dfb2f07ef",
+      "inventory_paths": [
+        "Source/non_ip",
+        "Source/ip",
+        "Source/domainset"
+      ],
+      "reason": "Reference scope for coverage, classification and overbroad-rule review; inclusion in this lock is not adoption into the published corpus."
+    },
+    "v2fly": {
+      "repository": "https://github.com/v2fly/domain-list-community",
+      "source_branch": "master",
+      "commit": "c6adacf29cc4fb05e04651fcf03e00989ef9f797",
+      "commit_date": "2026-10-09T10:11:47Z",
+      "license": "MIT",
+      "status": "selected-MIT-domain-inputs-with-independent-scope-review",
+      "files": [
+        {
+          "path": "data/amazon",
+          "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/amazon",
+          "sha256": "f1b24bcc1d576f30a09731b10cf55ba50822fd433b8f35568c77bbb45bdd5f0b",
+          "format": "domain-list"
+        },
+        {
+          "path": "data/anthropic",
+          "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/anthropic",
+          "sha256": "bf48dc1b342bbfd06f2a93ee8ce180fc424d9c041dafd2d182ffb3f4186698b4",
+          "format": "domain-list"
+        },
+        {
+          "path": "data/apple",
+          "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/apple",
+          "sha256": "d46d18afe2f2d51bd48ddd239c43f460a32a9d605b384baa2cd6c70ec29cf29f",
+          "format": "domain-list"
+        },
+        {
+          "path": "data/bilibili",
+          "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/bilibili",
+          "sha256": "dbe560654836a368cf5c36ed3962f5fe983f07d0f160aa8ca7e48f63cbec527b",
+          "format": "domain-list"
+        },
+        {
+          "path": "data/bilibili-cdn",
+          "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/bilibili-cdn",
+          "sha256": "13f3606396902e6b405afb3c8741ef3a1b574845f366a9181645acb57e60565d",
+          "format": "domain-list"
+        },
+        {
+          "path": "data/bing",
+          "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/bing",
+          "sha256": "7cc5c544975772aa91964b1c756f305b5375d747a900c2cdd7f8777cbc42b93d",
+          "format": "domain-list"
+        },
+        {
+          "path": "data/blogspot",
+          "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/blogspot",
+          "sha256": "9f9d2e0eba824d204812b0c64bee64ff1f4d4a4c838031f8f24c5f013e5e6063",
+          "format": "domain-list"
+        },
+        {
+          "path": "data/category-games",
+          "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/category-games",
+          "sha256": "e2416161c8b7cb0f0a0a11813dc59d5de7458b5fffd0f4d9d4d69b85e79d86dd",
+          "format": "domain-list"
+        },
+        {
+          "path": "data/category-media",
+          "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/category-media",
+          "sha256": "6157c718a7e2513b58074bc91fd590a3a7f79057cb36710709daa56f3d6de805",
+          "format": "domain-list"
+        },
+        {
+          "path": "data/discord",
+          "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/discord",
+          "sha256": "6e57668fe3c87895036e1b35ce7110ea1872c41850e1e92258dc20517e3d6dc5",
+          "format": "domain-list"
+        },
+        {
+          "path": "data/disney",
+          "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/disney",
+          "sha256": "692bd4cf2e28adc8128597bcd9fcd77eae2c6ac9420dc282703873a6d40a05b1",
+          "format": "domain-list"
+        },
+        {
+          "path": "data/dropbox",
+          "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/dropbox",
+          "sha256": "d0acc573cf24749d243ce2a388136cd683e4f3e584283e1a37d0681d1ed13025",
+          "format": "domain-list"
+        },
+        {
+          "path": "data/epicgames",
+          "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/epicgames",
+          "sha256": "23c7018f09fff7a4c5521068255caeb66b2e13877c67ec4ae7c751bceb507ea4",
+          "format": "domain-list"
+        },
+        {
+          "path": "data/facebook",
+          "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/facebook",
+          "sha256": "bd860c04a95c82afa1aa86c166a50eb561a952c6915257f941fa6d58a0431da9",
+          "format": "domain-list"
+        },
+        {
+          "path": "data/geolocation-!cn",
+          "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/geolocation-!cn",
+          "sha256": "275952c7760f18e3929ce28db6d020ab01f911930eabb71fc7adbf3a1b95d5b4",
+          "format": "domain-list"
+        },
+        {
+          "path": "data/geolocation-cn",
+          "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/geolocation-cn",
+          "sha256": "c38419846262aa2e08d451468cc4d3b2a482695d5aa10fdb3308a59d449d1e13",
+          "format": "domain-list"
+        },
+        {
+          "path": "data/github",
+          "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/github",
+          "sha256": "549a8bf61fd4a673a59e0a0f8794e66e5228d6a8bc759c6f4888a287e728ccc2",
+          "format": "domain-list"
+        },
+        {
+          "path": "data/google",
+          "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/google",
+          "sha256": "5a85d201b8fb4b03486515618da4c164a0ce0c59341cb2dee6d1b0bdca176653",
+          "format": "domain-list"
+        },
+        {
+          "path": "data/google-gemini",
+          "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/google-gemini",
+          "sha256": "30aff080b1a90df95d5cb2bbd32884b5d21f6231631f6ed869919d4fb073e4a6",
+          "format": "domain-list"
+        },
+        {
+          "path": "data/google-play",
+          "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/google-play",
+          "sha256": "ea1a161c52a443b2c0a105f8a94bcfc86e5c8a267d483f34e53848b7310fc65e",
+          "format": "domain-list"
+        },
+        {
+          "path": "data/googlefcm",
+          "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/googlefcm",
+          "sha256": "6611d2b58eda9737b00e14cebdebb52918709df1fc8b39b95a2966b55a1cfc7b",
+          "format": "domain-list"
+        },
+        {
+          "path": "data/hsbc",
+          "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/hsbc",
+          "sha256": "164cdc2062ac1d4909634945684db500b86b9d579dd9f2ead26cae8eff15933d",
+          "format": "domain-list"
+        },
+        {
+          "path": "data/hsbc-cn",
+          "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/hsbc-cn",
+          "sha256": "454992e697112c33c7b037390517789b42406429df839ac0ec646f8f79494f2f",
+          "format": "domain-list"
+        },
+        {
+          "path": "data/instagram",
+          "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/instagram",
+          "sha256": "e392526b75e27218f874590d0db99b5e009fb0b7679095f0eac48a4ee3fb6413",
+          "format": "domain-list"
+        },
+        {
+          "path": "data/microsoft",
+          "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/microsoft",
+          "sha256": "b033d7375c45b2613f5230046ef190d0f2d2c83c1eba7a082d41a0c6088286f4",
+          "format": "domain-list"
+        },
+        {
+          "path": "data/microsoft-dev",
+          "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/microsoft-dev",
+          "sha256": "0c4ecd6d7adae4a1bf94ac35cffe1549422e3a0f205aa4ea7e9952f96ab4fe1c",
+          "format": "domain-list"
+        },
+        {
+          "path": "data/microsoft-pki",
+          "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/microsoft-pki",
+          "sha256": "d413d7bbd9c04de796950a3e044930be58bcbd614ae1173edec77a9c06f592e2",
+          "format": "domain-list"
+        },
+        {
+          "path": "data/msn",
+          "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/msn",
+          "sha256": "a486f869b43e0f1575922d4cf826b19b34da890ee83e97f1c5a77d9b525101c8",
+          "format": "domain-list"
+        },
+        {
+          "path": "data/netflix",
+          "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/netflix",
+          "sha256": "6a5568ce8d99b718b3a191292c81c94be56b5e14601316b99a6ece708f8f91f7",
+          "format": "domain-list"
+        },
+        {
+          "path": "data/nintendo",
+          "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/nintendo",
+          "sha256": "dd5894925069d6a065e86246ce377ebd871cb36f2478d52fc618e8cfec023b21",
+          "format": "domain-list"
+        },
+        {
+          "path": "data/onedrive",
+          "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/onedrive",
+          "sha256": "373014cf0257b6cd16580226da0c92c76b996257ad1b0b98949694d94f0bfa96",
+          "format": "domain-list"
+        },
+        {
+          "path": "data/openai",
+          "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/openai",
+          "sha256": "19a100966b3c5b0dff2e7038ba66366ef10d6384781b3eda6de4d1e79712dcc6",
+          "format": "domain-list"
+        },
+        {
+          "path": "data/playstation",
+          "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/playstation",
+          "sha256": "32795cf948f8950a2f59404992390750881e40a85ccb067b5ee731325c54ae32",
+          "format": "domain-list"
+        },
+        {
+          "path": "data/private",
+          "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/private",
+          "sha256": "831667a51e35d5c7ec3c53b89fa02a372fd5309aa6138aee7c03a4423f7c4cf7",
+          "format": "domain-list"
+        },
+        {
+          "path": "data/slack",
+          "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/slack",
+          "sha256": "0c1db5d6d7343fd4b423109be5396dea7a0b2769b9e150f1a3a49b1dde04ddec",
+          "format": "domain-list"
+        },
+        {
+          "path": "data/spotify",
+          "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/spotify",
+          "sha256": "ec710e93e84e85536a661905f2182f239464f55c1e837523de222d7e9d21c65b",
+          "format": "domain-list"
+        },
+        {
+          "path": "data/steam",
+          "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/steam",
+          "sha256": "4ce9aaf395d54abd93196c188efed96d5649adcddb636ed8727ca7e665524810",
+          "format": "domain-list"
+        },
+        {
+          "path": "data/telegram",
+          "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/telegram",
+          "sha256": "24a2d026dbf3a09a8ca893420a40adbad70328978df0100d9c63abecdbf01b5d",
+          "format": "domain-list"
+        },
+        {
+          "path": "data/tld-cn",
+          "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/tld-cn",
+          "sha256": "e4def7c67fbf362a34713edb93c7ae8fdf4178cd641e07c21e801fcd639264d6",
+          "format": "domain-list"
+        },
+        {
+          "path": "data/twitter",
+          "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/twitter",
+          "sha256": "05fee908ab80f262be5f603b24d3bdaa60aee1005ccc1cec988bab9236061116",
+          "format": "domain-list"
+        },
+        {
+          "path": "data/whatsapp",
+          "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/whatsapp",
+          "sha256": "62def09a533350c9e5259d1d498ed1da1689ff174f436f51c065260f21f037d2",
+          "format": "domain-list"
+        },
+        {
+          "path": "data/xbox",
+          "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/xbox",
+          "sha256": "92651578026e4adb0f04a05c89cda745fc3be993796cf3abaf756f041a4cefb1",
+          "format": "domain-list"
+        },
+        {
+          "path": "data/youtube",
+          "url": "https://raw.githubusercontent.com/v2fly/domain-list-community/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/youtube",
+          "sha256": "9ffb657176fdffed567953749c137bb3d8a216ce4e839b3831b626c752902213",
+          "format": "domain-list"
+        }
+      ],
+      "license_path": "LICENSE",
+      "license_sha256": "b9d84a22870d3f21c91a4c6e410c9cc51d00902f5233ad0c84011479244bf7d2",
+      "inventory_paths": [
+        "data"
+      ],
+      "license_file": "LICENSES/v2fly-MIT.txt",
+      "dependencies": {
+        "directory": "data",
+        "roots": [
+          "data/amazon",
+          "data/anthropic",
+          "data/apple",
+          "data/bilibili",
+          "data/bilibili-cdn",
+          "data/bing",
+          "data/blogspot",
+          "data/category-games",
+          "data/category-media",
+          "data/discord",
+          "data/disney",
+          "data/dropbox",
+          "data/epicgames",
+          "data/facebook",
+          "data/geolocation-!cn",
+          "data/geolocation-cn",
+          "data/github",
+          "data/google",
+          "data/google-gemini",
+          "data/google-play",
+          "data/googlefcm",
+          "data/hsbc",
+          "data/hsbc-cn",
+          "data/instagram",
+          "data/microsoft",
+          "data/microsoft-dev",
+          "data/microsoft-pki",
+          "data/msn",
+          "data/netflix",
+          "data/nintendo",
+          "data/onedrive",
+          "data/openai",
+          "data/playstation",
+          "data/private",
+          "data/slack",
+          "data/spotify",
+          "data/steam",
+          "data/telegram",
+          "data/tld-cn",
+          "data/twitter",
+          "data/whatsapp",
+          "data/xbox",
+          "data/youtube"
+        ]
+      },
+      "reason": "Reference scope for coverage, classification and overbroad-rule review; inclusion in this lock is not adoption into the published corpus."
+    },
+    "ACL4SSR": {
+      "repository": "https://github.com/ACL4SSR/ACL4SSR",
+      "source_branch": "master",
+      "commit": "802e3abf065f8609e7d9073ba506158dbe2ba6e7",
+      "commit_date": "2026-10-07T03:44:24Z",
+      "license": "CC-BY-SA-4.0",
+      "status": "reference-only-not-imported",
+      "files": [
+        {
+          "path": "Clash/Apple.list",
+          "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/Apple.list",
+          "sha256": "7b2e60cd0bf3c4bfb1369890d39cc3783bdfcb016089b78acee0ff6f0d4e51c5",
+          "format": "surge"
+        },
+        {
+          "path": "Clash/Microsoft.list",
+          "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/Microsoft.list",
+          "sha256": "b502566c1b86d5512111bd4a2bb5d808eda4e36aad3009a3ca05da354c09449e",
+          "format": "surge"
+        },
+        {
+          "path": "Clash/Ruleset/OpenAi.list",
+          "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/Ruleset/OpenAi.list",
+          "sha256": "c4f839e4dda6cb96e4373349c72b4e5f848b8ae03564c0d0eae0873955310129",
+          "format": "surge"
+        },
+        {
+          "path": "Clash/Ruleset/Claude.list",
+          "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/Ruleset/Claude.list",
+          "sha256": "3ac0f58fad5d1fe7067e4c0bd598ca84b9497597fc95f6473e5e1c00c31f3948",
+          "format": "surge"
+        },
+        {
+          "path": "Clash/Ruleset/Telegram.list",
+          "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/Ruleset/Telegram.list",
+          "sha256": "73645c86448a39526603584d777a90032c4eedf06327b07a67540d2e8dcdd548",
+          "format": "surge"
+        },
+        {
+          "path": "Clash/Ruleset/Developer.list",
+          "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/Ruleset/Developer.list",
+          "sha256": "da78117d6be3e7fc8d67f35b8c74c72ab1e9ffb57c2d693809bf0cd731f40e33",
+          "format": "surge"
+        },
+        {
+          "path": "Clash/Ruleset/ChinaNet.list",
+          "url": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/802e3abf065f8609e7d9073ba506158dbe2ba6e7/Clash/Ruleset/ChinaNet.list",
+          "sha256": "cf0a66fd822fa0afe1852405b841c996b415f3baf34c65b1e5dafc11633dbdaf",
+          "format": "surge"
+        }
+      ],
+      "license_path": "README.md",
+      "license_sha256": "67026f98f57b2f7d332dcfb3cf0fa7bb018f01db6b05ea468411a2a7bec70b7a",
+      "inventory_paths": [
+        "Clash"
+      ],
+      "reason": "Reference scope for coverage, classification and overbroad-rule review; inclusion in this lock is not adoption into the published corpus."
+    },
+    "Loyalsoldier": {
+      "repository": "https://github.com/Loyalsoldier/surge-rules",
+      "source_branch": "master",
+      "source_commit": "99568decaf4199fdc498cbac499830740fe1eb67",
+      "rule_branch": "release",
+      "rule_commit": "d4aa79e495cfc7009a1bc33ae603a437306e8e4d",
+      "license_branch": "master",
+      "license_commit": "99568decaf4199fdc498cbac499830740fe1eb67",
+      "license_path": "LICENSE",
+      "license": "GPL-3.0",
+      "status": "reference-only-not-imported",
+      "inventory_paths": [
+        "."
+      ],
+      "files": [
+        {
+          "path": "apple.txt",
+          "url": "https://raw.githubusercontent.com/Loyalsoldier/surge-rules/d4aa79e495cfc7009a1bc33ae603a437306e8e4d/apple.txt",
+          "sha256": "0afd48c209dfb09bedb6dac3ed5e17c6fea1697f4dbf1ada4aa2bd63def29028",
+          "format": "domainset"
+        },
+        {
+          "path": "icloud.txt",
+          "url": "https://raw.githubusercontent.com/Loyalsoldier/surge-rules/d4aa79e495cfc7009a1bc33ae603a437306e8e4d/icloud.txt",
+          "sha256": "5269dec21f9685f7e556af8492bcbe95910ee56d1af8c60f9d7e2c62ae9b0000",
+          "format": "domainset"
+        },
+        {
+          "path": "google.txt",
+          "url": "https://raw.githubusercontent.com/Loyalsoldier/surge-rules/d4aa79e495cfc7009a1bc33ae603a437306e8e4d/google.txt",
+          "sha256": "6756b5cfdd08f8eec74c2865ace6d1fc91163c3d6c3d5cdee3a4b944d68cbc00",
+          "format": "domainset"
+        },
+        {
+          "path": "private.txt",
+          "url": "https://raw.githubusercontent.com/Loyalsoldier/surge-rules/d4aa79e495cfc7009a1bc33ae603a437306e8e4d/private.txt",
+          "sha256": "757dd98454fbf8a576a2b5f7a497d4dacffd70fa43ac2b742e663db3788c02f0",
+          "format": "domainset"
+        },
+        {
+          "path": "direct.txt",
+          "url": "https://raw.githubusercontent.com/Loyalsoldier/surge-rules/d4aa79e495cfc7009a1bc33ae603a437306e8e4d/direct.txt",
+          "sha256": "e791e9c473e9187de736734de95cbbd184b401754736588bb1c3f277b6ecac23",
+          "format": "domainset"
+        },
+        {
+          "path": "proxy.txt",
+          "url": "https://raw.githubusercontent.com/Loyalsoldier/surge-rules/d4aa79e495cfc7009a1bc33ae603a437306e8e4d/proxy.txt",
+          "sha256": "2c0f49719ae25bb418620e6d661e48f2a9faec04e4093b0d74ab7ad44ec203b3",
+          "format": "domainset"
+        },
+        {
+          "path": "reject.txt",
+          "url": "https://raw.githubusercontent.com/Loyalsoldier/surge-rules/d4aa79e495cfc7009a1bc33ae603a437306e8e4d/reject.txt",
+          "sha256": "1cec49d298cf9a62eddf12f0b617ba76c9ec8db5b6fa74d6d46816d934b2af9d",
+          "format": "domainset"
+        },
+        {
+          "path": "ruleset/direct.txt",
+          "url": "https://raw.githubusercontent.com/Loyalsoldier/surge-rules/d4aa79e495cfc7009a1bc33ae603a437306e8e4d/ruleset/direct.txt",
+          "sha256": "cadd6b32edb9068d234a0764f4c3cfd5e0446c5473fad1b63a33bb99a50180d2",
+          "format": "surge"
+        },
+        {
+          "path": "ruleset/proxy.txt",
+          "url": "https://raw.githubusercontent.com/Loyalsoldier/surge-rules/d4aa79e495cfc7009a1bc33ae603a437306e8e4d/ruleset/proxy.txt",
+          "sha256": "5289e263f4c283dd75893f659140b9308340a8ba623e474d4418f3acc56b00bb",
+          "format": "surge"
+        },
+        {
+          "path": "ruleset/reject.txt",
+          "url": "https://raw.githubusercontent.com/Loyalsoldier/surge-rules/d4aa79e495cfc7009a1bc33ae603a437306e8e4d/ruleset/reject.txt",
+          "sha256": "d0fe3c87f47c5f15a207964dc1a117ec6f2961579a7c2b56a367c58b535885a0",
+          "format": "surge"
+        },
+        {
+          "path": "cncidr.txt",
+          "url": "https://raw.githubusercontent.com/Loyalsoldier/surge-rules/d4aa79e495cfc7009a1bc33ae603a437306e8e4d/cncidr.txt",
+          "sha256": "b6dd1fb115b7110c1eb4f33a4844d458f0e31b378d99ddebf56b3e34396c0f77",
+          "format": "surge"
+        },
+        {
+          "path": "telegramcidr.txt",
+          "url": "https://raw.githubusercontent.com/Loyalsoldier/surge-rules/d4aa79e495cfc7009a1bc33ae603a437306e8e4d/telegramcidr.txt",
+          "sha256": "0d7d5252552d4dfd75c5b76bab4bfdb3313c1946611e22039d06008c7ef3c678",
+          "format": "surge"
+        }
+      ],
+      "reason": "Compare native DOMAIN-SET and RULE-SET generated files; source branch only supplies generator documentation/license. Broad generated bundles are not additive imports.",
+      "license_sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
     }
   }
 }

@@ -1,27 +1,41 @@
-# 自有规则分类与去重记录
+# 分类与兜底设计
 
-这里的规则由个人仓库独立维护。上游提供历史参考与可审查的增量，不是自动镜像源；规则归属、策略、修复及发布都在本仓库决定。源提交与许可保留用于追溯，不能将上游较新的提交直接覆盖本地规则。
+`Config/categories.json` 是唯一活动分类清单。每个规则文本只在一个源文件中维护；默认启用、可选启用和有效 force-policy 由同一份 manifest 决定。文档中的分类不是第二套装载顺序。
 
-必选列表按 `docs/rule-categories.json` 中顺序确定精确规则归属。键是规则类型与目标，不含策略；域名转为小写，User-Agent 保留大小写。相同键只保留在第一个必选分类中。后缀、关键词、IP 范围的包含关系不等同于相同键，需另行审查，不能按名称批量删除。
+| 目录 | 内容 | 不属于这里的内容 |
+| --- | --- | --- |
+| AI | OpenAI、Claude 等服务自有域名和专属租户 | 通用云供应商、开发工具下载站 |
+| Banking | HSBC 明确银行业务及专属风控主机 | 全 AWS、通用统计/标签 CDN |
+| Platforms | Apple、Microsoft、Google 等通用产品服务 | 已单独归属的游戏、媒体、社交；任意云租户 |
+| Messaging / Social | 通讯与社交服务 | 新闻、流媒体和通用遥测 |
+| Developer | 代码托管、开发工具、包仓库 | 所有含 github 字样的域名 |
+| Games | 明确游戏平台/游戏服务 | Sony/Microsoft 整家公司及共享 Unity 根域 |
+| Media | 视频、音乐、新闻、媒体集团、社区等用途 | 聊天工具、历史云 IP 池 |
+| Regional | 剩余明确的国内与境外服务域名 | 国家顶级后缀、GeoIP、ASN、Final |
+| IP | 有当期官方依据、确需裸 IP 的应用地址 | 过期媒体、整段共享 CDN/云网络 |
+| Optional | 共享 OpenAI 依赖、独立 PCDN 拦截 | 把拒绝策略强制改成直连的混合列表 |
 
-| 分类文件 | 整理前条数 | 整理后条数 | 移出重复条数 |
-|---|---:|---:|---:|
-| Rules/Services/Apple.list | 114 | 114 | 0 |
-| Rules/Services/Microsoft.list | 412 | 411 | 1 |
-| Rules/Services/Google.list | 77 | 77 | 0 |
-| Rules/Games/GamesAll.list | 23 | 22 | 1 |
-| Rules/Media/DomesticMedia.list | 236 | 236 | 0 |
-| Rules/Services/SNS/Discord.list | 6 | 6 | 0 |
-| Rules/Media/ForeignMedia.list | 1581 | 1576 | 5 |
-| Rules/Region/China.list | 275 | 264 | 11 |
-| Rules/Region/Global.list | 634 | 557 | 77 |
+地区和默认策略是属性，不是域名所有权证据。一个厂商的不同产品可以分别属于游戏、聊天或媒体分类；收购关系不能证明所有 CDN 都是该产品专属。
 
-总计移除95条重复目标，其中13条为较后Global规则携带的 `force-remote-dns`，早先Google归属没有该标记。本次保留早先分类的策略与选项，不将后置标记搬到另一策略上；详情逐条记录在 `category-partition.json`。这不是删除不支持的语法。其余48条有效位置的该选项保留。
+## 范围原则
 
-`Rules/Services/OpenAI-Dependencies.list` 是可选资源，不作为必选分类的永久所有者。`intercom.io` 在此列表与 ForeignMedia 中的重复有明确原因：前者开启时可以跟随AI策略，关闭时仍有Global兜底。独立的 BilibiliPCDNReject 也需显式启用，其拒绝意图不并入普通服务分类。
+默认域名清单只使用 HOST 和 HOST-SUFFIX。后缀必须有域名边界；不使用 Google/Office 一类任意子串，也不使用 apple.* / onedrive.*。已由同策略父后缀覆盖的子域不重复维护。品牌顶级域名必须能证明当前委派与注册控制，不能与可公开注册的 .cn/.co.in 混为一谈。
 
-所有通用列表第三列统一为本仓库的 Apple、Microsoft、Google、Game、China 或 Global。消费者仍可通过 force-policy 显式覆盖；列表本身已不依赖历史 Foreign Media、Domestic Media、Microsoft Domestic、Apple Domestic 等上游策略名称。
+共享云根域从 Microsoft/Global/Media 等默认类别移除，不在另一文件里重新接管。服务专属第三方租户尽量使用精确 HOST；真正共享的 WorkOS、Cloudflare challenge、Stripe、Intercom 只能明确记录影响范围。OpenAI 共享依赖可关闭，关闭后的未命中流量自然经过 GeoIP/Final；不为此再放一份 intercom.io 到 ForeignMedia。
 
-本记录只证明分类与静态规则一致性；具体设备的匹配优先级、DNS路径、当前策略组选项、IP直连、应用动态地址仍需实机日志验证。
+少数服务子域需要与父域不同策略，如国际版内容与国内业务、OpenAI 官方依赖 humb.apple.com。例外文件必须绑定精确目标、有效策略、选项和较窄规则在前的约束，并解释依据。不能用例外掩盖非法语法、重复兜底和无边界模式。
 
-后续定点收敛已记录在 `shared-infrastructure-review.json`：9条共享基础设施规则转到Global，5个Google/Game关键词和1个Apple依赖关键词改为明确后缀，DomesticMedia的5个宽地址段、公共DNS和3个Fake-IP捕获地址移出。原阶段记录的48条DNS选项在进一步去重/去关键词后保留45条。剩余184条警告均按类型和具体位置给出保留理由与限制，其中宽CIDR、关键词、顶级通配仍是显式覆盖范围取舍，不能称为所有权验证通过。
+## GeoIP 是最后一层地理兜底
+
+配置先表达明确服务域名，保留本机/私网和必要的应用 IP 分类，最后只有：
+
+```text
+geoip, cn, direct
+final, Final
+```
+
+GeoIP 不写进可复用类别，.cn 也不是“服务器在中国”的证明。已知需要指定策略的海外服务不能因为 Final 默认代理就删除：其 DNS 结果可能是中国 IP，或数据库有误，明确域名应先确定意图。反过来，无法证明属于单一应用的共享 CDN/云 IP 不抢在 GeoIP 前捕获。
+
+构建器提供 remote 和 standalone，两种输出使用同一启用清单和有效策略。远程方式每个资源单独下载；全新导入若需要排除加载/缓存差异，可先使用 standalone。QX 的匹配优化、优先本地分流和插入资源开关是独立运行设置；静态清单的顺序不等于所有设备状态下的实际执行顺序，验收必须查看命中的规则和完整策略路径。
+
+完整迁移和删除记录见 corpus-review.json。docs/history/ 中第一轮“保留184告警”和条件重复的决策已被本轮取代。

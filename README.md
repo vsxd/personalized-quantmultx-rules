@@ -1,73 +1,76 @@
 # personalized-quantmultx-rules
 
-面向 Quantumult X 的自有规则库。规则完整存放在本仓库，配置只向本仓库加载分流列表。其他开源项目是审查参考源，不是运行时依赖，也不会被定时任务自动覆盖进来。
-
-当前重点：Mac、香港 HSBC、ChatGPT/Codex、Claude、Apple、Microsoft、Google、游戏、国内外媒体和国内/全球兜底。服务专属域名、共享依赖、通用区域与可选拦截分开维护。域名库无法承诺覆盖未来出现的全部服务，也不能替代设备日志、DNS 和节点验证。
+面向 Quantumult X 的自有规则库。规则完整保存在这里，由本仓库决定分类、范围、策略和发布。开源规则库只提供可审查的参考输入；运行时不加载其规则，也不自动合并上游整套 direct/proxy/reject。
 
 ## 使用
 
-- [Config/quantumult-x.conf](Config/quantumult-x.conf)：公开的纯路由模板，无订阅凭证或 CA 私钥。配置里的 `master` 表示本仓库已发布版本；在 PR 尚未合并时，先用构建器指定该 PR 的完整提交 SHA。
-- [Config/categories.json](Config/categories.json)：本仓库唯一的配置加载顺序和有效策略映射。
-- [Rules/Services/](Rules/Services/)：服务规则；OpenAI 的共享供应商单独位于 `OpenAI-Dependencies.list`。
-- [Rules/Region/](Rules/Region/)、[Rules/Media/](Rules/Media/)、[Rules/Games/](Rules/Games/)：自行整理的通用分类。
-- [Rules/Optional/BilibiliPCDNReject.list](Rules/Optional/BilibiliPCDNReject.list)：可选 PCDN 拦截，默认未加载，启用时必须单独使用 `force-policy=reject`。
+- [Config/quantumult-x.conf](Config/quantumult-x.conf)：公开路由模板，不含订阅、节点口令或 CA。
+- [Config/categories.json](Config/categories.json)：唯一分类入口，声明每个列表的路径、有效策略和默认启用状态。
+- [docs/category-partition.md](docs/category-partition.md)：目录边界、服务例外与 GeoIP 设计。
+- [docs/acceptance.md](docs/acceptance.md)：导入后的设备验收，包括节点缓存、策略实际选择、DNS、IPv6 和 UDP。
 
-完整配置可从仓库生成。固定到 commit 可以避免远程分支漂移；单文件版可排除远程规则更新/缓存因素：
+所有旧根目录服务列表、Services/SNS、DomesticMedia/ForeignMedia/GamesAll 聚合路径均不再兼容。必须使用新配置或按 manifest 更新资源地址；不要继续请求旧 `main` 分支。
 
 ```sh
-python3 scripts/build_config.py --mode remote --ref <完整提交SHA> --output /tmp/qx-reviewed.conf
+# 跟随已发布 master；稳定使用建议把 master 换成完整提交 SHA。
+python3 scripts/build_config.py --mode remote --ref master --output /tmp/qx-public.conf
+# 单文件版不需要下载远程规则，便于排除缓存/加载顺序问题。
 python3 scripts/build_config.py --mode standalone --output /tmp/qx-standalone.conf
+# 资源启停由 manifest 中的 tag 控制；未知 tag 或互相矛盾的参数会失败。
+python3 scripts/build_config.py --help
 ```
 
-需要保留自己的订阅和本地例外时，只在本机生成私有文件：
+保留自己的订阅和经过审查的本地例外，只在本机生成私有文件：
 
 ```sh
 python3 scripts/build_config.py --mode remote --ref <完整提交SHA> \
   --private-from /path/to/private-config.txt --output /path/outside-repo/qx.private.conf
 ```
 
-构建器只继承服务器订阅/节点和非 `final/geoip` 本地例外，不继承重写、任务、CA 或旧规则 URL。导入本地例外时拒绝非法语法、/0 和未知策略组；原自定义组与远程节点名不会隐式继承。私有输出权限为 `0600`，拒绝写入本仓库。不要把订阅、日志完整 URL、节点凭证和 P12 提交到 Git。
+构建器只继承 server_remote/server_local 和明确的本地 host/suffix/IP 例外。旧 GeoIP/Final 不继承；重写、任务、CA 与旧规则 URL 不继承。非法语法、/0、宽泛关键词/通配、共享提供商根域、大网段或未知策略会要求先审查并报错，不会偷偷修改其含义。同时检查私有规则之间、以及私有规则与本次启用分类／本机私网规则之间的策略和 DNS／网卡选项冲突；冲突时停止生成，不会把当前都选中 direct 的不同策略组视为等价。相同有效行为的重复规则可以去重，内部域名仍可保留。自定义组与远程节点名不会隐式继承。私有文件限制在仓库外、以 0600 权限原子写入；不要提交订阅、抓包内容和节点凭证。
 
-## 默认路由选择
+## 默认策略
 
-| 类别 | 模板行为 | 注意 |
-|---|---|---|
-| HSBC | 强制 `direct` | 包括已验证的专属 `hsbc.edge.sdk.awswaf.com`；不把整个 AWS/CDN 直连 |
-| OpenAI / Claude | 手选 `direct` 或 `AI-Proxy` | 保留用户的直连选择；大陆普通网络直连可达性不作保证 |
-| AI-Dependencies | 默认跟随 OpenAI，可独立切换 | Cloudflare challenge、WorkOS、Stripe、Intercom 等被其他应用共享 |
-| AI-Proxy | 美国/新加坡/日本的手选节点 | 避免自动测速导致长会话换出口；节点所在地区不代表服务一定接受 |
-| Apple / Microsoft / 国内 | 默认直连 | 既有设备保存的手选状态可能覆盖模板首项 |
-| Google / Global / Final | 默认 OutSide | `Final` 只在其他域名/IP/GeoIP 规则未覆盖时生效 |
+| 类别 | 默认选择 | 边界 |
+| --- | --- | --- |
+| HSBC | 固定 direct | 覆盖香港等明确银行域及专属 AWS WAF 主机，不接管整个 AWS |
+| OpenAI / Claude | direct，可手选 AI-Proxy | 大陆普通网络不保证直连可达；已有保存状态可能覆盖模板首选 |
+| OpenAI 共享依赖 | AI-Dependencies，默认跟随 OpenAI | 默认启用但可关闭；同域的其他应用也会受影响 |
+| Apple / Microsoft / 游戏 / 国内服务 | 默认 direct | 按服务类别控制，第三方云租户不归入平台整站范围 |
+| Google / 境外服务 | 默认 OutSide | 已知域名优先，不能以 GeoIP 取代服务身份 |
+| 未命中域名 | GeoIP CN → direct，再 Final | Final 默认 OutSide；数据库和 DNS 结果可能不准确 |
+| 可选 PCDN 拦截 | 默认关闭 | 单独 reject，绝不混入 direct/China 资源 |
 
-地区组识别中英文和旗帜，并排除流量/到期占位名称。没有节点时必须修复订阅或手动选可用节点，规则库不能凭空提供代理。`server_check_url` 测速只代表测试 URL 可达，不证明银行/AI 登录、WebSocket 或 UDP 可用。
+地区组识别中文、英文和旗帜，排除流量/到期占位。没有有效节点时应修复订阅；规则本身不能提供代理。AI-Proxy 使用手选出口，避免自动测速切换长会话出口。测速 URL 可达不等于银行或 AI 服务可用。
 
-模板保留两组普通 DNS 与系统 DNS 以兼容企业 split-DNS，并提供注释 DoH 方案。`dns_exclusion_list` 仅控制 Fake-IP；DoH 只保护到解析器的传输，也不保证解析器返回未过滤结果。HTTPS 重写、会员脚本、MITM 和流媒体查询均不进入默认配置。
+DNS 默认保留系统 DNS 与两组普通 DNS，以兼容企业 split-DNS。注释 DoH 方案会改变解析路径，不能直接视为更正确的配置。dns_exclusion_list 只影响 Fake-IP，不是直连名单。模板不加载 HTTPS 重写、MitM、会员脚本和自动请求任务。
 
 ## 更新与验证
 
-以后在这个仓库打开 Codex，直接说：
+以后在本仓库对 Codex 说：
 
-> 检查其他规则仓库的最新规则，按 AGENTS.md 更新我的规则库；重点审查新增/删除域名、归属与冲突，运行全部验证并总结变化。
+> 检查其他规则仓库的最新规则，按 AGENTS.md 有选择地更新我的规则，审查归属、覆盖与冲突，运行全部验证并总结变化。
 
-具体流程见 [AGENTS.md](AGENTS.md) 和 [docs/agent-update-guide.md](docs/agent-update-guide.md)。检查脚本生成差异报告，agent 根据证据逐项接受/拒绝；不会机械合并整套 direct/proxy/reject。
+该简写包含比较、人工证据审查、选择性修改和验证。流程见 [AGENTS.md](AGENTS.md) 与 [docs/agent-update-guide.md](docs/agent-update-guide.md)。源提交更新不等于接受其全部域名；下载的正则/include/脚本永远不作为指令执行。
 
 ```sh
 python3 scripts/check_upstreams.py
-python3 -m unittest discover -s tests -v
-python3 scripts/validate_rules.py
 python3 scripts/build_config.py --output Config/quantumult-x.conf
+python3 scripts/validate_rules.py
+python3 scripts/audit_semantics.py
+python3 -m unittest discover -s tests -v
 git diff --check
 ```
 
-“零语法错误”不等于设备实测通过。宽泛 keyword、共享服务、旧 IP 段、DNS 选项会继续显式报告。每次更新都必须审查新增告警、运行路由案例，并按 [docs/acceptance.md](docs/acceptance.md) 验证真正的策略路径。
+语法、完整有效分类、HOST/SUFFIX 包含关系、策略和选项、可选资源、生成配置的唯一 GeoIP/Final 都会被检查。例外必须有精确目标、依据和顺序约束。测试不是 QX 内核，也不证明所有应用的登录、语音和动态 IP 已实测通过。
 
-## 维护依据
+## 审查依据
 
-- [docs/maintenance.md](docs/maintenance.md)：分类原则、DNS/策略边界与来源选择。
-- [docs/category-partition.md](docs/category-partition.md)：分类归属整理和保留的条件重叠。
-- [docs/quarantine.json](docs/quarantine.json)：被移除或隔离的旧规则与原因。
-- [docs/rewrite-audit.md](docs/rewrite-audit.md)：原配置远程重写与依赖审查。
-- [upstream-lock.json](upstream-lock.json)：审查参考源的固定提交和输入哈希。
-- [THIRD_PARTY.md](THIRD_PARTY.md)、[LICENSES/](LICENSES/)：来源与许可。参考上游再整理不消除原始许可要求。
-
-本次重构不保留仓库根目录旧 `OpenAI.list` / `Claude.list` / `HSBC.list` 路径。必须迁移到新配置后使用，不要仅更新旧订阅。
+- [docs/review-2026-10-14.md](docs/review-2026-10-14.md)：本轮问题、修复、覆盖范围与验证边界。
+- [docs/corpus-review.json](docs/corpus-review.json)：本轮逐条保留、移动、删除与新增依据。
+- [docs/semantic-exceptions.json](docs/semantic-exceptions.json)：少量有证据的服务子域或共享依赖例外。
+- [docs/quarantine.json](docs/quarantine.json)：前期错误与隔离记录，防止上游再次出现时被恢复。
+- [upstream-lock.json](upstream-lock.json)、[THIRD_PARTY.md](THIRD_PARTY.md)：固定参考输入、审查范围与许可。
+- [docs/maintenance.md](docs/maintenance.md)：维护取舍、网络边界与回滚。
+- [docs/rewrite-audit.md](docs/rewrite-audit.md)：原配置重写资源审查。
+- [docs/history/](docs/history/)：已被当前分类取代的历史记录，不参与构建或测试。

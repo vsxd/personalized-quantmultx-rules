@@ -1,0 +1,21 @@
+# Independently curated Quantumult X destinations: NYTimes
+# Reviewed: 2026-10-14. Scope and exact decisions: docs/corpus-review.json.
+# Service names are separate from transport IP lists; no geography/final fallback here.
+# Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
+# Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+
+host-suffix, d1f1eryiqyjs0r.cloudfront.net, Global
+host-suffix, d3lar09xbwlsge.cloudfront.net, Global
+host-suffix, d3q1qj9jzsu8nw.cloudfront.net, Global
+host-suffix, dc8xl0ndzn2cb.cloudfront.net, Global
+host-suffix, nyt.com, Global
+host-suffix, nyt.net, Global
+host-suffix, nytchina.com, Global
+host-suffix, nytcn.me, Global
+host-suffix, nytco.com, Global
+host-suffix, nyti.ms, Global
+host-suffix, nytimes.com, Global
+host-suffix, nytimg.com, Global
+host-suffix, nytlog.com, Global
+host-suffix, nytstyle.com, Global
+host-suffix, timestalks.com, Global

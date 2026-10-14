@@ -1,0 +1,24 @@
+# Independently curated Quantumult X destinations: HuffPost
+# Reviewed: 2026-10-14. Scope and exact decisions: docs/corpus-review.json.
+# Service names are separate from transport IP lists; no geography/final fallback here.
+# Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
+# Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+
+host-suffix, huffingtonpost.ca, Global
+host-suffix, huffingtonpost.co.uk, Global
+host-suffix, huffingtonpost.co.za, Global
+host-suffix, huffingtonpost.com, Global
+host-suffix, huffingtonpost.com.au, Global
+host-suffix, huffingtonpost.com.mx, Global
+host-suffix, huffingtonpost.de, Global
+host-suffix, huffingtonpost.es, Global
+host-suffix, huffingtonpost.fr, Global
+host-suffix, huffingtonpost.gr, Global
+host-suffix, huffingtonpost.in, Global
+host-suffix, huffingtonpost.it, Global
+host-suffix, huffingtonpost.jp, Global
+host-suffix, huffingtonpost.kr, Global
+host-suffix, huffpost.com, Global
+host-suffix, huffpostarabi.com, Global
+host-suffix, huffpostbrasil.com, Global
+host-suffix, huffpostmaghreb.com, Global

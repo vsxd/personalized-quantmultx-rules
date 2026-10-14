@@ -1,0 +1,32 @@
+# Independently curated Quantumult X destinations: Spotify
+# Reviewed: 2026-10-14. Scope and exact decisions: docs/corpus-review.json.
+# Service names are separate from transport IP lists; no geography/final fallback here.
+# Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
+# Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+# Selected domain references: v2fly/domain-list-community@c6adacf29cc4fb05e04651fcf03e00989ef9f797.
+# MIT (Copyright (c) 2018-2019 V2Ray); full notices in LICENSES/.
+
+host, audio4-ak-spotify-com.akamaized.net, Global
+host, cdn-spotify-experiments.conductrics.com, Global
+host, heads-ak-spotify-com.akamaized.net, Global
+host, spotify.com.edgesuite.net, Global
+host-suffix, audio-ak-spotify-com.akamaized.net, Global
+host-suffix, byspotify.com, Global
+host-suffix, heads4-ak-spotify-com.akamaized.net, Global
+host-suffix, lifeatspotify.com, Global
+host-suffix, pscdn.co, Global
+host-suffix, scdn.co, Global
+host-suffix, spoti.fi, Global
+host-suffix, spotify-com.akamaized.net, Global
+host-suffix, spotify-everywhere.com, Global
+host-suffix, spotify.com, Global
+host-suffix, spotify.design, Global
+host-suffix, spotify.link, Global
+host-suffix, spotifycdn.com, Global
+host-suffix, spotifycdn.net, Global
+host-suffix, spotifycharts.com, Global
+host-suffix, spotifycodes.com, Global
+host-suffix, spotifyforbrands.com, Global
+host-suffix, spotifyforvendors.com, Global
+host-suffix, spotifyjobs.com, Global
+host-suffix, tospotify.com, Global

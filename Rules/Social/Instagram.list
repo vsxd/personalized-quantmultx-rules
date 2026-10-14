@@ -1,0 +1,12 @@
+# Independently curated Quantumult X destinations: Instagram
+# Reviewed: 2026-10-14. Scope and exact decisions: docs/corpus-review.json.
+# Service names are separate from transport IP lists; no geography/final fallback here.
+# Selected domain references: v2fly/domain-list-community@c6adacf29cc4fb05e04651fcf03e00989ef9f797.
+# MIT (Copyright (c) 2018-2019 V2Ray); full notices in LICENSES/.
+
+host-suffix, cdninstagram.com, Global
+host-suffix, ig.me, Global
+host-suffix, igcdn.com, Global
+host-suffix, igsonar.com, Global
+host-suffix, igtv.com, Global
+host-suffix, instagram.com, Global

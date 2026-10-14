@@ -1,0 +1,13 @@
+# Independently curated Quantumult X destinations: Claude
+# Reviewed: 2026-10-14. Scope and exact decisions: docs/corpus-review.json.
+# Service names are separate from transport IP lists; no geography/final fallback here.
+# Claude/Anthropic and dedicated static/MCP content endpoints.
+# Evidence: https://code.claude.com/docs/en/network-config
+# Shared package registries, source repositories and telemetry keep their own routing.
+
+host, servd-anthropic-website.b-cdn.net, Claude
+host-suffix, anthropic.com, Claude
+host-suffix, claude.ai, Claude
+host-suffix, claude.com, Claude
+host-suffix, claudemcpcontent.com, Claude
+host-suffix, claudeusercontent.com, Claude

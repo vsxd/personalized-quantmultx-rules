@@ -1,0 +1,13 @@
+# Independently curated Quantumult X destinations: Discovery
+# Reviewed: 2026-10-14. Scope and exact decisions: docs/corpus-review.json.
+# Service names are separate from transport IP lists; no geography/final fallback here.
+# Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
+# Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+
+host-suffix, content-ause1-ur-discovery1.uplynk.com, Global
+host-suffix, disco-api.com, Global
+host-suffix, discovery.com, Global
+host-suffix, discoveryplus.co.uk, Global
+host-suffix, discoveryplus.com, Global
+host-suffix, discoveryplus.in, Global
+host-suffix, dnitv.com, Global

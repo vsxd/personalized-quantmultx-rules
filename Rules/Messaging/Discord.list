@@ -1,0 +1,29 @@
+# Independently curated Quantumult X destinations: Discord
+# Reviewed: 2026-10-14. Scope and exact decisions: docs/corpus-review.json.
+# Service names are separate from transport IP lists; no geography/final fallback here.
+# Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
+# Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+# Selected domain references: v2fly/domain-list-community@c6adacf29cc4fb05e04651fcf03e00989ef9f797.
+# MIT (Copyright (c) 2018-2019 V2Ray); full notices in LICENSES/.
+
+host, discord-attachments-uploads-prd.storage.googleapis.com, Global
+host, hammerandchisel.ssl.zendesk.com, Global
+host-suffix, dis.gd, Global
+host-suffix, discord-activities.com, Global
+host-suffix, discord.co, Global
+host-suffix, discord.com, Global
+host-suffix, discord.design, Global
+host-suffix, discord.dev, Global
+host-suffix, discord.gg, Global
+host-suffix, discord.gift, Global
+host-suffix, discord.gifts, Global
+host-suffix, discord.media, Global
+host-suffix, discord.new, Global
+host-suffix, discord.store, Global
+host-suffix, discord.tools, Global
+host-suffix, discordactivities.com, Global
+host-suffix, discordapp.com, Global
+host-suffix, discordapp.net, Global
+host-suffix, discordmerch.com, Global
+host-suffix, discordpartygames.com, Global
+host-suffix, discordstatus.com, Global

@@ -1,0 +1,26 @@
+# Independently curated Quantumult X destinations: Communities
+# Reviewed: 2026-10-14. Scope and exact decisions: docs/corpus-review.json.
+# Service names are separate from transport IP lists; no geography/final fallback here.
+# Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
+# Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+
+host-suffix, badoo.com, Global
+host-suffix, dribbble.com, Global
+host-suffix, flickr.com, Global
+host-suffix, licdn.com, Global
+host-suffix, linkedin.com, Global
+host-suffix, medium.com, Global
+host-suffix, pinimg.com, Global
+host-suffix, pinterest.com, Global
+host-suffix, pixiv.net, Global
+host-suffix, ptt.cc, Global
+host-suffix, pximg.net, Global
+host-suffix, quora.com, Global
+host-suffix, quoracdn.net, Global
+host-suffix, snapchat.com, Global
+host-suffix, staticflickr.com, Global
+host-suffix, tinder.com, Global
+host-suffix, tmblr.co, Global
+host-suffix, tumblr.co, Global
+host-suffix, tumblr.com, Global
+host-suffix, txmblr.com, Global

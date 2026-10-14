@@ -1,0 +1,39 @@
+# Independently curated Quantumult X destinations: Xbox
+# Reviewed: 2026-10-14. Scope and exact decisions: docs/corpus-review.json.
+# Service names are separate from transport IP lists; no geography/final fallback here.
+# Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
+# Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+# Selected domain references: v2fly/domain-list-community@c6adacf29cc4fb05e04651fcf03e00989ef9f797.
+# MIT (Copyright (c) 2018-2019 V2Ray); full notices in LICENSES/.
+
+host-suffix, forzamotorsport.net, Game
+host-suffix, forzaracingchampionship.com, Game
+host-suffix, forzarc.com, Game
+host-suffix, gamepass.com, Game
+host-suffix, gears5.com, Game
+host-suffix, gearspop.com, Game
+host-suffix, gearstactics.com, Game
+host-suffix, msgamestudios.com, Game
+host-suffix, orithegame.com, Game
+host-suffix, renovacionxboxlive.com, Game
+host-suffix, tellmewhygame.com, Game
+host-suffix, xbox.co, Game
+host-suffix, xbox.com, Game
+host-suffix, xbox.eu, Game
+host-suffix, xbox.org, Game
+host-suffix, xbox360.co, Game
+host-suffix, xbox360.com, Game
+host-suffix, xbox360.eu, Game
+host-suffix, xbox360.org, Game
+host-suffix, xboxab.com, Game
+host-suffix, xboxgamepass.com, Game
+host-suffix, xboxgamestudios.com, Game
+host-suffix, xboxlive.cn, Game
+host-suffix, xboxlive.com, Game
+host-suffix, xboxone.co, Game
+host-suffix, xboxone.com, Game
+host-suffix, xboxone.eu, Game
+host-suffix, xboxplayanywhere.com, Game
+host-suffix, xboxservices.com, Game
+host-suffix, xboxstudios.com, Game
+host-suffix, xbx.lv, Game

@@ -1,0 +1,19 @@
+# Independently curated Quantumult X destinations: Slack
+# Reviewed: 2026-10-14. Scope and exact decisions: docs/corpus-review.json.
+# Service names are separate from transport IP lists; no geography/final fallback here.
+# Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
+# Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+# Selected domain references: v2fly/domain-list-community@c6adacf29cc4fb05e04651fcf03e00989ef9f797.
+# MIT (Copyright (c) 2018-2019 V2Ray); full notices in LICENSES/.
+
+host-suffix, slack-core.com, Global
+host-suffix, slack-edge.com, Global
+host-suffix, slack-files.com, Global
+host-suffix, slack-imgs.com, Global
+host-suffix, slack-msgs.com, Global
+host-suffix, slack-redir.net, Global
+host-suffix, slack.com, Global
+host-suffix, slackb.com, Global
+host-suffix, slackcertified.com, Global
+host-suffix, slackdemo.com, Global
+host-suffix, slackhq.com, Global

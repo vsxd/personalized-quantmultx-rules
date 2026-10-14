@@ -1,0 +1,32 @@
+# Independently curated Quantumult X destinations: X
+# Reviewed: 2026-10-14. Scope and exact decisions: docs/corpus-review.json.
+# Service names are separate from transport IP lists; no geography/final fallback here.
+# Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
+# Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+# Selected domain references: v2fly/domain-list-community@c6adacf29cc4fb05e04651fcf03e00989ef9f797.
+# MIT (Copyright (c) 2018-2019 V2Ray); full notices in LICENSES/.
+
+host-suffix, cms-twdigitalassets.com, Global
+host-suffix, periscope.tv, Global
+host-suffix, pscp.tv, Global
+host-suffix, t.co, Global
+host-suffix, tweetdeck.com, Global
+host-suffix, tweetmarker.net, Global
+host-suffix, twimg.co, Global
+host-suffix, twimg.com, Global
+host-suffix, twitpic.com, Global
+host-suffix, twitter.biz, Global
+host-suffix, twitter.com, Global
+host-suffix, twitter.jp, Global
+host-suffix, twitter.map.fastly.net, Global
+host-suffix, twittercommunity.com, Global
+host-suffix, twitterflightschool.com, Global
+host-suffix, twitterinc.com, Global
+host-suffix, twitteroauth.com, Global
+host-suffix, twitterstat.us, Global
+host-suffix, twtrdns.net, Global
+host-suffix, twttr.com, Global
+host-suffix, twttr.net, Global
+host-suffix, twvid.com, Global
+host-suffix, vine.co, Global
+host-suffix, x.com, Global

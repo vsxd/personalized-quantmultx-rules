@@ -1,0 +1,18 @@
+# Independently curated Quantumult X destinations: HSBC
+# Reviewed: 2026-10-14. Scope and exact decisions: docs/corpus-review.json.
+# Service names are separate from transport IP lists; no geography/final fallback here.
+# HSBC Hong Kong/PayMe plus existing group domains; fixed direct policy in baseline.
+# HSBC tenant AWS WAF challenge is necessary; awswaf.com is not a bank-wide suffix.
+# Evidence: https://www.hsbc.com.hk/ways-to-bank/mobile-apps/banking/
+
+host, hsbc.edge.sdk.awswaf.com, direct
+host-suffix, hsbc.ca, direct
+host-suffix, hsbc.co.uk, direct
+host-suffix, hsbc.com, direct
+host-suffix, hsbc.com.au, direct
+host-suffix, hsbc.com.cn, direct
+host-suffix, hsbc.com.hk, direct
+host-suffix, hsbc.com.sg, direct
+host-suffix, hsbc.net, direct
+host-suffix, hsbcnet.com, direct
+host-suffix, hsbcprivatebank.com, direct

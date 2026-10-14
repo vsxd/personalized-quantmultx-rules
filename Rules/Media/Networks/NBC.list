@@ -1,0 +1,26 @@
+# Independently curated Quantumult X destinations: NBC
+# Reviewed: 2026-10-14. Scope and exact decisions: docs/corpus-review.json.
+# Service names are separate from transport IP lists; no geography/final fallback here.
+# Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
+# Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+
+host-suffix, bravotv.com, Global
+host-suffix, cnbc.com, Global
+host-suffix, cnbcfm.com, Global
+host-suffix, eonline.com, Global
+host-suffix, msnbc.com, Global
+host-suffix, nbc-sports.go-vip.net, Global
+host-suffix, nbc.co, Global
+host-suffix, nbc.com, Global
+host-suffix, nbcnews.com, Global
+host-suffix, nbcsports.com, Global
+host-suffix, nbcsports.h-cdn.com, Global
+host-suffix, nbcudigitaladops.com, Global
+host-suffix, nbcuni.com, Global
+host-suffix, oxygen.com, Global
+host-suffix, peacocktv.com, Global
+host-suffix, s-nbcnews.com, Global
+host-suffix, syfy.com, Global
+host-suffix, telemundo.com, Global
+host-suffix, universalkids.com, Global
+host-suffix, usanetwork.com, Global
