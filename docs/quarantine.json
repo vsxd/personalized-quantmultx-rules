@@ -1,0 +1,398 @@
+[
+  {
+    "file": "Rules/Media/DomesticMedia.list",
+    "line": 11,
+    "rule": "user-agent,Domestic Media*,Domestic Media",
+    "reason": "Corrupt merged user-agent label; excluded rather than inventing original app identity."
+  },
+  {
+    "file": "Rules/Media/DomesticMedia.list",
+    "line": 88,
+    "rule": "host-suffix, v1d.szbdyd.com, reject",
+    "reason": "Separate optional blocking list; force-policy=China otherwise changes reject to direct."
+  },
+  {
+    "file": "Rules/Media/DomesticMedia.list",
+    "line": 89,
+    "rule": "host-suffix, mcdn.bilivideo.cn, reject",
+    "reason": "Separate optional blocking list; force-policy=China otherwise changes reject to direct."
+  },
+  {
+    "file": "Rules/Media/DomesticMedia.list",
+    "line": 131,
+    "rule": "user-agent,Domestic Media*,Domestic Media",
+    "reason": "Corrupt merged user-agent label; excluded rather than inventing original app identity."
+  },
+  {
+    "file": "Rules/Media/ForeignMedia.list",
+    "line": 1138,
+    "rule": "ip-cidr,52.71.40.0/16,Foreign Media",
+    "reason": "Noncanonical range expands to entire 52.71.0.0/16 shared cloud; no justification for service-specific capture."
+  },
+  {
+    "file": "Rules/Services/Microsoft.list",
+    "line": 9,
+    "rule": "host-keyword,microsoft,Microsoft",
+    "reason": "Unbounded vendor substring captures unrelated domains and shared cloud tenants; explicit suffixes remain."
+  },
+  {
+    "file": "Rules/Services/Microsoft.list",
+    "line": 10,
+    "rule": "host-keyword,windows,Microsoft",
+    "reason": "Unbounded vendor substring captures unrelated domains and shared cloud tenants; explicit suffixes remain."
+  },
+  {
+    "file": "Rules/Services/Microsoft.list",
+    "line": 16,
+    "rule": "host-keyword,Azure,Microsoft",
+    "reason": "Unbounded vendor substring captures unrelated domains and shared cloud tenants; explicit suffixes remain."
+  },
+  {
+    "file": "Rules/Services/Microsoft.list",
+    "line": 17,
+    "rule": "host-keyword,azure-dns,Microsoft",
+    "reason": "Unbounded vendor substring captures unrelated domains and shared cloud tenants; explicit suffixes remain."
+  },
+  {
+    "file": "Rules/Services/Microsoft.list",
+    "line": 18,
+    "rule": "host-keyword,azurecosmosdb,Microsoft",
+    "reason": "Unbounded vendor substring captures unrelated domains and shared cloud tenants; explicit suffixes remain."
+  },
+  {
+    "file": "Rules/Services/Microsoft.list",
+    "line": 19,
+    "rule": "host-keyword,azuredigitaltwins,Microsoft",
+    "reason": "Unbounded vendor substring captures unrelated domains and shared cloud tenants; explicit suffixes remain."
+  },
+  {
+    "file": "Rules/Services/Microsoft.list",
+    "line": 20,
+    "rule": "host-keyword,azuredns-prd,Microsoft",
+    "reason": "Unbounded vendor substring captures unrelated domains and shared cloud tenants; explicit suffixes remain."
+  },
+  {
+    "file": "Rules/Services/Microsoft.list",
+    "line": 21,
+    "rule": "host-keyword,azurefd,Microsoft",
+    "reason": "Unbounded vendor substring captures unrelated domains and shared cloud tenants; explicit suffixes remain."
+  },
+  {
+    "file": "Rules/Services/Microsoft.list",
+    "line": 22,
+    "rule": "host-keyword,azureplanetscale,Microsoft",
+    "reason": "Unbounded vendor substring captures unrelated domains and shared cloud tenants; explicit suffixes remain."
+  },
+  {
+    "file": "Rules/Services/Microsoft.list",
+    "line": 23,
+    "rule": "host-keyword,cosmosdb,Microsoft",
+    "reason": "Unbounded vendor substring captures unrelated domains and shared cloud tenants; explicit suffixes remain."
+  },
+  {
+    "file": "Rules/Services/Microsoft.list",
+    "line": 24,
+    "rule": "host-keyword,windowsazure,Microsoft",
+    "reason": "Unbounded vendor substring captures unrelated domains and shared cloud tenants; explicit suffixes remain."
+  },
+  {
+    "file": "Rules/Services/Microsoft.list",
+    "line": 61,
+    "rule": "host-keyword,Bing,Microsoft",
+    "reason": "Unbounded vendor substring captures unrelated domains and shared cloud tenants; explicit suffixes remain."
+  },
+  {
+    "file": "Rules/Services/Microsoft.list",
+    "line": 62,
+    "rule": "host-keyword,biying,Microsoft",
+    "reason": "Unbounded vendor substring captures unrelated domains and shared cloud tenants; explicit suffixes remain."
+  },
+  {
+    "file": "Rules/Services/Microsoft.list",
+    "line": 129,
+    "rule": "host-keyword,Here,Microsoft",
+    "reason": "Unbounded vendor substring captures unrelated domains and shared cloud tenants; explicit suffixes remain."
+  },
+  {
+    "file": "Rules/Services/Microsoft.list",
+    "line": 138,
+    "rule": "host-keyword,hotmail,Microsoft",
+    "reason": "Unbounded vendor substring captures unrelated domains and shared cloud tenants; explicit suffixes remain."
+  },
+  {
+    "file": "Rules/Services/Microsoft.list",
+    "line": 139,
+    "rule": "host-keyword,outlook,Microsoft",
+    "reason": "Unbounded vendor substring captures unrelated domains and shared cloud tenants; explicit suffixes remain."
+  },
+  {
+    "file": "Rules/Services/Microsoft.list",
+    "line": 158,
+    "rule": "host-keyword,microsoftnews,Microsoft",
+    "reason": "Unbounded vendor substring captures unrelated domains and shared cloud tenants; explicit suffixes remain."
+  },
+  {
+    "file": "Rules/Services/Microsoft.list",
+    "line": 159,
+    "rule": "host-keyword,microsoft-online,Microsoft",
+    "reason": "Unbounded vendor substring captures unrelated domains and shared cloud tenants; explicit suffixes remain."
+  },
+  {
+    "file": "Rules/Services/Microsoft.list",
+    "line": 160,
+    "rule": "host-keyword,microsoftnewsforkids,Microsoft",
+    "reason": "Unbounded vendor substring captures unrelated domains and shared cloud tenants; explicit suffixes remain."
+  },
+  {
+    "file": "Rules/Services/Microsoft.list",
+    "line": 161,
+    "rule": "host-keyword,microsoftnewskids,Microsoft",
+    "reason": "Unbounded vendor substring captures unrelated domains and shared cloud tenants; explicit suffixes remain."
+  },
+  {
+    "file": "Rules/Services/Microsoft.list",
+    "line": 162,
+    "rule": "host-keyword,microsoftol,Microsoft",
+    "reason": "Unbounded vendor substring captures unrelated domains and shared cloud tenants; explicit suffixes remain."
+  },
+  {
+    "file": "Rules/Services/Microsoft.list",
+    "line": 163,
+    "rule": "host-keyword,msn,Microsoft",
+    "reason": "Unbounded vendor substring captures unrelated domains and shared cloud tenants; explicit suffixes remain."
+  },
+  {
+    "file": "Rules/Services/Microsoft.list",
+    "line": 164,
+    "rule": "host-keyword,msnewskids,Microsoft",
+    "reason": "Unbounded vendor substring captures unrelated domains and shared cloud tenants; explicit suffixes remain."
+  },
+  {
+    "file": "Rules/Services/Microsoft.list",
+    "line": 170,
+    "rule": "host-keyword,microsoftreactor,Microsoft",
+    "reason": "Unbounded vendor substring captures unrelated domains and shared cloud tenants; explicit suffixes remain."
+  },
+  {
+    "file": "Rules/Services/Microsoft.list",
+    "line": 171,
+    "rule": "host-keyword,microsoftsilverlight,Microsoft",
+    "reason": "Unbounded vendor substring captures unrelated domains and shared cloud tenants; explicit suffixes remain."
+  },
+  {
+    "file": "Rules/Services/Microsoft.list",
+    "line": 172,
+    "rule": "host-keyword,vfsforgit,Microsoft",
+    "reason": "Unbounded vendor substring captures unrelated domains and shared cloud tenants; explicit suffixes remain."
+  },
+  {
+    "file": "Rules/Services/Microsoft.list",
+    "line": 220,
+    "rule": "host-keyword,Office,Microsoft",
+    "reason": "Unbounded vendor substring captures unrelated domains and shared cloud tenants; explicit suffixes remain."
+  },
+  {
+    "file": "Rules/Services/Microsoft.list",
+    "line": 233,
+    "rule": "host-keyword,Onedrive,Microsoft",
+    "reason": "Unbounded vendor substring captures unrelated domains and shared cloud tenants; explicit suffixes remain."
+  },
+  {
+    "file": "Rules/Services/Microsoft.list",
+    "line": 235,
+    "rule": "host-keyword,skydrive,Microsoft",
+    "reason": "Unbounded vendor substring captures unrelated domains and shared cloud tenants; explicit suffixes remain."
+  },
+  {
+    "file": "Rules/Services/Microsoft.list",
+    "line": 236,
+    "rule": "host-keyword,1drv,Microsoft",
+    "reason": "Unbounded vendor substring captures unrelated domains and shared cloud tenants; explicit suffixes remain."
+  },
+  {
+    "file": "Rules/Services/Microsoft.list",
+    "line": 237,
+    "rule": "host-keyword,sharepoint,Microsoft",
+    "reason": "Unbounded vendor substring captures unrelated domains and shared cloud tenants; explicit suffixes remain."
+  },
+  {
+    "file": "Rules/Services/Microsoft.list",
+    "line": 244,
+    "rule": "host-keyword,onenote,Microsoft",
+    "reason": "Unbounded vendor substring captures unrelated domains and shared cloud tenants; explicit suffixes remain."
+  },
+  {
+    "file": "Rules/Services/Microsoft.list",
+    "line": 247,
+    "rule": "host-keyword,Skype,Microsoft",
+    "reason": "Unbounded vendor substring captures unrelated domains and shared cloud tenants; explicit suffixes remain."
+  },
+  {
+    "file": "Rules/Services/Microsoft.list",
+    "line": 248,
+    "rule": "host-keyword,skypeassets,Microsoft",
+    "reason": "Unbounded vendor substring captures unrelated domains and shared cloud tenants; explicit suffixes remain."
+  },
+  {
+    "file": "Rules/Services/Microsoft.list",
+    "line": 252,
+    "rule": "host-keyword,microsoftstore,Microsoft",
+    "reason": "Unbounded vendor substring captures unrelated domains and shared cloud tenants; explicit suffixes remain."
+  },
+  {
+    "file": "Rules/Services/Microsoft.list",
+    "line": 260,
+    "rule": "host-keyword,visualstudio,Microsoft",
+    "reason": "Unbounded vendor substring captures unrelated domains and shared cloud tenants; explicit suffixes remain."
+  },
+  {
+    "file": "Rules/Services/Microsoft.list",
+    "line": 265,
+    "rule": "host-keyword,msminico,Microsoft",
+    "reason": "Unbounded vendor substring captures unrelated domains and shared cloud tenants; explicit suffixes remain."
+  },
+  {
+    "file": "Rules/Services/Microsoft.list",
+    "line": 275,
+    "rule": "host-keyword,xbox,Microsoft",
+    "reason": "Unbounded vendor substring captures unrelated domains and shared cloud tenants; explicit suffixes remain."
+  },
+  {
+    "file": "Rules/Services/Microsoft.list",
+    "line": 276,
+    "rule": "host-keyword,xbox360,Microsoft",
+    "reason": "Unbounded vendor substring captures unrelated domains and shared cloud tenants; explicit suffixes remain."
+  },
+  {
+    "file": "Rules/Services/Microsoft.list",
+    "line": 277,
+    "rule": "host-keyword,xboxlive,Microsoft",
+    "reason": "Unbounded vendor substring captures unrelated domains and shared cloud tenants; explicit suffixes remain."
+  },
+  {
+    "file": "Rules/Services/Microsoft.list",
+    "line": 278,
+    "rule": "host-keyword,xboxone,Microsoft",
+    "reason": "Unbounded vendor substring captures unrelated domains and shared cloud tenants; explicit suffixes remain."
+  },
+  {
+    "file": "Rules/Services/Microsoft.list",
+    "line": 295,
+    "rule": "host-keyword,Applicationinsights,Microsoft",
+    "reason": "Unbounded vendor substring captures unrelated domains and shared cloud tenants; explicit suffixes remain."
+  },
+  {
+    "file": "Rules/Services/Microsoft.list",
+    "line": 296,
+    "rule": "host-keyword,joinms,Microsoft",
+    "reason": "Unbounded vendor substring captures unrelated domains and shared cloud tenants; explicit suffixes remain."
+  },
+  {
+    "file": "Rules/Services/Microsoft.list",
+    "line": 297,
+    "rule": "host-keyword,internetexplorer,Microsoft",
+    "reason": "Unbounded vendor substring captures unrelated domains and shared cloud tenants; explicit suffixes remain."
+  },
+  {
+    "file": "Rules/Services/Microsoft.list",
+    "line": 298,
+    "rule": "host-keyword,microsofthouse,Microsoft",
+    "reason": "Unbounded vendor substring captures unrelated domains and shared cloud tenants; explicit suffixes remain."
+  },
+  {
+    "file": "Rules/Services/Microsoft.list",
+    "line": 299,
+    "rule": "host-keyword,msauth,Microsoft",
+    "reason": "Unbounded vendor substring captures unrelated domains and shared cloud tenants; explicit suffixes remain."
+  },
+  {
+    "file": "Rules/Services/Microsoft.list",
+    "line": 300,
+    "rule": "host-keyword,msft,Microsoft",
+    "reason": "Unbounded vendor substring captures unrelated domains and shared cloud tenants; explicit suffixes remain."
+  },
+  {
+    "file": "Rules/Services/Microsoft.list",
+    "line": 301,
+    "rule": "host-keyword,msftauth,Microsoft",
+    "reason": "Unbounded vendor substring captures unrelated domains and shared cloud tenants; explicit suffixes remain."
+  },
+  {
+    "file": "Rules/Services/Microsoft.list",
+    "line": 302,
+    "rule": "host-keyword,winhec,Microsoft",
+    "reason": "Unbounded vendor substring captures unrelated domains and shared cloud tenants; explicit suffixes remain."
+  },
+  {
+    "file": "Rules/Media/DomesticMedia.list",
+    "line": 80,
+    "rule": "ip-cidr, 119.29.29.29/32, China",
+    "reason": "Public DNS resolver is not a domestic-media service endpoint."
+  },
+  {
+    "file": "Rules/Media/DomesticMedia.list",
+    "line": 132,
+    "rule": "ip-cidr, 101.224.0.0/13, China",
+    "reason": "Broad ISP/cloud range does not identify domestic media; GeoIP cn handles regional fallback."
+  },
+  {
+    "file": "Rules/Media/DomesticMedia.list",
+    "line": 133,
+    "rule": "ip-cidr, 103.44.56.0/22, China",
+    "reason": "Broad ISP/cloud range does not identify domestic media; GeoIP cn handles regional fallback."
+  },
+  {
+    "file": "Rules/Media/DomesticMedia.list",
+    "line": 138,
+    "rule": "ip-cidr, 118.26.32.0/23, China",
+    "reason": "Broad ISP/cloud range does not identify domestic media; GeoIP cn handles regional fallback."
+  },
+  {
+    "file": "Rules/Media/DomesticMedia.list",
+    "line": 139,
+    "rule": "ip-cidr, 119.176.0.0/12, China",
+    "reason": "Broad ISP/cloud range does not identify domestic media; GeoIP cn handles regional fallback."
+  },
+  {
+    "file": "Rules/Media/DomesticMedia.list",
+    "line": 197,
+    "rule": "ip6-cidr, ::ffff:198.18.5.138/128, China",
+    "reason": "IPv4-mapped benchmark/Fake-IP address from a capture, not a routable service endpoint."
+  },
+  {
+    "file": "Rules/Media/DomesticMedia.list",
+    "line": 198,
+    "rule": "ip6-cidr, ::ffff:198.18.6.81/128, China",
+    "reason": "IPv4-mapped benchmark/Fake-IP address from a capture, not a routable service endpoint."
+  },
+  {
+    "file": "Rules/Media/DomesticMedia.list",
+    "line": 199,
+    "rule": "ip6-cidr, ::ffff:198.18.6.83/128, China",
+    "reason": "IPv4-mapped benchmark/Fake-IP address from a capture, not a routable service endpoint."
+  },
+  {
+    "file": "Rules/Media/DomesticMedia.list",
+    "line": 250,
+    "rule": "ip-cidr, 106.11.0.0/16, China",
+    "reason": "Broad ISP/cloud range does not identify domestic media; GeoIP cn handles regional fallback."
+  },
+  {
+    "file": "Rules/Region/Global.list",
+    "line": 530,
+    "rule": "host-keyword, porn, Global, force-remote-dns",
+    "reason": "Unbounded generic or unverified typo keyword; no reliable application identity. Explicit domain rules remain."
+  },
+  {
+    "file": "Rules/Services/Apple.list",
+    "line": 62,
+    "rule": "host-keyword, icoudo, Apple",
+    "reason": "Unbounded generic or unverified typo keyword; no reliable application identity. Explicit domain rules remain."
+  },
+  {
+    "file": "Rules/Services/Apple.list",
+    "line": 63,
+    "rule": "host-keyword, icoudos, Apple",
+    "reason": "Unbounded generic or unverified typo keyword; no reliable application identity. Explicit domain rules remain."
+  }
+]

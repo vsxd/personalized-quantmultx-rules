@@ -1,0 +1,1280 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-10-14",
+  "scope": "Targeted shared infrastructure and keyword review. No rule is removed merely because a hostname resolves through CDN. Known tenant hostnames are preserved.",
+  "candidates": [
+    {
+      "file": "Rules/Services/Microsoft.list",
+      "lines": [
+        29
+      ],
+      "type": "host-suffix",
+      "target": "azureedge.net",
+      "proposal": "Move generic provider suffix into clearly labeled Global infrastructure fallback; retain exact Microsoft tenants and earlier OpenAI endpoints.",
+      "reason": "All Azure CDN tenants are broader than Microsoft applications. Moving changes fallback policy and therefore requires route fixtures.",
+      "status": "applied-targeted-normalization"
+    },
+    {
+      "file": "Rules/Services/Microsoft.list",
+      "lines": [
+        36
+      ],
+      "type": "host-suffix",
+      "target": "azurewebsites.net",
+      "proposal": "Move generic provider suffix into Global infrastructure fallback; retain microsoftapps.azurewebsites.net as a Microsoft-specific host/suffix.",
+      "reason": "Shared Azure App Service tenants include unrelated apps.",
+      "status": "applied-targeted-normalization"
+    },
+    {
+      "file": "Rules/Services/Google.list",
+      "lines": [
+        23
+      ],
+      "type": "host-keyword",
+      "target": "appspot",
+      "proposal": "Replace keyword with host-suffix appspot.com if the intended scope is Google App Engine; do not remove all Google-owned CDN hosts.",
+      "reason": "The substring can match unrelated registered domains containing appspot.",
+      "status": "applied-targeted-normalization"
+    },
+    {
+      "file": "Rules/Media/ForeignMedia.list",
+      "lines": [
+        213
+      ],
+      "type": "host-suffix",
+      "target": "intercom.io",
+      "proposal": "Retain current optional AI fallback until optional behavior is decided; categorize as shared customer support infrastructure rather than foreign media.",
+      "reason": "Used by unrelated services; optional AI dependency override intentionally overlaps.",
+      "status": "retained-conditional-fallback-reviewed"
+    },
+    {
+      "file": "Rules/Media/ForeignMedia.list",
+      "lines": [
+        219
+      ],
+      "type": "host-suffix",
+      "target": "sentry.io",
+      "proposal": "Move broad provider suffix to Global infrastructure or remove only after observing intended fallback; keep known media tenant disney.my.sentry.io.",
+      "reason": "Telemetry provider does not identify which application made the request.",
+      "status": "applied-targeted-normalization"
+    },
+    {
+      "file": "Rules/Media/ForeignMedia.list",
+      "lines": [
+        353
+      ],
+      "type": "host-suffix",
+      "target": "execute-api.us-east-1.amazonaws.com",
+      "proposal": "Move regional/shared infrastructure to Global fallback; retain explicitly named service tenant endpoints.",
+      "reason": "Regional cloud services host unrelated apps and should not be described as media-only.",
+      "status": "applied-targeted-normalization"
+    },
+    {
+      "file": "Rules/Media/ForeignMedia.list",
+      "lines": [
+        704
+      ],
+      "type": "host-suffix",
+      "target": "execute-api.ap-southeast-1.amazonaws.com",
+      "proposal": "Move regional/shared infrastructure to Global fallback; retain explicitly named service tenant endpoints.",
+      "reason": "Regional cloud services host unrelated apps and should not be described as media-only.",
+      "status": "applied-targeted-normalization"
+    },
+    {
+      "file": "Rules/Media/ForeignMedia.list",
+      "lines": [
+        721
+      ],
+      "type": "host-suffix",
+      "target": "s3-ap-southeast-1.amazonaws.com",
+      "proposal": "Move regional/shared infrastructure to Global fallback; retain explicitly named service tenant endpoints.",
+      "reason": "Regional cloud services host unrelated apps and should not be described as media-only.",
+      "status": "applied-targeted-normalization"
+    },
+    {
+      "file": "Rules/Media/ForeignMedia.list",
+      "lines": [
+        989
+      ],
+      "type": "host-suffix",
+      "target": "us-west-2.amazonaws.com",
+      "proposal": "Move regional/shared infrastructure to Global fallback; retain explicitly named service tenant endpoints.",
+      "reason": "Regional cloud services host unrelated apps and should not be described as media-only.",
+      "status": "applied-targeted-normalization"
+    },
+    {
+      "file": "Rules/Media/ForeignMedia.list",
+      "lines": [
+        1660
+      ],
+      "type": "host-suffix",
+      "target": "cognito-identity.us-east-1.amazonaws.com",
+      "proposal": "Move regional/shared infrastructure to Global fallback; retain explicitly named service tenant endpoints.",
+      "reason": "Regional cloud services host unrelated apps and should not be described as media-only.",
+      "status": "applied-targeted-normalization"
+    },
+    {
+      "file": "Rules/Media/ForeignMedia.list",
+      "lines": [
+        1661
+      ],
+      "type": "host-suffix",
+      "target": "mobileanalytics.us-east-1.amazonaws.com",
+      "proposal": "Move regional/shared infrastructure to Global fallback; retain explicitly named service tenant endpoints.",
+      "reason": "Regional cloud services host unrelated apps and should not be described as media-only.",
+      "status": "applied-targeted-normalization"
+    }
+  ],
+  "other_observations": [
+    "Apple apple.*, iphone.*, macbook.* wildcard TLD rules need authoritative suffix enumeration before replacement.",
+    "Google google/gmail/blogspot/recaptcha keywords should be replaced through reviewed exact/suffix inventories, not a blind textual edit.",
+    "The existing static classifier cannot guarantee app/process isolation on shared endpoints."
+  ],
+  "changes": [
+    {
+      "source": "Rules/Games/GamesAll.list",
+      "rule": "host-keyword, epicgames, Game",
+      "replacement_suffixes": [
+        "epicgames.com"
+      ],
+      "reason": "Use known service suffix rather than matching the token anywhere in arbitrary domains."
+    },
+    {
+      "source": "Rules/Media/DomesticMedia.list",
+      "rule": "host-keyword, qiyi, China",
+      "reason": "Explicit service suffix inventory already remains; unbounded keyword is redundant for those services."
+    },
+    {
+      "source": "Rules/Media/ForeignMedia.list",
+      "rule": "host-suffix, sentry.io, Global",
+      "target": "Rules/Region/Global.list",
+      "reason": "Shared infrastructure is not owned by the service or media category."
+    },
+    {
+      "source": "Rules/Media/ForeignMedia.list",
+      "rule": "host-suffix, execute-api.us-east-1.amazonaws.com, Global",
+      "target": "Rules/Region/Global.list",
+      "reason": "Shared infrastructure is not owned by the service or media category."
+    },
+    {
+      "source": "Rules/Media/ForeignMedia.list",
+      "rule": "host-suffix, execute-api.ap-southeast-1.amazonaws.com, Global",
+      "target": "Rules/Region/Global.list",
+      "reason": "Shared infrastructure is not owned by the service or media category."
+    },
+    {
+      "source": "Rules/Media/ForeignMedia.list",
+      "rule": "host-suffix, s3-ap-southeast-1.amazonaws.com, Global",
+      "target": "Rules/Region/Global.list",
+      "reason": "Shared infrastructure is not owned by the service or media category."
+    },
+    {
+      "source": "Rules/Media/ForeignMedia.list",
+      "rule": "host-keyword, japonx, Global",
+      "reason": "Explicit service suffix inventory already remains; unbounded keyword is redundant for those services."
+    },
+    {
+      "source": "Rules/Media/ForeignMedia.list",
+      "rule": "host-keyword, japronx, Global",
+      "reason": "Explicit service suffix inventory already remains; unbounded keyword is redundant for those services."
+    },
+    {
+      "source": "Rules/Media/ForeignMedia.list",
+      "rule": "host-suffix, us-west-2.amazonaws.com, Global",
+      "target": "Rules/Region/Global.list",
+      "reason": "Shared infrastructure is not owned by the service or media category."
+    },
+    {
+      "source": "Rules/Media/ForeignMedia.list",
+      "rule": "host-suffix, cognito-identity.us-east-1.amazonaws.com, Global",
+      "target": "Rules/Region/Global.list",
+      "reason": "Shared infrastructure is not owned by the service or media category."
+    },
+    {
+      "source": "Rules/Media/ForeignMedia.list",
+      "rule": "host-suffix, mobileanalytics.us-east-1.amazonaws.com, Global",
+      "target": "Rules/Region/Global.list",
+      "reason": "Shared infrastructure is not owned by the service or media category."
+    },
+    {
+      "source": "Rules/Region/Global.list",
+      "rule": "host-keyword, fbcdn, Global, force-remote-dns",
+      "reason": "Explicit service suffix inventory already remains; unbounded keyword is redundant for those services."
+    },
+    {
+      "source": "Rules/Services/Apple.list",
+      "rule": "host-keyword, icloud.com.akadns.net, Apple",
+      "replacement_suffixes": [
+        "icloud.com.akadns.net"
+      ],
+      "reason": "Use known service suffix rather than matching the token anywhere in arbitrary domains."
+    },
+    {
+      "source": "Rules/Services/Google.list",
+      "rule": "host-keyword, appspot, Google",
+      "replacement_suffixes": [
+        "appspot.com"
+      ],
+      "reason": "Use known service suffix rather than matching the token anywhere in arbitrary domains."
+    },
+    {
+      "source": "Rules/Services/Google.list",
+      "rule": "host-keyword, googlesource, Google",
+      "replacement_suffixes": [
+        "googlesource.com"
+      ],
+      "reason": "Use known service suffix rather than matching the token anywhere in arbitrary domains."
+    },
+    {
+      "source": "Rules/Services/Google.list",
+      "rule": "host-keyword, gmail, Google",
+      "replacement_suffixes": [
+        "gmail.com"
+      ],
+      "reason": "Use known service suffix rather than matching the token anywhere in arbitrary domains."
+    },
+    {
+      "source": "Rules/Services/Google.list",
+      "rule": "host-keyword, recaptcha, Google",
+      "replacement_suffixes": [
+        "recaptcha.net"
+      ],
+      "reason": "Use known service suffix rather than matching the token anywhere in arbitrary domains."
+    },
+    {
+      "source": "Rules/Services/Microsoft.list",
+      "rule": "host-suffix, azureedge.net, Microsoft",
+      "target": "Rules/Region/Global.list",
+      "reason": "Shared infrastructure is not owned by the service or media category."
+    },
+    {
+      "source": "Rules/Services/Microsoft.list",
+      "rule": "host-suffix, azurewebsites.net, Microsoft",
+      "target": "Rules/Region/Global.list",
+      "reason": "Shared infrastructure is not owned by the service or media category."
+    },
+    {
+      "source": "Rules/Region/Global.list",
+      "rule": "host-suffix, appspot.com, Global, force-remote-dns",
+      "owner": "Rules/Services/Google.list",
+      "reason": "Exact target now owned by earlier required category after targeted normalization."
+    },
+    {
+      "source": "Rules/Region/Global.list",
+      "rule": "host-suffix, recaptcha.net, Global",
+      "owner": "Rules/Services/Google.list",
+      "reason": "Exact target now owned by earlier required category after targeted normalization."
+    }
+  ],
+  "notes": [
+    "All changes preserve known tenant-specific endpoints. Global infrastructure inherits the consumer Global policy; it does not become an unconditional proxy rule.",
+    "Quarantined domestic ranges and public resolver no longer claim media identity; benchmark/Fake-IP artifacts were also excluded."
+  ],
+  "warning_review": {
+    "reviewed_at": "2026-10-14",
+    "remaining_warnings": 184,
+    "status": "Every remaining diagnostic assigned a reviewed retention decision; review is not a claim of endpoint ownership or runtime success.",
+    "groups": [
+      {
+        "code": "broad-cidr",
+        "count": 88,
+        "files": {
+          "Rules/Media/ForeignMedia.list": 76,
+          "Rules/Services/Apple.list": 10,
+          "Rules/Services/Google.list": 2
+        },
+        "decision": "retain-reviewed-scope-with-explicit-limit",
+        "reason": "ForeignMedia76 ranges remain Global as in the prior route; broad direct ISP ranges were removed from DomesticMedia. Apple10 and Google2 ranges preserve the provider policy for IP-only connections. Deleting every broad range would change intended IP-only service behavior without evidence.",
+        "limit": "This is a routing-scope review, not a fresh authoritative ownership attestation. ForeignMedia includes shared CDN/cloud blocks and is not an exclusive media IP set. Known service-domain overrides precede fallback; pure-IP requests can still match these broad ranges. Only endpoint logs or authoritative provider prefix inventories justify further narrowing.",
+        "locations": [
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 867,
+            "rule": "ip-cidr, 103.246.56.0/22, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 868,
+            "rule": "ip-cidr, 103.27.148.0/22, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 869,
+            "rule": "ip-cidr, 110.76.140.0/22, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 870,
+            "rule": "ip-cidr, 113.61.104.0/22, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 871,
+            "rule": "ip-cidr, 27.0.236.0/22, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 989,
+            "rule": "ip-cidr, 23.78.0.0/16, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 990,
+            "rule": "ip-cidr, 23.246.0.0/18, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1029,
+            "rule": "ip-cidr, 34.192.0.0/16, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1030,
+            "rule": "ip-cidr, 34.208.0.0/12, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1031,
+            "rule": "ip-cidr, 34.248.0.0/13, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1032,
+            "rule": "ip-cidr, 35.160.0.0/13, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1033,
+            "rule": "ip-cidr, 37.77.184.0/21, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1040,
+            "rule": "ip-cidr, 44.224.0.0/16, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1041,
+            "rule": "ip-cidr, 44.230.0.0/16, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1042,
+            "rule": "ip-cidr, 45.57.0.0/17, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1120,
+            "rule": "ip-cidr, 52.0.0.0/15, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1121,
+            "rule": "ip-cidr, 52.5.0.0/16, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1122,
+            "rule": "ip-cidr, 52.7.0.0/16, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1123,
+            "rule": "ip-cidr, 52.10.0.0/15, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1124,
+            "rule": "ip-cidr, 52.12.0.0/15, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1125,
+            "rule": "ip-cidr, 52.22.0.0/16, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1126,
+            "rule": "ip-cidr, 52.24.0.0/14, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1127,
+            "rule": "ip-cidr, 52.32.0.0/14, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1128,
+            "rule": "ip-cidr, 52.40.0.0/14, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1129,
+            "rule": "ip-cidr, 52.48.0.0/14, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1130,
+            "rule": "ip-cidr, 52.54.0.0/16, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1131,
+            "rule": "ip-cidr, 52.72.0.0/16, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1132,
+            "rule": "ip-cidr, 52.88.0.0/15, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1133,
+            "rule": "ip-cidr, 54.0.0.0/16, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1134,
+            "rule": "ip-cidr, 54.68.0.0/15, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1135,
+            "rule": "ip-cidr, 54.74.0.0/15, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1136,
+            "rule": "ip-cidr, 54.76.0.0/15, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1137,
+            "rule": "ip-cidr, 54.85.0.0/16, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1138,
+            "rule": "ip-cidr, 54.86.0.0/16, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1139,
+            "rule": "ip-cidr, 54.148.0.0/15, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1140,
+            "rule": "ip-cidr, 54.175.0.0/16, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1141,
+            "rule": "ip-cidr, 54.186.0.0/15, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1142,
+            "rule": "ip-cidr, 54.188.0.0/15, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1143,
+            "rule": "ip-cidr, 54.213.0.0/16, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1144,
+            "rule": "ip-cidr, 54.214.128.0/17, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1145,
+            "rule": "ip-cidr, 64.120.128.0/17, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1146,
+            "rule": "ip-cidr, 66.197.128.0/17, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1147,
+            "rule": "ip-cidr, 69.53.224.0/19, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1164,
+            "rule": "ip-cidr, 103.87.204.0/22, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1168,
+            "rule": "ip-cidr, 108.175.32.0/20, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1169,
+            "rule": "ip-cidr, 185.2.220.0/22, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1170,
+            "rule": "ip-cidr, 185.9.188.0/22, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1171,
+            "rule": "ip-cidr, 192.173.64.0/18, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1208,
+            "rule": "ip-cidr, 198.38.96.0/19, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1211,
+            "rule": "ip-cidr, 198.45.48.0/20, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1216,
+            "rule": "ip-cidr, 208.75.76.0/22, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1218,
+            "rule": "ip-cidr, 203.83.220.0/22, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1219,
+            "rule": "ip-cidr, 203.116.0.0/16, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1220,
+            "rule": "ip-cidr, 203.198.0.0/20, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1221,
+            "rule": "ip-cidr, 203.198.80.0/21, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1222,
+            "rule": "ip-cidr, 207.45.72.0/22, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1224,
+            "rule": "ip-cidr, 218.102.32.0/19, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1225,
+            "rule": "ip-cidr, 219.76.0.0/17, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1238,
+            "rule": "ip6-cidr, 2607:fb10:5020::/44, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1250,
+            "rule": "ip6-cidr, 2607:fb10:7020::/44, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1254,
+            "rule": "ip6-cidr, 2607:fb10:7040::/44, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1255,
+            "rule": "ip6-cidr, 2607:fb10:7050::/44, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1259,
+            "rule": "ip6-cidr, 2607:fb10:7080::/44, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1264,
+            "rule": "ip6-cidr, 2607:fb10:7090::/44, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1266,
+            "rule": "ip6-cidr, 2607:fb10:70b0::/44, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1267,
+            "rule": "ip6-cidr, 2607:fb10:70d0::/44, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1270,
+            "rule": "ip6-cidr, 2607:fb10:7110::/44, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1271,
+            "rule": "ip6-cidr, 2607:fb10:7120::/44, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1288,
+            "rule": "ip6-cidr, 2607:fb10:71c0::/44, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1295,
+            "rule": "ip6-cidr, 2607:fb10::/32, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1296,
+            "rule": "ip6-cidr, 2620:10c:7000::/44, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1422,
+            "rule": "ip6-cidr, 2a00:86c0::/32, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1424,
+            "rule": "ip6-cidr, 2a03:5640::/32, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1765,
+            "rule": "ip-cidr, 172.110.32.0/21, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1766,
+            "rule": "ip-cidr, 216.73.80.0/20, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1767,
+            "rule": "ip6-cidr, 2620:120:e000::/40, Global"
+          },
+          {
+            "file": "Rules/Services/Apple.list",
+            "line": 31,
+            "rule": "ip-cidr, 17.0.0.0/8, Apple"
+          },
+          {
+            "file": "Rules/Services/Apple.list",
+            "line": 32,
+            "rule": "ip-cidr, 63.92.224.0/19, Apple"
+          },
+          {
+            "file": "Rules/Services/Apple.list",
+            "line": 33,
+            "rule": "ip-cidr, 65.199.22.0/23, Apple"
+          },
+          {
+            "file": "Rules/Services/Apple.list",
+            "line": 34,
+            "rule": "ip-cidr, 139.178.128.0/18, Apple"
+          },
+          {
+            "file": "Rules/Services/Apple.list",
+            "line": 35,
+            "rule": "ip-cidr, 144.178.0.0/19, Apple"
+          },
+          {
+            "file": "Rules/Services/Apple.list",
+            "line": 36,
+            "rule": "ip-cidr, 144.178.36.0/22, Apple"
+          },
+          {
+            "file": "Rules/Services/Apple.list",
+            "line": 37,
+            "rule": "ip-cidr, 144.178.48.0/20, Apple"
+          },
+          {
+            "file": "Rules/Services/Apple.list",
+            "line": 41,
+            "rule": "ip6-cidr, 2403:300::/32, Apple"
+          },
+          {
+            "file": "Rules/Services/Apple.list",
+            "line": 42,
+            "rule": "ip6-cidr, 2620:149::/32, Apple"
+          },
+          {
+            "file": "Rules/Services/Apple.list",
+            "line": 43,
+            "rule": "ip6-cidr, 2a01:b740::/32, Apple"
+          },
+          {
+            "file": "Rules/Services/Google.list",
+            "line": 105,
+            "rule": "ip-cidr, 173.194.0.0/16, Google"
+          },
+          {
+            "file": "Rules/Services/Google.list",
+            "line": 106,
+            "rule": "ip-cidr, 74.125.0.0/16, Google"
+          }
+        ]
+      },
+      {
+        "code": "broad-keyword",
+        "count": 22,
+        "files": {
+          "Rules/Media/ForeignMedia.list": 9,
+          "Rules/Region/Global.list": 11,
+          "Rules/Services/Google.list": 2
+        },
+        "decision": "retain-reviewed-coverage-tradeoff",
+        "reason": "Known bounded Google/Game/Apple tokens have been converted to suffixes and redundant/unknown/generic tokens removed. Remaining Google google/blogspot bridge many country domains; remaining media9 tokens recognize variable CDN/ELB endpoint names; Global11 tokens supply broad fallback coverage.",
+        "limit": "These22 substrings can match unrelated domains. They are deliberate coverage tradeoffs, not ownership proof. Global tokens do not override earlier required service rules in the assembled profile. Replacing country-domain coverage requires a reviewed suffix inventory, not guessed TLDs.",
+        "locations": [
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 68,
+            "rule": "host-keyword, avoddashs, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 120,
+            "rule": "host-keyword, bbcfmt, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 121,
+            "rule": "host-keyword, uk-live, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 221,
+            "rule": "host-keyword, voddazn, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 856,
+            "rule": "host-keyword, jooxweb-api, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 983,
+            "rule": "host-keyword, dualstack.apiproxy-device-prod-nlb-, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 984,
+            "rule": "host-keyword, dualstack.ichnaea-web-, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1552,
+            "rule": "host-keyword, -spotify-com, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1568,
+            "rule": "host-keyword, -tiktokcdn-com, Global"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 92,
+            "rule": "host-keyword, github, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 524,
+            "rule": "host-keyword, amazon, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 525,
+            "rule": "host-keyword, appledaily, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 526,
+            "rule": "host-keyword, facebook, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 527,
+            "rule": "host-keyword, instagram, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 528,
+            "rule": "host-keyword, twitter, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 529,
+            "rule": "host-keyword, twimg, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 532,
+            "rule": "host-keyword, beetalk, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 533,
+            "rule": "host-keyword, dropbox, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 534,
+            "rule": "host-keyword, telegram, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 535,
+            "rule": "host-keyword, whatsapp, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Services/Google.list",
+            "line": 11,
+            "rule": "host-keyword, google, Google"
+          },
+          {
+            "file": "Rules/Services/Google.list",
+            "line": 43,
+            "rule": "host-keyword, blogspot, Google"
+          }
+        ]
+      },
+      {
+        "code": "cross-list-overlap",
+        "count": 1,
+        "files": {
+          "Rules/Media/ForeignMedia.list": 1
+        },
+        "decision": "retain-intentional-conditional-fallback",
+        "reason": "The sole exact cross-list overlap is intercom.io in optional OpenAI-Dependencies and ForeignMedia Global fallback. Without the latter, disabling the optional resource would silently discard classification.",
+        "limit": "Enabling optional dependency policy also affects other applications using that shared provider.",
+        "locations": [
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 213,
+            "rule": "host-suffix, intercom.io, Global"
+          }
+        ]
+      },
+      {
+        "code": "dns-option",
+        "count": 45,
+        "files": {
+          "Rules/Region/Global.list": 45
+        },
+        "decision": "retain-supported-existing-dns-behavior",
+        "reason": "force-remote-dns has been observed in the installed QX/Tunnel binaries;45 remaining options are retained to avoid changing DNS behavior solely due to missing sample documentation. Removed flags belonged to shadowed or pruned duplicate rules, recorded in change logs.",
+        "limit": "Static presence cannot certify the effective DNS path or privacy. Verify selected policy and runtime behavior on device.",
+        "locations": [
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 92,
+            "rule": "host-keyword, github, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 164,
+            "rule": "host-suffix, pixiv.net, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 202,
+            "rule": "host-suffix, twitch.tv, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 367,
+            "rule": "host-suffix, ptt.cc, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 524,
+            "rule": "host-keyword, amazon, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 525,
+            "rule": "host-keyword, appledaily, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 526,
+            "rule": "host-keyword, facebook, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 527,
+            "rule": "host-keyword, instagram, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 528,
+            "rule": "host-keyword, twitter, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 529,
+            "rule": "host-keyword, twimg, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 532,
+            "rule": "host-keyword, beetalk, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 533,
+            "rule": "host-keyword, dropbox, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 534,
+            "rule": "host-keyword, telegram, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 535,
+            "rule": "host-keyword, whatsapp, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 537,
+            "rule": "host-suffix, 1e100.net, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 538,
+            "rule": "host-suffix, 2mdn.net, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 539,
+            "rule": "host-suffix, akamai.net, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 540,
+            "rule": "host-suffix, bandwagonhost.com, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 541,
+            "rule": "host-suffix, blogblog.com, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 542,
+            "rule": "host-suffix, crittercism.com, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 543,
+            "rule": "host-suffix, culturalspot.org, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 544,
+            "rule": "host-suffix, dartlang.org, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 545,
+            "rule": "host-suffix, fb.com, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 546,
+            "rule": "host-suffix, fb.me, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 547,
+            "rule": "host-suffix, fbcdn.net, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 548,
+            "rule": "host-suffix, fbsbx.com, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 549,
+            "rule": "host-suffix, gcr.io, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 550,
+            "rule": "host-suffix, gosetsuden.jp, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 551,
+            "rule": "host-suffix, heroku.com, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 552,
+            "rule": "host-suffix, html5rocks.com, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 553,
+            "rule": "host-suffix, keyhole.com, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 554,
+            "rule": "host-suffix, kobo.com, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 555,
+            "rule": "host-suffix, kobobooks.com, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 556,
+            "rule": "host-suffix, messenger.com, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 557,
+            "rule": "host-suffix, netmarble.com, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 558,
+            "rule": "host-suffix, nianticlabs.com, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 559,
+            "rule": "host-suffix, pinimg.com, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 560,
+            "rule": "host-suffix, pubnub.com, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 561,
+            "rule": "host-suffix, t.co, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 562,
+            "rule": "host-suffix, thefacebook.com, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 563,
+            "rule": "host-suffix, toggleable.com, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 564,
+            "rule": "host-suffix, torproject.org, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 565,
+            "rule": "host-suffix, twimg.co, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 566,
+            "rule": "host-suffix, twitpic.com, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 567,
+            "rule": "host-suffix, unfiltered.news, Global, force-remote-dns"
+          }
+        ]
+      },
+      {
+        "code": "shared-domain",
+        "count": 10,
+        "files": {
+          "Rules/Media/ForeignMedia.list": 1,
+          "Rules/Region/Global.list": 8,
+          "Rules/Services/OpenAI-Dependencies.list": 1
+        },
+        "decision": "retain-labeled-shared-infrastructure",
+        "reason": "Generic Microsoft/cloud and media telemetry suffixes now live in Global fallback, while explicit service tenants and optional AI dependencies remain separate. Shared provider coverage is labeled instead of asserted as app ownership.",
+        "limit": "Global/AI dependency selection can intentionally affect many tenant applications; these rules are not per-app isolation.",
+        "locations": [
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 213,
+            "rule": "host-suffix, intercom.io, Global"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 47,
+            "rule": "host-suffix, cloudflare.com, Global"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 48,
+            "rule": "host-suffix, cloudfront.net, Global"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 226,
+            "rule": "host-suffix, windows.net, Global"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 250,
+            "rule": "host-suffix, amazonaws.com, Global"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 539,
+            "rule": "host-suffix, akamai.net, Global, force-remote-dns"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 570,
+            "rule": "host-suffix, sentry.io, Global"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 577,
+            "rule": "host-suffix, azureedge.net, Global"
+          },
+          {
+            "file": "Rules/Region/Global.list",
+            "line": 578,
+            "rule": "host-suffix, azurewebsites.net, Global"
+          },
+          {
+            "file": "Rules/Services/OpenAI-Dependencies.list",
+            "line": 23,
+            "rule": "HOST-SUFFIX, intercom.io, OpenAI"
+          }
+        ]
+      },
+      {
+        "code": "wildcard-tld",
+        "count": 18,
+        "files": {
+          "Rules/Media/ForeignMedia.list": 6,
+          "Rules/Services/Apple.list": 11,
+          "Rules/Services/Microsoft.list": 1
+        },
+        "decision": "retain-reviewed-international-coverage-tradeoff",
+        "reason": "Apple11, Microsoft1 and YouTube6 TLD patterns preserve country-domain coverage from the maintained baseline. Known core services have explicit suffix rules. Replacing all country variants with invented domains or silently dropping them would risk coverage regression.",
+        "limit": "Wildcard ownership is not guaranteed; unrelated registrations such as apple.example can match. These18 patterns remain explicit risks and require authoritative suffix enumeration before they can be called narrowly scoped.",
+        "locations": [
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1743,
+            "rule": "host-wildcard, youtube.*, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1744,
+            "rule": "host-wildcard, youtube.com.*, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1745,
+            "rule": "host-wildcard, youtube.co.*, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1746,
+            "rule": "host-wildcard, youtubego.*, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1747,
+            "rule": "host-wildcard, youtubego.co.*, Global"
+          },
+          {
+            "file": "Rules/Media/ForeignMedia.list",
+            "line": 1748,
+            "rule": "host-wildcard, youtubego.com.*, Global"
+          },
+          {
+            "file": "Rules/Services/Apple.list",
+            "line": 16,
+            "rule": "host-wildcard, apple.*, Apple"
+          },
+          {
+            "file": "Rules/Services/Apple.list",
+            "line": 17,
+            "rule": "host-wildcard, apple.com.*, Apple"
+          },
+          {
+            "file": "Rules/Services/Apple.list",
+            "line": 20,
+            "rule": "host-wildcard, ipod.*, Apple"
+          },
+          {
+            "file": "Rules/Services/Apple.list",
+            "line": 21,
+            "rule": "host-wildcard, imac.*, Apple"
+          },
+          {
+            "file": "Rules/Services/Apple.list",
+            "line": 22,
+            "rule": "host-wildcard, iphone.*, Apple"
+          },
+          {
+            "file": "Rules/Services/Apple.list",
+            "line": 23,
+            "rule": "host-wildcard, ipad.*, Apple"
+          },
+          {
+            "file": "Rules/Services/Apple.list",
+            "line": 24,
+            "rule": "host-wildcard, ipadair.*, Apple"
+          },
+          {
+            "file": "Rules/Services/Apple.list",
+            "line": 25,
+            "rule": "host-wildcard, ipadmini.*, Apple"
+          },
+          {
+            "file": "Rules/Services/Apple.list",
+            "line": 26,
+            "rule": "host-wildcard, macbook.*, Apple"
+          },
+          {
+            "file": "Rules/Services/Apple.list",
+            "line": 27,
+            "rule": "host-wildcard, macbookair.*, Apple"
+          },
+          {
+            "file": "Rules/Services/Apple.list",
+            "line": 28,
+            "rule": "host-wildcard, macbookpro.*, Apple"
+          },
+          {
+            "file": "Rules/Services/Microsoft.list",
+            "line": 208,
+            "rule": "host-wildcard, onedrive.*, Microsoft"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+# Independently curated Quantumult X destinations: Nintendo
+# Reviewed: 2026-10-14. Scope and exact decisions: docs/corpus-review.json.
+# Service names are separate from transport IP lists; no geography/final fallback here.
+# Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
+# Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+# Selected domain references: v2fly/domain-list-community@c6adacf29cc4fb05e04651fcf03e00989ef9f797.
+# MIT (Copyright (c) 2018-2019 V2Ray); full notices in LICENSES/.
+
+host-suffix, nintendo.at, Game
+host-suffix, nintendo.be, Game
+host-suffix, nintendo.ch, Game
+host-suffix, nintendo.co.jp, Game
+host-suffix, nintendo.co.kr, Game
+host-suffix, nintendo.co.uk, Game
+host-suffix, nintendo.co.za, Game
+host-suffix, nintendo.com, Game
+host-suffix, nintendo.com.hk, Game
+host-suffix, nintendo.com.pt, Game
+host-suffix, nintendo.de, Game
+host-suffix, nintendo.dk, Game
+host-suffix, nintendo.es, Game
+host-suffix, nintendo.eu, Game
+host-suffix, nintendo.fi, Game
+host-suffix, nintendo.fr, Game
+host-suffix, nintendo.it, Game
+host-suffix, nintendo.net, Game
+host-suffix, nintendo.nl, Game
+host-suffix, nintendo.no, Game
+host-suffix, nintendo.pt, Game
+host-suffix, nintendo.ru, Game
+host-suffix, nintendo.se, Game
+host-suffix, nintendo.tw, Game
+host-suffix, nintendolabo.cn, Game
+host-suffix, nintendonetwork.net, Game
+host-suffix, nintendostore.com, Game
+host-suffix, nintendoswitch.cn, Game
+host-suffix, nintendoswitch.com, Game
+host-suffix, nintendoswitch.com.cn, Game
+host-suffix, nintendoswitch.net, Game
+host-suffix, pokemon.com, Game
+host-suffix, pokemonhome.com, Game
+host-suffix, supermario.com, Game
+host-suffix, supermariorun.com, Game

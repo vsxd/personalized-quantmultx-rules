@@ -1,0 +1,17 @@
+# Independently curated Quantumult X destinations: ChinaNews
+# Reviewed: 2026-10-14. Scope and exact decisions: docs/corpus-review.json.
+# Service names are separate from transport IP lists; no geography/final fallback here.
+# Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
+# Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+
+host-suffix, 36kr.com, China
+host-suffix, cailianpress.com, China
+host-suffix, huxiucdn.com, China
+host-suffix, ifeng.com, China
+host-suffix, ifengimg.com, China
+host-suffix, ithome.com, China
+host-suffix, myzaker.com, China
+host-suffix, qdaily.com, China
+host-suffix, sspai.com, China
+host-suffix, takungpao.com, China
+host-suffix, xinhuanet.com, China

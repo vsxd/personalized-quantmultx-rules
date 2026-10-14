@@ -1,0 +1,72 @@
+# Independently curated Quantumult X destinations: Apple
+# Reviewed: 2026-10-14. Scope and exact decisions: docs/corpus-review.json.
+# Service names are separate from transport IP lists; no geography/final fallback here.
+# Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
+# Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+# Selected domain references: v2fly/domain-list-community@c6adacf29cc4fb05e04651fcf03e00989ef9f797.
+# MIT (Copyright (c) 2018-2019 V2Ray); full notices in LICENSES/.
+
+host-suffix, aaplimg.com, Apple
+host-suffix, appldnld.apple.com.edgesuite.net, Apple
+host-suffix, apple-cloudkit.com, Apple
+host-suffix, apple-livephotoskit.com, Apple
+host-suffix, apple-mapkit.com, Apple
+host-suffix, apple-support.akadns.net, Apple
+host-suffix, apple.at, Apple
+host-suffix, apple.be, Apple
+host-suffix, apple.ca, Apple
+host-suffix, apple.ch, Apple
+host-suffix, apple.cn, Apple
+host-suffix, apple.co, Apple
+host-suffix, apple.co.jp, Apple
+host-suffix, apple.co.kr, Apple
+host-suffix, apple.co.nz, Apple
+host-suffix, apple.co.uk, Apple
+host-suffix, apple.com, Apple
+host-suffix, apple.com.akadns.net, Apple
+host-suffix, apple.com.au, Apple
+host-suffix, apple.com.br, Apple
+host-suffix, apple.com.cdn20.com, Apple
+host-suffix, apple.com.cn, Apple
+host-suffix, apple.com.edgekey.net.globalredir.akadns.net, Apple
+host-suffix, apple.com.mwcloudcdn.com, Apple
+host-suffix, apple.com.mwcname.com, Apple
+host-suffix, apple.com.mx, Apple
+host-suffix, apple.com.my, Apple
+host-suffix, apple.com.sg, Apple
+host-suffix, apple.com.tw, Apple
+host-suffix, apple.de, Apple
+host-suffix, apple.dk, Apple
+host-suffix, apple.es, Apple
+host-suffix, apple.fi, Apple
+host-suffix, apple.fr, Apple
+host-suffix, apple.ie, Apple
+host-suffix, apple.it, Apple
+host-suffix, apple.news, Apple
+host-suffix, apple.nl, Apple
+host-suffix, apple.no, Apple
+host-suffix, apple.se, Apple
+host-suffix, appsto.re, Apple
+host-suffix, appstore.com, Apple
+host-suffix, apzones.com, Apple
+host-suffix, cdn-apple.com, Apple
+host-suffix, cdn-apple.com.akadns.net, Apple
+host-suffix, courier-push-apple.com.akadns.net, Apple
+host-suffix, icloud-content.com, Apple
+host-suffix, icloud-content.com.cn, Apple
+host-suffix, icloud-sandbox.com, Apple
+host-suffix, icloud.com, Apple
+host-suffix, icloud.com.akadns.net, Apple
+host-suffix, icloud.com.cn, Apple
+host-suffix, icloud.net.cn, Apple
+host-suffix, itun.es, Apple
+host-suffix, itunes-apple.com.akadns.net, Apple
+host-suffix, itunes.com, Apple
+host-suffix, itunes.com.edgekey.net, Apple
+host-suffix, mail.me.com.akadns.net, Apple
+host-suffix, me.com, Apple
+host-suffix, mzstatic.com, Apple
+host-suffix, origin-apple.com.akadns.net, Apple
+host-suffix, push-apple.com.akadns.net, Apple
+host-suffix, safebrowsing.apple, Apple
+host-suffix, shazam.com, Apple

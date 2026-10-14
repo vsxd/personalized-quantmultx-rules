@@ -1,0 +1,41 @@
+# Independently curated Quantumult X destinations: Youku
+# Reviewed: 2026-10-14. Scope and exact decisions: docs/corpus-review.json.
+# Service names are separate from transport IP lists; no geography/final fallback here.
+# Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
+# Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+
+host-suffix, 0co3geye.cn, China
+host-suffix, 2isbbess.cn, China
+host-suffix, 33lwhaoinc.cn, China
+host-suffix, 52mtkvideo.cn, China
+host-suffix, 9xsecndns.cn, China
+host-suffix, b82yxres.cn, China
+host-suffix, cibntv.net, China
+host-suffix, gamenow.club, China
+host-suffix, kumiao.com, China
+host-suffix, kumiao.tv, China
+host-suffix, kuxiaomiao.cn, China
+host-suffix, kuxiaomiao.com, China
+host-suffix, kuxiaomiao.com.cn, China
+host-suffix, kuxiaomiao.net, China
+host-suffix, mmstat.com, China
+host-suffix, ns6mitkxo.cn, China
+host-suffix, sk2cdsnw.cn, China
+host-suffix, sogoodtech1.cn, China
+host-suffix, soku.com, China
+host-suffix, tudou.com, China
+host-suffix, ukoo.com.cn, China
+host-suffix, wenyupages.com, China
+host-suffix, wingsmobiletek.cn, China
+host-suffix, wwc.alicdn.com, China
+host-suffix, ykimg.com, China
+host-suffix, yodou.com, China
+host-suffix, yoku.net.cn, China
+host-suffix, yoqoo.com, China
+host-suffix, yoqoo.net, China
+host-suffix, yoqoo.net.cn, China
+host-suffix, yoqoo.tv, China
+host-suffix, youku.com, China
+host-suffix, youku.com.cn, China
+host-suffix, youku.org, China
+host-suffix, youqoo.net, China

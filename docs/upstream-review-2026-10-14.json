@@ -1,0 +1,195 @@
+{
+  "schema_version": 1,
+  "reviewed_at": "2026-10-14",
+  "audit_report_id": "20261014T083042.602319Z",
+  "lock_sha256": "d546e7f06c1dbe4cba40fce1048f91cb84ca982ebcee6e4314d62bf868899c73",
+  "comparison_status": "REVIEW_REQUIRED",
+  "exit_code": 1,
+  "interpretation": "All configured downloads, immutable input hash checks, license comparisons, tree inventories and include graph inventories finished. Exit 1 remains intentional because sve1r and ppmina original inputs contain malformed/unsupported syntax. This is not a failure of the local curated corpus tests.",
+  "sources": {
+    "sve1r": {
+      "rule_branch": "develop",
+      "baseline_commit": "8061d2ebe160280f25d4b20d6d929d9e03caecbe",
+      "latest_commit": "8061d2ebe160280f25d4b20d6d929d9e03caecbe",
+      "selected_files_compared": 10,
+      "comparison_complete": true,
+      "status": "REVIEW_REQUIRED",
+      "license_changed": false,
+      "tree_files_in_scope": 95,
+      "new_paths": [],
+      "removed_paths": [],
+      "changed_paths": []
+    },
+    "ppmina": {
+      "rule_branch": "release",
+      "baseline_commit": "82925ea21cdebe6f27212cd3938dc9187cc6f600",
+      "latest_commit": "82925ea21cdebe6f27212cd3938dc9187cc6f600",
+      "selected_files_compared": 6,
+      "comparison_complete": true,
+      "status": "REVIEW_REQUIRED",
+      "license_changed": false,
+      "tree_files_in_scope": 6,
+      "new_paths": [],
+      "removed_paths": [],
+      "changed_paths": []
+    },
+    "blackmatrix7": {
+      "rule_branch": "master",
+      "baseline_commit": "d8363caa2c1e47fb735615316032bed3f475ee57",
+      "latest_commit": "d8363caa2c1e47fb735615316032bed3f475ee57",
+      "selected_files_compared": 36,
+      "comparison_complete": true,
+      "status": "COMPLETE",
+      "license_changed": false,
+      "tree_files_in_scope": 2933,
+      "new_paths": [],
+      "removed_paths": [],
+      "changed_paths": []
+    },
+    "SukkaW": {
+      "rule_branch": "master",
+      "baseline_commit": "7c67f6c8f0eb0e990097f3f94b39992151644d88",
+      "latest_commit": "8a4972eb334f3fd9d0c813577d47d04c4c442bf9",
+      "selected_files_compared": 11,
+      "comparison_complete": true,
+      "status": "COMPLETE",
+      "license_changed": false,
+      "tree_files_in_scope": 48,
+      "new_paths": [],
+      "removed_paths": [],
+      "changed_paths": [
+        "Source/domainset/cdn.conf"
+      ]
+    },
+    "v2fly": {
+      "rule_branch": "master",
+      "baseline_commit": "c6adacf29cc4fb05e04651fcf03e00989ef9f797",
+      "latest_commit": "c6adacf29cc4fb05e04651fcf03e00989ef9f797",
+      "selected_files_compared": 43,
+      "comparison_complete": true,
+      "status": "COMPLETE",
+      "license_changed": false,
+      "tree_files_in_scope": 1545,
+      "new_paths": [],
+      "removed_paths": [],
+      "changed_paths": [],
+      "include_closure": {
+        "baseline_files": 1430,
+        "latest_files": 1430,
+        "added_paths": [],
+        "removed_paths": [],
+        "changed_paths": [],
+        "baseline_errors": [],
+        "latest_errors": [],
+        "expanded_into_rules": false
+      }
+    },
+    "ACL4SSR": {
+      "rule_branch": "master",
+      "baseline_commit": "802e3abf065f8609e7d9073ba506158dbe2ba6e7",
+      "latest_commit": "802e3abf065f8609e7d9073ba506158dbe2ba6e7",
+      "selected_files_compared": 7,
+      "comparison_complete": true,
+      "status": "COMPLETE",
+      "license_changed": false,
+      "tree_files_in_scope": 560,
+      "new_paths": [],
+      "removed_paths": [],
+      "changed_paths": []
+    },
+    "Loyalsoldier": {
+      "rule_branch": "release",
+      "baseline_commit": "d4aa79e495cfc7009a1bc33ae603a437306e8e4d",
+      "latest_commit": "d4aa79e495cfc7009a1bc33ae603a437306e8e4d",
+      "selected_files_compared": 12,
+      "comparison_complete": true,
+      "status": "COMPLETE",
+      "license_changed": false,
+      "tree_files_in_scope": 24,
+      "new_paths": [],
+      "removed_paths": [],
+      "changed_paths": []
+    }
+  },
+  "reference_syntax_decisions": [
+    {
+      "source": "sve1r",
+      "path": "Rules/Media/ForeignMedia.list",
+      "commit": "8061d2ebe160280f25d4b20d6d929d9e03caecbe",
+      "line": 827,
+      "text": "ip-cidr,203.74.95.130/28,Foreign Media",
+      "reason": "203.74.95.130/28 has host bits set",
+      "decision": "reject-as-published-routing-input",
+      "local_effect": "No invalid source line is imported; historical media CIDRs are removed and necessary Telegram IPs use the official dated source."
+    },
+    {
+      "source": "sve1r",
+      "path": "Rules/Media/ForeignMedia.list",
+      "commit": "8061d2ebe160280f25d4b20d6d929d9e03caecbe",
+      "line": 1133,
+      "text": "ip-cidr,52.71.40.0/16,Foreign Media",
+      "reason": "52.71.40.0/16 has host bits set",
+      "decision": "reject-as-published-routing-input",
+      "local_effect": "No invalid source line is imported; historical media CIDRs are removed and necessary Telegram IPs use the official dated source."
+    },
+    {
+      "source": "ppmina",
+      "path": "ruleset/telegramcidr.txt",
+      "commit": "82925ea21cdebe6f27212cd3938dc9187cc6f600",
+      "line": 9,
+      "text": "IP-CIDR6,2001:67c:4e8::/48,PROXY",
+      "reason": "unknown type or malformed fields",
+      "decision": "reject-as-published-routing-input",
+      "local_effect": "No invalid source line is imported; historical media CIDRs are removed and necessary Telegram IPs use the official dated source."
+    },
+    {
+      "source": "ppmina",
+      "path": "ruleset/telegramcidr.txt",
+      "commit": "82925ea21cdebe6f27212cd3938dc9187cc6f600",
+      "line": 10,
+      "text": "IP-CIDR6,2001:b28:f23c::/47,PROXY",
+      "reason": "unknown type or malformed fields",
+      "decision": "reject-as-published-routing-input",
+      "local_effect": "No invalid source line is imported; historical media CIDRs are removed and necessary Telegram IPs use the official dated source."
+    },
+    {
+      "source": "ppmina",
+      "path": "ruleset/telegramcidr.txt",
+      "commit": "82925ea21cdebe6f27212cd3938dc9187cc6f600",
+      "line": 11,
+      "text": "IP-CIDR6,2001:b28:f23f::/48,PROXY",
+      "reason": "unknown type or malformed fields",
+      "decision": "reject-as-published-routing-input",
+      "local_effect": "No invalid source line is imported; historical media CIDRs are removed and necessary Telegram IPs use the official dated source."
+    },
+    {
+      "source": "ppmina",
+      "path": "ruleset/telegramcidr.txt",
+      "commit": "82925ea21cdebe6f27212cd3938dc9187cc6f600",
+      "line": 12,
+      "text": "IP-CIDR6,2a0a:f280::/32,PROXY",
+      "reason": "unknown type or malformed fields",
+      "decision": "reject-as-published-routing-input",
+      "local_effect": "No invalid source line is imported; historical media CIDRs are removed and necessary Telegram IPs use the official dated source."
+    }
+  ],
+  "latest_change_decisions": [
+    {
+      "source": "SukkaW",
+      "baseline_commit": "7c67f6c8f0eb0e990097f3f94b39992151644d88",
+      "latest_commit": "8a4972eb334f3fd9d0c813577d47d04c4c442bf9",
+      "path": "Source/domainset/cdn.conf",
+      "added_native_rule": "exact:images.macworld.co.uk",
+      "decision": "not-adopted",
+      "reason": "A generic cached image host does not justify a new shared-CDN or direct routing owner. Keep local service ownership and GeoIP/Final behavior. Baseline remains unchanged so the external difference stays visible."
+    }
+  ],
+  "transient_integrity_event": {
+    "audit_report_id": "20261014T082711.303177Z",
+    "source": "blackmatrix7",
+    "path": "rule/Surge/Netflix/Netflix.list",
+    "event": "An intermediate raw response failed the locked SHA256 check and was rejected without adoption.",
+    "resolution": "Independent fresh raw content and authenticated Git blob 5d27df5b41cfd59ddd2c3db7f34b4c56abcb2d57 both matched the original locked 40424-byte SHA256 aa03f015949e8f6f981d90a7d8b1acf7e88472ee48601632bd964b0bb740f8aa. Final full comparison passed; lock was not changed to accommodate the mismatch."
+  },
+  "coverage_boundary": "125 selected reference files plus license evidence and directory inventories are compared. v2fly includes cover 1430 reachable source files for dependency change detection, not manual acceptance of every domain. External sources beyond these configured scopes are not claimed complete. Selective MIT adoptions and all local rule decisions are recorded in docs/corpus-review.json."
+}

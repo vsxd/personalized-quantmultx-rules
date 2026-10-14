@@ -1,0 +1,52 @@
+# Independently curated Quantumult X destinations: Bilibili
+# Reviewed: 2026-10-14. Scope and exact decisions: docs/corpus-review.json.
+# Service names are separate from transport IP lists; no geography/final fallback here.
+# Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
+# Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+# Selected domain references: v2fly/domain-list-community@c6adacf29cc4fb05e04651fcf03e00989ef9f797.
+# MIT (Copyright (c) 2018-2019 V2Ray); full notices in LICENSES/.
+
+host-suffix, acg.tv, China
+host-suffix, acgvideo.com, China
+host-suffix, animetamashi.cn, China
+host-suffix, animetamashi.com, China
+host-suffix, anitama.cn, China
+host-suffix, anitama.net, China
+host-suffix, b23.tv, China
+host-suffix, baka.im, China
+host-suffix, bigfun.cn, China
+host-suffix, bigfunapp.cn, China
+host-suffix, bili22.cn, China
+host-suffix, bili2233.cn, China
+host-suffix, bili23.cn, China
+host-suffix, bili33.cn, China
+host-suffix, biliapi.com, China
+host-suffix, biliapi.net, China
+host-suffix, bilibili.cc, China
+host-suffix, bilibili.cn, China
+host-suffix, bilibili.co, China
+host-suffix, bilibili.com, China
+host-suffix, bilibili.net, China
+host-suffix, bilibilipay.cn, China
+host-suffix, bilibilipay.com, China
+host-suffix, bilicdn1.com, China
+host-suffix, bilicdn2.com, China
+host-suffix, bilicdn3.com, China
+host-suffix, bilicdn4.com, China
+host-suffix, bilicdn5.com, China
+host-suffix, bilicomics.com, China
+host-suffix, biliimg.com, China
+host-suffix, bilivideo.cn, China
+host-suffix, bilivideo.com, China
+host-suffix, bilivideo.net, China
+host-suffix, corari.com, China
+host-suffix, hdslb.com, China
+host-suffix, hdslb.com.w.kunlunhuf.com, China
+host-suffix, hdslb.com.w.kunlunpi.com, China
+host-suffix, hdslb.net, China
+host-suffix, hdslb.org, China
+host-suffix, im9.com, China
+host-suffix, maoercdn.com, China
+host-suffix, mcbbs.net, China
+host-suffix, mincdn.com, China
+host-suffix, upos-hz-mirrorakam.akamaized.net, China

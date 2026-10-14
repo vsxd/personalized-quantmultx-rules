@@ -1,0 +1,12 @@
+# Independently curated Quantumult X destinations: TencentVideo
+# Reviewed: 2026-10-14. Scope and exact decisions: docs/corpus-review.json.
+# Service names are separate from transport IP lists; no geography/final fallback here.
+# Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
+# Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+
+host, 00713915daab0be43def5c338c02c80b.dlied1.cdntips.net, China
+host, 17caa75e77d31e1f5a7841e0b3374569.dlied1.cdntips.net, China
+host, apd-pcdnvodstat.teg.tencent-cloud.net, China
+host, ins-eeww7kom.ias.tencent-cloud.net, China
+host-suffix, pgdt.gtimg.cn, China
+host-suffix, v.smtcdns.com, China

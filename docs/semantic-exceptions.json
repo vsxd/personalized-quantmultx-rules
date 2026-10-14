@@ -1,0 +1,353 @@
+{
+  "schema_version": 2,
+  "reviewed_at": "2026-10-14",
+  "exceptions": [
+    {
+      "code": "shared-provider-suffix",
+      "targets": [
+        {
+          "kind": "host-suffix",
+          "value": "oaiusercontent.com",
+          "policy": "OpenAI",
+          "options": []
+        }
+      ],
+      "reason": "OpenAI service-owned user-file and sandbox content domain is in the official ChatGPT network allowlist. PSL isolation separates user content origins; it does not turn this product domain into arbitrary cloud infrastructure.",
+      "evidence": [
+        "https://help.openai.com/en/articles/9247338-network-recommendations-for-chatgpt-errors-on-web-and-apps"
+      ]
+    },
+    {
+      "code": "shared-provider-suffix",
+      "targets": [
+        {
+          "kind": "host-suffix",
+          "value": "claudeusercontent.com",
+          "policy": "Claude",
+          "options": []
+        }
+      ],
+      "reason": "Claude-owned artifact, bridge and sandbox frame content is required by official network guidance. Preserve the complete documented product-content boundary; PSL origin isolation is expected for user content.",
+      "evidence": [
+        "https://code.claude.com/docs/en/network-config"
+      ]
+    },
+    {
+      "code": "shared-provider-suffix",
+      "targets": [
+        {
+          "kind": "host-suffix",
+          "value": "intercom.io",
+          "policy": "AI-Dependencies",
+          "options": []
+        }
+      ],
+      "reason": "Official OpenAI allowlist explicitly includes this shared support provider. This is confined to the separately switchable AI-Dependencies category, enabled in the baseline; it affects other apps using the same provider and is not claimed to be OpenAI-exclusive.",
+      "evidence": [
+        "https://help.openai.com/en/articles/9247338-network-recommendations-for-chatgpt-errors-on-web-and-apps"
+      ]
+    },
+    {
+      "code": "shared-provider-suffix",
+      "targets": [
+        {
+          "kind": "host-suffix",
+          "value": "intercomcdn.com",
+          "policy": "AI-Dependencies",
+          "options": []
+        }
+      ],
+      "reason": "Official OpenAI allowlist explicitly includes this shared support provider. This is confined to the separately switchable AI-Dependencies category, enabled in the baseline; it affects other apps using the same provider and is not claimed to be OpenAI-exclusive.",
+      "evidence": [
+        "https://help.openai.com/en/articles/9247338-network-recommendations-for-chatgpt-errors-on-web-and-apps"
+      ]
+    },
+    {
+      "code": "shared-provider-suffix",
+      "targets": [
+        {
+          "kind": "host-suffix",
+          "value": "githubusercontent.com",
+          "policy": "Global",
+          "options": []
+        }
+      ],
+      "reason": "GitHub raw files, repository assets and release/user content are core GitHub destinations. The suffix is a product-content boundary; independent website hosting at github.io remains excluded.",
+      "evidence": [
+        "https://docs.github.com/en/rest/meta/meta#get-github-meta-information",
+        "https://github.com/v2fly/domain-list-community/blob/c6adacf29cc4fb05e04651fcf03e00989ef9f797/data/github"
+      ]
+    },
+    {
+      "code": "broad-cidr",
+      "targets": [
+        {
+          "kind": "ip-cidr",
+          "value": "149.154.160.0/20",
+          "policy": "Global",
+          "options": []
+        }
+      ],
+      "reason": "2026-10-14: exact prefix is in the current official Telegram address inventory (SHA-256 recorded in IP/Telegram.list and corpus-review.json). Needed for IP-only Telegram transports. It is not a generic cloud/media address pool; re-fetch and review with each update.",
+      "evidence": [
+        "https://core.telegram.org/resources/cidr.txt"
+      ]
+    },
+    {
+      "code": "broad-cidr",
+      "targets": [
+        {
+          "kind": "ip-cidr",
+          "value": "91.105.192.0/23",
+          "policy": "Global",
+          "options": []
+        }
+      ],
+      "reason": "2026-10-14: exact prefix is in the current official Telegram address inventory (SHA-256 recorded in IP/Telegram.list and corpus-review.json). Needed for IP-only Telegram transports. It is not a generic cloud/media address pool; re-fetch and review with each update.",
+      "evidence": [
+        "https://core.telegram.org/resources/cidr.txt"
+      ]
+    },
+    {
+      "code": "broad-cidr",
+      "targets": [
+        {
+          "kind": "ip-cidr",
+          "value": "91.108.12.0/22",
+          "policy": "Global",
+          "options": []
+        }
+      ],
+      "reason": "2026-10-14: exact prefix is in the current official Telegram address inventory (SHA-256 recorded in IP/Telegram.list and corpus-review.json). Needed for IP-only Telegram transports. It is not a generic cloud/media address pool; re-fetch and review with each update.",
+      "evidence": [
+        "https://core.telegram.org/resources/cidr.txt"
+      ]
+    },
+    {
+      "code": "broad-cidr",
+      "targets": [
+        {
+          "kind": "ip-cidr",
+          "value": "91.108.16.0/22",
+          "policy": "Global",
+          "options": []
+        }
+      ],
+      "reason": "2026-10-14: exact prefix is in the current official Telegram address inventory (SHA-256 recorded in IP/Telegram.list and corpus-review.json). Needed for IP-only Telegram transports. It is not a generic cloud/media address pool; re-fetch and review with each update.",
+      "evidence": [
+        "https://core.telegram.org/resources/cidr.txt"
+      ]
+    },
+    {
+      "code": "broad-cidr",
+      "targets": [
+        {
+          "kind": "ip-cidr",
+          "value": "91.108.20.0/22",
+          "policy": "Global",
+          "options": []
+        }
+      ],
+      "reason": "2026-10-14: exact prefix is in the current official Telegram address inventory (SHA-256 recorded in IP/Telegram.list and corpus-review.json). Needed for IP-only Telegram transports. It is not a generic cloud/media address pool; re-fetch and review with each update.",
+      "evidence": [
+        "https://core.telegram.org/resources/cidr.txt"
+      ]
+    },
+    {
+      "code": "broad-cidr",
+      "targets": [
+        {
+          "kind": "ip-cidr",
+          "value": "91.108.4.0/22",
+          "policy": "Global",
+          "options": []
+        }
+      ],
+      "reason": "2026-10-14: exact prefix is in the current official Telegram address inventory (SHA-256 recorded in IP/Telegram.list and corpus-review.json). Needed for IP-only Telegram transports. It is not a generic cloud/media address pool; re-fetch and review with each update.",
+      "evidence": [
+        "https://core.telegram.org/resources/cidr.txt"
+      ]
+    },
+    {
+      "code": "broad-cidr",
+      "targets": [
+        {
+          "kind": "ip-cidr",
+          "value": "91.108.56.0/22",
+          "policy": "Global",
+          "options": []
+        }
+      ],
+      "reason": "2026-10-14: exact prefix is in the current official Telegram address inventory (SHA-256 recorded in IP/Telegram.list and corpus-review.json). Needed for IP-only Telegram transports. It is not a generic cloud/media address pool; re-fetch and review with each update.",
+      "evidence": [
+        "https://core.telegram.org/resources/cidr.txt"
+      ]
+    },
+    {
+      "code": "broad-cidr",
+      "targets": [
+        {
+          "kind": "ip-cidr",
+          "value": "91.108.8.0/22",
+          "policy": "Global",
+          "options": []
+        }
+      ],
+      "reason": "2026-10-14: exact prefix is in the current official Telegram address inventory (SHA-256 recorded in IP/Telegram.list and corpus-review.json). Needed for IP-only Telegram transports. It is not a generic cloud/media address pool; re-fetch and review with each update.",
+      "evidence": [
+        "https://core.telegram.org/resources/cidr.txt"
+      ]
+    },
+    {
+      "code": "broad-cidr",
+      "targets": [
+        {
+          "kind": "ip6-cidr",
+          "value": "2a0a:f280::/32",
+          "policy": "Global",
+          "options": []
+        }
+      ],
+      "reason": "2026-10-14: exact prefix is in the current official Telegram address inventory (SHA-256 recorded in IP/Telegram.list and corpus-review.json). Needed for IP-only Telegram transports. It is not a generic cloud/media address pool; re-fetch and review with each update.",
+      "evidence": [
+        "https://core.telegram.org/resources/cidr.txt"
+      ]
+    },
+    {
+      "code": "host-policy-overlap",
+      "targets": [
+        {
+          "kind": "host",
+          "value": "humb.apple.com",
+          "policy": "AI-Dependencies",
+          "options": []
+        },
+        {
+          "kind": "host-suffix",
+          "value": "apple.com",
+          "policy": "Apple",
+          "options": []
+        }
+      ],
+      "reason": "The official OpenAI allowlist names this exact Apple host. Optional AI-Dependencies explicitly overrides the otherwise Apple policy, so the narrow host is loaded first.",
+      "evidence": [
+        "https://help.openai.com/en/articles/9247338-network-recommendations-for-chatgpt-errors-on-web-and-apps"
+      ],
+      "ordering": "narrower-before-broader"
+    },
+    {
+      "code": "host-policy-overlap",
+      "targets": [
+        {
+          "kind": "host-suffix",
+          "value": "inter.iqiyi.com",
+          "policy": "Global",
+          "options": []
+        },
+        {
+          "kind": "host-suffix",
+          "value": "iqiyi.com",
+          "policy": "China",
+          "options": []
+        }
+      ],
+      "reason": "iQIYI international endpoints have a Global policy while the mainland iqiyi.com service uses China. Preserve the existing explicit regional service distinction and require narrower international entries before the mainland parent; do not add a broader cloud override.",
+      "evidence": [
+        "https://github.com/sve1r/Rules-For-Quantumult-X/blob/8061d2ebe160280f25d4b20d6d929d9e03caecbe/Rules/Media/ForeignMedia.list",
+        "https://www.iq.com/"
+      ],
+      "ordering": "narrower-before-broader"
+    },
+    {
+      "code": "host-policy-overlap",
+      "targets": [
+        {
+          "kind": "host-suffix",
+          "value": "intl-rcd.iqiyi.com",
+          "policy": "Global",
+          "options": []
+        },
+        {
+          "kind": "host-suffix",
+          "value": "iqiyi.com",
+          "policy": "China",
+          "options": []
+        }
+      ],
+      "reason": "iQIYI international endpoints have a Global policy while the mainland iqiyi.com service uses China. Preserve the existing explicit regional service distinction and require narrower international entries before the mainland parent; do not add a broader cloud override.",
+      "evidence": [
+        "https://github.com/sve1r/Rules-For-Quantumult-X/blob/8061d2ebe160280f25d4b20d6d929d9e03caecbe/Rules/Media/ForeignMedia.list",
+        "https://www.iq.com/"
+      ],
+      "ordering": "narrower-before-broader"
+    },
+    {
+      "code": "host-policy-overlap",
+      "targets": [
+        {
+          "kind": "host-suffix",
+          "value": "intl-subscription.iqiyi.com",
+          "policy": "Global",
+          "options": []
+        },
+        {
+          "kind": "host-suffix",
+          "value": "iqiyi.com",
+          "policy": "China",
+          "options": []
+        }
+      ],
+      "reason": "iQIYI international endpoints have a Global policy while the mainland iqiyi.com service uses China. Preserve the existing explicit regional service distinction and require narrower international entries before the mainland parent; do not add a broader cloud override.",
+      "evidence": [
+        "https://github.com/sve1r/Rules-For-Quantumult-X/blob/8061d2ebe160280f25d4b20d6d929d9e03caecbe/Rules/Media/ForeignMedia.list",
+        "https://www.iq.com/"
+      ],
+      "ordering": "narrower-before-broader"
+    },
+    {
+      "code": "host-policy-overlap",
+      "targets": [
+        {
+          "kind": "host-suffix",
+          "value": "intl.iqiyi.com",
+          "policy": "Global",
+          "options": []
+        },
+        {
+          "kind": "host-suffix",
+          "value": "iqiyi.com",
+          "policy": "China",
+          "options": []
+        }
+      ],
+      "reason": "iQIYI international endpoints have a Global policy while the mainland iqiyi.com service uses China. Preserve the existing explicit regional service distinction and require narrower international entries before the mainland parent; do not add a broader cloud override.",
+      "evidence": [
+        "https://github.com/sve1r/Rules-For-Quantumult-X/blob/8061d2ebe160280f25d4b20d6d929d9e03caecbe/Rules/Media/ForeignMedia.list",
+        "https://www.iq.com/"
+      ],
+      "ordering": "narrower-before-broader"
+    },
+    {
+      "code": "host-policy-overlap",
+      "targets": [
+        {
+          "kind": "host-suffix",
+          "value": "mcdn.bilivideo.cn",
+          "policy": "reject",
+          "options": []
+        },
+        {
+          "kind": "host-suffix",
+          "value": "bilivideo.cn",
+          "policy": "China",
+          "options": []
+        }
+      ],
+      "reason": "Optional Bilibili PCDN blocking is disabled by default. Explicit opt-in rejects this narrower PCDN suffix before domestic bilivideo.cn; playback can be affected. It is a deliberate optional block, not an unconditional route conflict.",
+      "evidence": [
+        "https://github.com/sve1r/Rules-For-Quantumult-X/blob/8061d2ebe160280f25d4b20d6d929d9e03caecbe/Rules/Media/Domestic/BiliBili.list"
+      ],
+      "ordering": "narrower-before-broader"
+    }
+  ]
+}

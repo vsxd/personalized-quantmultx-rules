@@ -1,0 +1,26 @@
+# Independently curated Quantumult X destinations: InternationalNews
+# Reviewed: 2026-10-14. Scope and exact decisions: docs/corpus-review.json.
+# Service names are separate from transport IP lists; no geography/final fallback here.
+# Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
+# Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+
+host-suffix, afp.com, Global
+host-suffix, afpforum.com, Global
+host-suffix, americasvoice.news, Global
+host-suffix, bloomberg.com, Global
+host-suffix, cbc.ca, Global
+host-suffix, dw.com, Global
+host-suffix, economist.com, Global
+host-suffix, eluniverso.com, Global
+host-suffix, marketwatch.com, Global
+host-suffix, ndr.de, Global
+host-suffix, nrk.no, Global
+host-suffix, reuters.com, Global
+host-suffix, rfi.fr, Global
+host-suffix, sciencedaily.com, Global
+host-suffix, sciencemag.org, Global
+host-suffix, smh.com.au, Global
+host-suffix, time.com, Global
+host-suffix, timeinc.net, Global
+host-suffix, wsj.com, Global
+host-suffix, wsj.net, Global

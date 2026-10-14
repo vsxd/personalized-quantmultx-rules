@@ -1,0 +1,10 @@
+# Independently curated Quantumult X destinations: WhatsApp
+# Reviewed: 2026-10-14. Scope and exact decisions: docs/corpus-review.json.
+# Service names are separate from transport IP lists; no geography/final fallback here.
+# Selected domain references: v2fly/domain-list-community@c6adacf29cc4fb05e04651fcf03e00989ef9f797.
+# MIT (Copyright (c) 2018-2019 V2Ray); full notices in LICENSES/.
+
+host-suffix, wa.me, Global
+host-suffix, whatsapp.com, Global
+host-suffix, whatsapp.net, Global
+host-suffix, whatsapp.org, Global

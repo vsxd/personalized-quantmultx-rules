@@ -1,0 +1,26 @@
+# Independently curated Quantumult X destinations: PrimeVideo
+# Reviewed: 2026-10-14. Scope and exact decisions: docs/corpus-review.json.
+# Service names are separate from transport IP lists; no geography/final fallback here.
+# Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
+# Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+
+host, d1v5ir2lpwr8os.cloudfront.net, Global
+host, d22qjgkvxw22r6.cloudfront.net, Global
+host, d25xi40x97liuc.cloudfront.net, Global
+host, d27xxe7juh1us6.cloudfront.net, Global
+host, dmqdd6hw24ucf.cloudfront.net, Global
+host-suffix, aiv-cdn.net, Global
+host-suffix, aiv-delivery.net, Global
+host-suffix, amazonprimevideo.cn, Global
+host-suffix, amazonprimevideo.com.cn, Global
+host-suffix, amazonprimevideos.com, Global
+host-suffix, amazonvideo.cc, Global
+host-suffix, amazonvideo.com, Global
+host-suffix, avodmp4s3ww-a.akamaihd.net, Global
+host-suffix, media-amazon.com, Global
+host-suffix, prime-video.com, Global
+host-suffix, primevideo.cc, Global
+host-suffix, primevideo.com, Global
+host-suffix, primevideo.info, Global
+host-suffix, primevideo.org, Global
+host-suffix, primevideo.tv, Global

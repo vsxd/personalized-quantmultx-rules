@@ -1,0 +1,37 @@
+# Independently curated Quantumult X destinations: Qobuz
+# Reviewed: 2026-10-14. Scope and exact decisions: docs/corpus-review.json.
+# Service names are separate from transport IP lists; no geography/final fallback here.
+# Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
+# Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+
+host-suffix, cobeuz.fr, Global
+host-suffix, cobuz.fr, Global
+host-suffix, cobuzz.fr, Global
+host-suffix, kobuz.fr, Global
+host-suffix, qobuz.at, Global
+host-suffix, qobuz.be, Global
+host-suffix, qobuz.biz, Global
+host-suffix, qobuz.ca, Global
+host-suffix, qobuz.ch, Global
+host-suffix, qobuz.co.uk, Global
+host-suffix, qobuz.com, Global
+host-suffix, qobuz.de, Global
+host-suffix, qobuz.eu, Global
+host-suffix, qobuz.fi, Global
+host-suffix, qobuz.fr, Global
+host-suffix, qobuz.gr, Global
+host-suffix, qobuz.hk, Global
+host-suffix, qobuz.info, Global
+host-suffix, qobuz.it, Global
+host-suffix, qobuz.lt, Global
+host-suffix, qobuz.lu, Global
+host-suffix, qobuz.net, Global
+host-suffix, qobuz.org, Global
+host-suffix, qobuz.pl, Global
+host-suffix, qobuz.ro, Global
+host-suffix, qobuz.se, Global
+host-suffix, qobuz.tv, Global
+host-suffix, qobuz.us, Global
+host-suffix, quobuz.com, Global
+host-suffix, quobuz.fr, Global
+host-suffix, static-qobuz.com, Global

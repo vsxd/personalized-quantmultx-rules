@@ -1,0 +1,26 @@
+# Independently curated Quantumult X destinations: Epic
+# Reviewed: 2026-10-14. Scope and exact decisions: docs/corpus-review.json.
+# Service names are separate from transport IP lists; no geography/final fallback here.
+# Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
+# Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+# Selected domain references: v2fly/domain-list-community@c6adacf29cc4fb05e04651fcf03e00989ef9f797.
+# MIT (Copyright (c) 2018-2019 V2Ray); full notices in LICENSES/.
+
+host-suffix, capturingreality.com, Game
+host-suffix, eac-cdn.com, Game
+host-suffix, easy.ac, Game
+host-suffix, easyanticheat.net, Game
+host-suffix, egdownload.fastly-edge.com, Game
+host-suffix, epicgames.com, Game
+host-suffix, epicgames.dev, Game
+host-suffix, epicgamescdn.com, Game
+host-suffix, fab.com, Game
+host-suffix, fortnite-vod.akamaized.net, Game
+host-suffix, fortnite.com, Game
+host-suffix, quixel.com, Game
+host-suffix, quixel.se, Game
+host-suffix, realityscan.com, Game
+host-suffix, sketchfab.com, Game
+host-suffix, twinmotion.com, Game
+host-suffix, unrealengine.com, Game
+host-suffix, unrealtournament.com, Game

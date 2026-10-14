@@ -1,0 +1,30 @@
+# Independently curated Quantumult X destinations: HBO
+# Reviewed: 2026-10-14. Scope and exact decisions: docs/corpus-review.json.
+# Service names are separate from transport IP lists; no geography/final fallback here.
+# Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
+# Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+
+host-suffix, 44wilhpljf.execute-api.ap-southeast-1.amazonaws.com, Global
+host-suffix, bcbolthboa-a.akamaihd.net, Global
+host-suffix, cinemax.com, Global
+host-suffix, dai3fd1oh325y.cloudfront.net, Global
+host-suffix, forthethrone.com, Global
+host-suffix, hbo.com, Global
+host-suffix, hboasia.com, Global
+host-suffix, hboasia1-i.akamaihd.net, Global
+host-suffix, hboasia2-i.akamaihd.net, Global
+host-suffix, hboasia3-i.akamaihd.net, Global
+host-suffix, hboasia4-i.akamaihd.net, Global
+host-suffix, hboasia5-i.akamaihd.net, Global
+host-suffix, hboasialive.akamaized.net, Global
+host-suffix, hbogeo.cust.footprint.net, Global
+host-suffix, hbogo.com, Global
+host-suffix, hbogoasia.com, Global
+host-suffix, hbogoasia.hk, Global
+host-suffix, hbogoprod-vod.akamaized.net, Global
+host-suffix, hbolb.onwardsmg.com, Global
+host-suffix, hbomax.com, Global
+host-suffix, hbomaxcdn.com, Global
+host-suffix, hbonow.com, Global
+host-suffix, hbounify-prod.evergent.com, Global
+host-suffix, maxgo.com, Global

@@ -1,0 +1,21 @@
+{
+  "retrieved_at": "2026-10-14",
+  "psl_commit": "3929462652695bad04f0a27afb600974014a3c8b",
+  "files": [
+    {
+      "path": "public_suffix_list.dat",
+      "source_url": "https://raw.githubusercontent.com/publicsuffix/list/3929462652695bad04f0a27afb600974014a3c8b/public_suffix_list.dat",
+      "sha256": "2919eb9803c91a3f73a507cc6fedc934de005543c22c4016f72e3343de5dd6e7"
+    },
+    {
+      "path": "tlds-alpha-by-domain.txt",
+      "source_url": "https://data.iana.org/TLD/tlds-alpha-by-domain.txt",
+      "sha256": "2156a23a0f81c0f6401885a255192c5f0088781303542d3b224755055f908635"
+    }
+  ],
+  "scope": "IANA delegated TLDs plus ICANN and PRIVATE PSL boundaries. PRIVATE entries identify shared hosting, not application ownership.",
+  "licenses": {
+    "public_suffix_list.dat": "MPL-2.0 (source header retained)",
+    "tlds-alpha-by-domain.txt": "IANA public factual TLD registry data"
+  }
+}

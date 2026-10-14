@@ -1,0 +1,27 @@
+# Independently curated Quantumult X destinations: AbemaTV
+# Reviewed: 2026-10-14. Scope and exact decisions: docs/corpus-review.json.
+# Service names are separate from transport IP lists; no geography/final fallback here.
+# Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
+# Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+
+host-suffix, abema.io, Global
+host-suffix, abema.tv, Global
+host-suffix, abematv.akamaized.net, Global
+host-suffix, adx.promo, Global
+host-suffix, ameba.jp, Global
+host-suffix, amebame.com, Global
+host-suffix, amebaownd.com, Global
+host-suffix, amebaowndme.com, Global
+host-suffix, ameblo.jp, Global
+host-suffix, bucketeer.jp, Global
+host-suffix, d1otoma47x30pg.cloudfront.net, Global
+host-suffix, d2wy8f7a9ursnm.cloudfront.net, Global
+host-suffix, dokusho-ojikan.jp, Global
+host-suffix, ds-linear-abematv.akamaized.net, Global
+host-suffix, ds-vod-abematv.akamaized.net, Global
+host-suffix, hayabusa.dev, Global
+host-suffix, hayabusa.io, Global
+host-suffix, hayabusa.media, Global
+host-suffix, linear-abematv.akamaized.net, Global
+host-suffix, vod-abematv.akamaized.net, Global
+host-suffix, winticket.jp, Global

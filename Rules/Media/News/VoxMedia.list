@@ -1,0 +1,22 @@
+# Independently curated Quantumult X destinations: VoxMedia
+# Reviewed: 2026-10-14. Scope and exact decisions: docs/corpus-review.json.
+# Service names are separate from transport IP lists; no geography/final fallback here.
+# Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
+# Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+
+host-suffix, cstatic.net, Global
+host-suffix, curbed.com, Global
+host-suffix, eater.com, Global
+host-suffix, funnyordie.com, Global
+host-suffix, meridian.net, Global
+host-suffix, polygon.com, Global
+host-suffix, racked.com, Global
+host-suffix, recode.net, Global
+host-suffix, sbnation.com, Global
+host-suffix, theverge.com, Global
+host-suffix, vox-cdn.com, Global
+host-suffix, vox.com, Global
+host-suffix, voxcreative.com, Global
+host-suffix, voxfieldguide.com, Global
+host-suffix, voxmedia.com, Global
+host-suffix, voxops.net, Global

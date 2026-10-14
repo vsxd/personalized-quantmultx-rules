@@ -1,0 +1,57 @@
+# Independently curated Quantumult X destinations: VOA
+# Reviewed: 2026-10-14. Scope and exact decisions: docs/corpus-review.json.
+# Service names are separate from transport IP lists; no geography/final fallback here.
+# Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
+# Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+
+host-suffix, amerikaninsesi.com, Global
+host-suffix, amerikaninsesi.org, Global
+host-suffix, amerikaovozi.com, Global
+host-suffix, amerikayidzayn.com, Global
+host-suffix, amerikiskhma.com, Global
+host-suffix, bbg.gov, Global
+host-suffix, dandalinvoa.com, Global
+host-suffix, darivoa.com, Global
+host-suffix, dengeamerika.com, Global
+host-suffix, dengiamerika.com, Global
+host-suffix, glasamerike.net, Global
+host-suffix, golos-ameriki.ru, Global
+host-suffix, golosameriki.com, Global
+host-suffix, insidevoa.com, Global
+host-suffix, pashtovoa.com, Global
+host-suffix, persagg.com, Global
+host-suffix, radiyoyacuvoa.com, Global
+host-suffix, urduvoa.com, Global
+host-suffix, voa-11.akacast.akamaistream.net, Global
+host-suffix, voa.gov, Global
+host-suffix, voa.mobi, Global
+host-suffix, voaafaanoromoo.com, Global
+host-suffix, voaafrique.com, Global
+host-suffix, voabambara.com, Global
+host-suffix, voabangla.com, Global
+host-suffix, voacambodia.com, Global
+host-suffix, voacantonese.com, Global
+host-suffix, voachinese.com, Global
+host-suffix, voachineseblog.com, Global
+host-suffix, voadeewanews.com, Global
+host-suffix, voadeewaradio.com, Global
+host-suffix, voahausa.com, Global
+host-suffix, voaindonesia.com, Global
+host-suffix, voakorea.com, Global
+host-suffix, voalingala.com, Global
+host-suffix, voandebele.com, Global
+host-suffix, voanews.com, Global
+host-suffix, voanews.eu, Global
+host-suffix, voanoticias.com, Global
+host-suffix, voanouvel.com, Global
+host-suffix, voaportugues.com, Global
+host-suffix, voashona.com, Global
+host-suffix, voasomali.com, Global
+host-suffix, voaswahili.com, Global
+host-suffix, voathai.com, Global
+host-suffix, voatibetan.com, Global
+host-suffix, voatibetanenglish.com, Global
+host-suffix, voatiengviet.com, Global
+host-suffix, voatour.com, Global
+host-suffix, voazimbabwe.com, Global
+host-suffix, zeriamerikes.com, Global

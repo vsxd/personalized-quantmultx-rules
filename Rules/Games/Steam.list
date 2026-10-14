@@ -1,0 +1,64 @@
+# Independently curated Quantumult X destinations: Steam
+# Reviewed: 2026-10-14. Scope and exact decisions: docs/corpus-review.json.
+# Service names are separate from transport IP lists; no geography/final fallback here.
+# Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
+# Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+# Selected domain references: v2fly/domain-list-community@c6adacf29cc4fb05e04651fcf03e00989ef9f797.
+# MIT (Copyright (c) 2018-2019 V2Ray); full notices in LICENSES/.
+
+host, steambroadcast.akamaized.net, Game
+host, steamcloudsweden.blob.core.windows.net, Game
+host, steamcommunity-a.akamaihd.net, Game
+host, steamcommunity-a.akamaihd.net.edgesuite.net, Game
+host, steammobile.akamaized.net, Game
+host, steampipe-kr.akamaized.net, Game
+host, steampipe-partner.akamaized.net, Game
+host, steampipe.akamaized.net, Game
+host, steamstore-a.akamaihd.net, Game
+host, steamugcquincy.blob.core.windows.net, Game
+host, steamusercontent-a.akamaihd.net, Game
+host, steamuserimages-a.akamaihd.net, Game
+host, steamvideo-a.akamaihd.net, Game
+host-suffix, client-update.queniuqe.com, Game
+host-suffix, csgo.com.cn, Game
+host-suffix, csgo.wmsj.cn, Game
+host-suffix, dl.steam.clngaa.com, Game
+host-suffix, dota2.com, Game
+host-suffix, dota2.com.cn, Game
+host-suffix, dota2.wmsj.cn, Game
+host-suffix, edge.steam-dns.top.comcast.net, Game
+host-suffix, gstore.val.manlaxy.com, Game
+host-suffix, playartifact.com, Game
+host-suffix, s.team, Game
+host-suffix, st.dl.bscstorage.net, Game
+host-suffix, st.dl.eccdnx.com, Game
+host-suffix, st.dl.pinyuncloud.com, Game
+host-suffix, steam-api.com, Game
+host-suffix, steam-chat.com, Game
+host-suffix, steam.apac.qtlglb.com, Game
+host-suffix, steam.cdn.on.net, Game
+host-suffix, steam.cdn.orcon.net.nz, Game
+host-suffix, steam.cdn.slingshot.co.nz, Game
+host-suffix, steam.cdn.webra.ru, Game
+host-suffix, steam.eca.qtlglb.com, Game
+host-suffix, steam.naeu.qtlglb.com, Game
+host-suffix, steam.ru.qtlglb.com, Game
+host-suffix, steam.tv, Game
+host-suffix, steamcdn-a.akamaihd.net, Game
+host-suffix, steamchina.com, Game
+host-suffix, steamcommunity.com, Game
+host-suffix, steamconnecttest.com, Game
+host-suffix, steamcontent.com, Game
+host-suffix, steamdeck.com, Game
+host-suffix, steamgames.com, Game
+host-suffix, steampowered.com, Game
+host-suffix, steampowered.com.8686c.com, Game
+host-suffix, steamserver.net, Game
+host-suffix, steamstat.us, Game
+host-suffix, steamstatic.com, Game
+host-suffix, steamstatic.com.8686c.com, Game
+host-suffix, steamusercontent.com, Game
+host-suffix, underlords.com, Game
+host-suffix, valve.net, Game
+host-suffix, valvesoftware.com, Game
+host-suffix, wmsjsteam.com, Game

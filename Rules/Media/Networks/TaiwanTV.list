@@ -1,0 +1,17 @@
+# Independently curated Quantumult X destinations: TaiwanTV
+# Reviewed: 2026-10-14. Scope and exact decisions: docs/corpus-review.json.
+# Service names are separate from transport IP lists; no geography/final fallback here.
+# Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
+# Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+
+host, hamifans.emome.net, Global
+host, litvfreemobile-hichannel.cdn.hinet.net, Global
+host-suffix, 5itv.tv, Global
+host-suffix, friday.tw, Global
+host-suffix, kktv.com.tw, Global
+host-suffix, kktv.me, Global
+host-suffix, litv.tv, Global
+host-suffix, ocnttv.com, Global
+host-suffix, skyking.com.tw, Global
+host-suffix, theater-kktv.cdn.hinet.net, Global
+host-suffix, vidol.tv, Global

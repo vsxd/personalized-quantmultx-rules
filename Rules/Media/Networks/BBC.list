@@ -1,0 +1,31 @@
+# Independently curated Quantumult X destinations: BBC
+# Reviewed: 2026-10-14. Scope and exact decisions: docs/corpus-review.json.
+# Service names are separate from transport IP lists; no geography/final fallback here.
+# Includes reviewed SVE1R-derived material: MIT (Copyright (c) 2020 SVE1R).
+# Source: sve1r/Rules-For-Quantumult-X@8061d2ebe160280f25d4b20d6d929d9e03caecbe.
+
+host, aod-dash-uk-live.akamaized.net, Global
+host, aod-hls-uk-live.akamaized.net, Global
+host, as-dash-uk-live.akamaized.net, Global
+host, as-hls-uk-live.akamaized.net, Global
+host, vod-dash-uk-live.akamaized.net, Global
+host, vod-dash-ww-live.akamaized.net, Global
+host, vod-hls-uk-live.akamaized.net, Global
+host, vod-sub-uk-live.akamaized.net, Global
+host, vod-thumb-uk-live.akamaized.net, Global
+host, vod-thumb-ww-live.akamaized.net, Global
+host, vs-cmaf-push-uk-live.akamaized.net, Global
+host-suffix, bbc.co, Global
+host-suffix, bbc.co.uk, Global
+host-suffix, bbc.com, Global
+host-suffix, bbc.in, Global
+host-suffix, bbc.net.uk, Global
+host-suffix, bbcchinese.com, Global
+host-suffix, bbcfmt.hs.llnwd.net, Global
+host-suffix, bbcfmt.s.llnwi.net, Global
+host-suffix, bbci.co, Global
+host-suffix, bbci.co.uk, Global
+host-suffix, bbcmedia.co.uk, Global
+host-suffix, bbcpersian.com, Global
+host-suffix, bbcverticals.com, Global
+host-suffix, bidi.net.uk, Global
